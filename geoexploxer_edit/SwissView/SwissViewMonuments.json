@@ -1,0 +1,1877 @@
+[
+  {
+    "id": "000",
+    "ground_view": "data/SwissViewMonuments/ground_view/Bern_00.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Bern_00.png"
+  },
+  {
+    "id": "001",
+    "ground_view": "data/SwissViewMonuments/ground_view/Bern_01.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Bern_01.png"
+  },
+  {
+    "id": "002",
+    "ground_view": "data/SwissViewMonuments/ground_view/Bern_02.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Bern_02.png"
+  },
+  {
+    "id": "003",
+    "ground_view": "data/SwissViewMonuments/ground_view/Bern_03.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Bern_03.png"
+  },
+  {
+    "id": "004",
+    "ground_view": "data/SwissViewMonuments/ground_view/Bern_04.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Bern_04.png"
+  },
+  {
+    "id": "005",
+    "ground_view": "data/SwissViewMonuments/ground_view/Bern_05.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Bern_05.png"
+  },
+  {
+    "id": "006",
+    "ground_view": "data/SwissViewMonuments/ground_view/Bern_06.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Bern_06.png"
+  },
+  {
+    "id": "007",
+    "ground_view": "data/SwissViewMonuments/ground_view/Bern_07.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Bern_07.png"
+  },
+  {
+    "id": "008",
+    "ground_view": "data/SwissViewMonuments/ground_view/Bern_08.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Bern_08.png"
+  },
+  {
+    "id": "009",
+    "ground_view": "data/SwissViewMonuments/ground_view/Bern_09.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Bern_09.png"
+  },
+  {
+    "id": "010",
+    "ground_view": "data/SwissViewMonuments/ground_view/Bern_10.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Bern_10.png"
+  },
+  {
+    "id": "011",
+    "ground_view": "data/SwissViewMonuments/ground_view/Bern_11.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Bern_11.png"
+  },
+  {
+    "id": "012",
+    "ground_view": "data/SwissViewMonuments/ground_view/Bern_12.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Bern_12.png"
+  },
+  {
+    "id": "013",
+    "ground_view": "data/SwissViewMonuments/ground_view/Bern_13.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Bern_13.png"
+  },
+  {
+    "id": "014",
+    "ground_view": "data/SwissViewMonuments/ground_view/Bern_14.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Bern_14.png"
+  },
+  {
+    "id": "015",
+    "ground_view": "data/SwissViewMonuments/ground_view/Bern_15.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Bern_15.png"
+  },
+  {
+    "id": "016",
+    "ground_view": "data/SwissViewMonuments/ground_view/Bern_16.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Bern_16.png"
+  },
+  {
+    "id": "017",
+    "ground_view": "data/SwissViewMonuments/ground_view/Bern_17.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Bern_17.png"
+  },
+  {
+    "id": "018",
+    "ground_view": "data/SwissViewMonuments/ground_view/Bern_18.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Bern_18.png"
+  },
+  {
+    "id": "019",
+    "ground_view": "data/SwissViewMonuments/ground_view/Bern_19.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Bern_19.png"
+  },
+  {
+    "id": "020",
+    "ground_view": "data/SwissViewMonuments/ground_view/Bern_20.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Bern_20.png"
+  },
+  {
+    "id": "021",
+    "ground_view": "data/SwissViewMonuments/ground_view/Bern_21.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Bern_21.png"
+  },
+  {
+    "id": "022",
+    "ground_view": "data/SwissViewMonuments/ground_view/Bern_22.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Bern_22.png"
+  },
+  {
+    "id": "023",
+    "ground_view": "data/SwissViewMonuments/ground_view/Bern_23.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Bern_23.png"
+  },
+  {
+    "id": "024",
+    "ground_view": "data/SwissViewMonuments/ground_view/Bern_24.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Bern_24.png"
+  },
+  {
+    "id": "025",
+    "ground_view": "data/SwissViewMonuments/ground_view/Cilion_00.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Cilion_00.png"
+  },
+  {
+    "id": "026",
+    "ground_view": "data/SwissViewMonuments/ground_view/Cilion_01.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Cilion_01.png"
+  },
+  {
+    "id": "027",
+    "ground_view": "data/SwissViewMonuments/ground_view/Cilion_02.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Cilion_02.png"
+  },
+  {
+    "id": "028",
+    "ground_view": "data/SwissViewMonuments/ground_view/Cilion_03.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Cilion_03.png"
+  },
+  {
+    "id": "029",
+    "ground_view": "data/SwissViewMonuments/ground_view/Cilion_04.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Cilion_04.png"
+  },
+  {
+    "id": "030",
+    "ground_view": "data/SwissViewMonuments/ground_view/Cilion_05.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Cilion_05.png"
+  },
+  {
+    "id": "031",
+    "ground_view": "data/SwissViewMonuments/ground_view/Cilion_06.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Cilion_06.png"
+  },
+  {
+    "id": "032",
+    "ground_view": "data/SwissViewMonuments/ground_view/Cilion_07.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Cilion_07.png"
+  },
+  {
+    "id": "033",
+    "ground_view": "data/SwissViewMonuments/ground_view/Cilion_08.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Cilion_08.png"
+  },
+  {
+    "id": "034",
+    "ground_view": "data/SwissViewMonuments/ground_view/Cilion_09.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Cilion_09.png"
+  },
+  {
+    "id": "035",
+    "ground_view": "data/SwissViewMonuments/ground_view/Cilion_10.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Cilion_10.png"
+  },
+  {
+    "id": "036",
+    "ground_view": "data/SwissViewMonuments/ground_view/Cilion_11.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Cilion_11.png"
+  },
+  {
+    "id": "037",
+    "ground_view": "data/SwissViewMonuments/ground_view/Cilion_12.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Cilion_12.png"
+  },
+  {
+    "id": "038",
+    "ground_view": "data/SwissViewMonuments/ground_view/Cilion_13.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Cilion_13.png"
+  },
+  {
+    "id": "039",
+    "ground_view": "data/SwissViewMonuments/ground_view/Cilion_14.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Cilion_14.png"
+  },
+  {
+    "id": "040",
+    "ground_view": "data/SwissViewMonuments/ground_view/Cilion_15.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Cilion_15.png"
+  },
+  {
+    "id": "041",
+    "ground_view": "data/SwissViewMonuments/ground_view/Cilion_16.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Cilion_16.png"
+  },
+  {
+    "id": "042",
+    "ground_view": "data/SwissViewMonuments/ground_view/Cilion_17.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Cilion_17.png"
+  },
+  {
+    "id": "043",
+    "ground_view": "data/SwissViewMonuments/ground_view/Cilion_18.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Cilion_18.png"
+  },
+  {
+    "id": "044",
+    "ground_view": "data/SwissViewMonuments/ground_view/Cilion_19.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Cilion_19.png"
+  },
+  {
+    "id": "045",
+    "ground_view": "data/SwissViewMonuments/ground_view/Cilion_20.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Cilion_20.png"
+  },
+  {
+    "id": "046",
+    "ground_view": "data/SwissViewMonuments/ground_view/Cilion_21.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Cilion_21.png"
+  },
+  {
+    "id": "047",
+    "ground_view": "data/SwissViewMonuments/ground_view/Cilion_22.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Cilion_22.png"
+  },
+  {
+    "id": "048",
+    "ground_view": "data/SwissViewMonuments/ground_view/Cilion_23.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Cilion_23.png"
+  },
+  {
+    "id": "049",
+    "ground_view": "data/SwissViewMonuments/ground_view/Cilion_24.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Cilion_24.png"
+  },
+  {
+    "id": "050",
+    "ground_view": "data/SwissViewMonuments/ground_view/Geneve_00.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Geneve_00.png"
+  },
+  {
+    "id": "051",
+    "ground_view": "data/SwissViewMonuments/ground_view/Geneve_01.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Geneve_01.png"
+  },
+  {
+    "id": "052",
+    "ground_view": "data/SwissViewMonuments/ground_view/Geneve_02.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Geneve_02.png"
+  },
+  {
+    "id": "053",
+    "ground_view": "data/SwissViewMonuments/ground_view/Geneve_03.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Geneve_03.png"
+  },
+  {
+    "id": "054",
+    "ground_view": "data/SwissViewMonuments/ground_view/Geneve_04.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Geneve_04.png"
+  },
+  {
+    "id": "055",
+    "ground_view": "data/SwissViewMonuments/ground_view/Geneve_05.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Geneve_05.png"
+  },
+  {
+    "id": "056",
+    "ground_view": "data/SwissViewMonuments/ground_view/Geneve_06.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Geneve_06.png"
+  },
+  {
+    "id": "057",
+    "ground_view": "data/SwissViewMonuments/ground_view/Geneve_07.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Geneve_07.png"
+  },
+  {
+    "id": "058",
+    "ground_view": "data/SwissViewMonuments/ground_view/Geneve_08.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Geneve_08.png"
+  },
+  {
+    "id": "059",
+    "ground_view": "data/SwissViewMonuments/ground_view/Geneve_09.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Geneve_09.png"
+  },
+  {
+    "id": "060",
+    "ground_view": "data/SwissViewMonuments/ground_view/Geneve_10.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Geneve_10.png"
+  },
+  {
+    "id": "061",
+    "ground_view": "data/SwissViewMonuments/ground_view/Geneve_11.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Geneve_11.png"
+  },
+  {
+    "id": "062",
+    "ground_view": "data/SwissViewMonuments/ground_view/Geneve_12.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Geneve_12.png"
+  },
+  {
+    "id": "063",
+    "ground_view": "data/SwissViewMonuments/ground_view/Geneve_13.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Geneve_13.png"
+  },
+  {
+    "id": "064",
+    "ground_view": "data/SwissViewMonuments/ground_view/Geneve_14.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Geneve_14.png"
+  },
+  {
+    "id": "065",
+    "ground_view": "data/SwissViewMonuments/ground_view/Geneve_15.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Geneve_15.png"
+  },
+  {
+    "id": "066",
+    "ground_view": "data/SwissViewMonuments/ground_view/Geneve_16.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Geneve_16.png"
+  },
+  {
+    "id": "067",
+    "ground_view": "data/SwissViewMonuments/ground_view/Geneve_17.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Geneve_17.png"
+  },
+  {
+    "id": "068",
+    "ground_view": "data/SwissViewMonuments/ground_view/Geneve_18.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Geneve_18.png"
+  },
+  {
+    "id": "069",
+    "ground_view": "data/SwissViewMonuments/ground_view/Geneve_19.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Geneve_19.png"
+  },
+  {
+    "id": "070",
+    "ground_view": "data/SwissViewMonuments/ground_view/Geneve_20.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Geneve_20.png"
+  },
+  {
+    "id": "071",
+    "ground_view": "data/SwissViewMonuments/ground_view/Geneve_21.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Geneve_21.png"
+  },
+  {
+    "id": "072",
+    "ground_view": "data/SwissViewMonuments/ground_view/Geneve_22.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Geneve_22.png"
+  },
+  {
+    "id": "073",
+    "ground_view": "data/SwissViewMonuments/ground_view/Geneve_23.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Geneve_23.png"
+  },
+  {
+    "id": "074",
+    "ground_view": "data/SwissViewMonuments/ground_view/Geneve_24.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Geneve_24.png"
+  },
+  {
+    "id": "075",
+    "ground_view": "data/SwissViewMonuments/ground_view/GrandeDixence_00.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/GrandeDixence_00.png"
+  },
+  {
+    "id": "076",
+    "ground_view": "data/SwissViewMonuments/ground_view/GrandeDixence_01.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/GrandeDixence_01.png"
+  },
+  {
+    "id": "077",
+    "ground_view": "data/SwissViewMonuments/ground_view/GrandeDixence_02.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/GrandeDixence_02.png"
+  },
+  {
+    "id": "078",
+    "ground_view": "data/SwissViewMonuments/ground_view/GrandeDixence_03.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/GrandeDixence_03.png"
+  },
+  {
+    "id": "079",
+    "ground_view": "data/SwissViewMonuments/ground_view/GrandeDixence_04.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/GrandeDixence_04.png"
+  },
+  {
+    "id": "080",
+    "ground_view": "data/SwissViewMonuments/ground_view/GrandeDixence_05.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/GrandeDixence_05.png"
+  },
+  {
+    "id": "081",
+    "ground_view": "data/SwissViewMonuments/ground_view/GrandeDixence_06.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/GrandeDixence_06.png"
+  },
+  {
+    "id": "082",
+    "ground_view": "data/SwissViewMonuments/ground_view/GrandeDixence_07.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/GrandeDixence_07.png"
+  },
+  {
+    "id": "083",
+    "ground_view": "data/SwissViewMonuments/ground_view/GrandeDixence_08.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/GrandeDixence_08.png"
+  },
+  {
+    "id": "084",
+    "ground_view": "data/SwissViewMonuments/ground_view/GrandeDixence_09.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/GrandeDixence_09.png"
+  },
+  {
+    "id": "085",
+    "ground_view": "data/SwissViewMonuments/ground_view/GrandeDixence_10.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/GrandeDixence_10.png"
+  },
+  {
+    "id": "086",
+    "ground_view": "data/SwissViewMonuments/ground_view/GrandeDixence_11.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/GrandeDixence_11.png"
+  },
+  {
+    "id": "087",
+    "ground_view": "data/SwissViewMonuments/ground_view/GrandeDixence_12.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/GrandeDixence_12.png"
+  },
+  {
+    "id": "088",
+    "ground_view": "data/SwissViewMonuments/ground_view/GrandeDixence_13.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/GrandeDixence_13.png"
+  },
+  {
+    "id": "089",
+    "ground_view": "data/SwissViewMonuments/ground_view/GrandeDixence_14.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/GrandeDixence_14.png"
+  },
+  {
+    "id": "090",
+    "ground_view": "data/SwissViewMonuments/ground_view/GrandeDixence_15.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/GrandeDixence_15.png"
+  },
+  {
+    "id": "091",
+    "ground_view": "data/SwissViewMonuments/ground_view/GrandeDixence_16.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/GrandeDixence_16.png"
+  },
+  {
+    "id": "092",
+    "ground_view": "data/SwissViewMonuments/ground_view/GrandeDixence_17.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/GrandeDixence_17.png"
+  },
+  {
+    "id": "093",
+    "ground_view": "data/SwissViewMonuments/ground_view/GrandeDixence_18.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/GrandeDixence_18.png"
+  },
+  {
+    "id": "094",
+    "ground_view": "data/SwissViewMonuments/ground_view/GrandeDixence_19.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/GrandeDixence_19.png"
+  },
+  {
+    "id": "095",
+    "ground_view": "data/SwissViewMonuments/ground_view/GrandeDixence_20.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/GrandeDixence_20.png"
+  },
+  {
+    "id": "096",
+    "ground_view": "data/SwissViewMonuments/ground_view/GrandeDixence_21.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/GrandeDixence_21.png"
+  },
+  {
+    "id": "097",
+    "ground_view": "data/SwissViewMonuments/ground_view/GrandeDixence_22.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/GrandeDixence_22.png"
+  },
+  {
+    "id": "098",
+    "ground_view": "data/SwissViewMonuments/ground_view/GrandeDixence_23.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/GrandeDixence_23.png"
+  },
+  {
+    "id": "099",
+    "ground_view": "data/SwissViewMonuments/ground_view/GrandeDixence_24.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/GrandeDixence_24.png"
+  },
+  {
+    "id": "100",
+    "ground_view": "data/SwissViewMonuments/ground_view/GrosseScheidegg_00.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/GrosseScheidegg_00.png"
+  },
+  {
+    "id": "101",
+    "ground_view": "data/SwissViewMonuments/ground_view/GrosseScheidegg_01.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/GrosseScheidegg_01.png"
+  },
+  {
+    "id": "102",
+    "ground_view": "data/SwissViewMonuments/ground_view/GrosseScheidegg_02.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/GrosseScheidegg_02.png"
+  },
+  {
+    "id": "103",
+    "ground_view": "data/SwissViewMonuments/ground_view/GrosseScheidegg_03.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/GrosseScheidegg_03.png"
+  },
+  {
+    "id": "104",
+    "ground_view": "data/SwissViewMonuments/ground_view/GrosseScheidegg_04.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/GrosseScheidegg_04.png"
+  },
+  {
+    "id": "105",
+    "ground_view": "data/SwissViewMonuments/ground_view/GrosseScheidegg_05.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/GrosseScheidegg_05.png"
+  },
+  {
+    "id": "106",
+    "ground_view": "data/SwissViewMonuments/ground_view/GrosseScheidegg_06.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/GrosseScheidegg_06.png"
+  },
+  {
+    "id": "107",
+    "ground_view": "data/SwissViewMonuments/ground_view/GrosseScheidegg_07.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/GrosseScheidegg_07.png"
+  },
+  {
+    "id": "108",
+    "ground_view": "data/SwissViewMonuments/ground_view/GrosseScheidegg_08.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/GrosseScheidegg_08.png"
+  },
+  {
+    "id": "109",
+    "ground_view": "data/SwissViewMonuments/ground_view/GrosseScheidegg_09.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/GrosseScheidegg_09.png"
+  },
+  {
+    "id": "110",
+    "ground_view": "data/SwissViewMonuments/ground_view/GrosseScheidegg_10.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/GrosseScheidegg_10.png"
+  },
+  {
+    "id": "111",
+    "ground_view": "data/SwissViewMonuments/ground_view/GrosseScheidegg_11.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/GrosseScheidegg_11.png"
+  },
+  {
+    "id": "112",
+    "ground_view": "data/SwissViewMonuments/ground_view/GrosseScheidegg_12.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/GrosseScheidegg_12.png"
+  },
+  {
+    "id": "113",
+    "ground_view": "data/SwissViewMonuments/ground_view/GrosseScheidegg_13.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/GrosseScheidegg_13.png"
+  },
+  {
+    "id": "114",
+    "ground_view": "data/SwissViewMonuments/ground_view/GrosseScheidegg_14.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/GrosseScheidegg_14.png"
+  },
+  {
+    "id": "115",
+    "ground_view": "data/SwissViewMonuments/ground_view/GrosseScheidegg_15.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/GrosseScheidegg_15.png"
+  },
+  {
+    "id": "116",
+    "ground_view": "data/SwissViewMonuments/ground_view/GrosseScheidegg_16.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/GrosseScheidegg_16.png"
+  },
+  {
+    "id": "117",
+    "ground_view": "data/SwissViewMonuments/ground_view/GrosseScheidegg_17.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/GrosseScheidegg_17.png"
+  },
+  {
+    "id": "118",
+    "ground_view": "data/SwissViewMonuments/ground_view/GrosseScheidegg_18.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/GrosseScheidegg_18.png"
+  },
+  {
+    "id": "119",
+    "ground_view": "data/SwissViewMonuments/ground_view/GrosseScheidegg_19.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/GrosseScheidegg_19.png"
+  },
+  {
+    "id": "120",
+    "ground_view": "data/SwissViewMonuments/ground_view/GrosseScheidegg_20.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/GrosseScheidegg_20.png"
+  },
+  {
+    "id": "121",
+    "ground_view": "data/SwissViewMonuments/ground_view/GrosseScheidegg_21.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/GrosseScheidegg_21.png"
+  },
+  {
+    "id": "122",
+    "ground_view": "data/SwissViewMonuments/ground_view/GrosseScheidegg_22.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/GrosseScheidegg_22.png"
+  },
+  {
+    "id": "123",
+    "ground_view": "data/SwissViewMonuments/ground_view/GrosseScheidegg_23.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/GrosseScheidegg_23.png"
+  },
+  {
+    "id": "124",
+    "ground_view": "data/SwissViewMonuments/ground_view/GrosseScheidegg_24.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/GrosseScheidegg_24.png"
+  },
+  {
+    "id": "125",
+    "ground_view": "data/SwissViewMonuments/ground_view/Iseltwald_00.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Iseltwald_00.png"
+  },
+  {
+    "id": "126",
+    "ground_view": "data/SwissViewMonuments/ground_view/Iseltwald_01.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Iseltwald_01.png"
+  },
+  {
+    "id": "127",
+    "ground_view": "data/SwissViewMonuments/ground_view/Iseltwald_02.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Iseltwald_02.png"
+  },
+  {
+    "id": "128",
+    "ground_view": "data/SwissViewMonuments/ground_view/Iseltwald_03.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Iseltwald_03.png"
+  },
+  {
+    "id": "129",
+    "ground_view": "data/SwissViewMonuments/ground_view/Iseltwald_04.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Iseltwald_04.png"
+  },
+  {
+    "id": "130",
+    "ground_view": "data/SwissViewMonuments/ground_view/Iseltwald_05.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Iseltwald_05.png"
+  },
+  {
+    "id": "131",
+    "ground_view": "data/SwissViewMonuments/ground_view/Iseltwald_06.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Iseltwald_06.png"
+  },
+  {
+    "id": "132",
+    "ground_view": "data/SwissViewMonuments/ground_view/Iseltwald_07.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Iseltwald_07.png"
+  },
+  {
+    "id": "133",
+    "ground_view": "data/SwissViewMonuments/ground_view/Iseltwald_08.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Iseltwald_08.png"
+  },
+  {
+    "id": "134",
+    "ground_view": "data/SwissViewMonuments/ground_view/Iseltwald_09.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Iseltwald_09.png"
+  },
+  {
+    "id": "135",
+    "ground_view": "data/SwissViewMonuments/ground_view/Iseltwald_10.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Iseltwald_10.png"
+  },
+  {
+    "id": "136",
+    "ground_view": "data/SwissViewMonuments/ground_view/Iseltwald_11.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Iseltwald_11.png"
+  },
+  {
+    "id": "137",
+    "ground_view": "data/SwissViewMonuments/ground_view/Iseltwald_12.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Iseltwald_12.png"
+  },
+  {
+    "id": "138",
+    "ground_view": "data/SwissViewMonuments/ground_view/Iseltwald_13.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Iseltwald_13.png"
+  },
+  {
+    "id": "139",
+    "ground_view": "data/SwissViewMonuments/ground_view/Iseltwald_14.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Iseltwald_14.png"
+  },
+  {
+    "id": "140",
+    "ground_view": "data/SwissViewMonuments/ground_view/Iseltwald_15.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Iseltwald_15.png"
+  },
+  {
+    "id": "141",
+    "ground_view": "data/SwissViewMonuments/ground_view/Iseltwald_16.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Iseltwald_16.png"
+  },
+  {
+    "id": "142",
+    "ground_view": "data/SwissViewMonuments/ground_view/Iseltwald_17.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Iseltwald_17.png"
+  },
+  {
+    "id": "143",
+    "ground_view": "data/SwissViewMonuments/ground_view/Iseltwald_18.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Iseltwald_18.png"
+  },
+  {
+    "id": "144",
+    "ground_view": "data/SwissViewMonuments/ground_view/Iseltwald_19.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Iseltwald_19.png"
+  },
+  {
+    "id": "145",
+    "ground_view": "data/SwissViewMonuments/ground_view/Iseltwald_20.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Iseltwald_20.png"
+  },
+  {
+    "id": "146",
+    "ground_view": "data/SwissViewMonuments/ground_view/Iseltwald_21.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Iseltwald_21.png"
+  },
+  {
+    "id": "147",
+    "ground_view": "data/SwissViewMonuments/ground_view/Iseltwald_22.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Iseltwald_22.png"
+  },
+  {
+    "id": "148",
+    "ground_view": "data/SwissViewMonuments/ground_view/Iseltwald_23.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Iseltwald_23.png"
+  },
+  {
+    "id": "149",
+    "ground_view": "data/SwissViewMonuments/ground_view/Iseltwald_24.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Iseltwald_24.png"
+  },
+  {
+    "id": "150",
+    "ground_view": "data/SwissViewMonuments/ground_view/LacBleu_00.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/LacBleu_00.png"
+  },
+  {
+    "id": "151",
+    "ground_view": "data/SwissViewMonuments/ground_view/LacBleu_01.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/LacBleu_01.png"
+  },
+  {
+    "id": "152",
+    "ground_view": "data/SwissViewMonuments/ground_view/LacBleu_02.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/LacBleu_02.png"
+  },
+  {
+    "id": "153",
+    "ground_view": "data/SwissViewMonuments/ground_view/LacBleu_03.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/LacBleu_03.png"
+  },
+  {
+    "id": "154",
+    "ground_view": "data/SwissViewMonuments/ground_view/LacBleu_04.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/LacBleu_04.png"
+  },
+  {
+    "id": "155",
+    "ground_view": "data/SwissViewMonuments/ground_view/LacBleu_05.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/LacBleu_05.png"
+  },
+  {
+    "id": "156",
+    "ground_view": "data/SwissViewMonuments/ground_view/LacBleu_06.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/LacBleu_06.png"
+  },
+  {
+    "id": "157",
+    "ground_view": "data/SwissViewMonuments/ground_view/LacBleu_07.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/LacBleu_07.png"
+  },
+  {
+    "id": "158",
+    "ground_view": "data/SwissViewMonuments/ground_view/LacBleu_08.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/LacBleu_08.png"
+  },
+  {
+    "id": "159",
+    "ground_view": "data/SwissViewMonuments/ground_view/LacBleu_09.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/LacBleu_09.png"
+  },
+  {
+    "id": "160",
+    "ground_view": "data/SwissViewMonuments/ground_view/LacBleu_10.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/LacBleu_10.png"
+  },
+  {
+    "id": "161",
+    "ground_view": "data/SwissViewMonuments/ground_view/LacBleu_11.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/LacBleu_11.png"
+  },
+  {
+    "id": "162",
+    "ground_view": "data/SwissViewMonuments/ground_view/LacBleu_12.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/LacBleu_12.png"
+  },
+  {
+    "id": "163",
+    "ground_view": "data/SwissViewMonuments/ground_view/LacBleu_13.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/LacBleu_13.png"
+  },
+  {
+    "id": "164",
+    "ground_view": "data/SwissViewMonuments/ground_view/LacBleu_14.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/LacBleu_14.png"
+  },
+  {
+    "id": "165",
+    "ground_view": "data/SwissViewMonuments/ground_view/LacBleu_15.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/LacBleu_15.png"
+  },
+  {
+    "id": "166",
+    "ground_view": "data/SwissViewMonuments/ground_view/LacBleu_16.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/LacBleu_16.png"
+  },
+  {
+    "id": "167",
+    "ground_view": "data/SwissViewMonuments/ground_view/LacBleu_17.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/LacBleu_17.png"
+  },
+  {
+    "id": "168",
+    "ground_view": "data/SwissViewMonuments/ground_view/LacBleu_18.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/LacBleu_18.png"
+  },
+  {
+    "id": "169",
+    "ground_view": "data/SwissViewMonuments/ground_view/LacBleu_19.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/LacBleu_19.png"
+  },
+  {
+    "id": "170",
+    "ground_view": "data/SwissViewMonuments/ground_view/LacBleu_20.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/LacBleu_20.png"
+  },
+  {
+    "id": "171",
+    "ground_view": "data/SwissViewMonuments/ground_view/LacBleu_21.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/LacBleu_21.png"
+  },
+  {
+    "id": "172",
+    "ground_view": "data/SwissViewMonuments/ground_view/LacBleu_22.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/LacBleu_22.png"
+  },
+  {
+    "id": "173",
+    "ground_view": "data/SwissViewMonuments/ground_view/LacBleu_23.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/LacBleu_23.png"
+  },
+  {
+    "id": "174",
+    "ground_view": "data/SwissViewMonuments/ground_view/LacBleu_24.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/LacBleu_24.png"
+  },
+  {
+    "id": "175",
+    "ground_view": "data/SwissViewMonuments/ground_view/Lausanne_00.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Lausanne_00.png"
+  },
+  {
+    "id": "176",
+    "ground_view": "data/SwissViewMonuments/ground_view/Lausanne_01.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Lausanne_01.png"
+  },
+  {
+    "id": "177",
+    "ground_view": "data/SwissViewMonuments/ground_view/Lausanne_02.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Lausanne_02.png"
+  },
+  {
+    "id": "178",
+    "ground_view": "data/SwissViewMonuments/ground_view/Lausanne_03.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Lausanne_03.png"
+  },
+  {
+    "id": "179",
+    "ground_view": "data/SwissViewMonuments/ground_view/Lausanne_04.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Lausanne_04.png"
+  },
+  {
+    "id": "180",
+    "ground_view": "data/SwissViewMonuments/ground_view/Lausanne_05.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Lausanne_05.png"
+  },
+  {
+    "id": "181",
+    "ground_view": "data/SwissViewMonuments/ground_view/Lausanne_06.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Lausanne_06.png"
+  },
+  {
+    "id": "182",
+    "ground_view": "data/SwissViewMonuments/ground_view/Lausanne_07.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Lausanne_07.png"
+  },
+  {
+    "id": "183",
+    "ground_view": "data/SwissViewMonuments/ground_view/Lausanne_08.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Lausanne_08.png"
+  },
+  {
+    "id": "184",
+    "ground_view": "data/SwissViewMonuments/ground_view/Lausanne_09.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Lausanne_09.png"
+  },
+  {
+    "id": "185",
+    "ground_view": "data/SwissViewMonuments/ground_view/Lausanne_10.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Lausanne_10.png"
+  },
+  {
+    "id": "186",
+    "ground_view": "data/SwissViewMonuments/ground_view/Lausanne_11.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Lausanne_11.png"
+  },
+  {
+    "id": "187",
+    "ground_view": "data/SwissViewMonuments/ground_view/Lausanne_12.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Lausanne_12.png"
+  },
+  {
+    "id": "188",
+    "ground_view": "data/SwissViewMonuments/ground_view/Lausanne_13.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Lausanne_13.png"
+  },
+  {
+    "id": "189",
+    "ground_view": "data/SwissViewMonuments/ground_view/Lausanne_14.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Lausanne_14.png"
+  },
+  {
+    "id": "190",
+    "ground_view": "data/SwissViewMonuments/ground_view/Lausanne_15.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Lausanne_15.png"
+  },
+  {
+    "id": "191",
+    "ground_view": "data/SwissViewMonuments/ground_view/Lausanne_16.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Lausanne_16.png"
+  },
+  {
+    "id": "192",
+    "ground_view": "data/SwissViewMonuments/ground_view/Lausanne_17.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Lausanne_17.png"
+  },
+  {
+    "id": "193",
+    "ground_view": "data/SwissViewMonuments/ground_view/Lausanne_18.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Lausanne_18.png"
+  },
+  {
+    "id": "194",
+    "ground_view": "data/SwissViewMonuments/ground_view/Lausanne_19.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Lausanne_19.png"
+  },
+  {
+    "id": "195",
+    "ground_view": "data/SwissViewMonuments/ground_view/Lausanne_20.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Lausanne_20.png"
+  },
+  {
+    "id": "196",
+    "ground_view": "data/SwissViewMonuments/ground_view/Lausanne_21.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Lausanne_21.png"
+  },
+  {
+    "id": "197",
+    "ground_view": "data/SwissViewMonuments/ground_view/Lausanne_22.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Lausanne_22.png"
+  },
+  {
+    "id": "198",
+    "ground_view": "data/SwissViewMonuments/ground_view/Lausanne_23.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Lausanne_23.png"
+  },
+  {
+    "id": "199",
+    "ground_view": "data/SwissViewMonuments/ground_view/Lausanne_24.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Lausanne_24.png"
+  },
+  {
+    "id": "200",
+    "ground_view": "data/SwissViewMonuments/ground_view/Luzern_00.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Luzern_00.png"
+  },
+  {
+    "id": "201",
+    "ground_view": "data/SwissViewMonuments/ground_view/Luzern_01.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Luzern_01.png"
+  },
+  {
+    "id": "202",
+    "ground_view": "data/SwissViewMonuments/ground_view/Luzern_02.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Luzern_02.png"
+  },
+  {
+    "id": "203",
+    "ground_view": "data/SwissViewMonuments/ground_view/Luzern_03.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Luzern_03.png"
+  },
+  {
+    "id": "204",
+    "ground_view": "data/SwissViewMonuments/ground_view/Luzern_04.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Luzern_04.png"
+  },
+  {
+    "id": "205",
+    "ground_view": "data/SwissViewMonuments/ground_view/Luzern_05.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Luzern_05.png"
+  },
+  {
+    "id": "206",
+    "ground_view": "data/SwissViewMonuments/ground_view/Luzern_06.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Luzern_06.png"
+  },
+  {
+    "id": "207",
+    "ground_view": "data/SwissViewMonuments/ground_view/Luzern_07.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Luzern_07.png"
+  },
+  {
+    "id": "208",
+    "ground_view": "data/SwissViewMonuments/ground_view/Luzern_08.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Luzern_08.png"
+  },
+  {
+    "id": "209",
+    "ground_view": "data/SwissViewMonuments/ground_view/Luzern_09.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Luzern_09.png"
+  },
+  {
+    "id": "210",
+    "ground_view": "data/SwissViewMonuments/ground_view/Luzern_10.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Luzern_10.png"
+  },
+  {
+    "id": "211",
+    "ground_view": "data/SwissViewMonuments/ground_view/Luzern_11.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Luzern_11.png"
+  },
+  {
+    "id": "212",
+    "ground_view": "data/SwissViewMonuments/ground_view/Luzern_12.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Luzern_12.png"
+  },
+  {
+    "id": "213",
+    "ground_view": "data/SwissViewMonuments/ground_view/Luzern_13.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Luzern_13.png"
+  },
+  {
+    "id": "214",
+    "ground_view": "data/SwissViewMonuments/ground_view/Luzern_14.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Luzern_14.png"
+  },
+  {
+    "id": "215",
+    "ground_view": "data/SwissViewMonuments/ground_view/Luzern_15.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Luzern_15.png"
+  },
+  {
+    "id": "216",
+    "ground_view": "data/SwissViewMonuments/ground_view/Luzern_16.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Luzern_16.png"
+  },
+  {
+    "id": "217",
+    "ground_view": "data/SwissViewMonuments/ground_view/Luzern_17.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Luzern_17.png"
+  },
+  {
+    "id": "218",
+    "ground_view": "data/SwissViewMonuments/ground_view/Luzern_18.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Luzern_18.png"
+  },
+  {
+    "id": "219",
+    "ground_view": "data/SwissViewMonuments/ground_view/Luzern_19.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Luzern_19.png"
+  },
+  {
+    "id": "220",
+    "ground_view": "data/SwissViewMonuments/ground_view/Luzern_20.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Luzern_20.png"
+  },
+  {
+    "id": "221",
+    "ground_view": "data/SwissViewMonuments/ground_view/Luzern_21.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Luzern_21.png"
+  },
+  {
+    "id": "222",
+    "ground_view": "data/SwissViewMonuments/ground_view/Luzern_22.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Luzern_22.png"
+  },
+  {
+    "id": "223",
+    "ground_view": "data/SwissViewMonuments/ground_view/Luzern_23.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Luzern_23.png"
+  },
+  {
+    "id": "224",
+    "ground_view": "data/SwissViewMonuments/ground_view/Luzern_24.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Luzern_24.png"
+  },
+  {
+    "id": "225",
+    "ground_view": "data/SwissViewMonuments/ground_view/RhineGlacier_00.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/RhineGlacier_00.png"
+  },
+  {
+    "id": "226",
+    "ground_view": "data/SwissViewMonuments/ground_view/RhineGlacier_01.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/RhineGlacier_01.png"
+  },
+  {
+    "id": "227",
+    "ground_view": "data/SwissViewMonuments/ground_view/RhineGlacier_02.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/RhineGlacier_02.png"
+  },
+  {
+    "id": "228",
+    "ground_view": "data/SwissViewMonuments/ground_view/RhineGlacier_03.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/RhineGlacier_03.png"
+  },
+  {
+    "id": "229",
+    "ground_view": "data/SwissViewMonuments/ground_view/RhineGlacier_04.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/RhineGlacier_04.png"
+  },
+  {
+    "id": "230",
+    "ground_view": "data/SwissViewMonuments/ground_view/RhineGlacier_05.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/RhineGlacier_05.png"
+  },
+  {
+    "id": "231",
+    "ground_view": "data/SwissViewMonuments/ground_view/RhineGlacier_06.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/RhineGlacier_06.png"
+  },
+  {
+    "id": "232",
+    "ground_view": "data/SwissViewMonuments/ground_view/RhineGlacier_07.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/RhineGlacier_07.png"
+  },
+  {
+    "id": "233",
+    "ground_view": "data/SwissViewMonuments/ground_view/RhineGlacier_08.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/RhineGlacier_08.png"
+  },
+  {
+    "id": "234",
+    "ground_view": "data/SwissViewMonuments/ground_view/RhineGlacier_09.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/RhineGlacier_09.png"
+  },
+  {
+    "id": "235",
+    "ground_view": "data/SwissViewMonuments/ground_view/RhineGlacier_10.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/RhineGlacier_10.png"
+  },
+  {
+    "id": "236",
+    "ground_view": "data/SwissViewMonuments/ground_view/RhineGlacier_11.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/RhineGlacier_11.png"
+  },
+  {
+    "id": "237",
+    "ground_view": "data/SwissViewMonuments/ground_view/RhineGlacier_12.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/RhineGlacier_12.png"
+  },
+  {
+    "id": "238",
+    "ground_view": "data/SwissViewMonuments/ground_view/RhineGlacier_13.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/RhineGlacier_13.png"
+  },
+  {
+    "id": "239",
+    "ground_view": "data/SwissViewMonuments/ground_view/RhineGlacier_14.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/RhineGlacier_14.png"
+  },
+  {
+    "id": "240",
+    "ground_view": "data/SwissViewMonuments/ground_view/RhineGlacier_15.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/RhineGlacier_15.png"
+  },
+  {
+    "id": "241",
+    "ground_view": "data/SwissViewMonuments/ground_view/RhineGlacier_16.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/RhineGlacier_16.png"
+  },
+  {
+    "id": "242",
+    "ground_view": "data/SwissViewMonuments/ground_view/RhineGlacier_17.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/RhineGlacier_17.png"
+  },
+  {
+    "id": "243",
+    "ground_view": "data/SwissViewMonuments/ground_view/RhineGlacier_18.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/RhineGlacier_18.png"
+  },
+  {
+    "id": "244",
+    "ground_view": "data/SwissViewMonuments/ground_view/RhineGlacier_19.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/RhineGlacier_19.png"
+  },
+  {
+    "id": "245",
+    "ground_view": "data/SwissViewMonuments/ground_view/RhineGlacier_20.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/RhineGlacier_20.png"
+  },
+  {
+    "id": "246",
+    "ground_view": "data/SwissViewMonuments/ground_view/RhineGlacier_21.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/RhineGlacier_21.png"
+  },
+  {
+    "id": "247",
+    "ground_view": "data/SwissViewMonuments/ground_view/RhineGlacier_22.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/RhineGlacier_22.png"
+  },
+  {
+    "id": "248",
+    "ground_view": "data/SwissViewMonuments/ground_view/RhineGlacier_23.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/RhineGlacier_23.png"
+  },
+  {
+    "id": "249",
+    "ground_view": "data/SwissViewMonuments/ground_view/RhineGlacier_24.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/RhineGlacier_24.png"
+  },
+  {
+    "id": "250",
+    "ground_view": "data/SwissViewMonuments/ground_view/Rolex_00.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Rolex_00.png"
+  },
+  {
+    "id": "251",
+    "ground_view": "data/SwissViewMonuments/ground_view/Rolex_01.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Rolex_01.png"
+  },
+  {
+    "id": "252",
+    "ground_view": "data/SwissViewMonuments/ground_view/Rolex_02.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Rolex_02.png"
+  },
+  {
+    "id": "253",
+    "ground_view": "data/SwissViewMonuments/ground_view/Rolex_03.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Rolex_03.png"
+  },
+  {
+    "id": "254",
+    "ground_view": "data/SwissViewMonuments/ground_view/Rolex_04.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Rolex_04.png"
+  },
+  {
+    "id": "255",
+    "ground_view": "data/SwissViewMonuments/ground_view/Rolex_05.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Rolex_05.png"
+  },
+  {
+    "id": "256",
+    "ground_view": "data/SwissViewMonuments/ground_view/Rolex_06.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Rolex_06.png"
+  },
+  {
+    "id": "257",
+    "ground_view": "data/SwissViewMonuments/ground_view/Rolex_07.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Rolex_07.png"
+  },
+  {
+    "id": "258",
+    "ground_view": "data/SwissViewMonuments/ground_view/Rolex_08.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Rolex_08.png"
+  },
+  {
+    "id": "259",
+    "ground_view": "data/SwissViewMonuments/ground_view/Rolex_09.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Rolex_09.png"
+  },
+  {
+    "id": "260",
+    "ground_view": "data/SwissViewMonuments/ground_view/Rolex_10.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Rolex_10.png"
+  },
+  {
+    "id": "261",
+    "ground_view": "data/SwissViewMonuments/ground_view/Rolex_11.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Rolex_11.png"
+  },
+  {
+    "id": "262",
+    "ground_view": "data/SwissViewMonuments/ground_view/Rolex_12.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Rolex_12.png"
+  },
+  {
+    "id": "263",
+    "ground_view": "data/SwissViewMonuments/ground_view/Rolex_13.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Rolex_13.png"
+  },
+  {
+    "id": "264",
+    "ground_view": "data/SwissViewMonuments/ground_view/Rolex_14.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Rolex_14.png"
+  },
+  {
+    "id": "265",
+    "ground_view": "data/SwissViewMonuments/ground_view/Rolex_15.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Rolex_15.png"
+  },
+  {
+    "id": "266",
+    "ground_view": "data/SwissViewMonuments/ground_view/Rolex_16.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Rolex_16.png"
+  },
+  {
+    "id": "267",
+    "ground_view": "data/SwissViewMonuments/ground_view/Rolex_17.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Rolex_17.png"
+  },
+  {
+    "id": "268",
+    "ground_view": "data/SwissViewMonuments/ground_view/Rolex_18.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Rolex_18.png"
+  },
+  {
+    "id": "269",
+    "ground_view": "data/SwissViewMonuments/ground_view/Rolex_19.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Rolex_19.png"
+  },
+  {
+    "id": "270",
+    "ground_view": "data/SwissViewMonuments/ground_view/Rolex_20.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Rolex_20.png"
+  },
+  {
+    "id": "271",
+    "ground_view": "data/SwissViewMonuments/ground_view/Rolex_21.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Rolex_21.png"
+  },
+  {
+    "id": "272",
+    "ground_view": "data/SwissViewMonuments/ground_view/Rolex_22.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Rolex_22.png"
+  },
+  {
+    "id": "273",
+    "ground_view": "data/SwissViewMonuments/ground_view/Rolex_23.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Rolex_23.png"
+  },
+  {
+    "id": "274",
+    "ground_view": "data/SwissViewMonuments/ground_view/Rolex_24.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Rolex_24.png"
+  },
+  {
+    "id": "275",
+    "ground_view": "data/SwissViewMonuments/ground_view/Sion_00.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Sion_00.png"
+  },
+  {
+    "id": "276",
+    "ground_view": "data/SwissViewMonuments/ground_view/Sion_01.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Sion_01.png"
+  },
+  {
+    "id": "277",
+    "ground_view": "data/SwissViewMonuments/ground_view/Sion_02.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Sion_02.png"
+  },
+  {
+    "id": "278",
+    "ground_view": "data/SwissViewMonuments/ground_view/Sion_03.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Sion_03.png"
+  },
+  {
+    "id": "279",
+    "ground_view": "data/SwissViewMonuments/ground_view/Sion_04.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Sion_04.png"
+  },
+  {
+    "id": "280",
+    "ground_view": "data/SwissViewMonuments/ground_view/Sion_05.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Sion_05.png"
+  },
+  {
+    "id": "281",
+    "ground_view": "data/SwissViewMonuments/ground_view/Sion_06.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Sion_06.png"
+  },
+  {
+    "id": "282",
+    "ground_view": "data/SwissViewMonuments/ground_view/Sion_07.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Sion_07.png"
+  },
+  {
+    "id": "283",
+    "ground_view": "data/SwissViewMonuments/ground_view/Sion_08.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Sion_08.png"
+  },
+  {
+    "id": "284",
+    "ground_view": "data/SwissViewMonuments/ground_view/Sion_09.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Sion_09.png"
+  },
+  {
+    "id": "285",
+    "ground_view": "data/SwissViewMonuments/ground_view/Sion_10.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Sion_10.png"
+  },
+  {
+    "id": "286",
+    "ground_view": "data/SwissViewMonuments/ground_view/Sion_11.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Sion_11.png"
+  },
+  {
+    "id": "287",
+    "ground_view": "data/SwissViewMonuments/ground_view/Sion_12.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Sion_12.png"
+  },
+  {
+    "id": "288",
+    "ground_view": "data/SwissViewMonuments/ground_view/Sion_13.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Sion_13.png"
+  },
+  {
+    "id": "289",
+    "ground_view": "data/SwissViewMonuments/ground_view/Sion_14.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Sion_14.png"
+  },
+  {
+    "id": "290",
+    "ground_view": "data/SwissViewMonuments/ground_view/Sion_15.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Sion_15.png"
+  },
+  {
+    "id": "291",
+    "ground_view": "data/SwissViewMonuments/ground_view/Sion_16.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Sion_16.png"
+  },
+  {
+    "id": "292",
+    "ground_view": "data/SwissViewMonuments/ground_view/Sion_17.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Sion_17.png"
+  },
+  {
+    "id": "293",
+    "ground_view": "data/SwissViewMonuments/ground_view/Sion_18.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Sion_18.png"
+  },
+  {
+    "id": "294",
+    "ground_view": "data/SwissViewMonuments/ground_view/Sion_19.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Sion_19.png"
+  },
+  {
+    "id": "295",
+    "ground_view": "data/SwissViewMonuments/ground_view/Sion_20.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Sion_20.png"
+  },
+  {
+    "id": "296",
+    "ground_view": "data/SwissViewMonuments/ground_view/Sion_21.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Sion_21.png"
+  },
+  {
+    "id": "297",
+    "ground_view": "data/SwissViewMonuments/ground_view/Sion_22.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Sion_22.png"
+  },
+  {
+    "id": "298",
+    "ground_view": "data/SwissViewMonuments/ground_view/Sion_23.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Sion_23.png"
+  },
+  {
+    "id": "299",
+    "ground_view": "data/SwissViewMonuments/ground_view/Sion_24.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Sion_24.png"
+  },
+  {
+    "id": "300",
+    "ground_view": "data/SwissViewMonuments/ground_view/Spiez_00.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Spiez_00.png"
+  },
+  {
+    "id": "301",
+    "ground_view": "data/SwissViewMonuments/ground_view/Spiez_01.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Spiez_01.png"
+  },
+  {
+    "id": "302",
+    "ground_view": "data/SwissViewMonuments/ground_view/Spiez_02.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Spiez_02.png"
+  },
+  {
+    "id": "303",
+    "ground_view": "data/SwissViewMonuments/ground_view/Spiez_03.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Spiez_03.png"
+  },
+  {
+    "id": "304",
+    "ground_view": "data/SwissViewMonuments/ground_view/Spiez_04.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Spiez_04.png"
+  },
+  {
+    "id": "305",
+    "ground_view": "data/SwissViewMonuments/ground_view/Spiez_05.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Spiez_05.png"
+  },
+  {
+    "id": "306",
+    "ground_view": "data/SwissViewMonuments/ground_view/Spiez_06.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Spiez_06.png"
+  },
+  {
+    "id": "307",
+    "ground_view": "data/SwissViewMonuments/ground_view/Spiez_07.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Spiez_07.png"
+  },
+  {
+    "id": "308",
+    "ground_view": "data/SwissViewMonuments/ground_view/Spiez_08.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Spiez_08.png"
+  },
+  {
+    "id": "309",
+    "ground_view": "data/SwissViewMonuments/ground_view/Spiez_09.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Spiez_09.png"
+  },
+  {
+    "id": "310",
+    "ground_view": "data/SwissViewMonuments/ground_view/Spiez_10.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Spiez_10.png"
+  },
+  {
+    "id": "311",
+    "ground_view": "data/SwissViewMonuments/ground_view/Spiez_11.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Spiez_11.png"
+  },
+  {
+    "id": "312",
+    "ground_view": "data/SwissViewMonuments/ground_view/Spiez_12.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Spiez_12.png"
+  },
+  {
+    "id": "313",
+    "ground_view": "data/SwissViewMonuments/ground_view/Spiez_13.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Spiez_13.png"
+  },
+  {
+    "id": "314",
+    "ground_view": "data/SwissViewMonuments/ground_view/Spiez_14.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Spiez_14.png"
+  },
+  {
+    "id": "315",
+    "ground_view": "data/SwissViewMonuments/ground_view/Spiez_15.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Spiez_15.png"
+  },
+  {
+    "id": "316",
+    "ground_view": "data/SwissViewMonuments/ground_view/Spiez_16.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Spiez_16.png"
+  },
+  {
+    "id": "317",
+    "ground_view": "data/SwissViewMonuments/ground_view/Spiez_17.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Spiez_17.png"
+  },
+  {
+    "id": "318",
+    "ground_view": "data/SwissViewMonuments/ground_view/Spiez_18.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Spiez_18.png"
+  },
+  {
+    "id": "319",
+    "ground_view": "data/SwissViewMonuments/ground_view/Spiez_19.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Spiez_19.png"
+  },
+  {
+    "id": "320",
+    "ground_view": "data/SwissViewMonuments/ground_view/Spiez_20.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Spiez_20.png"
+  },
+  {
+    "id": "321",
+    "ground_view": "data/SwissViewMonuments/ground_view/Spiez_21.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Spiez_21.png"
+  },
+  {
+    "id": "322",
+    "ground_view": "data/SwissViewMonuments/ground_view/Spiez_22.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Spiez_22.png"
+  },
+  {
+    "id": "323",
+    "ground_view": "data/SwissViewMonuments/ground_view/Spiez_23.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Spiez_23.png"
+  },
+  {
+    "id": "324",
+    "ground_view": "data/SwissViewMonuments/ground_view/Spiez_24.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Spiez_24.png"
+  },
+  {
+    "id": "325",
+    "ground_view": "data/SwissViewMonuments/ground_view/Tseuzier_00.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Tseuzier_00.png"
+  },
+  {
+    "id": "326",
+    "ground_view": "data/SwissViewMonuments/ground_view/Tseuzier_01.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Tseuzier_01.png"
+  },
+  {
+    "id": "327",
+    "ground_view": "data/SwissViewMonuments/ground_view/Tseuzier_02.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Tseuzier_02.png"
+  },
+  {
+    "id": "328",
+    "ground_view": "data/SwissViewMonuments/ground_view/Tseuzier_03.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Tseuzier_03.png"
+  },
+  {
+    "id": "329",
+    "ground_view": "data/SwissViewMonuments/ground_view/Tseuzier_04.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Tseuzier_04.png"
+  },
+  {
+    "id": "330",
+    "ground_view": "data/SwissViewMonuments/ground_view/Tseuzier_05.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Tseuzier_05.png"
+  },
+  {
+    "id": "331",
+    "ground_view": "data/SwissViewMonuments/ground_view/Tseuzier_06.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Tseuzier_06.png"
+  },
+  {
+    "id": "332",
+    "ground_view": "data/SwissViewMonuments/ground_view/Tseuzier_07.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Tseuzier_07.png"
+  },
+  {
+    "id": "333",
+    "ground_view": "data/SwissViewMonuments/ground_view/Tseuzier_08.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Tseuzier_08.png"
+  },
+  {
+    "id": "334",
+    "ground_view": "data/SwissViewMonuments/ground_view/Tseuzier_09.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Tseuzier_09.png"
+  },
+  {
+    "id": "335",
+    "ground_view": "data/SwissViewMonuments/ground_view/Tseuzier_10.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Tseuzier_10.png"
+  },
+  {
+    "id": "336",
+    "ground_view": "data/SwissViewMonuments/ground_view/Tseuzier_11.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Tseuzier_11.png"
+  },
+  {
+    "id": "337",
+    "ground_view": "data/SwissViewMonuments/ground_view/Tseuzier_12.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Tseuzier_12.png"
+  },
+  {
+    "id": "338",
+    "ground_view": "data/SwissViewMonuments/ground_view/Tseuzier_13.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Tseuzier_13.png"
+  },
+  {
+    "id": "339",
+    "ground_view": "data/SwissViewMonuments/ground_view/Tseuzier_14.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Tseuzier_14.png"
+  },
+  {
+    "id": "340",
+    "ground_view": "data/SwissViewMonuments/ground_view/Tseuzier_15.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Tseuzier_15.png"
+  },
+  {
+    "id": "341",
+    "ground_view": "data/SwissViewMonuments/ground_view/Tseuzier_16.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Tseuzier_16.png"
+  },
+  {
+    "id": "342",
+    "ground_view": "data/SwissViewMonuments/ground_view/Tseuzier_17.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Tseuzier_17.png"
+  },
+  {
+    "id": "343",
+    "ground_view": "data/SwissViewMonuments/ground_view/Tseuzier_18.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Tseuzier_18.png"
+  },
+  {
+    "id": "344",
+    "ground_view": "data/SwissViewMonuments/ground_view/Tseuzier_19.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Tseuzier_19.png"
+  },
+  {
+    "id": "345",
+    "ground_view": "data/SwissViewMonuments/ground_view/Tseuzier_20.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Tseuzier_20.png"
+  },
+  {
+    "id": "346",
+    "ground_view": "data/SwissViewMonuments/ground_view/Tseuzier_21.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Tseuzier_21.png"
+  },
+  {
+    "id": "347",
+    "ground_view": "data/SwissViewMonuments/ground_view/Tseuzier_22.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Tseuzier_22.png"
+  },
+  {
+    "id": "348",
+    "ground_view": "data/SwissViewMonuments/ground_view/Tseuzier_23.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Tseuzier_23.png"
+  },
+  {
+    "id": "349",
+    "ground_view": "data/SwissViewMonuments/ground_view/Tseuzier_24.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Tseuzier_24.png"
+  },
+  {
+    "id": "350",
+    "ground_view": "data/SwissViewMonuments/ground_view/Zurich_00.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Zurich_00.png"
+  },
+  {
+    "id": "351",
+    "ground_view": "data/SwissViewMonuments/ground_view/Zurich_01.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Zurich_01.png"
+  },
+  {
+    "id": "352",
+    "ground_view": "data/SwissViewMonuments/ground_view/Zurich_02.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Zurich_02.png"
+  },
+  {
+    "id": "353",
+    "ground_view": "data/SwissViewMonuments/ground_view/Zurich_03.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Zurich_03.png"
+  },
+  {
+    "id": "354",
+    "ground_view": "data/SwissViewMonuments/ground_view/Zurich_04.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Zurich_04.png"
+  },
+  {
+    "id": "355",
+    "ground_view": "data/SwissViewMonuments/ground_view/Zurich_05.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Zurich_05.png"
+  },
+  {
+    "id": "356",
+    "ground_view": "data/SwissViewMonuments/ground_view/Zurich_06.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Zurich_06.png"
+  },
+  {
+    "id": "357",
+    "ground_view": "data/SwissViewMonuments/ground_view/Zurich_07.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Zurich_07.png"
+  },
+  {
+    "id": "358",
+    "ground_view": "data/SwissViewMonuments/ground_view/Zurich_08.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Zurich_08.png"
+  },
+  {
+    "id": "359",
+    "ground_view": "data/SwissViewMonuments/ground_view/Zurich_09.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Zurich_09.png"
+  },
+  {
+    "id": "360",
+    "ground_view": "data/SwissViewMonuments/ground_view/Zurich_10.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Zurich_10.png"
+  },
+  {
+    "id": "361",
+    "ground_view": "data/SwissViewMonuments/ground_view/Zurich_11.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Zurich_11.png"
+  },
+  {
+    "id": "362",
+    "ground_view": "data/SwissViewMonuments/ground_view/Zurich_12.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Zurich_12.png"
+  },
+  {
+    "id": "363",
+    "ground_view": "data/SwissViewMonuments/ground_view/Zurich_13.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Zurich_13.png"
+  },
+  {
+    "id": "364",
+    "ground_view": "data/SwissViewMonuments/ground_view/Zurich_14.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Zurich_14.png"
+  },
+  {
+    "id": "365",
+    "ground_view": "data/SwissViewMonuments/ground_view/Zurich_15.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Zurich_15.png"
+  },
+  {
+    "id": "366",
+    "ground_view": "data/SwissViewMonuments/ground_view/Zurich_16.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Zurich_16.png"
+  },
+  {
+    "id": "367",
+    "ground_view": "data/SwissViewMonuments/ground_view/Zurich_17.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Zurich_17.png"
+  },
+  {
+    "id": "368",
+    "ground_view": "data/SwissViewMonuments/ground_view/Zurich_18.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Zurich_18.png"
+  },
+  {
+    "id": "369",
+    "ground_view": "data/SwissViewMonuments/ground_view/Zurich_19.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Zurich_19.png"
+  },
+  {
+    "id": "370",
+    "ground_view": "data/SwissViewMonuments/ground_view/Zurich_20.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Zurich_20.png"
+  },
+  {
+    "id": "371",
+    "ground_view": "data/SwissViewMonuments/ground_view/Zurich_21.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Zurich_21.png"
+  },
+  {
+    "id": "372",
+    "ground_view": "data/SwissViewMonuments/ground_view/Zurich_22.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Zurich_22.png"
+  },
+  {
+    "id": "373",
+    "ground_view": "data/SwissViewMonuments/ground_view/Zurich_23.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Zurich_23.png"
+  },
+  {
+    "id": "374",
+    "ground_view": "data/SwissViewMonuments/ground_view/Zurich_24.jpg",
+    "aerial_view": "data/SwissViewMonuments/aerial_view/Zurich_24.png"
+  }
+]

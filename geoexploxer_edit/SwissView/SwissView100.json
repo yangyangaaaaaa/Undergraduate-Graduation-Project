@@ -1,0 +1,802 @@
+[
+    {
+        "id": "00",
+        "aerial_view": "data/SwissView100/swisstopo_00.jpg",
+        "LV95_coordinates": [
+            2717,
+            1095
+        ]
+    },
+    {
+        "id": "01",
+        "aerial_view": "data/SwissView100/swisstopo_01.jpg",
+        "LV95_coordinates": [
+            2701,
+            1212
+        ]
+    },
+    {
+        "id": "02",
+        "aerial_view": "data/SwissView100/swisstopo_02.jpg",
+        "LV95_coordinates": [
+            2708,
+            1214
+        ]
+    },
+    {
+        "id": "03",
+        "aerial_view": "data/SwissView100/swisstopo_03.jpg",
+        "LV95_coordinates": [
+            2709,
+            1241
+        ]
+    },
+    {
+        "id": "04",
+        "aerial_view": "data/SwissView100/swisstopo_04.jpg",
+        "LV95_coordinates": [
+            2713,
+            1239
+        ]
+    },
+    {
+        "id": "05",
+        "aerial_view": "data/SwissView100/swisstopo_05.jpg",
+        "LV95_coordinates": [
+            2728,
+            1119
+        ]
+    },
+    {
+        "id": "06",
+        "aerial_view": "data/SwissView100/swisstopo_06.jpg",
+        "LV95_coordinates": [
+            2635,
+            1161
+        ]
+    },
+    {
+        "id": "07",
+        "aerial_view": "data/SwissView100/swisstopo_07.jpg",
+        "LV95_coordinates": [
+            2729,
+            1213
+        ]
+    },
+    {
+        "id": "08",
+        "aerial_view": "data/SwissView100/swisstopo_08.jpg",
+        "LV95_coordinates": [
+            2731,
+            1197
+        ]
+    },
+    {
+        "id": "09",
+        "aerial_view": "data/SwissView100/swisstopo_09.jpg",
+        "LV95_coordinates": [
+            2732,
+            1216
+        ]
+    },
+    {
+        "id": "10",
+        "aerial_view": "data/SwissView100/swisstopo_10.jpg",
+        "LV95_coordinates": [
+            2734,
+            1237
+        ]
+    },
+    {
+        "id": "11",
+        "aerial_view": "data/SwissView100/swisstopo_11.jpg",
+        "LV95_coordinates": [
+            2736,
+            1153
+        ]
+    },
+    {
+        "id": "12",
+        "aerial_view": "data/SwissView100/swisstopo_12.jpg",
+        "LV95_coordinates": [
+            2749,
+            1155
+        ]
+    },
+    {
+        "id": "13",
+        "aerial_view": "data/SwissView100/swisstopo_13.jpg",
+        "LV95_coordinates": [
+            2749,
+            1163
+        ]
+    },
+    {
+        "id": "14",
+        "aerial_view": "data/SwissView100/swisstopo_14.jpg",
+        "LV95_coordinates": [
+            2749,
+            1184
+        ]
+    },
+    {
+        "id": "15",
+        "aerial_view": "data/SwissView100/swisstopo_15.jpg",
+        "LV95_coordinates": [
+            2755,
+            1143
+        ]
+    },
+    {
+        "id": "16",
+        "aerial_view": "data/SwissView100/swisstopo_16.jpg",
+        "LV95_coordinates": [
+            2756,
+            1202
+        ]
+    },
+    {
+        "id": "17",
+        "aerial_view": "data/SwissView100/swisstopo_17.jpg",
+        "LV95_coordinates": [
+            2759,
+            1248
+        ]
+    },
+    {
+        "id": "18",
+        "aerial_view": "data/SwissView100/swisstopo_18.jpg",
+        "LV95_coordinates": [
+            2759,
+            1256
+        ]
+    },
+    {
+        "id": "19",
+        "aerial_view": "data/SwissView100/swisstopo_19.jpg",
+        "LV95_coordinates": [
+            2761,
+            1182
+        ]
+    },
+    {
+        "id": "20",
+        "aerial_view": "data/SwissView100/swisstopo_20.jpg",
+        "LV95_coordinates": [
+            2763,
+            1220
+        ]
+    },
+    {
+        "id": "21",
+        "aerial_view": "data/SwissView100/swisstopo_21.jpg",
+        "LV95_coordinates": [
+            2769,
+            1146
+        ]
+    },
+    {
+        "id": "22",
+        "aerial_view": "data/SwissView100/swisstopo_22.jpg",
+        "LV95_coordinates": [
+            2772,
+            1170
+        ]
+    },
+    {
+        "id": "23",
+        "aerial_view": "data/SwissView100/swisstopo_23.jpg",
+        "LV95_coordinates": [
+            2775,
+            1201
+        ]
+    },
+    {
+        "id": "24",
+        "aerial_view": "data/SwissView100/swisstopo_24.jpg",
+        "LV95_coordinates": [
+            2775,
+            1208
+        ]
+    },
+    {
+        "id": "25",
+        "aerial_view": "data/SwissView100/swisstopo_25.jpg",
+        "LV95_coordinates": [
+            2776,
+            1168
+        ]
+    },
+    {
+        "id": "26",
+        "aerial_view": "data/SwissView100/swisstopo_26.jpg",
+        "LV95_coordinates": [
+            2610,
+            1109
+        ]
+    },
+    {
+        "id": "27",
+        "aerial_view": "data/SwissView100/swisstopo_27.jpg",
+        "LV95_coordinates": [
+            2782,
+            1147
+        ]
+    },
+    {
+        "id": "28",
+        "aerial_view": "data/SwissView100/swisstopo_28.jpg",
+        "LV95_coordinates": [
+            2804,
+            1180
+        ]
+    },
+    {
+        "id": "29",
+        "aerial_view": "data/SwissView100/swisstopo_29.jpg",
+        "LV95_coordinates": [
+            2816,
+            1167
+        ]
+    },
+    {
+        "id": "30",
+        "aerial_view": "data/SwissView100/swisstopo_30.jpg",
+        "LV95_coordinates": [
+            2821,
+            1207
+        ]
+    },
+    {
+        "id": "31",
+        "aerial_view": "data/SwissView100/swisstopo_31.jpg",
+        "LV95_coordinates": [
+            2652,
+            1201
+        ]
+    },
+    {
+        "id": "32",
+        "aerial_view": "data/SwissView100/swisstopo_32.jpg",
+        "LV95_coordinates": [
+            2503,
+            1123
+        ]
+    },
+    {
+        "id": "33",
+        "aerial_view": "data/SwissView100/swisstopo_33.jpg",
+        "LV95_coordinates": [
+            2511,
+            1140
+        ]
+    },
+    {
+        "id": "34",
+        "aerial_view": "data/SwissView100/swisstopo_34.jpg",
+        "LV95_coordinates": [
+            2531,
+            1151
+        ]
+    },
+    {
+        "id": "35",
+        "aerial_view": "data/SwissView100/swisstopo_35.jpg",
+        "LV95_coordinates": [
+            2543,
+            1194
+        ]
+    },
+    {
+        "id": "36",
+        "aerial_view": "data/SwissView100/swisstopo_36.jpg",
+        "LV95_coordinates": [
+            2546,
+            1194
+        ]
+    },
+    {
+        "id": "37",
+        "aerial_view": "data/SwissView100/swisstopo_37.jpg",
+        "LV95_coordinates": [
+            2556,
+            1210
+        ]
+    },
+    {
+        "id": "38",
+        "aerial_view": "data/SwissView100/swisstopo_38.jpg",
+        "LV95_coordinates": [
+            2567,
+            1178
+        ]
+    },
+    {
+        "id": "39",
+        "aerial_view": "data/SwissView100/swisstopo_39.jpg",
+        "LV95_coordinates": [
+            2572,
+            1184
+        ]
+    },
+    {
+        "id": "40",
+        "aerial_view": "data/SwissView100/swisstopo_40.jpg",
+        "LV95_coordinates": [
+            2576,
+            1115
+        ]
+    },
+    {
+        "id": "41",
+        "aerial_view": "data/SwissView100/swisstopo_41.jpg",
+        "LV95_coordinates": [
+            2577,
+            1248
+        ]
+    },
+    {
+        "id": "42",
+        "aerial_view": "data/SwissView100/swisstopo_42.jpg",
+        "LV95_coordinates": [
+            2578,
+            1180
+        ]
+    },
+    {
+        "id": "43",
+        "aerial_view": "data/SwissView100/swisstopo_43.jpg",
+        "LV95_coordinates": [
+            2716,
+            1095
+        ]
+    },
+    {
+        "id": "44",
+        "aerial_view": "data/SwissView100/swisstopo_44.jpg",
+        "LV95_coordinates": [
+            2579,
+            1125
+        ]
+    },
+    {
+        "id": "45",
+        "aerial_view": "data/SwissView100/swisstopo_45.jpg",
+        "LV95_coordinates": [
+            2583,
+            1126
+        ]
+    },
+    {
+        "id": "46",
+        "aerial_view": "data/SwissView100/swisstopo_46.jpg",
+        "LV95_coordinates": [
+            2587,
+            1168
+        ]
+    },
+    {
+        "id": "47",
+        "aerial_view": "data/SwissView100/swisstopo_47.jpg",
+        "LV95_coordinates": [
+            2588,
+            1241
+        ]
+    },
+    {
+        "id": "48",
+        "aerial_view": "data/SwissView100/swisstopo_48.jpg",
+        "LV95_coordinates": [
+            2588,
+            1249
+        ]
+    },
+    {
+        "id": "49",
+        "aerial_view": "data/SwissView100/swisstopo_49.jpg",
+        "LV95_coordinates": [
+            2589,
+            1133
+        ]
+    },
+    {
+        "id": "50",
+        "aerial_view": "data/SwissView100/swisstopo_50.jpg",
+        "LV95_coordinates": [
+            2605,
+            1105
+        ]
+    },
+    {
+        "id": "51",
+        "aerial_view": "data/SwissView100/swisstopo_51.jpg",
+        "LV95_coordinates": [
+            2606,
+            1111
+        ]
+    },
+    {
+        "id": "52",
+        "aerial_view": "data/SwissView100/swisstopo_52.jpg",
+        "LV95_coordinates": [
+            2606,
+            1120
+        ]
+    },
+    {
+        "id": "53",
+        "aerial_view": "data/SwissView100/swisstopo_53.jpg",
+        "LV95_coordinates": [
+            2608,
+            1098
+        ]
+    },
+    {
+        "id": "54",
+        "aerial_view": "data/SwissView100/swisstopo_54.jpg",
+        "LV95_coordinates": [
+            2620,
+            1090
+        ]
+    },
+    {
+        "id": "55",
+        "aerial_view": "data/SwissView100/swisstopo_55.jpg",
+        "LV95_coordinates": [
+            2622,
+            1092
+        ]
+    },
+    {
+        "id": "56",
+        "aerial_view": "data/SwissView100/swisstopo_56.jpg",
+        "LV95_coordinates": [
+            2628,
+            1125
+        ]
+    },
+    {
+        "id": "57",
+        "aerial_view": "data/SwissView100/swisstopo_57.jpg",
+        "LV95_coordinates": [
+            2634,
+            1143
+        ]
+    },
+    {
+        "id": "58",
+        "aerial_view": "data/SwissView100/swisstopo_58.jpg",
+        "LV95_coordinates": [
+            2670,
+            1166
+        ]
+    },
+    {
+        "id": "59",
+        "aerial_view": "data/SwissView100/swisstopo_59.jpg",
+        "LV95_coordinates": [
+            2649,
+            1114
+        ]
+    },
+    {
+        "id": "60",
+        "aerial_view": "data/SwissView100/swisstopo_60.jpg",
+        "LV95_coordinates": [
+            2668,
+            1154
+        ]
+    },
+    {
+        "id": "61",
+        "aerial_view": "data/SwissView100/swisstopo_61.jpg",
+        "LV95_coordinates": [
+            2581,
+            1220
+        ]
+    },
+    {
+        "id": "62",
+        "aerial_view": "data/SwissView100/swisstopo_62.jpg",
+        "LV95_coordinates": [
+            2587,
+            1195
+        ]
+    },
+    {
+        "id": "63",
+        "aerial_view": "data/SwissView100/swisstopo_63.jpg",
+        "LV95_coordinates": [
+            2592,
+            1199
+        ]
+    },
+    {
+        "id": "64",
+        "aerial_view": "data/SwissView100/swisstopo_64.jpg",
+        "LV95_coordinates": [
+            2592,
+            1230
+        ]
+    },
+    {
+        "id": "65",
+        "aerial_view": "data/SwissView100/swisstopo_65.jpg",
+        "LV95_coordinates": [
+            2594,
+            1184
+        ]
+    },
+    {
+        "id": "66",
+        "aerial_view": "data/SwissView100/swisstopo_66.jpg",
+        "LV95_coordinates": [
+            2610,
+            1237
+        ]
+    },
+    {
+        "id": "67",
+        "aerial_view": "data/SwissView100/swisstopo_67.jpg",
+        "LV95_coordinates": [
+            2611,
+            1242
+        ]
+    },
+    {
+        "id": "68",
+        "aerial_view": "data/SwissView100/swisstopo_68.jpg",
+        "LV95_coordinates": [
+            2615,
+            1258
+        ]
+    },
+    {
+        "id": "69",
+        "aerial_view": "data/SwissView100/swisstopo_69.jpg",
+        "LV95_coordinates": [
+            2618,
+            1191
+        ]
+    },
+    {
+        "id": "70",
+        "aerial_view": "data/SwissView100/swisstopo_70.jpg",
+        "LV95_coordinates": [
+            2621,
+            1207
+        ]
+    },
+    {
+        "id": "71",
+        "aerial_view": "data/SwissView100/swisstopo_71.jpg",
+        "LV95_coordinates": [
+            2622,
+            1190
+        ]
+    },
+    {
+        "id": "72",
+        "aerial_view": "data/SwissView100/swisstopo_72.jpg",
+        "LV95_coordinates": [
+            2622,
+            1262
+        ]
+    },
+    {
+        "id": "73",
+        "aerial_view": "data/SwissView100/swisstopo_73.jpg",
+        "LV95_coordinates": [
+            2623,
+            1197
+        ]
+    },
+    {
+        "id": "74",
+        "aerial_view": "data/SwissView100/swisstopo_74.jpg",
+        "LV95_coordinates": [
+            2626,
+            1255
+        ]
+    },
+    {
+        "id": "75",
+        "aerial_view": "data/SwissView100/swisstopo_75.jpg",
+        "LV95_coordinates": [
+            2618,
+            1171
+        ]
+    },
+    {
+        "id": "76",
+        "aerial_view": "data/SwissView100/swisstopo_76.jpg",
+        "LV95_coordinates": [
+            2632,
+            1234
+        ]
+    },
+    {
+        "id": "77",
+        "aerial_view": "data/SwissView100/swisstopo_77.jpg",
+        "LV95_coordinates": [
+            2641,
+            1258
+        ]
+    },
+    {
+        "id": "78",
+        "aerial_view": "data/SwissView100/swisstopo_78.jpg",
+        "LV95_coordinates": [
+            2681,
+            1162
+        ]
+    },
+    {
+        "id": "79",
+        "aerial_view": "data/SwissView100/swisstopo_79.jpg",
+        "LV95_coordinates": [
+            2660,
+            1272
+        ]
+    },
+    {
+        "id": "80",
+        "aerial_view": "data/SwissView100/swisstopo_80.jpg",
+        "LV95_coordinates": [
+            2663,
+            1251
+        ]
+    },
+    {
+        "id": "81",
+        "aerial_view": "data/SwissView100/swisstopo_81.jpg",
+        "LV95_coordinates": [
+            2664,
+            1222
+        ]
+    },
+    {
+        "id": "82",
+        "aerial_view": "data/SwissView100/swisstopo_82.jpg",
+        "LV95_coordinates": [
+            2665,
+            1258
+        ]
+    },
+    {
+        "id": "83",
+        "aerial_view": "data/SwissView100/swisstopo_83.jpg",
+        "LV95_coordinates": [
+            2668,
+            1254
+        ]
+    },
+    {
+        "id": "84",
+        "aerial_view": "data/SwissView100/swisstopo_84.jpg",
+        "LV95_coordinates": [
+            2691,
+            1110
+        ]
+    },
+    {
+        "id": "85",
+        "aerial_view": "data/SwissView100/swisstopo_85.jpg",
+        "LV95_coordinates": [
+            2622,
+            1150
+        ]
+    },
+    {
+        "id": "86",
+        "aerial_view": "data/SwissView100/swisstopo_86.jpg",
+        "LV95_coordinates": [
+            2604,
+            1163
+        ]
+    },
+    {
+        "id": "87",
+        "aerial_view": "data/SwissView100/swisstopo_87.jpg",
+        "LV95_coordinates": [
+            2636,
+            1160
+        ]
+    },
+    {
+        "id": "88",
+        "aerial_view": "data/SwissView100/swisstopo_88.jpg",
+        "LV95_coordinates": [
+            2706,
+            1143
+        ]
+    },
+    {
+        "id": "89",
+        "aerial_view": "data/SwissView100/swisstopo_89.jpg",
+        "LV95_coordinates": [
+            2709,
+            1120
+        ]
+    },
+    {
+        "id": "90",
+        "aerial_view": "data/SwissView100/swisstopo_90.jpg",
+        "LV95_coordinates": [
+            2710,
+            1114
+        ]
+    },
+    {
+        "id": "91",
+        "aerial_view": "data/SwissView100/swisstopo_91.jpg",
+        "LV95_coordinates": [
+            2710,
+            1144
+        ]
+    },
+    {
+        "id": "92",
+        "aerial_view": "data/SwissView100/swisstopo_92.jpg",
+        "LV95_coordinates": [
+            2712,
+            1156
+        ]
+    },
+    {
+        "id": "93",
+        "aerial_view": "data/SwissView100/swisstopo_93.jpg",
+        "LV95_coordinates": [
+            2714,
+            1150
+        ]
+    },
+    {
+        "id": "94",
+        "aerial_view": "data/SwissView100/swisstopo_94.jpg",
+        "LV95_coordinates": [
+            2492,
+            1117
+        ]
+    },
+    {
+        "id": "95",
+        "aerial_view": "data/SwissView100/swisstopo_95.jpg",
+        "LV95_coordinates": [
+            2718,
+            1091
+        ]
+    },
+    {
+        "id": "96",
+        "aerial_view": "data/SwissView100/swisstopo_96.jpg",
+        "LV95_coordinates": [
+            2608,
+            1157
+        ]
+    },
+    {
+        "id": "97",
+        "aerial_view": "data/SwissView100/swisstopo_97.jpg",
+        "LV95_coordinates": [
+            2673,
+            1255
+        ]
+    },
+    {
+        "id": "98",
+        "aerial_view": "data/SwissView100/swisstopo_98.jpg",
+        "LV95_coordinates": [
+            2621,
+            1149
+        ]
+    },
+    {
+        "id": "99",
+        "aerial_view": "data/SwissView100/swisstopo_99.jpg",
+        "LV95_coordinates": [
+            2694,
+            1203
+        ]
+    }
+]
