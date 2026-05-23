@@ -1,0 +1,29 @@
+{
+  "series": "appendix_compare_20260519",
+  "experiment": "anchor0624_dataset_param_appendix_seed321_480k",
+  "purpose": "Appendix-ready comparison experiments for GeoExplorer-anchor0624: training dataset comparison, parameter sensitivity, seed stability, and budget sensitivity.",
+  "language": "zh-CN",
+  "algorithm_base": "GeoExplorer-anchor0624",
+  "primary_protocol": {
+    "grid": "5x5",
+    "budget": 10,
+    "distances": [4, 5, 6, 7, 8],
+    "policy": "greedy_argmax",
+    "task_bank_seed": 20260519
+  },
+  "training_defaults": {
+    "target_steps": 480000,
+    "seed": 321,
+    "train_dataset": "MASA+MM-GAG",
+    "gate_mode": "linear",
+    "gate_floor": 0.405,
+    "pbrs_coef": 0.10,
+    "entropy_coef": 0.005,
+    "val_distances": [7, 8]
+  },
+  "notes": [
+    "Historical April results are not mixed into the final appendix tables; they are only used as candidate-search evidence.",
+    "All formal rows should be trained/evaluated through the same orchestrator and fixed evaluator.",
+    "Training-domain benchmarks are retained, but training-dataset claims should emphasize transfer means and per-benchmark evidence."
+  ]
+}

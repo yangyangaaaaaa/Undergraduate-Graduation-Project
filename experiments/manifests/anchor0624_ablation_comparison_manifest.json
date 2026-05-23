@@ -1,0 +1,98 @@
+{
+  "round_type": "anchor0624_full_factorial_ablation_seed321_480k_shared_eval",
+  "created_at": "2026-05-15T17:32:00+08:00",
+  "purpose": "Paper-grade factorial ablation for the current best shared-MASA GeoExplorer variant at 0.6240 SR. This is not only leave-one-out: it enumerates every combination of the four controlled mechanisms so that main effects and interactions can both be inspected.",
+  "paper_protocol_anchor": {
+    "source": "GeoExplorer paper snippets and local shared-MASA protocol",
+    "core_setting": "5x5 grid, B=10, C={4,5,6,7,8}, greedy success ratio by distance",
+    "original_method": "GeoExplorer combines goal-oriented distance reward with curiosity-driven intrinsic reward based on action-state dynamics prediction error.",
+    "baseline_reference": "GOMAA-Geo uses action modeling plus distance-based extrinsic rewards; GeoExplorer adds goal-agnostic curiosity reward."
+  },
+  "fixed_controls": [
+    "Training data grid: canonical MASA+MM-GAG train grid used by the current 0.624 line.",
+    "Seed: 321 for every ablation branch.",
+    "RL budget: 480000 timesteps for every trained branch.",
+    "Hardware policy: use GPU0 and GPU1 only.",
+    "PPO controls: target_kl=0.02, eps_clip=0.20, lr_actor=1e-4, lr_critic=1e-4.",
+    "Evaluation: strict shared MASA task bundle, 250 total tasks, C={4,5,6,7,8}, B=10, greedy policy.",
+    "No top-k promotion or selection before shared evaluation; every branch is evaluated.",
+    "The g0_p0_e0_v0 branch is a same-data no-added-mechanism control inside this codebase, not a separate official-paper GeoExplorer reimplementation."
+  ],
+  "incumbent": {
+    "variant": "pbrs010_gate_a0405_ent005_val78_seed321_480000",
+    "shared_masa_overall_sr": 0.624,
+    "distance_sr": {
+      "d4": 0.34,
+      "d5": 0.32,
+      "d6": 0.64,
+      "d7": 0.86,
+      "d8": 0.96
+    },
+    "confirmed_replicates": [
+      "after0624 pbrs010_gate_a0405_ent005_val78_ctrl_seed321_480000",
+      "nextfamily anchor_val78_seed321_480000",
+      "anchorpreserve anchor_val78_control_seed321_480000"
+    ]
+  },
+  "factor_definition": {
+    "G": {
+      "name": "distance gate on intrinsic reward",
+      "off": "GEOEXPLORER_GATE_MODE=none, gate_floor=1.0",
+      "on": "GEOEXPLORER_GATE_MODE=linear, gate_floor=0.405"
+    },
+    "P": {
+      "name": "potential-based reward shaping",
+      "off": "GEOEXPLORER_PBRS_COEF=0.0",
+      "on": "GEOEXPLORER_PBRS_COEF=0.10"
+    },
+    "E": {
+      "name": "low entropy coefficient",
+      "off": "GEOEXPLORER_ENT_COEF=0.010",
+      "on": "GEOEXPLORER_ENT_COEF=0.005"
+    },
+    "V": {
+      "name": "far-distance validation selection",
+      "off": "GEOEXPLORER_VAL_DISTS=4,5,6,7,8",
+      "on": "GEOEXPLORER_VAL_DISTS=7,8"
+    }
+  },
+  "reward_formula_under_test": {
+    "implementation": "reward_total = reward_ex + factor * reward_in * gate_weight(dist) + pbrs_bonus(prev_dist, dist) + finish_bonus(dist)",
+    "notes": [
+      "finish_bonus is fixed off in all factorial branches.",
+      "factor remains 1.0 in all factorial branches.",
+      "G and P affect the reward function directly; E affects PPO regularization; V affects checkpoint selection during training."
+    ]
+  },
+  "branches": [
+    "g0_p0_e0_v0",
+    "g1_p0_e0_v0",
+    "g0_p1_e0_v0",
+    "g1_p1_e0_v0",
+    "g0_p0_e1_v0",
+    "g1_p0_e1_v0",
+    "g0_p1_e1_v0",
+    "g1_p1_e1_v0",
+    "g0_p0_e0_v1",
+    "g1_p0_e0_v1",
+    "g0_p1_e0_v1",
+    "g1_p1_e0_v1",
+    "g0_p0_e1_v1",
+    "g1_p0_e1_v1",
+    "g0_p1_e1_v1",
+    "g1_p1_e1_v1"
+  ],
+  "interpretation_plan": [
+    "Primary table: all 16 combinations sorted by shared MASA SR.",
+    "Core reward-factor subtable: compare G/P 2x2 cells under E=1,V=1 to isolate reward-mechanism contributions near the anchor.",
+    "Main effects: compute mean SR when each factor is on minus mean SR when it is off.",
+    "Two-way interactions: inspect whether G and P are complementary, redundant, or harmful together.",
+    "Distance-bucket interpretation: report not just overall SR but d4-d8, because the anchor's known strength is d7/d8."
+  ],
+  "expected_outputs": {
+    "remote_status": "/root/geoexplorer/ab_experiments/algo_ablation_anchor0624_20260515/anchor_val78_component_ablation_seed321_480k_shared/monitoring/anchor0624_ablation_status_latest.json",
+    "shared_eval_summary": "/root/geoexplorer/analysis/pipeline_20260515_anchor0624_ablation_shared_compare/anchor0624_ablation_shared_summary.md",
+    "shared_eval_table": "/root/geoexplorer/analysis/pipeline_20260515_anchor0624_ablation_shared_compare/anchor0624_ablation_shared_table.csv",
+    "shared_eval_aggregate": "/root/geoexplorer/analysis/pipeline_20260515_anchor0624_ablation_shared_compare/anchor0624_ablation_shared_aggregate.json"
+  }
+}

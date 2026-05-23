@@ -1,0 +1,66 @@
+# Python/runtime caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local environments
+.venv/
+.venv*/
+venv/
+env/
+conda/
+
+# Training checkpoints and model weights
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+checkpoint/
+checkpoints/
+results/checkpoint/
+
+# Large generated arrays and raw datasets
+*.npy
+*.npz
+*.h5
+*.hdf5
+data/raw/
+data/*/raw/
+staging/
+tmp/
+temp/
+
+# Logs and transient run state
+*.log
+*.pid
+nohup.out
+wandb/
+runs/
+tensorboard/
+
+# Archives generated during transfer or packaging
+*.tar
+*.tar.gz
+*.zip
+*.7z
+
+# Secrets and local credentials
+.env
+.env.*
+*password*
+*token*
+*secret*
+*.pem
+*.key
+
+# Office temporary files
+~$*
+
+# Local assistant/workflow scratch files
+.codex_tmp/
+.claude_resources.json
+progress.md
+task_plan.md
+findings.md

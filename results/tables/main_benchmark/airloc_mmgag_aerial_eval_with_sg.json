@@ -1,0 +1,74 @@
+{
+  "method": "AiRLoc",
+  "dataset": "mmgag_aerial",
+  "benchmark": "mmgag_aerial",
+  "protocol": {
+    "grid": "5x5",
+    "budget": 10,
+    "distance_buckets": [
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "goal_mode": "aerial",
+    "policy_mode": "greedy",
+    "seed": 42,
+    "task_bank_seed": 20260516,
+    "train_source": "existing AiRLoc formal_seed42_e200 model trained on masa_filt / aerial-goal source; MM-GAG fixed tasks are used only for evaluation",
+    "note": "AiRLoc is evaluated only for aerial-image target mode because the original method has no ground/text goal encoder."
+  },
+  "overall": {
+    "num_cases": 1175,
+    "success_ratio": 0.4604255319148936,
+    "sg_mean": 1.462127659574468
+  },
+  "per_distance": [
+    {
+      "distance": 4,
+      "num_cases": 235,
+      "success_count": 133,
+      "success_ratio": 0.5659574468085107,
+      "sg_mean": 1.097872340425532,
+      "mean_steps": 7.221276595744681,
+      "mean_iou": 0.5659574468085107
+    },
+    {
+      "distance": 5,
+      "num_cases": 235,
+      "success_count": 115,
+      "success_ratio": 0.48936170212765956,
+      "sg_mean": 1.297872340425532,
+      "mean_steps": 7.829787234042553,
+      "mean_iou": 0.48936170212765956
+    },
+    {
+      "distance": 6,
+      "num_cases": 235,
+      "success_count": 115,
+      "success_ratio": 0.48936170212765956,
+      "sg_mean": 1.3063829787234043,
+      "mean_steps": 7.876595744680851,
+      "mean_iou": 0.48936170212765956
+    },
+    {
+      "distance": 7,
+      "num_cases": 235,
+      "success_count": 103,
+      "success_ratio": 0.43829787234042555,
+      "sg_mean": 1.5361702127659576,
+      "mean_steps": 8.23404255319149,
+      "mean_iou": 0.43829787234042555
+    },
+    {
+      "distance": 8,
+      "num_cases": 235,
+      "success_count": 75,
+      "success_ratio": 0.3191489361702128,
+      "sg_mean": 2.072340425531915,
+      "mean_steps": 8.782978723404256,
+      "mean_iou": 0.3191489361702128
+    }
+  ]
+}

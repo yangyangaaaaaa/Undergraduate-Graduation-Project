@@ -1,0 +1,113 @@
+[
+  {
+    "file": "F:\\bishe\\GeoExplorer\\analysis\\dataset_overview_figures\\manual_redraw_assets\\01_MASA\\MASA_aerial_search_panel_ready_square.png",
+    "relative": "01_MASA/MASA_aerial_search_panel_ready_square.png",
+    "size": [
+      1500,
+      1500
+    ],
+    "source": "F:\\bishe\\GeoExplorer\\analysis\\dataset_overview_figures\\masa_sample.png",
+    "note": "MASA aerial search image cropped square for the right panel."
+  },
+  {
+    "file": "F:\\bishe\\GeoExplorer\\analysis\\dataset_overview_figures\\manual_redraw_assets\\01_MASA\\MASA_aerial_target_patch_row1_col3_panel_ready.png",
+    "relative": "01_MASA/MASA_aerial_target_patch_row1_col3_panel_ready.png",
+    "size": [
+      324,
+      324
+    ],
+    "source": "F:\\bishe\\GeoExplorer\\analysis\\dataset_overview_figures\\masa_sample.png",
+    "note": "Target aerial patch used in the left small image; row=1, col=3 under a 5x5 grid."
+  },
+  {
+    "file": "F:\\bishe\\GeoExplorer\\analysis\\dataset_overview_figures\\manual_redraw_assets\\02_MM-GAG\\MMGAG_ground_target_IMG_1704_panel_ready_square.png",
+    "relative": "02_MM-GAG/MMGAG_ground_target_IMG_1704_panel_ready_square.png",
+    "size": [
+      3024,
+      3024
+    ],
+    "source": "F:\\bishe\\GeoExplorer\\data\\mm_gag\\raw\\gomaa_geo_mm_gag\\ground_images_jpg\\IMG_1704.jpg",
+    "note": "Ground target cue cropped square."
+  },
+  {
+    "file": "F:\\bishe\\GeoExplorer\\analysis\\dataset_overview_figures\\manual_redraw_assets\\02_MM-GAG\\MMGAG_aerial_search_IMG_1704_panel_ready_ratio1p27.png",
+    "relative": "02_MM-GAG/MMGAG_aerial_search_IMG_1704_panel_ready_ratio1p27.png",
+    "size": [
+      2816,
+      2217
+    ],
+    "source": "F:\\bishe\\GeoExplorer\\data\\mm_gag\\raw\\gomaa_geo_mm_gag\\sat_images_patches\\IMG_1704.HEIC\\stitched_image.jpg",
+    "note": "Aerial stitched search image cropped to the wide ratio used in the previous figure."
+  },
+  {
+    "file": "F:\\bishe\\GeoExplorer\\analysis\\dataset_overview_figures\\manual_redraw_assets\\02_MM-GAG\\MMGAG_text_target_cue.txt",
+    "relative": "02_MM-GAG/MMGAG_text_target_cue.txt",
+    "size": null,
+    "source": "F:\\bishe\\GeoExplorer\\data\\mm_gag\\processed\\mmgag_index.csv",
+    "note": "Full real MM-GAG text caption for sample IMG_1704, replacing the earlier illustrative placeholder."
+  },
+  {
+    "file": "F:\\bishe\\GeoExplorer\\analysis\\dataset_overview_figures\\manual_redraw_assets\\02_MM-GAG\\MMGAG_IMG_1704_caption_complete.md",
+    "relative": "02_MM-GAG/MMGAG_IMG_1704_caption_complete.md",
+    "size": null,
+    "source": "F:\\bishe\\GeoExplorer\\data\\mm_gag\\processed\\mmgag_index.csv",
+    "note": "Complete MM-GAG caption metadata for sample IMG_1704, including coordinates and paired image sources."
+  },
+  {
+    "file": "F:\\bishe\\GeoExplorer\\analysis\\dataset_overview_figures\\manual_redraw_assets\\03_SwissView\\SwissView100_aerial_sample_panel_ready_square.png",
+    "relative": "03_SwissView/SwissView100_aerial_sample_panel_ready_square.png",
+    "size": [
+      1500,
+      1500
+    ],
+    "source": "F:\\bishe\\GeoExplorer\\analysis\\dataset_overview_figures\\swissview100_sample.jpg",
+    "note": "Optional SwissView100 aerial sample cropped square."
+  },
+  {
+    "file": "F:\\bishe\\GeoExplorer\\analysis\\dataset_overview_figures\\manual_redraw_assets\\03_SwissView\\SwissViewMonuments_ground_target_Chillon_00_panel_ready_square.png",
+    "relative": "03_SwissView/SwissViewMonuments_ground_target_Chillon_00_panel_ready_square.png",
+    "size": [
+      574,
+      574
+    ],
+    "source": "F:\\bishe\\GeoExplorer\\analysis\\dataset_overview_figures\\swissviewmonuments_ground_cilioncastle_00.jpg",
+    "note": "SwissViewMonuments ground target cropped square."
+  },
+  {
+    "file": "F:\\bishe\\GeoExplorer\\analysis\\dataset_overview_figures\\manual_redraw_assets\\03_SwissView\\SwissViewMonuments_aerial_search_Chillon_00_panel_ready_square.png",
+    "relative": "03_SwissView/SwissViewMonuments_aerial_search_Chillon_00_panel_ready_square.png",
+    "size": [
+      1500,
+      1500
+    ],
+    "source": "F:\\bishe\\GeoExplorer\\analysis\\dataset_overview_figures\\swissviewmonuments_sample.png",
+    "note": "SwissViewMonuments aerial search image cropped square."
+  },
+  {
+    "file": "F:\\bishe\\GeoExplorer\\analysis\\dataset_overview_figures\\manual_redraw_assets\\04_xBD\\xBD_pre_disaster_target_panel_ready_square.png",
+    "relative": "04_xBD/xBD_pre_disaster_target_panel_ready_square.png",
+    "size": [
+      1024,
+      1024
+    ],
+    "source": "F:\\bishe\\GeoExplorer\\data\\xbd\\raw\\archives\\test_images_labels_targets.tar::test/images/hurricane-harvey_00000003_pre_disaster.png",
+    "note": "Pre-disaster target image used as xBD target cue."
+  },
+  {
+    "file": "F:\\bishe\\GeoExplorer\\analysis\\dataset_overview_figures\\manual_redraw_assets\\04_xBD\\xBD_post_disaster_search_panel_ready_square.png",
+    "relative": "04_xBD/xBD_post_disaster_search_panel_ready_square.png",
+    "size": [
+      1024,
+      1024
+    ],
+    "source": "F:\\bishe\\GeoExplorer\\data\\xbd\\raw\\archives\\test_images_labels_targets.tar::test/images/hurricane-harvey_00000003_post_disaster.png",
+    "note": "Post-disaster search image paired with the pre-disaster target."
+  },
+  {
+    "file": "F:\\bishe\\GeoExplorer\\analysis\\dataset_overview_figures\\manual_redraw_assets\\04_xBD\\xBD_pair_metadata.json",
+    "relative": "04_xBD/xBD_pair_metadata.json",
+    "size": null,
+    "source": "F:\\bishe\\GeoExplorer\\data\\xbd\\processed\\xbd_index.csv",
+    "note": "Metadata row for the chosen xBD pre/post pair."
+  }
+]

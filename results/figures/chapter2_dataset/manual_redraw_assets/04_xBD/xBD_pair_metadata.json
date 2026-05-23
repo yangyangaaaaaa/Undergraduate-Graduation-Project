@@ -1,0 +1,8 @@
+{
+  "pair_id": "hurricane-harvey_00000003",
+  "disaster": "hurricane-harvey",
+  "archive_role": "test",
+  "archive_path": "F:\\bishe\\GeoExplorer\\data\\xbd\\raw\\archives\\test_images_labels_targets.tar",
+  "pre_member": "test/images/hurricane-harvey_00000003_pre_disaster.png",
+  "post_member": "test/images/hurricane-harvey_00000003_post_disaster.png"
+}

@@ -1,0 +1,86 @@
+{
+  "round_type": "anchor0624_factorial_generalization_eval_seed321_480k",
+  "created_at": "2026-05-16T00:00:00+08:00",
+  "purpose": "Paper-oriented post-ablation evaluation for the completed anchor0624 2^4 factorial checkpoints, plus a paper-aligned external baseline comparison layer. The goal is to separately answer: (1) whether the current anchor0624 method is competitive with original-paper baselines under 5x5/B=10/C={4,5,6,7,8}; and (2) whether the MASA-shared 0.6240 anchor and its ablated variants transfer across domain and goal modality.",
+  "original_paper_alignment": {
+    "matrix_note": "F:/bishe/GeoExplorer/analysis/geoexplorer_paper_experiment_replication_matrix_20260516.md",
+    "core_protocol": "5x5 grid, search budget B=10, distance buckets C={4,5,6,7,8}, greedy/argmax numerical evaluation; stochastic policy only for visualization.",
+    "paper_items_to_cover": [
+      "Table 1 Masa aerial validation",
+      "Table 2 MM-GAG aerial/ground/text generalization",
+      "Table 3 xBD-disaster transfer once processed xBD arrays are available",
+      "Table 4 SwissViewMonuments unseen target generalization",
+      "Table 5 method ablation context, reported separately from our anchor0624 mechanism ablation",
+      "Supplementary SG metric and optional SwissView100 transfer"
+    ],
+    "separation_rule": "External method comparison and anchor0624 mechanism ablation must be interpreted as two evidence layers, not merged into one causal claim."
+  },
+  "source_ablation": {
+    "local_root": "F:/bishe/GeoExplorer/ab_experiments/algo_ablation_anchor0624_20260515/anchor_val78_component_ablation_seed321_480k_shared",
+    "remote_checkpoint_root": "/root/geoexplorer/results/checkpoint/algo_ablation_anchor0624_20260515/masa_plus_mmgag_anchor0624_component_ablation_seed321_480k_gpu01",
+    "shared_masa_summary": "/root/geoexplorer/analysis/pipeline_20260515_anchor0624_ablation_shared_compare/anchor0624_ablation_shared_summary.md",
+    "shared_masa_table": "/root/geoexplorer/analysis/pipeline_20260515_anchor0624_ablation_shared_compare/anchor0624_ablation_shared_table.csv",
+    "shared_masa_aggregate": "/root/geoexplorer/analysis/pipeline_20260515_anchor0624_ablation_shared_compare/anchor0624_ablation_shared_aggregate.json"
+  },
+  "design": {
+    "paper_baseline_compare_layer": {
+      "purpose": "Replicate the original paper's method-comparison style before interpreting our added mechanisms.",
+      "methods_in_current_launcher": [
+        "Random policy on aerial-goal comparable settings",
+        "GOMAA-Geo on aerial/ground/text and SwissViewMonuments settings",
+        "DiT-AGL on aerial-goal comparable settings",
+        "GeoExplorer-anchor0624 on all supported settings"
+      ],
+      "blocked_or_not_applicable": {
+        "PPO policy": "No validated standalone PPO baseline checkpoint/evaluator is available in this local bundle for all requested paper settings.",
+        "AiRLoc": "Existing AiRLoc bundle is unimodal aerial and MASA-layout specific; do not report it on ground/text without a validated adapter.",
+        "xBD Table 3/S3": "Requires remote processed xBD pre/post arrays and a rechecked pre-disaster-goal evaluator path."
+      },
+      "local_supervisor": "monitoring/paper_baseline_compare_supervisor.py",
+      "local_launcher": "monitoring/launch_paper_baseline_compare.py",
+      "local_collector": "monitoring/collect_paper_baseline_compare_status.py",
+      "remote_output_root": "/root/geoexplorer/analysis/pipeline_20260516_paper_baseline_compare"
+    },
+    "checkpoint_panel": "All 16 trained factorial cells, seed 321, 480k timesteps, best-val checkpoint geoexplorer.pt.",
+    "factor_panel": {
+      "G_gate": "distance gate on intrinsic reward, off none/floor=1.0, on linear/floor=0.405",
+      "P_pbrs": "potential-based reward shaping, off coef=0.0, on coef=0.10",
+      "E_low_entropy": "entropy coefficient, off 0.010, on 0.005",
+      "V_val78": "checkpoint selection validation distances, off 4,5,6,7,8, on 7,8"
+    },
+    "benchmark_panel": [
+      "masa_aerial",
+      "mmgag_aerial",
+      "mmgag_ground",
+      "mmgag_text",
+      "swissviewmonuments_aerial_ground"
+    ],
+    "primary_generalization_benchmarks": [
+      "mmgag_aerial",
+      "mmgag_ground",
+      "mmgag_text",
+      "swissviewmonuments_aerial_ground"
+    ],
+    "protocol": "Fixed greedy evaluation with 5x5 grid, B=10, C={4,5,6,7,8}, repeats-per-distance=5, fixed task-bank seed 20260516 for generated non-shared benchmarks.",
+    "blocked_extensions": {
+      "xbd_pre_post": "Blocked because remote processed xBD grids were previously absent: /root/geoexplorer/GeoExplorer/data/xbd/processed/xbd_pre_grid_5.npy and xbd_post_grid_5.npy. Local raw tar archives and prepare_xbd_embeddings.py exist, so this should be a separate data-prep/evaluator-audit stage."
+    }
+  },
+  "analysis_plan": [
+    "Report per-checkpoint metrics on each benchmark plus primary_generalization_mean and all_benchmark_mean.",
+    "Compare the full anchor g1_p1_e1_v1 against same-data control g0_p0_e0_v0 and the best transfer runner-up.",
+    "Compute factorial main effects and two-way interactions for each benchmark and for the primary generalization mean.",
+    "Check whether PBRS or gate improves MASA while hurting MM-GAG ground/text transfer.",
+    "Preserve all per-benchmark JSON outputs so distance-bucket behavior can be inspected later."
+  ],
+  "expected_outputs": {
+    "remote_status": "/root/geoexplorer/ab_experiments/algo_paper_generalization_20260516/anchor0624_factorial_generalization_seed321_480k/monitoring/anchor0624_generalization_status_latest.json",
+    "remote_summary": "/root/geoexplorer/analysis/pipeline_20260516_anchor0624_factorial_generalization/anchor0624_generalization_summary.md",
+    "remote_table": "/root/geoexplorer/analysis/pipeline_20260516_anchor0624_factorial_generalization/anchor0624_generalization_table.csv",
+    "remote_aggregate": "/root/geoexplorer/analysis/pipeline_20260516_anchor0624_factorial_generalization/anchor0624_generalization_aggregate.json",
+    "paper_baseline_remote_status": "/root/geoexplorer/ab_experiments/algo_paper_generalization_20260516/anchor0624_factorial_generalization_seed321_480k/monitoring/paper_baseline_compare_status_latest.json",
+    "paper_baseline_remote_summary": "/root/geoexplorer/analysis/pipeline_20260516_paper_baseline_compare/paper_baseline_compare_summary.md",
+    "paper_baseline_remote_table": "/root/geoexplorer/analysis/pipeline_20260516_paper_baseline_compare/paper_baseline_compare_table.csv",
+    "paper_baseline_remote_aggregate": "/root/geoexplorer/analysis/pipeline_20260516_paper_baseline_compare/paper_baseline_compare_aggregate.json"
+  }
+}

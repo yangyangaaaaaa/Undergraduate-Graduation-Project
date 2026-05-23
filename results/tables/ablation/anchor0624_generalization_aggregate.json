@@ -1,0 +1,1081 @@
+{
+  "generated_at": "2026-05-16T16:06:39+00:00",
+  "series": "algo_paper_generalization_20260516",
+  "experiment": "anchor0624_factorial_generalization_seed321_480k",
+  "source_series": "algo_ablation_anchor0624_20260515",
+  "source_train_experiment": "masa_plus_mmgag_anchor0624_component_ablation_seed321_480k_gpu01",
+  "task_bank_seed": 20260516,
+  "benchmarks": [
+    "masa_aerial",
+    "mmgag_aerial",
+    "mmgag_ground",
+    "mmgag_text",
+    "swissviewmonuments_aerial_ground"
+  ],
+  "primary_generalization_benchmarks": [
+    "mmgag_aerial",
+    "mmgag_ground",
+    "mmgag_text",
+    "swissviewmonuments_aerial_ground"
+  ],
+  "rows": [
+    {
+      "name": "g1_p1_e1_v1_seed321_best_val",
+      "branch": "g1_p1_e1_v1",
+      "role": "full_anchor0624",
+      "factors": {
+        "G_gate": 1,
+        "P_pbrs": 1,
+        "E_low_entropy": 1,
+        "V_val78": 1
+      },
+      "seed": 321,
+      "target_steps": 480000,
+      "checkpoint": "/root/geoexplorer/results/checkpoint/algo_ablation_anchor0624_20260515/masa_plus_mmgag_anchor0624_component_ablation_seed321_480k_gpu01/g1_p1_e1_v1_seed321_t480k/geoexplorer.pt",
+      "metrics": {
+        "masa_aerial": 0.588,
+        "mmgag_aerial": 0.6170212765957447,
+        "mmgag_ground": 0.6391489361702127,
+        "mmgag_text": 0.6246808510638298,
+        "swissviewmonuments_aerial_ground": 0.6035555555555556
+      },
+      "primary_generalization_mean": 0.6211016548463357,
+      "all_benchmark_mean": 0.6144813238770686,
+      "masa_per_distance": {
+        "d4": 0.2,
+        "d5": 0.34,
+        "d6": 0.64,
+        "d7": 0.82,
+        "d8": 0.94
+      }
+    },
+    {
+      "name": "g1_p0_e1_v1_seed321_best_val",
+      "branch": "g1_p0_e1_v1",
+      "role": "factorial_ablation_cell",
+      "factors": {
+        "G_gate": 1,
+        "P_pbrs": 0,
+        "E_low_entropy": 1,
+        "V_val78": 1
+      },
+      "seed": 321,
+      "target_steps": 480000,
+      "checkpoint": "/root/geoexplorer/results/checkpoint/algo_ablation_anchor0624_20260515/masa_plus_mmgag_anchor0624_component_ablation_seed321_480k_gpu01/g1_p0_e1_v1_seed321_t480k/geoexplorer.pt",
+      "metrics": {
+        "masa_aerial": 0.588,
+        "mmgag_aerial": 0.5965957446808511,
+        "mmgag_ground": 0.6119148936170212,
+        "mmgag_text": 0.5948936170212766,
+        "swissviewmonuments_aerial_ground": 0.5551555555555556
+      },
+      "primary_generalization_mean": 0.5896399527186762,
+      "all_benchmark_mean": 0.589311962174941,
+      "masa_per_distance": {
+        "d4": 0.26,
+        "d5": 0.36,
+        "d6": 0.66,
+        "d7": 0.82,
+        "d8": 0.84
+      }
+    },
+    {
+      "name": "g1_p0_e0_v1_seed321_best_val",
+      "branch": "g1_p0_e0_v1",
+      "role": "factorial_ablation_cell",
+      "factors": {
+        "G_gate": 1,
+        "P_pbrs": 0,
+        "E_low_entropy": 0,
+        "V_val78": 1
+      },
+      "seed": 321,
+      "target_steps": 480000,
+      "checkpoint": "/root/geoexplorer/results/checkpoint/algo_ablation_anchor0624_20260515/masa_plus_mmgag_anchor0624_component_ablation_seed321_480k_gpu01/g1_p0_e0_v1_seed321_t480k/geoexplorer.pt",
+      "metrics": {
+        "masa_aerial": 0.656,
+        "mmgag_aerial": 0.6127659574468085,
+        "mmgag_ground": 0.588936170212766,
+        "mmgag_text": 0.5974468085106382,
+        "swissviewmonuments_aerial_ground": 0.5469
+      },
+      "primary_generalization_mean": 0.5865122340425531,
+      "all_benchmark_mean": 0.6004097872340426,
+      "masa_per_distance": {
+        "d4": 0.26,
+        "d5": 0.52,
+        "d6": 0.74,
+        "d7": 0.88,
+        "d8": 0.88
+      }
+    },
+    {
+      "name": "g1_p1_e0_v0_seed321_best_val",
+      "branch": "g1_p1_e0_v0",
+      "role": "factorial_ablation_cell",
+      "factors": {
+        "G_gate": 1,
+        "P_pbrs": 1,
+        "E_low_entropy": 0,
+        "V_val78": 0
+      },
+      "seed": 321,
+      "target_steps": 480000,
+      "checkpoint": "/root/geoexplorer/results/checkpoint/algo_ablation_anchor0624_20260515/masa_plus_mmgag_anchor0624_component_ablation_seed321_480k_gpu01/g1_p1_e0_v0_seed321_t480k/geoexplorer.pt",
+      "metrics": {
+        "masa_aerial": 0.584,
+        "mmgag_aerial": 0.603404255319149,
+        "mmgag_ground": 0.6059574468085106,
+        "mmgag_text": 0.56,
+        "swissviewmonuments_aerial_ground": 0.5546222222222223
+      },
+      "primary_generalization_mean": 0.5809959810874705,
+      "all_benchmark_mean": 0.5815967848699763,
+      "masa_per_distance": {
+        "d4": 0.22,
+        "d5": 0.4,
+        "d6": 0.68,
+        "d7": 0.74,
+        "d8": 0.88
+      }
+    },
+    {
+      "name": "g0_p0_e1_v1_seed321_best_val",
+      "branch": "g0_p0_e1_v1",
+      "role": "factorial_ablation_cell",
+      "factors": {
+        "G_gate": 0,
+        "P_pbrs": 0,
+        "E_low_entropy": 1,
+        "V_val78": 1
+      },
+      "seed": 321,
+      "target_steps": 480000,
+      "checkpoint": "/root/geoexplorer/results/checkpoint/algo_ablation_anchor0624_20260515/masa_plus_mmgag_anchor0624_component_ablation_seed321_480k_gpu01/g0_p0_e1_v1_seed321_t480k/geoexplorer.pt",
+      "metrics": {
+        "masa_aerial": 0.684,
+        "mmgag_aerial": 0.5863829787234043,
+        "mmgag_ground": 0.5940425531914894,
+        "mmgag_text": 0.5497872340425531,
+        "swissviewmonuments_aerial_ground": 0.5574777777777777
+      },
+      "primary_generalization_mean": 0.5719226359338061,
+      "all_benchmark_mean": 0.594338108747045,
+      "masa_per_distance": {
+        "d4": 0.32,
+        "d5": 0.46,
+        "d6": 0.8,
+        "d7": 0.86,
+        "d8": 0.98
+      }
+    },
+    {
+      "name": "g0_p0_e0_v0_seed321_best_val",
+      "branch": "g0_p0_e0_v0",
+      "role": "same_data_no_added_mechanism_control",
+      "factors": {
+        "G_gate": 0,
+        "P_pbrs": 0,
+        "E_low_entropy": 0,
+        "V_val78": 0
+      },
+      "seed": 321,
+      "target_steps": 480000,
+      "checkpoint": "/root/geoexplorer/results/checkpoint/algo_ablation_anchor0624_20260515/masa_plus_mmgag_anchor0624_component_ablation_seed321_480k_gpu01/g0_p0_e0_v0_seed321_t480k/geoexplorer.pt",
+      "metrics": {
+        "masa_aerial": 0.548,
+        "mmgag_aerial": 0.5651063829787234,
+        "mmgag_ground": 0.571063829787234,
+        "mmgag_text": 0.5387234042553192,
+        "swissviewmonuments_aerial_ground": 0.5430555555555555
+      },
+      "primary_generalization_mean": 0.5544872931442081,
+      "all_benchmark_mean": 0.5531898345153665,
+      "masa_per_distance": {
+        "d4": 0.16,
+        "d5": 0.36,
+        "d6": 0.62,
+        "d7": 0.76,
+        "d8": 0.84
+      }
+    },
+    {
+      "name": "g1_p0_e0_v0_seed321_best_val",
+      "branch": "g1_p0_e0_v0",
+      "role": "factorial_ablation_cell",
+      "factors": {
+        "G_gate": 1,
+        "P_pbrs": 0,
+        "E_low_entropy": 0,
+        "V_val78": 0
+      },
+      "seed": 321,
+      "target_steps": 480000,
+      "checkpoint": "/root/geoexplorer/results/checkpoint/algo_ablation_anchor0624_20260515/masa_plus_mmgag_anchor0624_component_ablation_seed321_480k_gpu01/g1_p0_e0_v0_seed321_t480k/geoexplorer.pt",
+      "metrics": {
+        "masa_aerial": 0.604,
+        "mmgag_aerial": 0.534468085106383,
+        "mmgag_ground": 0.5327659574468085,
+        "mmgag_text": 0.5268085106382979,
+        "swissviewmonuments_aerial_ground": 0.5119666666666667
+      },
+      "primary_generalization_mean": 0.526502304964539,
+      "all_benchmark_mean": 0.5420018439716312,
+      "masa_per_distance": {
+        "d4": 0.42,
+        "d5": 0.5,
+        "d6": 0.7,
+        "d7": 0.76,
+        "d8": 0.64
+      }
+    },
+    {
+      "name": "g0_p0_e0_v1_seed321_best_val",
+      "branch": "g0_p0_e0_v1",
+      "role": "factorial_ablation_cell",
+      "factors": {
+        "G_gate": 0,
+        "P_pbrs": 0,
+        "E_low_entropy": 0,
+        "V_val78": 1
+      },
+      "seed": 321,
+      "target_steps": 480000,
+      "checkpoint": "/root/geoexplorer/results/checkpoint/algo_ablation_anchor0624_20260515/masa_plus_mmgag_anchor0624_component_ablation_seed321_480k_gpu01/g0_p0_e0_v1_seed321_t480k/geoexplorer.pt",
+      "metrics": {
+        "masa_aerial": 0.58,
+        "mmgag_aerial": 0.5404255319148936,
+        "mmgag_ground": 0.5293617021276595,
+        "mmgag_text": 0.5174468085106383,
+        "swissviewmonuments_aerial_ground": 0.5035333333333333
+      },
+      "primary_generalization_mean": 0.5226918439716312,
+      "all_benchmark_mean": 0.5341534751773049,
+      "masa_per_distance": {
+        "d4": 0.28,
+        "d5": 0.48,
+        "d6": 0.66,
+        "d7": 0.68,
+        "d8": 0.8
+      }
+    },
+    {
+      "name": "g0_p1_e1_v0_seed321_best_val",
+      "branch": "g0_p1_e1_v0",
+      "role": "factorial_ablation_cell",
+      "factors": {
+        "G_gate": 0,
+        "P_pbrs": 1,
+        "E_low_entropy": 1,
+        "V_val78": 0
+      },
+      "seed": 321,
+      "target_steps": 480000,
+      "checkpoint": "/root/geoexplorer/results/checkpoint/algo_ablation_anchor0624_20260515/masa_plus_mmgag_anchor0624_component_ablation_seed321_480k_gpu01/g0_p1_e1_v0_seed321_t480k/geoexplorer.pt",
+      "metrics": {
+        "masa_aerial": 0.56,
+        "mmgag_aerial": 0.4970212765957447,
+        "mmgag_ground": 0.5072340425531915,
+        "mmgag_text": 0.5012765957446809,
+        "swissviewmonuments_aerial_ground": 0.49987777777777775
+      },
+      "primary_generalization_mean": 0.5013524231678488,
+      "all_benchmark_mean": 0.5130819385342791,
+      "masa_per_distance": {
+        "d4": 0.32,
+        "d5": 0.42,
+        "d6": 0.7,
+        "d7": 0.7,
+        "d8": 0.66
+      }
+    },
+    {
+      "name": "g1_p0_e1_v0_seed321_best_val",
+      "branch": "g1_p0_e1_v0",
+      "role": "factorial_ablation_cell",
+      "factors": {
+        "G_gate": 1,
+        "P_pbrs": 0,
+        "E_low_entropy": 1,
+        "V_val78": 0
+      },
+      "seed": 321,
+      "target_steps": 480000,
+      "checkpoint": "/root/geoexplorer/results/checkpoint/algo_ablation_anchor0624_20260515/masa_plus_mmgag_anchor0624_component_ablation_seed321_480k_gpu01/g1_p0_e1_v0_seed321_t480k/geoexplorer.pt",
+      "metrics": {
+        "masa_aerial": 0.508,
+        "mmgag_aerial": 0.4817021276595745,
+        "mmgag_ground": 0.4757446808510638,
+        "mmgag_text": 0.46808510638297873,
+        "swissviewmonuments_aerial_ground": 0.5084
+      },
+      "primary_generalization_mean": 0.48348297872340423,
+      "all_benchmark_mean": 0.48838638297872344,
+      "masa_per_distance": {
+        "d4": 0.34,
+        "d5": 0.42,
+        "d6": 0.6,
+        "d7": 0.5,
+        "d8": 0.68
+      }
+    },
+    {
+      "name": "g1_p1_e0_v1_seed321_best_val",
+      "branch": "g1_p1_e0_v1",
+      "role": "factorial_ablation_cell",
+      "factors": {
+        "G_gate": 1,
+        "P_pbrs": 1,
+        "E_low_entropy": 0,
+        "V_val78": 1
+      },
+      "seed": 321,
+      "target_steps": 480000,
+      "checkpoint": "/root/geoexplorer/results/checkpoint/algo_ablation_anchor0624_20260515/masa_plus_mmgag_anchor0624_component_ablation_seed321_480k_gpu01/g1_p1_e0_v1_seed321_t480k/geoexplorer.pt",
+      "metrics": {
+        "masa_aerial": 0.58,
+        "mmgag_aerial": 0.4902127659574468,
+        "mmgag_ground": 0.48936170212765956,
+        "mmgag_text": 0.45787234042553193,
+        "swissviewmonuments_aerial_ground": 0.49607777777777784
+      },
+      "primary_generalization_mean": 0.48338114657210407,
+      "all_benchmark_mean": 0.5027049172576832,
+      "masa_per_distance": {
+        "d4": 0.3,
+        "d5": 0.44,
+        "d6": 0.58,
+        "d7": 0.66,
+        "d8": 0.92
+      }
+    },
+    {
+      "name": "g0_p1_e0_v1_seed321_best_val",
+      "branch": "g0_p1_e0_v1",
+      "role": "factorial_ablation_cell",
+      "factors": {
+        "G_gate": 0,
+        "P_pbrs": 1,
+        "E_low_entropy": 0,
+        "V_val78": 1
+      },
+      "seed": 321,
+      "target_steps": 480000,
+      "checkpoint": "/root/geoexplorer/results/checkpoint/algo_ablation_anchor0624_20260515/masa_plus_mmgag_anchor0624_component_ablation_seed321_480k_gpu01/g0_p1_e0_v1_seed321_t480k/geoexplorer.pt",
+      "metrics": {
+        "masa_aerial": 0.468,
+        "mmgag_aerial": 0.48,
+        "mmgag_ground": 0.5063829787234042,
+        "mmgag_text": 0.46808510638297873,
+        "swissviewmonuments_aerial_ground": 0.46076666666666666
+      },
+      "primary_generalization_mean": 0.47880868794326237,
+      "all_benchmark_mean": 0.4766469503546099,
+      "masa_per_distance": {
+        "d4": 0.26,
+        "d5": 0.42,
+        "d6": 0.66,
+        "d7": 0.54,
+        "d8": 0.46
+      }
+    },
+    {
+      "name": "g0_p1_e0_v0_seed321_best_val",
+      "branch": "g0_p1_e0_v0",
+      "role": "factorial_ablation_cell",
+      "factors": {
+        "G_gate": 0,
+        "P_pbrs": 1,
+        "E_low_entropy": 0,
+        "V_val78": 0
+      },
+      "seed": 321,
+      "target_steps": 480000,
+      "checkpoint": "/root/geoexplorer/results/checkpoint/algo_ablation_anchor0624_20260515/masa_plus_mmgag_anchor0624_component_ablation_seed321_480k_gpu01/g0_p1_e0_v0_seed321_t480k/geoexplorer.pt",
+      "metrics": {
+        "masa_aerial": 0.484,
+        "mmgag_aerial": 0.43148936170212765,
+        "mmgag_ground": 0.46638297872340423,
+        "mmgag_text": 0.4323404255319149,
+        "swissviewmonuments_aerial_ground": 0.4278777777777777
+      },
+      "primary_generalization_mean": 0.43952263593380614,
+      "all_benchmark_mean": 0.4484181087470449,
+      "masa_per_distance": {
+        "d4": 0.38,
+        "d5": 0.42,
+        "d6": 0.6,
+        "d7": 0.52,
+        "d8": 0.5
+      }
+    },
+    {
+      "name": "g0_p0_e1_v0_seed321_best_val",
+      "branch": "g0_p0_e1_v0",
+      "role": "factorial_ablation_cell",
+      "factors": {
+        "G_gate": 0,
+        "P_pbrs": 0,
+        "E_low_entropy": 1,
+        "V_val78": 0
+      },
+      "seed": 321,
+      "target_steps": 480000,
+      "checkpoint": "/root/geoexplorer/results/checkpoint/algo_ablation_anchor0624_20260515/masa_plus_mmgag_anchor0624_component_ablation_seed321_480k_gpu01/g0_p0_e1_v0_seed321_t480k/geoexplorer.pt",
+      "metrics": {
+        "masa_aerial": 0.504,
+        "mmgag_aerial": 0.44,
+        "mmgag_ground": 0.4272340425531915,
+        "mmgag_text": 0.43829787234042555,
+        "swissviewmonuments_aerial_ground": 0.43433333333333335
+      },
+      "primary_generalization_mean": 0.43496631205673764,
+      "all_benchmark_mean": 0.4487730496453901,
+      "masa_per_distance": {
+        "d4": 0.5,
+        "d5": 0.44,
+        "d6": 0.6,
+        "d7": 0.54,
+        "d8": 0.44
+      }
+    },
+    {
+      "name": "g1_p1_e1_v0_seed321_best_val",
+      "branch": "g1_p1_e1_v0",
+      "role": "factorial_ablation_cell",
+      "factors": {
+        "G_gate": 1,
+        "P_pbrs": 1,
+        "E_low_entropy": 1,
+        "V_val78": 0
+      },
+      "seed": 321,
+      "target_steps": 480000,
+      "checkpoint": "/root/geoexplorer/results/checkpoint/algo_ablation_anchor0624_20260515/masa_plus_mmgag_anchor0624_component_ablation_seed321_480k_gpu01/g1_p1_e1_v0_seed321_t480k/geoexplorer.pt",
+      "metrics": {
+        "masa_aerial": 0.452,
+        "mmgag_aerial": 0.40085106382978725,
+        "mmgag_ground": 0.3727659574468085,
+        "mmgag_text": 0.3617021276595745,
+        "swissviewmonuments_aerial_ground": 0.4040111111111111
+      },
+      "primary_generalization_mean": 0.38483256501182034,
+      "all_benchmark_mean": 0.39826605200945625,
+      "masa_per_distance": {
+        "d4": 0.34,
+        "d5": 0.54,
+        "d6": 0.6,
+        "d7": 0.5,
+        "d8": 0.28
+      }
+    },
+    {
+      "name": "g0_p1_e1_v1_seed321_best_val",
+      "branch": "g0_p1_e1_v1",
+      "role": "factorial_ablation_cell",
+      "factors": {
+        "G_gate": 0,
+        "P_pbrs": 1,
+        "E_low_entropy": 1,
+        "V_val78": 1
+      },
+      "seed": 321,
+      "target_steps": 480000,
+      "checkpoint": "/root/geoexplorer/results/checkpoint/algo_ablation_anchor0624_20260515/masa_plus_mmgag_anchor0624_component_ablation_seed321_480k_gpu01/g0_p1_e1_v1_seed321_t480k/geoexplorer.pt",
+      "metrics": {
+        "masa_aerial": 0.308,
+        "mmgag_aerial": 0.3617021276595745,
+        "mmgag_ground": 0.3676595744680851,
+        "mmgag_text": 0.32595744680851063,
+        "swissviewmonuments_aerial_ground": 0.36354444444444445
+      },
+      "primary_generalization_mean": 0.35471589834515366,
+      "all_benchmark_mean": 0.34537271867612296,
+      "masa_per_distance": {
+        "d4": 0.26,
+        "d5": 0.32,
+        "d6": 0.36,
+        "d7": 0.36,
+        "d8": 0.24
+      }
+    }
+  ],
+  "factorial_effects": {
+    "primary_generalization_mean": {
+      "main_effects": {
+        "G_gate": {
+          "on_mean": 0.532056102245863,
+          "off_mean": 0.48230846631205676,
+          "effect_on_minus_off": 0.04974763593380621
+        },
+        "P_pbrs": {
+          "on_mean": 0.4805888741134752,
+          "off_mean": 0.5337756944444445,
+          "effect_on_minus_off": -0.05318682033096933
+        },
+        "E_low_entropy": {
+          "on_mean": 0.4927518026004728,
+          "off_mean": 0.5216127659574469,
+          "effect_on_minus_off": -0.02886096335697408
+        },
+        "V_val78": {
+          "on_mean": 0.5260967567966903,
+          "off_mean": 0.4882678117612293,
+          "effect_on_minus_off": 0.037828945035461026
+        }
+      },
+      "two_way_interactions": {
+        "G_gate__x__P_pbrs": {
+          "mean_11": 0.5175778368794327,
+          "mean_10": 0.5465343676122931,
+          "mean_01": 0.44359991134751775,
+          "mean_00": 0.5210170212765958,
+          "difference_of_differences": 0.0484605791962176
+        },
+        "G_gate__x__E_low_entropy": {
+          "mean_11": 0.5197642878250591,
+          "mean_10": 0.5443479166666667,
+          "mean_01": 0.46573931737588653,
+          "mean_00": 0.49887761524822694,
+          "difference_of_differences": 0.00855466903073282
+        },
+        "G_gate__x__V_val78": {
+          "mean_11": 0.5701587470449172,
+          "mean_10": 0.4939534574468085,
+          "mean_01": 0.4820347665484633,
+          "mean_00": 0.4825821660756502,
+          "difference_of_differences": 0.07675268912529559
+        },
+        "P_pbrs__x__E_low_entropy": {
+          "mean_11": 0.4655006353427896,
+          "mean_10": 0.49567711288416083,
+          "mean_01": 0.5200029698581561,
+          "mean_00": 0.5475484190307328,
+          "difference_of_differences": -0.0026310283687944747
+        },
+        "P_pbrs__x__V_val78": {
+          "mean_11": 0.484501846926714,
+          "mean_10": 0.4766759013002364,
+          "mean_01": 0.5676916666666666,
+          "mean_00": 0.4998597222222223,
+          "difference_of_differences": -0.0600059988179667
+        },
+        "E_low_entropy__x__V_val78": {
+          "mean_11": 0.5343450354609929,
+          "mean_10": 0.4511585697399527,
+          "mean_01": 0.5178484781323877,
+          "mean_00": 0.5253770537825059,
+          "difference_of_differences": 0.09071504137115838
+        }
+      }
+    },
+    "all_benchmark_mean": {
+      "main_effects": {
+        "G_gate": {
+          "on_mean": 0.5396448817966903,
+          "off_mean": 0.48924677304964537,
+          "effect_on_minus_off": 0.05039810874704498
+        },
+        "P_pbrs": {
+          "on_mean": 0.48507109929078013,
+          "off_mean": 0.5438205555555555,
+          "effect_on_minus_off": -0.0587494562647754
+        },
+        "E_low_entropy": {
+          "on_mean": 0.49900144208037833,
+          "off_mean": 0.5298902127659575,
+          "effect_on_minus_off": -0.03088877068557916
+        },
+        "V_val78": {
+          "on_mean": 0.5321774054373523,
+          "off_mean": 0.4967142494089835,
+          "effect_on_minus_off": 0.03546315602836875
+        }
+      },
+      "two_way_interactions": {
+        "G_gate__x__P_pbrs": {
+          "mean_11": 0.524262269503546,
+          "mean_10": 0.5550274940898345,
+          "mean_01": 0.4458799290780142,
+          "mean_00": 0.5326136170212766,
+          "difference_of_differences": 0.05596846335697392
+        },
+        "G_gate__x__E_low_entropy": {
+          "mean_11": 0.5226114302600473,
+          "mean_10": 0.5566783333333334,
+          "mean_01": 0.47539145390070925,
+          "mean_00": 0.5031020921985816,
+          "difference_of_differences": -0.006356264775413734
+        },
+        "G_gate__x__V_val78": {
+          "mean_11": 0.5767269976359338,
+          "mean_10": 0.5025627659574468,
+          "mean_01": 0.4876278132387707,
+          "mean_00": 0.49086573286052015,
+          "difference_of_differences": 0.07740215130023653
+        },
+        "P_pbrs__x__E_low_entropy": {
+          "mean_11": 0.4678005082742317,
+          "mean_10": 0.5023416903073286,
+          "mean_01": 0.5302023758865249,
+          "mean_00": 0.5574387352245863,
+          "difference_of_differences": -0.007304822695035407
+        },
+        "P_pbrs__x__V_val78": {
+          "mean_11": 0.48480147754137115,
+          "mean_10": 0.48534072104018916,
+          "mean_01": 0.5795533333333334,
+          "mean_00": 0.5080877777777778,
+          "difference_of_differences": -0.07200479905437357
+        },
+        "E_low_entropy__x__V_val78": {
+          "mean_11": 0.5358760283687943,
+          "mean_10": 0.4621268557919622,
+          "mean_01": 0.5284787825059102,
+          "mean_00": 0.5313016430260047,
+          "difference_of_differences": 0.07657203309692662
+        }
+      }
+    },
+    "masa_aerial": {
+      "main_effects": {
+        "G_gate": {
+          "on_mean": 0.57,
+          "off_mean": 0.517,
+          "effect_on_minus_off": 0.052999999999999936
+        },
+        "P_pbrs": {
+          "on_mean": 0.503,
+          "off_mean": 0.5840000000000001,
+          "effect_on_minus_off": -0.08100000000000007
+        },
+        "E_low_entropy": {
+          "on_mean": 0.524,
+          "off_mean": 0.5630000000000001,
+          "effect_on_minus_off": -0.039000000000000035
+        },
+        "V_val78": {
+          "on_mean": 0.5565,
+          "off_mean": 0.5305000000000001,
+          "effect_on_minus_off": 0.025999999999999912
+        }
+      },
+      "two_way_interactions": {
+        "G_gate__x__P_pbrs": {
+          "mean_11": 0.5509999999999999,
+          "mean_10": 0.589,
+          "mean_01": 0.455,
+          "mean_00": 0.5790000000000001,
+          "difference_of_differences": 0.08600000000000002
+        },
+        "G_gate__x__E_low_entropy": {
+          "mean_11": 0.534,
+          "mean_10": 0.606,
+          "mean_01": 0.514,
+          "mean_00": 0.52,
+          "difference_of_differences": -0.06599999999999995
+        },
+        "G_gate__x__V_val78": {
+          "mean_11": 0.603,
+          "mean_10": 0.537,
+          "mean_01": 0.51,
+          "mean_00": 0.524,
+          "difference_of_differences": 0.07999999999999996
+        },
+        "P_pbrs__x__E_low_entropy": {
+          "mean_11": 0.47700000000000004,
+          "mean_10": 0.5289999999999999,
+          "mean_01": 0.571,
+          "mean_00": 0.5970000000000001,
+          "difference_of_differences": -0.025999999999999746
+        },
+        "P_pbrs__x__V_val78": {
+          "mean_11": 0.486,
+          "mean_10": 0.52,
+          "mean_01": 0.627,
+          "mean_00": 0.541,
+          "difference_of_differences": -0.12
+        },
+        "E_low_entropy__x__V_val78": {
+          "mean_11": 0.5419999999999999,
+          "mean_10": 0.506,
+          "mean_01": 0.571,
+          "mean_00": 0.555,
+          "difference_of_differences": 0.020000000000000018
+        }
+      }
+    },
+    "mmgag_aerial": {
+      "main_effects": {
+        "G_gate": {
+          "on_mean": 0.5421276595744681,
+          "off_mean": 0.4877659574468085,
+          "effect_on_minus_off": 0.05436170212765956
+        },
+        "P_pbrs": {
+          "on_mean": 0.48521276595744683,
+          "off_mean": 0.5446808510638297,
+          "effect_on_minus_off": -0.05946808510638285
+        },
+        "E_low_entropy": {
+          "on_mean": 0.49765957446808506,
+          "off_mean": 0.5322340425531915,
+          "effect_on_minus_off": -0.03457446808510645
+        },
+        "V_val78": {
+          "on_mean": 0.5356382978723404,
+          "off_mean": 0.49425531914893617,
+          "effect_on_minus_off": 0.04138297872340424
+        }
+      },
+      "two_way_interactions": {
+        "G_gate__x__P_pbrs": {
+          "mean_11": 0.5278723404255319,
+          "mean_10": 0.5563829787234043,
+          "mean_01": 0.4425531914893617,
+          "mean_00": 0.5329787234042553,
+          "difference_of_differences": 0.061914893617021294
+        },
+        "G_gate__x__E_low_entropy": {
+          "mean_11": 0.5240425531914894,
+          "mean_10": 0.5602127659574468,
+          "mean_01": 0.47127659574468084,
+          "mean_00": 0.5042553191489362,
+          "difference_of_differences": -0.0031914893617021045
+        },
+        "G_gate__x__V_val78": {
+          "mean_11": 0.5791489361702128,
+          "mean_10": 0.5051063829787235,
+          "mean_01": 0.4921276595744681,
+          "mean_00": 0.48340425531914893,
+          "difference_of_differences": 0.06531914893617019
+        },
+        "P_pbrs__x__E_low_entropy": {
+          "mean_11": 0.4691489361702128,
+          "mean_10": 0.5012765957446809,
+          "mean_01": 0.5261702127659575,
+          "mean_00": 0.5631914893617022,
+          "difference_of_differences": 0.004893617021276553
+        },
+        "P_pbrs__x__V_val78": {
+          "mean_11": 0.48723404255319147,
+          "mean_10": 0.48319148936170214,
+          "mean_01": 0.5840425531914893,
+          "mean_00": 0.5053191489361702,
+          "difference_of_differences": -0.07468085106382977
+        },
+        "E_low_entropy__x__V_val78": {
+          "mean_11": 0.5404255319148936,
+          "mean_10": 0.4548936170212766,
+          "mean_01": 0.5308510638297872,
+          "mean_00": 0.5336170212765957,
+          "difference_of_differences": 0.08829787234042552
+        }
+      }
+    },
+    "mmgag_ground": {
+      "main_effects": {
+        "G_gate": {
+          "on_mean": 0.5395744680851063,
+          "off_mean": 0.49617021276595746,
+          "effect_on_minus_off": 0.04340425531914888
+        },
+        "P_pbrs": {
+          "on_mean": 0.4943617021276596,
+          "off_mean": 0.5413829787234042,
+          "effect_on_minus_off": -0.04702127659574462
+        },
+        "E_low_entropy": {
+          "on_mean": 0.49946808510638296,
+          "off_mean": 0.5362765957446808,
+          "effect_on_minus_off": -0.03680851063829782
+        },
+        "V_val78": {
+          "on_mean": 0.5408510638297872,
+          "off_mean": 0.49489361702127665,
+          "effect_on_minus_off": 0.04595744680851055
+        }
+      },
+      "two_way_interactions": {
+        "G_gate__x__P_pbrs": {
+          "mean_11": 0.5268085106382978,
+          "mean_10": 0.5523404255319149,
+          "mean_01": 0.4619148936170212,
+          "mean_00": 0.5304255319148936,
+          "difference_of_differences": 0.04297872340425535
+        },
+        "G_gate__x__E_low_entropy": {
+          "mean_11": 0.5248936170212766,
+          "mean_10": 0.5542553191489362,
+          "mean_01": 0.47404255319148936,
+          "mean_00": 0.5182978723404255,
+          "difference_of_differences": 0.01489361702127645
+        },
+        "G_gate__x__V_val78": {
+          "mean_11": 0.5823404255319149,
+          "mean_10": 0.49680851063829784,
+          "mean_01": 0.4993617021276595,
+          "mean_00": 0.4929787234042553,
+          "difference_of_differences": 0.07914893617021285
+        },
+        "P_pbrs__x__E_low_entropy": {
+          "mean_11": 0.4717021276595744,
+          "mean_10": 0.5170212765957447,
+          "mean_01": 0.5272340425531915,
+          "mean_00": 0.5555319148936171,
+          "difference_of_differences": -0.017021276595744705
+        },
+        "P_pbrs__x__V_val78": {
+          "mean_11": 0.5006382978723404,
+          "mean_10": 0.4880851063829787,
+          "mean_01": 0.5810638297872341,
+          "mean_00": 0.5017021276595744,
+          "difference_of_differences": -0.06680851063829801
+        },
+        "E_low_entropy__x__V_val78": {
+          "mean_11": 0.5531914893617021,
+          "mean_10": 0.44574468085106383,
+          "mean_01": 0.5285106382978724,
+          "mean_00": 0.5440425531914894,
+          "difference_of_differences": 0.12297872340425536
+        }
+      }
+    },
+    "mmgag_text": {
+      "main_effects": {
+        "G_gate": {
+          "on_mean": 0.523936170212766,
+          "off_mean": 0.47148936170212763,
+          "effect_on_minus_off": 0.05244680851063832
+        },
+        "P_pbrs": {
+          "on_mean": 0.4664893617021277,
+          "off_mean": 0.528936170212766,
+          "effect_on_minus_off": -0.062446808510638274
+        },
+        "E_low_entropy": {
+          "on_mean": 0.48308510638297875,
+          "off_mean": 0.5123404255319148,
+          "effect_on_minus_off": -0.029255319148936088
+        },
+        "V_val78": {
+          "on_mean": 0.5170212765957447,
+          "off_mean": 0.478404255319149,
+          "effect_on_minus_off": 0.03861702127659572
+        }
+      },
+      "two_way_interactions": {
+        "G_gate__x__P_pbrs": {
+          "mean_11": 0.5010638297872341,
+          "mean_10": 0.5468085106382978,
+          "mean_01": 0.4319148936170213,
+          "mean_00": 0.511063829787234,
+          "difference_of_differences": 0.03340425531914892
+        },
+        "G_gate__x__E_low_entropy": {
+          "mean_11": 0.512340425531915,
+          "mean_10": 0.535531914893617,
+          "mean_01": 0.4538297872340426,
+          "mean_00": 0.4891489361702128,
+          "difference_of_differences": 0.012127659574468208
+        },
+        "G_gate__x__V_val78": {
+          "mean_11": 0.5687234042553191,
+          "mean_10": 0.47914893617021276,
+          "mean_01": 0.4653191489361702,
+          "mean_00": 0.47765957446808516,
+          "difference_of_differences": 0.10191489361702127
+        },
+        "P_pbrs__x__E_low_entropy": {
+          "mean_11": 0.45340425531914896,
+          "mean_10": 0.4795744680851064,
+          "mean_01": 0.5127659574468085,
+          "mean_00": 0.5451063829787235,
+          "difference_of_differences": 0.006170212765957528
+        },
+        "P_pbrs__x__V_val78": {
+          "mean_11": 0.46914893617021275,
+          "mean_10": 0.4638297872340426,
+          "mean_01": 0.5648936170212766,
+          "mean_00": 0.49297872340425536,
+          "difference_of_differences": -0.06659574468085111
+        },
+        "E_low_entropy__x__V_val78": {
+          "mean_11": 0.5238297872340425,
+          "mean_10": 0.4423404255319149,
+          "mean_01": 0.5102127659574468,
+          "mean_00": 0.514468085106383,
+          "difference_of_differences": 0.08574468085106379
+        }
+      }
+    },
+    "swissviewmonuments_aerial_ground": {
+      "main_effects": {
+        "G_gate": {
+          "on_mean": 0.5225861111111112,
+          "off_mean": 0.4738083333333334,
+          "effect_on_minus_off": 0.04877777777777781
+        },
+        "P_pbrs": {
+          "on_mean": 0.4762916666666667,
+          "off_mean": 0.5201027777777778,
+          "effect_on_minus_off": -0.04381111111111108
+        },
+        "E_low_entropy": {
+          "on_mean": 0.4907944444444445,
+          "off_mean": 0.5056,
+          "effect_on_minus_off": -0.014805555555555572
+        },
+        "V_val78": {
+          "on_mean": 0.510876388888889,
+          "off_mean": 0.48551805555555555,
+          "effect_on_minus_off": 0.025358333333333427
+        }
+      },
+      "two_way_interactions": {
+        "G_gate__x__P_pbrs": {
+          "mean_11": 0.5145666666666667,
+          "mean_10": 0.5306055555555556,
+          "mean_01": 0.4380166666666666,
+          "mean_00": 0.5096,
+          "difference_of_differences": 0.05554444444444462
+        },
+        "G_gate__x__E_low_entropy": {
+          "mean_11": 0.5177805555555556,
+          "mean_10": 0.5273916666666667,
+          "mean_01": 0.4638083333333334,
+          "mean_00": 0.4838083333333333,
+          "difference_of_differences": 0.010388888888888781
+        },
+        "G_gate__x__V_val78": {
+          "mean_11": 0.5504222222222223,
+          "mean_10": 0.49475,
+          "mean_01": 0.4713305555555556,
+          "mean_00": 0.4762861111111111,
+          "difference_of_differences": 0.060627777777777725
+        },
+        "P_pbrs__x__E_low_entropy": {
+          "mean_11": 0.4677472222222222,
+          "mean_10": 0.48483611111111113,
+          "mean_01": 0.5138416666666666,
+          "mean_00": 0.5263638888888889,
+          "difference_of_differences": -0.004566666666666719
+        },
+        "P_pbrs__x__V_val78": {
+          "mean_11": 0.4809861111111111,
+          "mean_10": 0.4715972222222222,
+          "mean_01": 0.5407666666666667,
+          "mean_00": 0.4994388888888889,
+          "difference_of_differences": -0.03193888888888896
+        },
+        "E_low_entropy__x__V_val78": {
+          "mean_11": 0.5199333333333334,
+          "mean_10": 0.4616555555555556,
+          "mean_01": 0.5018194444444445,
+          "mean_00": 0.5093805555555555,
+          "difference_of_differences": 0.06583888888888878
+        }
+      }
+    }
+  },
+  "key_comparisons": {
+    "best_by_primary_generalization_mean": {
+      "name": "g1_p1_e1_v1_seed321_best_val",
+      "branch": "g1_p1_e1_v1",
+      "role": "full_anchor0624",
+      "factors": {
+        "G_gate": 1,
+        "P_pbrs": 1,
+        "E_low_entropy": 1,
+        "V_val78": 1
+      },
+      "seed": 321,
+      "target_steps": 480000,
+      "checkpoint": "/root/geoexplorer/results/checkpoint/algo_ablation_anchor0624_20260515/masa_plus_mmgag_anchor0624_component_ablation_seed321_480k_gpu01/g1_p1_e1_v1_seed321_t480k/geoexplorer.pt",
+      "metrics": {
+        "masa_aerial": 0.588,
+        "mmgag_aerial": 0.6170212765957447,
+        "mmgag_ground": 0.6391489361702127,
+        "mmgag_text": 0.6246808510638298,
+        "swissviewmonuments_aerial_ground": 0.6035555555555556
+      },
+      "primary_generalization_mean": 0.6211016548463357,
+      "all_benchmark_mean": 0.6144813238770686,
+      "masa_per_distance": {
+        "d4": 0.2,
+        "d5": 0.34,
+        "d6": 0.64,
+        "d7": 0.82,
+        "d8": 0.94
+      }
+    },
+    "full_anchor_g1_p1_e1_v1": {
+      "name": "g1_p1_e1_v1_seed321_best_val",
+      "branch": "g1_p1_e1_v1",
+      "role": "full_anchor0624",
+      "factors": {
+        "G_gate": 1,
+        "P_pbrs": 1,
+        "E_low_entropy": 1,
+        "V_val78": 1
+      },
+      "seed": 321,
+      "target_steps": 480000,
+      "checkpoint": "/root/geoexplorer/results/checkpoint/algo_ablation_anchor0624_20260515/masa_plus_mmgag_anchor0624_component_ablation_seed321_480k_gpu01/g1_p1_e1_v1_seed321_t480k/geoexplorer.pt",
+      "metrics": {
+        "masa_aerial": 0.588,
+        "mmgag_aerial": 0.6170212765957447,
+        "mmgag_ground": 0.6391489361702127,
+        "mmgag_text": 0.6246808510638298,
+        "swissviewmonuments_aerial_ground": 0.6035555555555556
+      },
+      "primary_generalization_mean": 0.6211016548463357,
+      "all_benchmark_mean": 0.6144813238770686,
+      "masa_per_distance": {
+        "d4": 0.2,
+        "d5": 0.34,
+        "d6": 0.64,
+        "d7": 0.82,
+        "d8": 0.94
+      }
+    },
+    "same_data_control_g0_p0_e0_v0": {
+      "name": "g0_p0_e0_v0_seed321_best_val",
+      "branch": "g0_p0_e0_v0",
+      "role": "same_data_no_added_mechanism_control",
+      "factors": {
+        "G_gate": 0,
+        "P_pbrs": 0,
+        "E_low_entropy": 0,
+        "V_val78": 0
+      },
+      "seed": 321,
+      "target_steps": 480000,
+      "checkpoint": "/root/geoexplorer/results/checkpoint/algo_ablation_anchor0624_20260515/masa_plus_mmgag_anchor0624_component_ablation_seed321_480k_gpu01/g0_p0_e0_v0_seed321_t480k/geoexplorer.pt",
+      "metrics": {
+        "masa_aerial": 0.548,
+        "mmgag_aerial": 0.5651063829787234,
+        "mmgag_ground": 0.571063829787234,
+        "mmgag_text": 0.5387234042553192,
+        "swissviewmonuments_aerial_ground": 0.5430555555555555
+      },
+      "primary_generalization_mean": 0.5544872931442081,
+      "all_benchmark_mean": 0.5531898345153665,
+      "masa_per_distance": {
+        "d4": 0.16,
+        "d5": 0.36,
+        "d6": 0.62,
+        "d7": 0.76,
+        "d8": 0.84
+      }
+    },
+    "anchor_minus_control_primary_generalization_mean": 0.06661436170212764,
+    "anchor_minus_control_all_benchmark_mean": 0.061291489361702034
+  },
+  "rigor_notes": [
+    "This is evaluation-only; no additional training or checkpoint selection is performed.",
+    "All 16 trained factorial cells are evaluated to avoid top-row selection bias.",
+    "Primary generalization mean excludes masa_aerial so in-domain MASA does not dominate the transfer conclusion.",
+    "Single seed 321 limits seed-stability claims; this round supports mechanism diagnosis and transfer evidence."
+  ]
+}

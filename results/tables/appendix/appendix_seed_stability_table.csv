@@ -1,0 +1,4 @@
+seed,run,mean_transfer_sr,mean_all_sr,mean_transfer_sg,mean_all_sg,checkpoint
+42,seed_stability_seed42_t480k,0.463458,0.471440,1.810750,1.755035,/root/geoexplorer/results/checkpoint/appendix_compare_20260519/anchor0624_dataset_param_appendix/seed_stability_seed42_t480k/geoexplorer.pt
+123,seed_stability_seed123_t480k,0.548157,0.556827,1.454499,1.409809,/root/geoexplorer/results/checkpoint/appendix_compare_20260519/anchor0624_dataset_param_appendix/seed_stability_seed123_t480k/geoexplorer.pt
+321,dataset_masa_plus_mmgag_seed321_t480k,0.542198,0.576542,1.407017,1.288517,/root/geoexplorer/results/checkpoint/appendix_compare_20260519/anchor0624_dataset_param_appendix/dataset_masa_plus_mmgag_seed321_t480k/geoexplorer.pt
