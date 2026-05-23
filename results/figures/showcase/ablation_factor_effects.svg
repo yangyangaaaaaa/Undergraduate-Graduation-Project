@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="641.970591pt" height="366.442031pt" viewBox="0 0 641.970591 366.442031" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-05-23T16:22:43.730936</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.9.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 366.442031
+L 641.970591 366.442031
+L 641.970591 0
+L 0 0
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 96.596875 327.917969
+L 605.335869 327.917969
+L 605.335869 23.077969
+L 96.596875 23.077969
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="m17ff5b5126" d="M 0 0
+L 0 3.5
+" style="stroke: #374151; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m17ff5b5126" x="178.969702" y="327.917969" style="fill: #374151; stroke: #374151; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="fill: #374151; font: 10px 'DejaVu Sans'; text-anchor: middle" x="178.969702" y="342.516406" transform="rotate(-0 178.969702 342.516406)">−0.04</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#m17ff5b5126" x="268.830947" y="327.917969" style="fill: #374151; stroke: #374151; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="fill: #374151; font: 10px 'DejaVu Sans'; text-anchor: middle" x="268.830947" y="342.516406" transform="rotate(-0 268.830947 342.516406)">−0.02</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#m17ff5b5126" x="358.692193" y="327.917969" style="fill: #374151; stroke: #374151; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="fill: #374151; font: 10px 'DejaVu Sans'; text-anchor: middle" x="358.692193" y="342.516406" transform="rotate(-0 358.692193 342.516406)">0.00</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#m17ff5b5126" x="448.553438" y="327.917969" style="fill: #374151; stroke: #374151; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="fill: #374151; font: 10px 'DejaVu Sans'; text-anchor: middle" x="448.553438" y="342.516406" transform="rotate(-0 448.553438 342.516406)">0.02</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5">
+      <g>
+       <use xlink:href="#m17ff5b5126" x="538.414683" y="327.917969" style="fill: #374151; stroke: #374151; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="fill: #374151; font: 10px 'DejaVu Sans'; text-anchor: middle" x="538.414683" y="342.516406" transform="rotate(-0 538.414683 342.516406)">0.04</text>
+     </g>
+    </g>
+    <g id="text_6">
+     <text style="fill: #1f2937; font: 11px 'DejaVu Sans'; text-anchor: middle" x="350.966372" y="356.954375" transform="rotate(-0 350.966372 356.954375)">Mean effect on primary generalization SR</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_6">
+      <path d="M 96.596875 291.612748
+L 605.335869 291.612748
+" clip-path="url(#pdc7d1e0b7b)" style="fill: none; stroke: #9aa4b2; stroke-opacity: 0.25; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_7">
+      <defs>
+       <path id="mfb29827e43" d="M 0 0
+L -3.5 0
+" style="stroke: #374151; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#mfb29827e43" x="96.596875" y="291.612748" style="fill: #374151; stroke: #374151; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="fill: #374151; font: 10px 'DejaVu Sans'; text-anchor: end" x="89.596875" y="295.411967" transform="rotate(-0 89.596875 295.411967)">P: PBRS</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_8">
+      <path d="M 96.596875 214.202895
+L 605.335869 214.202895
+" clip-path="url(#pdc7d1e0b7b)" style="fill: none; stroke: #9aa4b2; stroke-opacity: 0.25; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_9">
+      <g>
+       <use xlink:href="#mfb29827e43" x="96.596875" y="214.202895" style="fill: #374151; stroke: #374151; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <text style="fill: #374151; font: 10px 'DejaVu Sans'; text-anchor: end" x="89.596875" y="218.002114" transform="rotate(-0 89.596875 218.002114)">E: lower entropy</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_10">
+      <path d="M 96.596875 136.793042
+L 605.335869 136.793042
+" clip-path="url(#pdc7d1e0b7b)" style="fill: none; stroke: #9aa4b2; stroke-opacity: 0.25; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_11">
+      <g>
+       <use xlink:href="#mfb29827e43" x="96.596875" y="136.793042" style="fill: #374151; stroke: #374151; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <text style="fill: #374151; font: 10px 'DejaVu Sans'; text-anchor: end" x="89.596875" y="140.592261" transform="rotate(-0 89.596875 140.592261)">V: val C=7,8</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_12">
+      <path d="M 96.596875 59.38319
+L 605.335869 59.38319
+" clip-path="url(#pdc7d1e0b7b)" style="fill: none; stroke: #9aa4b2; stroke-opacity: 0.25; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_13">
+      <g>
+       <use xlink:href="#mfb29827e43" x="96.596875" y="59.38319" style="fill: #374151; stroke: #374151; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_10">
+      <text style="fill: #374151; font: 10px 'DejaVu Sans'; text-anchor: end" x="89.596875" y="63.182408" transform="rotate(-0 89.596875 63.182408)">G: distance gate</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 358.692193 314.061605
+L 119.721375 314.061605
+L 119.721375 269.163891
+L 358.692193 269.163891
+z
+" clip-path="url(#pdc7d1e0b7b)" style="fill: #cc3311"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 358.692193 236.651752
+L 229.018484 236.651752
+L 229.018484 191.754038
+L 358.692193 191.754038
+z
+" clip-path="url(#pdc7d1e0b7b)" style="fill: #cc3311"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 358.692193 159.2419
+L 528.660807 159.2419
+L 528.660807 114.344185
+L 358.692193 114.344185
+z
+" clip-path="url(#pdc7d1e0b7b)" style="fill: #0077bb"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 358.692193 81.832047
+L 582.211369 81.832047
+L 582.211369 36.934332
+L 358.692193 36.934332
+z
+" clip-path="url(#pdc7d1e0b7b)" style="fill: #0077bb"/>
+   </g>
+   <g id="line2d_14">
+    <path d="M 358.692193 327.917969
+L 358.692193 23.077969
+" clip-path="url(#pdc7d1e0b7b)" style="fill: none; stroke: #111827; stroke-linecap: square"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 96.596875 327.917969
+L 96.596875 23.077969
+" style="fill: none; stroke: #d7dce3; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 96.596875 327.917969
+L 605.335869 327.917969
+" style="fill: none; stroke: #d7dce3; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_11">
+    <text style="font: 700 10px 'DejaVu Sans'; text-anchor: end" x="108.488719" y="294.372123" transform="rotate(-0 108.488719 294.372123)">-0.053</text>
+   </g>
+   <g id="text_12">
+    <text style="font: 700 10px 'DejaVu Sans'; text-anchor: end" x="217.785829" y="216.96227" transform="rotate(-0 217.785829 216.96227)">-0.029</text>
+   </g>
+   <g id="text_13">
+    <text style="font: 700 10px 'DejaVu Sans'; text-anchor: start" x="539.893462" y="139.552417" transform="rotate(-0 539.893462 139.552417)">+0.038</text>
+   </g>
+   <g id="text_14">
+    <text style="font: 700 10px 'DejaVu Sans'; text-anchor: start" x="593.444025" y="62.142565" transform="rotate(-0 593.444025 62.142565)">+0.050</text>
+   </g>
+   <g id="text_15">
+    <text style="font: 700 13px 'DejaVu Sans'; text-anchor: middle" x="350.966372" y="17.077969" transform="rotate(-0 350.966372 17.077969)">Ablation main effects: validation focus and PBRS contribute most on average</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pdc7d1e0b7b">
+   <rect x="96.596875" y="23.077969" width="508.738994" height="304.84"/>
+  </clipPath>
+ </defs>
+</svg>
