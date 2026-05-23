@@ -45,6 +45,20 @@
 | `results/tables/ultra_long/ultra_long_v3_grid25_summary.csv` | `25 x 25` 探索性压力测试汇总。 |
 | `results/tables/ultra_long/ultra_long_v3_grid25_per_distance.csv` | `25 x 25` 探索性压力测试分距离结果。 |
 
+## 补充统计与行为分析
+
+| 文件 | 用途 |
+| --- | --- |
+| `results/tables/statistical_analysis/main_benchmark_ci_table.csv` | 主表各方法 SR 的成功次数、任务数与 95% 置信区间。 |
+| `results/tables/statistical_analysis/main_benchmark_diff_ci_table.csv` | 本文方法相对 GOMAA-Geo、Random policy、DiT-AGL 的 SR 差值置信区间。 |
+| `results/tables/statistical_analysis/ultra_long_ci_table.csv` | 长距离扩展测试各方法 SR 置信区间。 |
+| `results/tables/statistical_analysis/ultra_long_diff_ci_table.csv` | 长距离扩展测试中本文方法相对基线的 SR 差值置信区间。 |
+| `results/tables/trajectory_analysis/trajectory_behavior_summary.csv` | 轨迹案例库的总体行为指标，包括目标距离缩短、单调接近率和重复访问率。 |
+| `results/tables/trajectory_analysis/trajectory_behavior_by_distance.csv` | 按距离桶统计的轨迹行为指标。 |
+| `results/tables/trajectory_analysis/c4_failure_profile.csv` | `C=4` 短距离失败样例画像，用于解释短距离弱项。 |
+| `results/tables/reward_process/reward_process_summary.csv` | 奖励分量过程统计，包括外部奖励、门控内在奖励、PBRS 与总奖励。 |
+| `results/tables/experiment_plan/supplement_experiment_plan.csv` | 后续建议补跑的预算敏感性、任务种子稳定性、目标线索鲁棒性等实验方案。 |
+
 ## 图件
 
 | 文件夹 | 内容 |
@@ -53,6 +67,7 @@
 | `results/figures/chapter3_method/` | 方法总体结构图。 |
 | `results/figures/chapter4_trajectories/` | 典型成功轨迹和三方法困难样例对比。 |
 | `results/figures/reward_story/` | G/P 机制辅助可视化图。 |
+| `results/figures/supplement/` | 置信区间、轨迹行为、C=4 失败画像和奖励过程曲线等补充分析图。 |
 
 ## 中文报告
 
@@ -61,6 +76,7 @@
 | `results/reports/ablation_reward_formula_report_20260520_zh.md` | 以奖励公式组织的消融实验报告。 |
 | `results/reports/chapter4_airloc_ultralong_split_material_20260521_zh.md` | AirLoc、长距离实验和数据划分材料。 |
 | `results/reports/reward_gate_eval_protocol_audit_20260520_zh.md` | 消融测试阶段是否调用奖励模块的协议审查。 |
+| `results/reports/supplement_experiment_analysis_zh.md` | 补充统计、轨迹行为、奖励过程分析与后续实验方案。 |
 | `results/reports/xbd_protocol_correction_20260519_zh.md` | xBD 评测口径说明。 |
 | `results/reports/source_result_inventory_20260522.md` | 原始本地结果目录索引。 |
 
@@ -74,3 +90,4 @@
 | `experiments/scripts/appendix_dataset_param/` | 数据集、参数和种子实验脚本。 |
 | `experiments/scripts/appendix_gate_valdist/` | 门控、验证距离和奖励控制实验脚本。 |
 | `experiments/scripts/ultra_long_eval/` | 长距离扩展测试脚本。 |
+| `code/tools/build_supplement_experiment_analysis.py` | 从已有结果生成补充统计表、轨迹行为表、奖励过程表、图件和后续实验方案。 |

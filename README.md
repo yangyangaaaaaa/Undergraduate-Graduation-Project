@@ -11,6 +11,7 @@
 - 机制消融：16 组 G/P/E/V 消融中，完整分支 `g1_p1_e1_v1` 的主泛化均值为 `0.6211`，高于同数据无新增机制控制组 `0.5545`。
 - 长距离：8x8 与 10x10 扩展网格中，本文方法在更长起终点距离下保持更稳定的成功率；25x25 压力测试也保留了对比材料。
 - 可视化：仓库整理了 `103` 个展示文件，包括 `22` 个 GIF、`57` 张 PNG、`24` 个 SVG，以及轨迹、奖励机制、参数敏感和长距离测试图。
+- 补充分析：新增置信区间、轨迹行为、C=4 失败画像和奖励过程曲线，用于支撑结果稳定性与中远距离优势解释。
 
 ## 方法概览
 
@@ -34,6 +35,7 @@ r_t = r_ex,t + lambda_t r_in,t + r_p,t
 | 奖励设计 | ![Reward gate](results/figures/showcase/reward_gate_pb_comparison.png) | 对比常数、线性、正弦、二次幂和混合门控，以及 PBRS 开关。 |
 | 参数敏感 | ![Parameter sensitivity](results/figures/showcase/parameter_sensitivity_curves.png) | 覆盖门控下限、PBRS 系数、熵系数、训练预算和验证距离集合。 |
 | 长距离压力测试 | ![Ultra long](results/figures/showcase/ultra_long_sr_curves.png) | 8x8 与 10x10 扩展网格下的长距离成功率曲线。 |
+| 补充行为分析 | ![Trajectory behavior](results/figures/supplement/trajectory_behavior_metrics.png) | 用轨迹单调接近率、重复访问率和距离缩短率解释中远距离搜索行为。 |
 
 ## 动态轨迹
 
@@ -47,6 +49,7 @@ r_t = r_ex,t + lambda_t r_in,t + r_p,t
 
 - `code/geoexplorer_active/`：本文方法的干净代码入口，包括训练、评测、数据预处理和模型定义。
 - `code/tools/build_visual_showcase.py`：从 `results/tables/` 重新生成 GitHub 展示图和媒体清单。
+- `code/tools/build_supplement_experiment_analysis.py`：生成置信区间、轨迹行为、奖励过程和后续补跑实验方案。
 - `experiments/`：主表、消融实验、参数实验和长距离测试对应的脚本与 manifest。
 - `results/tables/`：已整理的主实验、消融、附录参数、长距离和轨迹记录表。
 - `results/figures/`：论文图、数据集图、轨迹图、奖励机制图和 GitHub 展示图。
@@ -76,6 +79,7 @@ python validate.py
 
 ```bash
 python code/tools/build_visual_showcase.py
+python code/tools/build_supplement_experiment_analysis.py
 ```
 
 仓库不包含训练 checkpoint、原始大规模数据包和本地临时缓存。结果表保留 checkpoint 路径或 run 名称，用于和原始实验设置对应；大文件权重需要按复现说明另行准备。

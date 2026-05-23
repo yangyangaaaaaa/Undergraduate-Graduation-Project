@@ -81,6 +81,18 @@ python code/tools/build_visual_showcase.py
 | ![gp paths](../results/figures/showcase/reward_story/figure_b_gp_2x2_paths_img189.png) | 展示 G 与 P 四种组合对路径的影响。 |
 | ![reward replay](../results/figures/showcase/reward_story/gifs/gif_anchor_reward_replay_img189.gif) | 动态回放奖励机制如何影响搜索过程。 |
 
+## 补充统计与行为分析图
+
+这些图位于 `results/figures/supplement/`，由 `code/tools/build_supplement_experiment_analysis.py` 从已有结果表和任务级记录生成。它们更适合放在论文补充分析或答辩问答页，用来回答“结果是否稳定”“为什么短距离不一定最好”“轨迹行为是否真的更稳”等问题。
+
+| 图 | 用途 | 数据来源 |
+|---|---|---|
+| ![mmgag ci](../results/figures/supplement/mmgag_diff_ci.png) | 展示 MM-GAG A/G/T 上本文方法相对 GOMAA-Geo 的 SR 差值及近似 95% CI。 | `results/tables/statistical_analysis/main_benchmark_diff_ci_table.csv` |
+| ![ultra ci](../results/figures/supplement/ultra_long_diff_ci.png) | 展示长距离扩展测试中本文方法相对基线的 SR 差值及近似 95% CI。 | `results/tables/statistical_analysis/ultra_long_diff_ci_table.csv` |
+| ![behavior](../results/figures/supplement/trajectory_behavior_metrics.png) | 用成功率、距离缩短率、单调接近率和重复访问率解释轨迹行为差异。 | `results/tables/trajectory_analysis/trajectory_behavior_by_distance.csv` |
+| ![c4 failure](../results/figures/supplement/c4_failure_profile.png) | 分析 `C=4` 短距离失败样例，支撑“方法优势集中在中远距离”的论文表述。 | `results/tables/trajectory_analysis/c4_failure_profile.csv` |
+| ![reward traces](../results/figures/supplement/reward_component_traces.png) | 展示成功/失败样例中奖励分量、门控值和总奖励随步数变化的趋势。 | `results/tables/reward_process/reward_process_summary.csv` |
+
 ## 使用建议
 
 - 项目首页优先使用 `benchmark_overview_dashboard.png`、`mmgag_modality_sr.png`、`ultra_long_sr_curves.png` 和一组困难案例 GIF。
