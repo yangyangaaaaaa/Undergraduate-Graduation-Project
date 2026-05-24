@@ -45,6 +45,17 @@
 | `results/tables/ultra_long/ultra_long_v3_grid25_summary.csv` | `25 x 25` 探索性压力测试汇总。 |
 | `results/tables/ultra_long/ultra_long_v3_grid25_per_distance.csv` | `25 x 25` 探索性压力测试分距离结果。 |
 
+## P0/P1 补充评测
+
+| 文件 | 用途 |
+| --- | --- |
+| `results/tables/supplement_eval/budget_sensitivity_summary.csv` | P0 8x8/10x10 预算敏感性汇总。 |
+| `results/tables/supplement_eval/task_seed_summary.csv` | P0 MM-GAG 与 ultra-long task-bank seed 稳定性汇总。 |
+| `results/tables/supplement_eval/p1_grid25_budget_summary.csv` | P1 25x25 超大网格预算敏感性汇总。 |
+| `results/tables/supplement_eval/p1_grid25_seed_summary.csv` | P1 25x25 超大网格 task-bank seed 稳定性汇总。 |
+| `results/tables/supplement_eval/p0_supplement_aggregate.json` | P0 补充评测完整聚合数据。 |
+| `results/tables/supplement_eval/p1_grid25_aggregate.json` | P1 25x25 补充评测完整聚合数据。 |
+
 ## 补充统计与行为分析
 
 | 文件 | 用途 |
@@ -77,6 +88,9 @@
 | `results/reports/chapter4_airloc_ultralong_split_material_20260521_zh.md` | AirLoc、长距离实验和数据划分材料。 |
 | `results/reports/reward_gate_eval_protocol_audit_20260520_zh.md` | 消融测试阶段是否调用奖励模块的协议审查。 |
 | `results/reports/supplement_experiment_analysis_zh.md` | 补充统计、轨迹行为、奖励过程分析与后续实验方案。 |
+| `results/reports/p0_supplement_eval_inventory_zh.md` | P0 预算敏感性与 task-bank seed 复评整理说明。 |
+| `results/reports/p1_grid25_analysis_zh.md` | P1 25x25 超大网格压力测试整理与分析。 |
+| `results/reports/supplement_eval_overview_zh.md` | P0/P1 补充实验总报告，可作为第 4 章补充材料来源。 |
 | `results/reports/xbd_protocol_correction_20260519_zh.md` | xBD 评测口径说明。 |
 | `results/reports/source_result_inventory_20260522.md` | 原始本地结果目录索引。 |
 

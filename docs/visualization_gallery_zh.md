@@ -53,6 +53,16 @@ python code/tools/build_visual_showcase.py
 | ![ultra sg](../results/figures/showcase/ultra_long_sg_curves.png) | 8x8 与 10x10 扩展网格下的 SG 曲线。 | SG 越低表示到达后剩余预算越多或路径更高效。 |
 | ![grid25](../results/figures/showcase/grid25_stress_curves.png) | 25x25 探索性压力测试。 | 该设置难度显著更高，主要作为补充观察。 |
 
+## P0/P1 补充评测图
+
+| 图 | 用途 | 数据来源 |
+|---|---|---|
+| ![p0 budget](../results/figures/supplement/p0_budget_sensitivity.png) | 展示 8x8/10x10 下预算变化对 SR 的影响。 | `results/tables/supplement_eval/budget_sensitivity_summary.csv` |
+| ![p0 advantage](../results/figures/supplement/p0_budget_advantage.png) | 展示本文方法相对 GOMAA-Geo 的预算敏感性差值。 | `results/tables/supplement_eval/budget_sensitivity_summary.csv` |
+| ![p0 seed](../results/figures/supplement/p0_task_seed_stability.png) | 展示 MM-GAG 与 ultra-long task-bank seed 复评的稳定性。 | `results/tables/supplement_eval/task_seed_summary.csv` |
+| ![p1 budget](../results/figures/supplement/p1_grid25_budget_sensitivity.png) | 展示 25x25 超大网格下预算变化对 SR 的影响。 | `results/tables/supplement_eval/p1_grid25_budget_summary.csv` |
+| ![p1 distance](../results/figures/supplement/p1_grid25_per_distance_seed_mean.png) | 展示 25x25 下不同距离桶的 seed 平均 SR。 | `results/tables/supplement_eval/p1_grid25_seed_table.csv` |
+
 ## 动态与静态轨迹
 
 轨迹媒体位于以下目录：
