@@ -74,6 +74,30 @@ METHOD_LABEL = {
     "本文方法": "Ours",
 }
 
+METHOD_DISPLAY_LABEL = {
+    "Ours": "本文方法",
+    "Random": "随机策略",
+}
+
+BENCHMARK_DISPLAY_LABEL = {
+    "masa_aerial": "MASA 航拍",
+    "mmgag_aerial": "MM-GAG 航拍",
+    "mmgag_ground": "MM-GAG 地面",
+    "mmgag_text": "MM-GAG 文本",
+    "swissview100_aerial": "SwissView100 航拍",
+    "swissviewmonuments_aerial": "SwissMon 航拍",
+    "swissviewmonuments_ground": "SwissMon 地面",
+    "xbd_pre_aerial": "xBD 灾前",
+    "xbd_disaster_aerial": "xBD 灾后",
+    "masa_aerial_8x8": "长距离 8x8",
+    "masa_aerial_10x10": "长距离 10x10",
+}
+
+FAMILY_DISPLAY_LABEL = {
+    "mmgag": "MM-GAG",
+    "ultra_long": "长距离",
+}
+
 
 def read_csv(rel: str) -> pd.DataFrame:
     return pd.read_csv(TABLE_DIR / rel)
@@ -84,6 +108,26 @@ def normalize_method(value: object) -> str:
         return ""
     text = str(value)
     return METHOD_LABEL.get(text, text)
+
+
+def display_method(value: object) -> str:
+    text = normalize_method(value)
+    return METHOD_DISPLAY_LABEL.get(text, text)
+
+
+def display_benchmark(value: object) -> str:
+    text = str(value)
+    return BENCHMARK_DISPLAY_LABEL.get(text, text.replace("_", " "))
+
+
+def display_seed_setting(row: pd.Series) -> str:
+    family = str(row["family"])
+    benchmark = str(row["benchmark"])
+    if family == "mmgag":
+        return display_benchmark(benchmark)
+    if family == "ultra_long":
+        return display_benchmark(benchmark)
+    return f"{FAMILY_DISPLAY_LABEL.get(family, family)} | {display_benchmark(benchmark)}"
 
 
 def ensure_dirs() -> None:
@@ -98,7 +142,7 @@ def setup_style() -> None:
             "axes.facecolor": CARD,
             "savefig.facecolor": PAPER,
             "font.family": "sans-serif",
-            "font.sans-serif": ["Arial", "DejaVu Sans", "Helvetica"],
+            "font.sans-serif": ["Microsoft YaHei", "SimHei", "Arial", "DejaVu Sans", "Helvetica"],
             "axes.edgecolor": FAINT,
             "axes.labelcolor": INK,
             "xtick.color": MUTED,
@@ -125,25 +169,16 @@ def clean_axes(ax: plt.Axes, grid: str = "y") -> None:
     ax.set_axisbelow(True)
 
 
-def add_card(fig: plt.Figure, title: str, subtitle: str, tag: str | None = None) -> None:
-    bg = FancyBboxPatch(
-        (0.012, 0.018),
-        0.976,
-        0.964,
-        boxstyle="round,pad=0.008,rounding_size=0.020",
-        transform=fig.transFigure,
-        linewidth=1.1,
-        edgecolor="#E2DED4",
-        facecolor=CARD,
-        zorder=-10,
-    )
-    fig.patches.append(bg)
+def add_card(fig: plt.Figure, title: str, subtitle: str, tag: str | None = None, conclusion: str | None = None) -> None:
     fig.text(0.045, 0.935, title, fontsize=23, fontweight="bold", color=INK)
     fig.text(0.045, 0.900, subtitle, fontsize=10.5, color=MUTED)
+    fig.lines.append(
+        plt.Line2D([0.045, 0.955], [0.872, 0.872], transform=fig.transFigure, color="#DCE3E4", linewidth=1.2)
+    )
     if tag:
         fig.text(
-            0.865,
-            0.925,
+            0.895,
+            0.926,
             tag,
             ha="center",
             va="center",
@@ -152,6 +187,20 @@ def add_card(fig: plt.Figure, title: str, subtitle: str, tag: str | None = None)
             fontweight="bold",
             bbox=dict(boxstyle="round,pad=0.35", facecolor="#EAF2FB", edgecolor="#CFE2F5"),
         )
+    if conclusion:
+        box = FancyBboxPatch(
+            (0.045, 0.028),
+            0.91,
+            0.055,
+            boxstyle="round,pad=0.006,rounding_size=0.010",
+            transform=fig.transFigure,
+            linewidth=0.9,
+            edgecolor="#D9E6DD",
+            facecolor="#F1F7F3",
+            zorder=-1,
+        )
+        fig.patches.append(box)
+        fig.text(0.062, 0.050, conclusion, fontsize=10.5, color="#2F493C", va="center")
 
 
 def save_card(fig: plt.Figure, name: str) -> None:
@@ -193,16 +242,17 @@ def hero_dashboard() -> None:
     fig = plt.figure(figsize=(16, 9))
     add_card(
         fig,
-        "GeoExplorer reward shaping improves active geo-localization",
-        "Paper-aligned evaluation, reward ablations, and long-range stress tests summarized from reproducible result tables.",
-        "Project showcase",
+        "实验结果总览",
+        "基于主实验、跨模态任务和长距离压力测试的可复现统计汇总。",
+        "项目展示",
+        "结论：本文方法在共享主基准、MM-GAG 跨模态任务和长距离搜索中均取得稳定提升。",
     )
     gs = fig.add_gridspec(
         3,
         6,
         left=0.055,
         right=0.965,
-        bottom=0.075,
+        bottom=0.150,
         top=0.835,
         hspace=0.58,
         wspace=0.46,
@@ -210,10 +260,10 @@ def hero_dashboard() -> None:
     )
 
     metrics = [
-        ("Shared mean SR", pivot["Ours"].mean(), pivot["GOMAA-Geo"].mean(), BLUE),
-        ("Mean SR gain", pivot["gain"].mean(), 0.0, GREEN),
-        ("MM-GAG mean gain", mmgag["gain"].mean(), 0.0, VIOLET),
-        ("Long-range gain", ultra_delta, 0.0, GOLD),
+        ("平均成功率", pivot["Ours"].mean(), pivot["GOMAA-Geo"].mean(), BLUE),
+        ("平均提升", pivot["gain"].mean(), 0.0, GREEN),
+        ("MM-GAG 提升", mmgag["gain"].mean(), 0.0, VIOLET),
+        ("长距离提升", ultra_delta, 0.0, GOLD),
     ]
     for i, (label, value, baseline, color) in enumerate(metrics):
         ax = fig.add_subplot(gs[0, i + 1 if i > 1 else i])
@@ -232,38 +282,38 @@ def hero_dashboard() -> None:
         )
         ax.text(0.06, 0.65, label, transform=ax.transAxes, fontsize=10, color=MUTED)
         display = f"{value:.3f}" if baseline else f"+{value:.3f}"
-        ax.text(0.06, 0.25, display, transform=ax.transAxes, fontsize=27, color=color, fontweight="bold")
+        ax.text(0.06, 0.30, display, transform=ax.transAxes, fontsize=25, color=color, fontweight="bold")
         if baseline:
-            ax.text(0.55, 0.31, f"vs {baseline:.3f}", transform=ax.transAxes, fontsize=10, color=MUTED)
+            ax.text(0.06, 0.14, f"对比 {baseline:.3f}", transform=ax.transAxes, fontsize=9.2, color=MUTED)
 
     ax = fig.add_subplot(gs[1:, :3])
     y = np.arange(len(pivot))
     ax.barh(y, pivot["gain"], color=[GREEN if v >= 0 else RED for v in pivot["gain"]], height=0.62)
     ax.axvline(0, color=INK, linewidth=0.9)
     ax.set_yticks(y)
-    ax.set_yticklabels([v.replace("_", " ") for v in pivot.index])
-    ax.set_xlabel("SR gain over GOMAA-Geo")
-    ax.set_title("Benchmark-level advantage")
+    ax.set_yticklabels([display_benchmark(v) for v in pivot.index])
+    ax.set_xlabel("相对 GOMAA-Geo 的成功率提升")
+    ax.set_title("各数据集上的提升幅度")
     for yi, val in zip(y, pivot["gain"]):
         annotate_value(ax, val + 0.004, yi, f"{val:+.3f}", GREEN if val >= 0 else RED)
     clean_axes(ax)
 
     ax = fig.add_subplot(gs[1:, 3:])
     targets = ["mmgag_aerial", "mmgag_ground", "mmgag_text"]
-    labels = ["Aerial goal", "Ground goal", "Text goal"]
+    labels = ["航拍目标", "地面目标", "文本目标"]
     x = np.arange(len(targets))
     ours = [float(main[(main["benchmark"].eq(t)) & (main["method_clean"].eq("Ours"))]["success_ratio"].iloc[0]) for t in targets]
     gomaa = [float(main[(main["benchmark"].eq(t)) & (main["method_clean"].eq("GOMAA-Geo"))]["success_ratio"].iloc[0]) for t in targets]
     ax.plot(x, gomaa, marker="o", markersize=8, linewidth=2.4, color=ORANGE, label="GOMAA-Geo")
-    ax.plot(x, ours, marker="o", markersize=8, linewidth=3.2, color=BLUE, label="Ours")
+    ax.plot(x, ours, marker="o", markersize=8, linewidth=3.2, color=BLUE, label="本文方法")
     for xi, o, g in zip(x, ours, gomaa):
         ax.vlines(xi, g, o, color="#9EC9EA", linewidth=7, alpha=0.55)
         ax.text(xi + 0.05, o + 0.008, f"+{o-g:.3f}", color=BLUE, fontsize=10, fontweight="bold")
     ax.set_xticks(x)
     ax.set_xticklabels(labels)
     ax.set_ylim(0.46, 0.68)
-    ax.set_ylabel("Success rate")
-    ax.set_title("Cross-modal MM-GAG gains")
+    ax.set_ylabel("成功率")
+    ax.set_title("MM-GAG 跨模态目标")
     ax.legend(frameon=False, loc="lower right")
     clean_axes(ax)
 
@@ -274,17 +324,18 @@ def mmgag_modality_panel() -> None:
     df = read_csv("main_benchmark/paper_baseline_compare_table.csv")
     df["method_clean"] = df["method"].map(normalize_method)
     targets = ["mmgag_aerial", "mmgag_ground", "mmgag_text"]
-    target_labels = ["Aerial image goal", "Ground image goal", "Text goal"]
+    target_labels = ["航拍图像目标", "地面图像目标", "文本描述目标"]
     methods = ["Ours", "GOMAA-Geo", "GeoExplorer", "Random", "DiT-AGL"]
 
     fig = plt.figure(figsize=(16, 9))
     add_card(
         fig,
-        "Cross-modal target forms: consistent advantage on MM-GAG",
-        "Aerial, ground, and text goals are evaluated under the same distance-bucket protocol.",
+        "跨模态目标定位表现",
+        "在相同距离分桶协议下比较航拍图像、地面图像和文本描述三类目标线索。",
         "MM-GAG",
+        "结论：三类目标形式下本文方法均位于第一梯队，说明目标表示对不同模态具有较好的适应性。",
     )
-    gs = fig.add_gridspec(1, 3, left=0.065, right=0.96, bottom=0.13, top=0.80, wspace=0.22)
+    gs = fig.add_gridspec(1, 3, left=0.065, right=0.96, bottom=0.18, top=0.80, wspace=0.22)
     for idx, (target, title) in enumerate(zip(targets, target_labels)):
         ax = fig.add_subplot(gs[0, idx])
         rows = df[df["benchmark"].eq(target)].copy()
@@ -294,10 +345,13 @@ def mmgag_modality_panel() -> None:
             if len(hit):
                 values.append((method, float(hit["success_ratio"].iloc[0])))
         plot = pd.DataFrame(values, columns=["method", "sr"]).sort_values("sr")
-        ax.barh(plot["method"], plot["sr"], color=[METHOD_COLOR.get(m, GRAY) for m in plot["method"]], height=0.55)
+        y_pos = np.arange(len(plot))
+        ax.barh(y_pos, plot["sr"], color=[METHOD_COLOR.get(m, GRAY) for m in plot["method"]], height=0.55)
+        ax.set_yticks(y_pos)
+        ax.set_yticklabels([display_method(m) for m in plot["method"]])
         ax.set_xlim(0, 0.72)
         ax.set_title(title)
-        ax.set_xlabel("Success rate")
+        ax.set_xlabel("成功率")
         for yi, row in enumerate(plot.itertuples(index=False)):
             ax.text(row.sr + 0.012, yi, f"{row.sr:.3f}", va="center", fontsize=9, fontweight="bold")
         clean_axes(ax)
@@ -315,14 +369,15 @@ def ablation_story_panel() -> None:
     fig = plt.figure(figsize=(16, 9))
     add_card(
         fig,
-        "Mechanism ablation: the complete G+P+E+V branch is best",
-        "G: distance gate, P: PBRS, E: lower entropy, V: far-distance validation.",
-        "16-cell ablation",
+        "模块消融实验",
+        "G 表示距离门控，P 表示 PBRS，E 表示低熵约束，V 表示远距离验证设置。",
+        "16 组消融",
+        "结论：完整 G+P+E+V 分支取得最高主泛化均值，各模块组合后形成更稳定的整体收益。",
     )
-    gs = fig.add_gridspec(1, 2, left=0.075, right=0.94, bottom=0.14, top=0.78, wspace=0.32, width_ratios=[1.15, 0.85])
+    gs = fig.add_gridspec(1, 2, left=0.075, right=0.94, bottom=0.18, top=0.78, wspace=0.32, width_ratios=[1.15, 0.85])
 
     ax = fig.add_subplot(gs[0, 0])
-    im = ax.imshow(mat.values, cmap="cividis", vmin=0.54, vmax=0.625)
+    im = ax.imshow(mat.values, cmap="cividis", vmin=0.35, vmax=0.625)
     ax.set_xticks(np.arange(len(col_order)))
     ax.set_xticklabels(col_order)
     ax.set_yticks(np.arange(len(row_order)))
@@ -333,16 +388,16 @@ def ablation_story_panel() -> None:
             val = mat.iloc[i, j]
             color = "white" if val > 0.585 else INK
             ax.text(j, i, f"{val:.3f}", ha="center", va="center", color=color, fontsize=12, fontweight="bold" if val == best else "normal")
-    ax.set_title("Primary generalization mean")
+    ax.set_title("主泛化均值")
     cbar = fig.colorbar(im, ax=ax, fraction=0.046, pad=0.04)
-    cbar.set_label("SR")
+    cbar.set_label("成功率")
 
     ax = fig.add_subplot(gs[0, 1])
     factors = [
-        ("G gate", "G_gate"),
-        ("P PBRS", "P_pbrs"),
-        ("E entropy", "E_low_entropy"),
-        ("V val C=7,8", "V_val78"),
+        ("G 距离门控", "G_gate"),
+        ("P 势函数塑形", "P_pbrs"),
+        ("E 低熵约束", "E_low_entropy"),
+        ("V 远距离验证", "V_val78"),
     ]
     rows = []
     for label, col in factors:
@@ -354,8 +409,8 @@ def ablation_story_panel() -> None:
     ax.axvline(0, color=INK, linewidth=0.9)
     for yi, row in enumerate(eff.itertuples(index=False)):
         ax.text(row.effect + 0.002, yi, f"{row.effect:+.3f}", va="center", fontsize=10, fontweight="bold")
-    ax.set_xlabel("Mean marginal effect")
-    ax.set_title("Average factor effect")
+    ax.set_xlabel("平均边际效应")
+    ax.set_title("单个因素的平均贡献")
     clean_axes(ax)
     save_card(fig, "ablation_story_panel")
 
@@ -366,10 +421,10 @@ def reward_design_panel() -> None:
     def pbrs_state(value: object) -> str:
         text = str(value)
         if "_no_pb" in text:
-            return "PBRS off"
+            return "关闭 PBRS"
         if text.endswith("_pb") or text == "external_pbrs":
-            return "PBRS on"
-        return "PBRS off"
+            return "开启 PBRS"
+        return "关闭 PBRS"
 
     df["pb"] = df["value"].map(pbrs_state)
     df["gate"] = (
@@ -379,37 +434,38 @@ def reward_design_panel() -> None:
         .str.replace("_0.405", "", regex=False)
     )
     order = ["external", "constant", "linear", "blend_lp", "power2", "sine"]
-    label_map = {"external": "external", "constant": "constant", "linear": "linear", "blend_lp": "linear-power", "power2": "power2", "sine": "sine"}
+    label_map = {"external": "外在奖励", "constant": "常数门控", "linear": "线性门控", "blend_lp": "线性-幂次", "power2": "二次门控", "sine": "正弦门控"}
 
     fig = plt.figure(figsize=(16, 9))
     add_card(
         fig,
-        "Reward design: distance-aware linear gate plus PBRS wins",
-        "Rows are evaluated on MM-GAG mean SR; reward terms affect training, not inference-time reward injection.",
-        "Reward ablation",
+        "奖励设计对比",
+        "所有方案均在 MM-GAG 平均成功率上评估；奖励项只影响训练阶段，不在推理阶段额外注入。",
+        "奖励消融",
+        "结论：线性距离门控与 PBRS 组合表现最好，说明探索强度随距离变化比固定内在奖励更合适。",
     )
-    gs = fig.add_gridspec(1, 2, left=0.07, right=0.95, bottom=0.13, top=0.78, width_ratios=[1.2, 0.8], wspace=0.28)
+    gs = fig.add_gridspec(1, 2, left=0.07, right=0.95, bottom=0.18, top=0.78, width_ratios=[1.2, 0.8], wspace=0.28)
     ax = fig.add_subplot(gs[0, 0])
     x = np.arange(len(order))
-    for pb, color, marker in [("PBRS off", ORANGE, "o"), ("PBRS on", BLUE, "o")]:
+    for pb, color, marker in [("关闭 PBRS", ORANGE, "o"), ("开启 PBRS", BLUE, "o")]:
         vals = []
         for gate in order:
-            if gate == "external" and pb == "PBRS off":
+            if gate == "external" and pb == "关闭 PBRS":
                 hit = df[df["value"].eq("external_only")]
-            elif gate == "external" and pb == "PBRS on":
+            elif gate == "external" and pb == "开启 PBRS":
                 hit = df[df["value"].eq("external_pbrs")]
             else:
                 hit = df[(df["gate"].eq(gate)) & (df["pb"].eq(pb))]
             vals.append(float(hit["mmgag_mean_sr"].iloc[0]) if len(hit) else np.nan)
-        ax.plot(x, vals, marker=marker, linewidth=3 if pb == "PBRS on" else 2.2, color=color, label=pb)
+        ax.plot(x, vals, marker=marker, linewidth=3 if pb == "开启 PBRS" else 2.2, color=color, label=pb)
         for xi, val in zip(x, vals):
             if np.isfinite(val):
                 ax.text(xi, val + 0.010, f"{val:.3f}", ha="center", fontsize=8.2, color=color)
     ax.set_xticks(x)
     ax.set_xticklabels([label_map[v] for v in order], rotation=18, ha="right")
-    ax.set_ylabel("MM-GAG mean SR")
+    ax.set_ylabel("MM-GAG 平均成功率")
     ax.set_ylim(0.34, 0.64)
-    ax.set_title("Gate function sweep")
+    ax.set_title("距离门控函数对比")
     ax.legend(frameon=False, loc="lower left")
     clean_axes(ax)
 
@@ -418,22 +474,22 @@ def reward_design_panel() -> None:
     mmgag = control[control["benchmark"].isin(["mmgag_aerial", "mmgag_ground", "mmgag_text"])]
     means = mmgag.groupby("run")["sr"].mean().reset_index()
     name_map = {
-        "reward_external_only_seed321_t480k": "External only",
-        "reward_intrinsic_only_seed321_t480k": "Intrinsic only",
-        "reward_intrinsic_no_decay_seed321_t480k": "Ext+Int no gate",
+        "reward_external_only_seed321_t480k": "仅外在奖励",
+        "reward_intrinsic_only_seed321_t480k": "仅内在奖励",
+        "reward_intrinsic_no_decay_seed321_t480k": "外在+无门控内在",
     }
     means["label"] = means["run"].map(name_map)
     ours = float(df[df["value"].eq("linear_0.405_pb")]["mmgag_mean_sr"].iloc[0])
     plot = pd.concat(
-        [means[["label", "sr"]].rename(columns={"sr": "value"}), pd.DataFrame([{"label": "Linear gate + PBRS", "value": ours}])],
+        [means[["label", "sr"]].rename(columns={"sr": "value"}), pd.DataFrame([{"label": "线性门控 + PBRS", "value": ours}])],
         ignore_index=True,
     ).sort_values("value")
-    ax.barh(plot["label"], plot["value"], color=[BLUE if "Linear" in x else GRAY for x in plot["label"]], height=0.55)
+    ax.barh(plot["label"], plot["value"], color=[BLUE if "线性" in x else GRAY for x in plot["label"]], height=0.55)
     for yi, row in enumerate(plot.itertuples(index=False)):
         ax.text(row.value + 0.010, yi, f"{row.value:.3f}", va="center", fontsize=9, fontweight="bold")
     ax.set_xlim(0, 0.66)
-    ax.set_xlabel("MM-GAG mean SR")
-    ax.set_title("Strict reward endpoints")
+    ax.set_xlabel("MM-GAG 平均成功率")
+    ax.set_title("奖励端点对照")
     clean_axes(ax)
     save_card(fig, "reward_design_panel")
 
@@ -446,21 +502,22 @@ def long_range_panel() -> None:
     fig = plt.figure(figsize=(16, 9))
     add_card(
         fig,
-        "Long-range stress tests: stronger target direction at larger grids",
-        "Evaluation-only tests reuse trained checkpoints under expanded grid sizes and budgets.",
+        "长距离搜索与压力测试",
+        "在扩大网格和搜索预算后复用已训练模型进行评测，不额外重训。",
         "8x8 / 10x10 / 25x25",
+        "结论：搜索范围扩大后绝对成功率下降，但本文方法相对 GOMAA-Geo 的优势仍然保持。",
     )
-    gs = fig.add_gridspec(2, 2, left=0.07, right=0.95, bottom=0.12, top=0.78, hspace=0.45, wspace=0.28)
+    gs = fig.add_gridspec(2, 2, left=0.07, right=0.95, bottom=0.18, top=0.78, hspace=0.52, wspace=0.28)
     for ax, grid in zip([fig.add_subplot(gs[0, 0]), fig.add_subplot(gs[0, 1])], ["8x8", "10x10"]):
         sub = budget[budget["grid"].eq(grid)]
         for method in ["Ours", "GOMAA-Geo", "GeoExplorer"]:
             hit = sub[sub["method_clean"].eq(method)].sort_values("budget")
             if hit.empty:
                 continue
-            ax.plot(hit["budget"], hit["success_ratio"], marker="o", linewidth=3 if method == "Ours" else 2.2, color=METHOD_COLOR[method], label=method)
-        ax.set_title(f"{grid} budget sensitivity")
-        ax.set_xlabel("Search budget")
-        ax.set_ylabel("Success rate")
+            ax.plot(hit["budget"], hit["success_ratio"], marker="o", linewidth=3 if method == "Ours" else 2.2, color=METHOD_COLOR[method], label=display_method(method))
+        ax.set_title(f"{grid} 预算敏感性")
+        ax.set_xlabel("搜索预算")
+        ax.set_ylabel("成功率")
         ax.set_ylim(0.2, 0.82)
         clean_axes(ax)
     fig.axes[0].legend(frameon=False, loc="lower right")
@@ -470,10 +527,10 @@ def long_range_panel() -> None:
     ax = fig.add_subplot(gs[1, 0])
     for method in ["Ours", "GOMAA-Geo", "GeoExplorer"]:
         hit = p1[p1["method_clean"].eq(method)].sort_values("budget")
-        ax.plot(hit["budget"], hit["success_ratio"], marker="o", linewidth=3 if method == "Ours" else 2.2, color=METHOD_COLOR[method], label=method)
-    ax.set_title("25x25 exploratory pressure test")
-    ax.set_xlabel("Search budget")
-    ax.set_ylabel("Success rate")
+        ax.plot(hit["budget"], hit["success_ratio"], marker="o", linewidth=3 if method == "Ours" else 2.2, color=METHOD_COLOR[method], label=display_method(method))
+    ax.set_title("25x25 探索性压力测试")
+    ax.set_xlabel("搜索预算")
+    ax.set_ylabel("成功率")
     clean_axes(ax)
 
     ax = fig.add_subplot(gs[1, 1])
@@ -487,16 +544,13 @@ def long_range_panel() -> None:
         ).dropna()
         pivot["delta"] = pivot["anchor0624"] - pivot["gomaa"]
         pivot = pivot.reset_index()
-        pivot["setting"] = pivot.apply(
-            lambda r: f"{r['family']} | {str(r['benchmark']).replace('masa_aerial_', '')}",
-            axis=1,
-        )
+        pivot["setting"] = pivot.apply(display_seed_setting, axis=1)
         plot = pivot.sort_values("delta")
         ax.barh(plot["setting"], plot["delta"], color=GREEN, height=0.52)
         for yi, row in enumerate(plot.itertuples(index=False)):
             ax.text(row.delta + 0.004, yi, f"+{row.delta:.3f}", va="center", fontsize=9, fontweight="bold")
-        ax.set_xlabel("Mean SR gain")
-        ax.set_title("Task-bank seed stability")
+        ax.set_xlabel("平均成功率提升")
+        ax.set_title("任务库随机种子稳定性")
     else:
         ax.axis("off")
     clean_axes(ax)
@@ -508,17 +562,18 @@ def trajectory_behavior_panel() -> None:
     fig = plt.figure(figsize=(16, 9))
     add_card(
         fig,
-        "Trajectory behavior explains the medium-to-long distance advantage",
-        "Behavior metrics are computed from the curated trajectory case bank and used as qualitative evidence.",
-        "Trajectory analysis",
+        "轨迹行为统计",
+        "从整理后的轨迹案例库计算行为指标，用于解释中远距离任务中的性能差异。",
+        "轨迹分析",
+        "结论：本文方法在中远距离下更常接近目标、重复访问更少，搜索路径更稳定。",
     )
     metrics = [
-        ("success_rate", "Success rate"),
-        ("progress_ratio", "Progress ratio"),
-        ("monotonic_step_rate", "Monotonic step rate"),
-        ("revisit_rate", "Revisit rate"),
+        ("success_rate", "成功率"),
+        ("progress_ratio", "接近目标比例"),
+        ("monotonic_step_rate", "单调接近率"),
+        ("revisit_rate", "重复访问率"),
     ]
-    gs = fig.add_gridspec(2, 2, left=0.07, right=0.95, bottom=0.12, top=0.78, hspace=0.42, wspace=0.28)
+    gs = fig.add_gridspec(2, 2, left=0.07, right=0.95, bottom=0.18, top=0.78, hspace=0.52, wspace=0.28)
     axes = [fig.add_subplot(gs[i, j]) for i in range(2) for j in range(2)]
     for ax, (metric, ylabel) in zip(axes, metrics):
         for method in ["GeoExplorer-anchor0624", "GOMAA-Geo", "GeoExplorer-pristine"]:
@@ -526,9 +581,9 @@ def trajectory_behavior_panel() -> None:
             hit = df[df["method"].eq(method)].sort_values("distance")
             if hit.empty:
                 continue
-            ax.plot(hit["distance"], hit[metric], marker="o", linewidth=3 if label == "Ours" else 2.2, color=METHOD_COLOR[label], label=label)
+            ax.plot(hit["distance"], hit[metric], marker="o", linewidth=3 if label == "Ours" else 2.2, color=METHOD_COLOR[label], label=display_method(label))
         ax.set_title(ylabel)
-        ax.set_xlabel("Distance")
+        ax.set_xlabel("初始距离")
         ax.set_ylabel(ylabel)
         clean_axes(ax)
     axes[0].legend(frameon=False, loc="lower right")
@@ -566,32 +621,33 @@ def reward_process_panel() -> None:
     fig = plt.figure(figsize=(16, 9))
     add_card(
         fig,
-        "Reward process traces reveal why shaping helps search",
-        "Aggregated trajectory cases decompose external, curiosity, and PBRS terms for successful and failed searches.",
-        "Reward process",
+        "奖励过程分解",
+        "对成功与失败轨迹分别汇总外在奖励、门控内在奖励和 PBRS 项，观察训练信号如何影响搜索。",
+        "奖励过程",
+        "结论：成功轨迹通常累积更高总奖励，并在门控内在奖励与 PBRS 的配合下形成更明确的目标导向。",
     )
     gs = fig.add_gridspec(
         2,
         2,
         left=0.07,
         right=0.95,
-        bottom=0.12,
+        bottom=0.18,
         top=0.78,
-        hspace=0.42,
+        hspace=0.52,
         wspace=0.28,
     )
 
     ax = fig.add_subplot(gs[0, 0])
     full_grouped = grouped[grouped["method_key"].eq("g1_p1_e1_v1")].set_index("success")
     components = [
-        ("External", "sum_external", ORANGE),
-        ("Gated intrinsic", "sum_intrinsic_gated", SKY),
+        ("外在奖励", "sum_external", ORANGE),
+        ("门控内在奖励", "sum_intrinsic_gated", SKY),
         ("PBRS", "sum_pbrs", GREEN),
-        ("Total", "sum_total", BLUE),
+        ("总奖励", "sum_total", BLUE),
     ]
     x = np.arange(len(components))
     width = 0.34
-    for offset, success, label, color in [(-width / 2, True, "Success", BLUE), (width / 2, False, "Failure", RED)]:
+    for offset, success, label, color in [(-width / 2, True, "成功轨迹", BLUE), (width / 2, False, "失败轨迹", RED)]:
         vals = [float(full_grouped.loc[success, col]) if success in full_grouped.index else np.nan for _, col, _ in components]
         ax.bar(x + offset, vals, width=width, color=color, alpha=0.82, label=label)
         for xi, val in zip(x + offset, vals):
@@ -600,33 +656,33 @@ def reward_process_panel() -> None:
     ax.axhline(0, color=INK, linewidth=0.9)
     ax.set_xticks(x)
     ax.set_xticklabels([c[0] for c in components], rotation=12, ha="right")
-    ax.set_ylabel("Mean accumulated reward")
-    ax.set_title("Full method: success vs failure")
+    ax.set_ylabel("平均累计奖励")
+    ax.set_title("完整方法：成功与失败轨迹")
     ax.legend(frameon=False, ncols=2, loc="upper left")
     clean_axes(ax)
 
     ax = fig.add_subplot(gs[0, 1])
-    for success, label, color, marker in [(True, "Success", BLUE, "o"), (False, "Failure", RED, "s")]:
+    for success, label, color, marker in [(True, "成功轨迹", BLUE, "o"), (False, "失败轨迹", RED, "s")]:
         hit = full[full["success"].eq(success)].sort_values("distance")
         if hit.empty:
             continue
         ax.plot(hit["distance"], hit["sum_total"], marker=marker, linewidth=3, color=color, label=label)
         ax.fill_between(hit["distance"], hit["sum_external"], hit["sum_total"], color=color, alpha=0.10)
     ax.axhline(0, color=INK, linewidth=0.9)
-    ax.set_xlabel("Initial distance C")
-    ax.set_ylabel("Accumulated total reward")
-    ax.set_title("Reward outcome across distance buckets")
+    ax.set_xlabel("初始距离 C")
+    ax.set_ylabel("累计总奖励")
+    ax.set_title("不同距离下的奖励结果")
     ax.legend(frameon=False)
     clean_axes(ax)
 
     ax = fig.add_subplot(gs[1, 0])
     diagnostics = [
-        ("Path length", "path_length"),
-        ("Final distance", "final_distance"),
+        ("路径长度", "path_length"),
+        ("最终距离", "final_distance"),
     ]
     x = np.arange(len(diagnostics))
     width = 0.34
-    for offset, success, label, color in [(-width / 2, True, "Success", BLUE), (width / 2, False, "Failure", RED)]:
+    for offset, success, label, color in [(-width / 2, True, "成功轨迹", BLUE), (width / 2, False, "失败轨迹", RED)]:
         vals = [float(full_grouped.loc[success, col]) if success in full_grouped.index else np.nan for _, col in diagnostics]
         ax.bar(x + offset, vals, width=width, color=color, alpha=0.82, label=label)
         for xi, val in zip(x + offset, vals):
@@ -634,25 +690,25 @@ def reward_process_panel() -> None:
                 ax.text(xi, val + 0.18, f"{val:.1f}", ha="center", va="bottom", fontsize=9, fontweight="bold")
     ax.set_xticks(x)
     ax.set_xticklabels([d[0] for d in diagnostics])
-    ax.set_ylabel("Mean value")
-    ax.set_title("Trajectory outcome diagnostics")
+    ax.set_ylabel("平均值")
+    ax.set_title("轨迹结果诊断")
     ax.legend(frameon=False, ncols=2, loc="upper left")
     clean_axes(ax)
 
     ax = fig.add_subplot(gs[1, 1])
     for method, label, color in [
-        ("g1_p1_e1_v1", "Full gate", BLUE),
-        ("g1_p0_e1_v1", "Gate without PBRS", SKY),
-        ("g0_p1_e1_v1", "No distance gate", ORANGE),
+        ("g1_p1_e1_v1", "完整门控", BLUE),
+        ("g1_p0_e1_v1", "无 PBRS", SKY),
+        ("g0_p1_e1_v1", "无距离门控", ORANGE),
     ]:
         hit = df[(df["method_key"].eq(method)) & (df["success"].eq(True))].sort_values("distance")
         if hit.empty:
             continue
         ax.plot(hit["distance"], hit["mean_gate"], marker="o", linewidth=2.6, color=color, label=label)
-    ax.set_xlabel("Initial distance C")
-    ax.set_ylabel("Mean gate value")
+    ax.set_xlabel("初始距离 C")
+    ax.set_ylabel("平均门控值")
     ax.set_ylim(-0.02, 1.05)
-    ax.set_title("Gate profile on successful trajectories")
+    ax.set_title("成功轨迹中的门控曲线")
     ax.legend(frameon=False, loc="lower left")
     clean_axes(ax)
 
@@ -718,9 +774,9 @@ def build_triptych_gifs() -> None:
     label_font = _load_font(22, bold=True)
     small_font = _load_font(15, bold=False)
     methods = [
-        ("anchor0624", "Ours", BLUE, "success"),
-        ("gomaa", "GOMAA-Geo", ORANGE, "misses target"),
-        ("pristine", "GeoExplorer", GREEN, "drifts away"),
+        ("anchor0624", "本文方法", BLUE, "到达目标"),
+        ("gomaa", "GOMAA-Geo", ORANGE, "未到达目标"),
+        ("pristine", "GeoExplorer", GREEN, "偏离目标"),
     ]
 
     base_names = sorted(
@@ -754,9 +810,9 @@ def build_triptych_gifs() -> None:
                 canvas.alpha_composite(panel, (x0, 0))
                 draw.rectangle((x0, 0, x0 + 6, panel_h), fill=color)
                 _draw_shadow_text(draw, (x0 + 16, 12), label, label_font, "white", stroke=2)
-                _draw_shadow_text(draw, (x0 + panel_w - 116, 14), f"step {i:02d}/{n - 1:02d}", small_font, "#EAF3FB", stroke=2)
-                status = outcome if i == n - 1 else "searching"
-                meta = f"{status} | C=6 | img=189 | step={i}/{n - 1}"
+                _draw_shadow_text(draw, (x0 + panel_w - 118, 14), f"步 {i:02d}/{n - 1:02d}", small_font, "#EAF3FB", stroke=2)
+                status = outcome if i == n - 1 else "搜索中"
+                meta = f"{status} | C=6 | 图像 189 | 步数 {i}/{n - 1}"
                 _draw_shadow_text(draw, (x0 + 16, panel_h - 30), meta, small_font, "#F2F7FA", stroke=2)
             draw.rectangle((0, panel_h - 4, canvas_size[0], panel_h), fill=(5, 10, 18, 160))
             draw.rectangle((0, panel_h - 4, int(canvas_size[0] * i / max(1, n - 1)), panel_h), fill=BLUE)

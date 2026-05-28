@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-  <img src="results/figures/showcase/experience/hero_experience.png" width="100%" alt="Curiosity-guided active geo-localization hero">
+  <img src="results/figures/showcase/experience/hero_experience.png" width="100%" alt="好奇心驱动的无人机主动目标定位展示图">
 </p>
 
 ## 项目一眼看懂
@@ -22,80 +22,92 @@
   </tr>
 </table>
 
-## 方法架构
+## 方法框架
 
-方法框架以目标表示、历史动作-特征序列建模和 Actor-Critic 策略推理为主线。训练阶段通过混合奖励机制优化策略网络，推理阶段仅使用训练后的策略网络进行动作选择。
+方法由三部分组成：首先将航拍图像、地面图像或文本描述编码为统一的目标表示；随后用 Transformer 建模历史动作与观测特征序列；最后由 Actor-Critic 策略网络根据当前状态和历史信息选择下一步动作。混合奖励机制只用于训练阶段优化策略，推理阶段直接使用训练好的策略网络。
 
 <p align="center">
-  <img src="results/figures/showcase/dataset/figure3_1_method_overview_revised.png" width="100%" alt="Method architecture">
+  <img src="results/figures/showcase/dataset/figure3_1_method_overview_revised.png" width="100%" alt="方法框架图">
 </p>
 
-## 数据集场景
+## 数据集与任务场景
 
 实验材料覆盖航拍目标、地面目标、文本目标和灾前灾后场景。下面的图用于快速说明不同数据设置对应的目标线索和搜索区域形式。
 
 <p align="center">
-  <img src="results/figures/showcase/dataset/chapter2_typical_dataset_scene_examples.png" width="100%" alt="Dataset scene examples">
+  <img src="results/figures/showcase/dataset/chapter2_typical_dataset_scene_examples.png" width="100%" alt="数据集与任务场景示例">
 </p>
 
-## 轨迹剧场
+## 轨迹对比
 
 下面的 GIF 把同一个困难样例下的三种方法同步放在一张图中。新版在三个轨迹面板之间保留细间隔，避免画面直接挤在一起，同时保持统一裁剪、统一步数和统一进度条，便于直接观察搜索行为差异。
 
 <p align="center">
-  <img src="results/figures/showcase/experience/trajectory_theater_gifs/three_method_hardcase__img189_d6_s20_g14_r0__theater.gif" width="100%" alt="Synchronized trajectory theater">
+  <img src="results/figures/showcase/experience/trajectory_theater_gifs/three_method_hardcase__img189_d6_s20_g14_r0__theater.gif" width="100%" alt="同步轨迹对比动图">
 </p>
 
 <p align="center">
-  <img src="results/figures/showcase/experience/trajectory_storyboard_experience.png" width="100%" alt="Trajectory storyboard">
+  <img src="results/figures/showcase/experience/trajectory_storyboard_experience.png" width="100%" alt="轨迹对比结果图">
 </p>
 
-## 证据墙
+## 核心结果证据墙
 
-证据墙将主基准、跨模态、长距离和轨迹行为四条证据链放在同一张图中。它不替代表格原始数据，而是用于项目首页和答辩开场页快速解释“优势从哪里来”。
+证据墙把总体性能、跨模态目标、长距离搜索和轨迹行为放在同一页中，用来快速说明本文方法的提升来自哪些实验现象。完整数值仍以 `results/tables/` 中的表格为准。
 
 <p align="center">
-  <img src="results/figures/showcase/experience/evidence_wall_experience.png" width="100%" alt="Evidence wall">
+  <img src="results/figures/showcase/experience/evidence_wall_experience.png" width="100%" alt="核心结果证据墙">
 </p>
 
-## 结果图卡
+## 主要实验结果
 
-新版展示页不再把多张结果图压进两列表格。每张核心图卡单独占一行，保证 GitHub 页面中仍能看清坐标、数值和结论。
+以下结果图按单列展示，避免 GitHub 页面压缩后看不清坐标、数值和图例。每张图对应一组核心实验结论。
 
-### 总览图
+### 结果总览
+
+汇总主基准平均成功率、相对提升、跨模态任务和长距离任务表现，用于快速把握整体实验结论。
 
 <p align="center">
-  <img src="results/figures/showcase/polished/hero_dashboard.png" width="100%" alt="Main result dashboard">
+  <img src="results/figures/showcase/polished/hero_dashboard.png" width="100%" alt="实验结果总览">
 </p>
 
-### MM-GAG 跨模态目标
+### 跨模态目标定位
+
+比较航拍图像、地面图像和文本描述三类目标线索，展示目标表示在不同输入形式下的适应能力。
 
 <p align="center">
-  <img src="results/figures/showcase/polished/mmgag_modality_panel.png" width="100%" alt="MM-GAG modality panel">
+  <img src="results/figures/showcase/polished/mmgag_modality_panel.png" width="100%" alt="跨模态目标定位表现">
 </p>
 
-### 机制消融
+### 模块消融实验
+
+对门控、势函数塑形、内在奖励和价值分支进行组合消融，说明完整机制相对各个删减版本的收益。
 
 <p align="center">
-  <img src="results/figures/showcase/polished/ablation_story_panel.png" width="100%" alt="Ablation story panel">
+  <img src="results/figures/showcase/polished/ablation_story_panel.png" width="100%" alt="模块消融实验">
 </p>
 
-### 奖励机制
+### 奖励设计分析
+
+比较不同距离门控函数和 PBRS 开关，解释训练阶段混合奖励如何改善策略学习。
 
 <p align="center">
-  <img src="results/figures/showcase/polished/reward_design_panel.png" width="100%" alt="Reward design panel">
+  <img src="results/figures/showcase/polished/reward_design_panel.png" width="100%" alt="奖励设计对比">
 </p>
 
-### 超长距离与压力测试
+### 长距离搜索与压力测试
+
+展示 8x8、10x10 和 25x25 网格下的预算敏感性与随机种子稳定性，评估搜索范围扩大后的表现。
 
 <p align="center">
-  <img src="results/figures/showcase/polished/long_range_panel.png" width="100%" alt="Long range panel">
+  <img src="results/figures/showcase/polished/long_range_panel.png" width="100%" alt="长距离搜索与压力测试">
 </p>
 
-### 轨迹行为分析
+### 轨迹行为统计
+
+从成功率、接近目标比例、单调接近率和重复访问率解释本文方法为什么在中远距离任务中更稳定。
 
 <p align="center">
-  <img src="results/figures/showcase/polished/trajectory_behavior_panel.png" width="100%" alt="Trajectory behavior panel">
+  <img src="results/figures/showcase/polished/trajectory_behavior_panel.png" width="100%" alt="轨迹行为统计">
 </p>
 
 ## 结果与材料组织

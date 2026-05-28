@@ -39,10 +39,27 @@ VIOLET = "#7E6BD1"
 WHITE = "#FFFFFF"
 
 METHODS = [
-    ("anchor0624", "Ours", BLUE, "SUCCESS"),
-    ("gomaa", "GOMAA-Geo", ORANGE, "misses target"),
-    ("pristine", "GeoExplorer", GREEN, "drifts away"),
+    ("anchor0624", "本文方法", BLUE, "到达目标"),
+    ("gomaa", "GOMAA-Geo", ORANGE, "未到达目标"),
+    ("pristine", "GeoExplorer", GREEN, "偏离目标"),
 ]
+
+BENCHMARK_DISPLAY_LABEL = {
+    "masa_aerial": "MASA 航拍",
+    "mmgag_aerial": "MM-GAG 航拍",
+    "mmgag_ground": "MM-GAG 地面",
+    "mmgag_text": "MM-GAG 文本",
+    "swissview100_aerial": "SwissView100 航拍",
+    "swissviewmonuments_aerial": "SwissMon 航拍",
+    "swissviewmonuments_ground": "SwissMon 地面",
+    "xbd_pre_aerial": "xBD 灾前",
+    "xbd_disaster_aerial": "xBD 灾后",
+}
+
+
+def display_benchmark(value: object) -> str:
+    text = str(value)
+    return BENCHMARK_DISPLAY_LABEL.get(text, text.replace("_", " "))
 
 
 def ensure_dirs() -> None:
@@ -171,10 +188,12 @@ def draw_wrapped(
     line_gap: int = 8,
 ) -> int:
     x, y = xy
-    words = text.split()
+    has_spaces = " " in text
+    words = text.split() if has_spaces else list(text)
+    sep = " " if has_spaces else ""
     line = ""
     for word in words:
-        candidate = f"{line} {word}".strip()
+        candidate = f"{line}{sep}{word}".strip() if has_spaces else f"{line}{word}"
         if draw.textlength(candidate, font=font_obj) <= width or not line:
             line = candidate
         else:
@@ -291,12 +310,12 @@ def build_hero() -> None:
     for y in range(0, 1440, 160):
         draw.line((0, y, 2560, y), fill=(255, 255, 255, 10), width=1)
 
-    draw.text((120, 96), "Curiosity-guided", font=F["display"], fill=WHITE)
-    draw.text((120, 178), "active geo-localization", font=font(62, bold=True), fill=WHITE)
+    draw.text((120, 96), "好奇心驱动", font=F["display"], fill=WHITE)
+    draw.text((120, 178), "无人机主动目标定位", font=font(62, bold=True), fill=WHITE)
     draw_wrapped(
         draw,
         (124, 275),
-        "A UAV agent searches a discrete aerial grid.  The policy learns from distance-aware curiosity and potential-based reward shaping, then navigates by the trained actor-critic network at inference time.",
+        "智能体在离散航拍网格中主动搜索目标。训练阶段通过距离门控好奇心奖励和势函数奖励塑形学习策略，推理阶段使用训练好的 Actor-Critic 网络选择动作。",
         F["body"],
         "#D9E6F2",
         1040,
@@ -304,10 +323,10 @@ def build_hero() -> None:
     )
 
     chips = [
-        ("Shared mean SR", f"{metrics['shared_mean']:.3f}", "#7CC7FF"),
-        ("Gain vs GOMAA", f"+{metrics['shared_gain']:.3f}", "#6FE0B5"),
-        ("MM-GAG gain", f"+{metrics['mmgag_gain']:.3f}", "#C3B5FF"),
-        ("Long-range gain", f"+{metrics['ultra_gain']:.3f}", "#FFD66B"),
+        ("平均成功率", f"{metrics['shared_mean']:.3f}", "#7CC7FF"),
+        ("相对提升", f"+{metrics['shared_gain']:.3f}", "#6FE0B5"),
+        ("跨模态提升", f"+{metrics['mmgag_gain']:.3f}", "#C3B5FF"),
+        ("长距离提升", f"+{metrics['ultra_gain']:.3f}", "#FFD66B"),
     ]
     for i, chip in enumerate(chips):
         draw_chip(draw, (124 + (i % 2) * 340, 535 + (i // 2) * 150), *chip)
@@ -315,12 +334,12 @@ def build_hero() -> None:
     # Main trajectory evidence.
     paste_round(canvas, frames["anchor0624_last"], (1380, 250), (890, 740), radius=42, border="#7CC7FF", border_width=5)
     draw.rounded_rectangle((1428, 298, 1820, 368), radius=24, fill=(31, 119, 180, 225))
-    draw.text((1455, 314), "same hard case: reaches target", font=F["h3"], fill=WHITE)
-    draw.text((1415, 1040), "Trajectory evidence", font=F["h2"], fill=WHITE)
+    draw.text((1455, 314), "同一困难样例：到达目标", font=F["h3"], fill=WHITE)
+    draw.text((1415, 1040), "轨迹证据", font=F["h2"], fill=WHITE)
     draw_wrapped(
         draw,
         (1415, 1092),
-        "The successful path is not just shorter; it maintains target-directed progress while the baselines drift into high-revisit routes.",
+        "成功轨迹不只是路径更短，更关键是持续朝目标推进；对比方法更容易出现绕行和重复访问。",
         F["body"],
         "#D9E6F2",
         850,
@@ -329,11 +348,11 @@ def build_hero() -> None:
     # Pipeline strip.
     strip_y = 1220
     stages = [
-        ("Target cue", "aerial / ground / text"),
-        ("History", "actions + observations"),
-        ("Transformer", "state & next-feature prediction"),
-        ("Actor-Critic", "legal action distribution"),
-        ("Move", "grid update"),
+        ("目标线索", "航拍 / 地面 / 文本"),
+        ("历史序列", "动作 + 观测"),
+        ("Transformer", "状态与下一特征预测"),
+        ("Actor-Critic", "合法动作分布"),
+        ("移动", "更新网格位置"),
     ]
     x = 120
     for i, (title, subtitle) in enumerate(stages):
@@ -356,70 +375,6 @@ def ImageEnhance_like(im: Image.Image, brightness: float = 1.0, contrast: float 
     return im
 
 
-def build_method_blueprint() -> None:
-    canvas = Image.new("RGBA", (2400, 1350), PAPER)
-    draw = ImageDraw.Draw(canvas)
-    draw.rectangle((0, 0, 2400, 1350), fill="#F5F7F2")
-    draw.text((110, 72), "Method blueprint: one inference path, one training-only reward loop", font=F["h1"], fill=INK)
-    draw.text((112, 140), "The picture separates what runs at test time from what only shapes PPO training.", font=F["body"], fill=SLATE)
-
-    def card(x: int, y: int, w: int, h: int, title: str, body: str, color: str, dashed: bool = False) -> tuple[int, int]:
-        fill = "#FFFFFF" if not dashed else "#FFF7E8"
-        draw.rounded_rectangle((x, y, x + w, y + h), radius=34, fill=fill, outline=color, width=4)
-        draw.text((x + 32, y + 28), title, font=F["h2"], fill=color)
-        draw_wrapped(draw, (x + 32, y + 84), body, F["body"], "#2F3B4A", w - 64, line_gap=10)
-        return x + w, y + h // 2
-
-    y = 260
-    nodes = [
-        (100, y, 350, 250, "1. Goal cue", "Aerial image, ground image, or text is encoded into a shared target representation.", GREEN),
-        (535, y, 390, 250, "2. Search memory", "Observation and action-observation tokens form the history sequence.", BLUE),
-        (1010, y, 430, 250, "3. Transformer state", "Goal and history are fused into h_t; the next feature is predicted for curiosity.", VIOLET),
-        (1525, y, 365, 250, "4. Actor-Critic", "The policy outputs legal action probabilities and value estimate.", ORANGE),
-        (1975, y, 300, 250, "5. Grid move", "The selected action updates the UAV grid location.", "#2F6F9F"),
-    ]
-    centers = []
-    for n in nodes:
-        end = card(*n)
-        centers.append((n[0] + n[2] // 2, n[1] + n[3] // 2))
-    for idx, (a, b) in enumerate(zip(centers[:-1], centers[1:])):
-        start_x = nodes[idx][0] + nodes[idx][2] + 8
-        end_x = nodes[idx + 1][0] - 8
-        draw_arrow(draw, (start_x, a[1]), (end_x, b[1]), "#536B83", width=6)
-
-    # Training-only reward loop.
-    loop = (250, 740, 2150, 1118)
-    draw.rounded_rectangle(loop, radius=45, fill="#FFF3D8", outline="#D9A044", width=5)
-    draw.text((300, 780), "Training-only hybrid reward", font=F["h2"], fill="#A45E00")
-    draw.text((300, 835), "Used to update PPO parameters.  It is not injected during inference.", font=F["body"], fill="#76521E")
-    formula = "reward = external + gate * curiosity + PBRS"
-    draw.text((1240, 785), formula, font=font(44, bold=True, serif=True), fill=INK)
-
-    terms = [
-        ("External reward", "target arrival / step cost", ORANGE),
-        ("Curiosity reward", "next-feature prediction error", CYAN),
-        ("Distance gate", "lambda_t emphasizes useful exploration", BLUE),
-        ("PBRS", "potential change shapes progress", GREEN),
-    ]
-    x = 330
-    for title, body, color in terms:
-        draw.rounded_rectangle((x, 930, x + 410, 1060), radius=28, fill=WHITE, outline=color, width=3)
-        draw.text((x + 28, 952), title, font=F["h3"], fill=color)
-        draw.text((x + 28, 995), body, font=F["small"], fill=SLATE)
-        x += 455
-    draw.line((1800, 930, 1800, 610), fill="#B7791F", width=5)
-    draw_arrow(draw, (1800, 610), (1710, 515), "#B7791F", width=5)
-    draw.text((1840, 650), "PPO update", font=F["h3"], fill="#A45E00")
-
-    # Inference tag.
-    draw.rounded_rectangle((100, 1135, 1010, 1238), radius=30, fill="#EAF5FF", outline="#9CCDF0", width=3)
-    draw.text((140, 1165), "Inference: goal cue + history -> Transformer -> Actor-Critic -> greedy legal action", font=F["body"], fill="#1D5F8F")
-    draw.rounded_rectangle((1110, 1135, 2260, 1238), radius=30, fill="#FFF3D8", outline="#E8BD6B", width=3)
-    draw.text((1150, 1165), "Training: the reward loop shapes the same policy weights through PPO", font=F["body"], fill="#8A5A14")
-
-    canvas.convert("RGB").save(EXP_DIR / "method_blueprint_experience.png", quality=95)
-
-
 def build_evidence_wall() -> None:
     metrics = compute_metrics()
     main = read_csv("main_benchmark/paper_baseline_compare_table.csv")
@@ -433,52 +388,43 @@ def build_evidence_wall() -> None:
     pivot["gain"] = pivot["Ours"] - pivot["GOMAA-Geo"]
     pivot = pivot.sort_values("gain", ascending=True)
 
-    canvas = Image.new("RGBA", (2400, 1350), "#F7F8F4")
+    canvas = Image.new("RGBA", (2400, 1350), "#F6F8F5")
     draw = ImageDraw.Draw(canvas)
-    # Header band: dense and editorial, closer to the reference landing page.
-    draw.rectangle((0, 0, 2400, 190), fill="#0B1B2B")
-    draw.text((90, 42), "证据墙：四条证据链支撑方法改进", font=F["h1"], fill=WHITE)
-    draw.text((94, 118), "主基准 / 跨模态 / 长距离 / 轨迹行为", font=F["body"], fill="#C7D6E4")
+
+    draw.text((90, 56), "核心结果证据墙", font=F["h1"], fill=INK)
+    draw.text((94, 126), "从总体性能、跨模态适应、长距离搜索和轨迹行为四个角度说明方法改进。", font=F["body"], fill="#445166")
     metric_tiles = [
-        ("主基准 SR", f"{metrics['shared_mean']:.3f}", BLUE),
+        ("平均成功率", f"{metrics['shared_mean']:.3f}", BLUE),
         ("平均提升", f"+{metrics['shared_gain']:.3f}", GREEN),
-        ("消融提升", f"+{metrics['ablation_gain']:.3f}", VIOLET),
+        ("完整机制收益", f"+{metrics['ablation_gain']:.3f}", VIOLET),
         ("长距离提升", f"+{metrics['ultra_gain']:.3f}", YELLOW),
     ]
     for i, (label, value, color) in enumerate(metric_tiles):
-        x = 1180 + i * 285
-        y = 45
-        draw.rounded_rectangle((x, y, x + 250, y + 105), radius=24, fill=(255, 255, 255, 24), outline=(255, 255, 255, 70), width=2)
-        draw.text((x + 22, y + 18), label, font=F["small"], fill="#C7D6E4")
-        draw.text((x + 22, y + 43), value, font=F["number"], fill=color)
+        x = 1160 + i * 290
+        y = 44
+        draw.rounded_rectangle((x, y, x + 250, y + 112), radius=20, fill=WHITE, outline="#DCE3E4", width=2)
+        draw.rectangle((x + 18, y + 18, x + 25, y + 92), fill=color)
+        draw.text((x + 42, y + 20), label, font=F["small"], fill="#627083")
+        draw.text((x + 42, y + 44), value, font=F["number"], fill=color)
 
-    def section(x: int, y: int, w: int, h: int, title: str, tag: str, color: str) -> None:
-        draw.rectangle((x, y, x + w, y + h), fill=WHITE)
-        draw.rectangle((x, y, x + w, y + 8), fill=color)
-        draw.text((x + 28, y + 28), tag, font=F["h3"], fill=color)
-        draw.text((x + 100, y + 28), title, font=F["h2"], fill=INK)
-        draw.line((x + 28, y + 86, x + w - 28, y + 86), fill="#E2E6E8", width=2)
+    def section(x: int, y: int, w: int, h: int, title: str, tag: str, color: str, note: str) -> None:
+        draw.rounded_rectangle((x, y, x + w, y + h), radius=18, fill=WHITE, outline="#DDE4E5", width=2)
+        draw.rectangle((x + 24, y + 26, x + 34, y + 80), fill=color)
+        draw.text((x + 52, y + 24), tag, font=F["h3"], fill=color)
+        draw.text((x + 105, y + 22), title, font=F["h2"], fill=INK)
+        draw.line((x + 30, y + 92, x + w - 30, y + 92), fill="#E5EAEC", width=2)
+        draw_wrapped(draw, (x + 34, y + h - 72), note, F["small"], "#445166", w - 68, line_gap=6)
 
     # 01 benchmark gains.
-    x, y, w, h = 90, 245, 1030, 440
-    section(x, y, w, h, "主基准逐项提升", "01", BLUE)
-    bar_x, bar_y = x + 360, y + 120
-    bar_w, row_h = 485, 34
+    x, y, w, h = 90, 230, 1030, 460
+    section(x, y, w, h, "主实验：各数据集上的成功率提升", "01", BLUE, "绿色条表示本文方法相对 GOMAA-Geo 的成功率增益，多个数据集同时提升说明改进不是单一场景偶然现象。")
+    bar_x, bar_y = x + 360, y + 116
+    bar_w, row_h = 485, 30
     min_gain, max_gain = float(pivot["gain"].min()), float(pivot["gain"].max())
     scale = bar_w / max(0.001, max_gain - min_gain)
     for i, (bench, row) in enumerate(pivot.iterrows()):
         yy = bar_y + i * row_h
-        label = {
-            "masa_aerial": "MASA aerial",
-            "mmgag_aerial": "MM-GAG aerial",
-            "mmgag_ground": "MM-GAG ground",
-            "mmgag_text": "MM-GAG text",
-            "swissview100_aerial": "SwissView100 aerial",
-            "swissviewmonuments_aerial": "SwissMon aerial",
-            "swissviewmonuments_ground": "SwissMon ground",
-            "xbd_pre_aerial": "xBD pre",
-            "xbd_disaster_aerial": "xBD disaster",
-        }.get(bench, bench.replace("_", " "))
+        label = display_benchmark(bench)
         draw.text((x + 32, yy - 4), label, font=F["tiny"], fill="#293649")
         zero_x = bar_x + int((0 - min_gain) * scale)
         val_x = bar_x + int((row["gain"] - min_gain) * scale)
@@ -489,13 +435,13 @@ def build_evidence_wall() -> None:
     draw.line((bar_x + int((0 - min_gain) * scale), bar_y - 12, bar_x + int((0 - min_gain) * scale), bar_y + len(pivot) * row_h), fill="#6B7280", width=2)
 
     # 02 MM-GAG cross-modal.
-    x, y, w, h = 1190, 245, 1120, 440
-    section(x, y, w, h, "跨模态目标适应", "02", GREEN)
+    x, y, w, h = 1190, 230, 1120, 460
+    section(x, y, w, h, "跨模态目标：图像与文本线索都能受益", "02", GREEN, "航拍图、地面图和文本描述三类目标线索下均保持优势，说明目标表示与历史序列建模具有较好的跨模态适应性。")
     targets = [("mmgag_aerial", "航拍目标"), ("mmgag_ground", "地面目标"), ("mmgag_text", "文本目标")]
     for i, (bench, label) in enumerate(targets):
         ours = float(main[(main["benchmark"].eq(bench)) & (main["method_clean"].eq("Ours"))]["success_ratio"].iloc[0])
         gomaa = float(main[(main["benchmark"].eq(bench)) & (main["method_clean"].eq("GOMAA-Geo"))]["success_ratio"].iloc[0])
-        yy = y + 142 + i * 86
+        yy = y + 140 + i * 76
         x1 = x + 250 + int(gomaa * 760)
         x2 = x + 250 + int(ours * 760)
         draw.text((x + 40, yy - 18), label, font=F["body"], fill=INK)
@@ -504,18 +450,18 @@ def build_evidence_wall() -> None:
         draw.ellipse((x1 - 16, yy - 16, x1 + 16, yy + 16), fill=ORANGE)
         draw.ellipse((x2 - 18, yy - 18, x2 + 18, yy + 18), fill=BLUE)
         draw.text((x2 + 34, yy - 18), f"+{ours-gomaa:.3f}", font=F["h3"], fill=GREEN)
-    draw.text((x + 360, y + h - 60), "orange = GOMAA-Geo, blue = Ours", font=F["small"], fill=SLATE)
+    draw.text((x + 360, y + 352), "橙色为 GOMAA-Geo，蓝色为本文方法", font=F["small"], fill=SLATE)
 
     # 03 long-range budget curves.
-    x, y, w, h = 90, 745, 1030, 485
-    section(x, y, w, h, "长距离预算敏感性", "03", ORANGE)
+    x, y, w, h = 90, 745, 1030, 505
+    section(x, y, w, h, "长距离搜索：预算变化下仍保持优势", "03", ORANGE, "8x8 与 10x10 网格中，预算增加后两种方法都会变好，但本文方法曲线整体更高，说明优势并非来自某一个固定预算点。")
     for idx, grid in enumerate(["8x8", "10x10"]):
         sub = budget[(budget["grid"].eq(grid)) & (budget["method_clean"].isin(["Ours", "GOMAA-Geo"]))].copy()
         if sub.empty:
             continue
         bx = x + 65 + idx * 465
         by = y + 135
-        bw, bh = 380, 250
+        bw, bh = 380, 230
         draw.text((bx, y + 100), grid, font=F["h3"], fill=INK)
         draw.line((bx, by + bh, bx + bw, by + bh), fill="#A9B4BE", width=2)
         draw.line((bx, by, bx, by + bh), fill="#A9B4BE", width=2)
@@ -532,13 +478,15 @@ def build_evidence_wall() -> None:
             for pt in pts:
                 draw.ellipse((pt[0] - 9, pt[1] - 9, pt[0] + 9, pt[1] + 9), fill=color)
             if pts:
-                draw.text((pts[-1][0] - 72, pts[-1][1] - 34), method, font=F["tiny"], fill=color)
+                label = "本文方法" if method == "Ours" else method
+                dx = -100 if method == "Ours" else -72
+                dy = -48 if method == "Ours" else 14
+                draw.text((pts[-1][0] + dx, pts[-1][1] + dy), label, font=F["tiny"], fill=color)
         draw.text((bx, by + bh + 22), f"B={budgets[0]}..{budgets[-1]}", font=F["small"], fill=SLATE)
-    draw.text((x + 65, y + h - 55), "预算变化下优势保持稳定，说明提升并非只来自单一预算点。", font=F["body"], fill="#293649")
 
     # 04 trajectory behavior.
-    x, y, w, h = 1190, 745, 1120, 485
-    section(x, y, w, h, "轨迹行为解释", "04", VIOLET)
+    x, y, w, h = 1190, 745, 1120, 505
+    section(x, y, w, h, "搜索轨迹：更稳定地接近目标", "04", VIOLET, "C=8 困难样例中，本文方法成功率更高、接近目标比例更高，同时重复访问更少，轨迹行为更符合主动搜索目标。")
     sub = traj[traj["distance"].eq(8)].copy()
     metrics_bars = [
         ("success_rate", "成功率"),
@@ -547,14 +495,14 @@ def build_evidence_wall() -> None:
         ("revisit_rate", "重复访问"),
     ]
     for i, (metric, name) in enumerate(metrics_bars):
-        yy = y + 132 + i * 70
+        yy = y + 126 + i * 62
         draw.text((x + 44, yy + 5), name, font=F["body"], fill=INK)
         for method, color, offset in [("GOMAA-Geo", ORANGE, 0), ("GeoExplorer-anchor0624", BLUE, 28)]:
             val = float(sub[sub["method"].eq(method)][metric].iloc[0])
             bar_len = int(val * 760)
             draw.rounded_rectangle((x + 230, yy + offset, x + 230 + bar_len, yy + offset + 20), radius=10, fill=color)
             draw.text((x + 1010, yy + offset - 4), f"{val:.2f}", font=F["tiny"], fill=color)
-    draw.text((x + 230, y + h - 58), "C=8 困难样例中，本文方法更少回访、更稳定接近目标。", font=F["body"], fill="#293649")
+    draw.text((x + 230, y + 392), "橙色为 GOMAA-Geo，蓝色为本文方法", font=F["small"], fill=SLATE)
 
     canvas.convert("RGB").save(EXP_DIR / "evidence_wall_experience.png", quality=95)
 
@@ -563,8 +511,8 @@ def build_trajectory_storyboard(base: str = "three_method_hardcase__img189_d6_s2
     frames = first_last_frames(base)
     canvas = gradient_bg((2400, 1040), "#07101D", "#142A3D")
     draw = ImageDraw.Draw(canvas)
-    draw.text((88, 58), "One hard case, three behaviors", font=F["h1"], fill=WHITE)
-    draw.text((92, 126), "Same start, same target, same budget.  Labels stay inside the imagery; no cards, no outer frame.", font=F["body"], fill="#C8D6E4")
+    draw.text((88, 58), "同一困难样例下的三种搜索行为", font=F["h1"], fill=WHITE)
+    draw.text((92, 126), "起点、目标和预算完全一致；标签直接嵌入图像，便于对比真实搜索路径。", font=F["body"], fill="#C8D6E4")
     panel_w, panel_h = 710, 650
     gutter = 16
     start_x, y0 = 75, 235
@@ -574,11 +522,11 @@ def build_trajectory_storyboard(base: str = "three_method_hardcase__img189_d6_s2
         canvas.alpha_composite(panel, (x, y0))
         draw.rectangle((x, y0, x + 8, y0 + panel_h), fill=color)
         draw_shadow_text(draw, (x + 34, y0 + 32), label, F["h2"], WHITE, stroke=3)
-        badge = "target reached" if suffix == "anchor0624" else outcome
+        badge = "到达目标" if suffix == "anchor0624" else outcome
         draw_shadow_text(draw, (x + 34, y0 + panel_h - 70), badge, F["h2"], color, stroke=3)
     draw.text(
         (105, 950),
-        "Green=start, yellow=goal, numbered markers=search order.  The useful comparison is the path itself, so the layout avoids white cards and decorative borders.",
+        "绿色框为起点，黄色框为目标；编号标记表示搜索顺序。对比重点是路径本身，因此版式不再使用白色说明卡片或装饰边框。",
         font=F["body"],
         fill="#C8D6E4",
     )
@@ -604,9 +552,9 @@ def theater_frame(
         canvas.alpha_composite(panel.convert("RGBA"), (x0, 0))
         # Text is burned into the image instead of being placed in cards.
         draw_shadow_text(draw, (x0 + 16, 12), label, font(22, bold=True), WHITE, stroke=2)
-        draw_shadow_text(draw, (x0 + panel_w - 116, 14), f"step {i:02d}/{n - 1:02d}", F["tiny"], "#EAF3FB", stroke=2)
-        status = "success" if suffix == "anchor0624" and i == n - 1 else (outcome if i == n - 1 else "searching")
-        meta = f"{status} | C=6 | img=189 | step={i}/{n - 1}"
+        draw_shadow_text(draw, (x0 + panel_w - 118, 14), f"步 {i:02d}/{n - 1:02d}", F["tiny"], "#EAF3FB", stroke=2)
+        status = "到达目标" if suffix == "anchor0624" and i == n - 1 else (outcome if i == n - 1 else "搜索中")
+        meta = f"{status} | C=6 | 图像 189 | 步数 {i}/{n - 1}"
         draw_shadow_text(draw, (x0 + 16, panel_h - 30), meta, F["tiny"], "#F2F7FA", stroke=2)
 
     # Ultra-thin progress indicator, kept inside the image instead of adding a
@@ -664,7 +612,6 @@ def write_manifest() -> None:
 def build_experience() -> None:
     ensure_dirs()
     build_hero()
-    build_method_blueprint()
     build_evidence_wall()
     build_trajectory_storyboard()
     build_theater_gifs()

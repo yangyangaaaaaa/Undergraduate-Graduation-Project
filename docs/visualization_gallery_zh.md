@@ -1,6 +1,6 @@
 # 可视化结果画廊
 
-本画廊整理项目展示页、论文补充材料和答辩展示可直接使用的图件。当前展示层分为两级：`experience/` 用于 GitHub 首页首屏、轨迹剧场和方法叙事；`polished/` 用于可复现的科研风格结果图卡。这样既保留数据表驱动的严谨性，也避免首页只像普通统计图堆叠。
+本画廊整理项目展示页、论文补充材料和答辩展示可直接使用的图件。展示素材分为两类：一类用于首页开场、方法说明和轨迹对比，另一类用于展示主要实验结果。这样既保留数据表驱动的严谨性，也避免首页只像普通统计图堆叠。
 
 ## 生成方式
 
@@ -8,93 +8,121 @@
 python code/tools/build_visual_showcase.py
 ```
 
-该脚本会读取 `results/tables/` 中的真实实验结果表，重新生成基础展示图、experience 首页资产、polished 图卡、同步三联 GIF，并复制轨迹与奖励机制媒体。新版核心文件位于 `results/figures/showcase/experience/`、`results/figures/showcase/polished/` 和 `results/figures/showcase/trajectories/triptych_gifs/`。
+该脚本会读取 `results/tables/` 中的真实实验结果表，重新生成基础展示图、首页叙事素材、核心结果图、同步三联 GIF，并复制轨迹与奖励机制媒体。新版核心文件位于 `results/figures/showcase/experience/`、`results/figures/showcase/polished/` 和 `results/figures/showcase/trajectories/triptych_gifs/`。
 
-## Experience 首页资产
+## 首页展示素材
 
 这些图用于项目首页和答辩开场页，目标是先讲清楚“任务是什么、方法强在哪、轨迹为什么更稳”。
 
 <p align="center">
-  <img src="../results/figures/showcase/experience/hero_experience.png" width="100%" alt="experience hero">
+  <img src="../results/figures/showcase/experience/hero_experience.png" width="100%" alt="首页展示海报">
 </p>
 
-### 方法架构图
+### 方法框架
 
 <p align="center">
-  <img src="../results/figures/showcase/dataset/figure3_1_method_overview_revised.png" width="100%" alt="method architecture">
+  <img src="../results/figures/showcase/dataset/figure3_1_method_overview_revised.png" width="100%" alt="方法框架图">
 </p>
 
-### 数据集场景图
+### 数据集与任务场景
 
 <p align="center">
-  <img src="../results/figures/showcase/dataset/chapter2_typical_dataset_scene_examples.png" width="100%" alt="dataset examples">
+  <img src="../results/figures/showcase/dataset/chapter2_typical_dataset_scene_examples.png" width="100%" alt="数据集与任务场景示例">
 </p>
 
-### 证据墙
+### 核心结果证据墙
 
 <p align="center">
-  <img src="../results/figures/showcase/experience/evidence_wall_experience.png" width="100%" alt="evidence wall">
-</p>
-
-<p align="center">
-  <img src="../results/figures/showcase/experience/trajectory_theater_gifs/three_method_hardcase__img189_d6_s20_g14_r0__theater.gif" width="100%" alt="trajectory theater">
+  <img src="../results/figures/showcase/experience/evidence_wall_experience.png" width="100%" alt="核心结果证据墙">
 </p>
 
 <p align="center">
-  <img src="../results/figures/showcase/experience/trajectory_storyboard_experience.png" width="100%" alt="trajectory storyboard">
-</p>
-
-## Polished 核心图卡
-
-核心图卡按单列展示，避免 GitHub 页面把坐标和数值压得过小。
-
-<p align="center">
-  <img src="../results/figures/showcase/polished/hero_dashboard.png" width="100%" alt="hero dashboard">
+  <img src="../results/figures/showcase/experience/trajectory_theater_gifs/three_method_hardcase__img189_d6_s20_g14_r0__theater.gif" width="100%" alt="同步轨迹对比动图">
 </p>
 
 <p align="center">
-  <img src="../results/figures/showcase/polished/mmgag_modality_panel.png" width="100%" alt="mmgag modality panel">
+  <img src="../results/figures/showcase/experience/trajectory_storyboard_experience.png" width="100%" alt="轨迹对比结果图">
 </p>
 
-<p align="center">
-  <img src="../results/figures/showcase/polished/ablation_story_panel.png" width="100%" alt="ablation story panel">
-</p>
+## 主要实验结果
+
+主要实验结果按单列展示，避免 GitHub 页面把坐标和数值压得过小。每张图底部都给出简短结论，方便答辩或 README 快速阅读。
+
+### 结果总览
+
+汇总主实验、跨模态任务和长距离压力测试，先给出整体提升幅度。
 
 <p align="center">
-  <img src="../results/figures/showcase/polished/reward_design_panel.png" width="100%" alt="reward design panel">
+  <img src="../results/figures/showcase/polished/hero_dashboard.png" width="100%" alt="实验结果总览">
 </p>
 
-<p align="center">
-  <img src="../results/figures/showcase/polished/long_range_panel.png" width="100%" alt="long range panel">
-</p>
+### 跨模态目标定位
+
+比较航拍图像、地面图像和文本描述三类目标线索下的成功率。
 
 <p align="center">
-  <img src="../results/figures/showcase/polished/trajectory_behavior_panel.png" width="100%" alt="trajectory behavior panel">
+  <img src="../results/figures/showcase/polished/mmgag_modality_panel.png" width="100%" alt="跨模态目标定位表现">
 </p>
 
+### 模块消融实验
+
+展示 G/P/E/V 四个机制开关的组合消融和平均边际效应。
+
 <p align="center">
-  <img src="../results/figures/showcase/polished/reward_process_panel.png" width="100%" alt="reward process panel">
+  <img src="../results/figures/showcase/polished/ablation_story_panel.png" width="100%" alt="模块消融实验">
+</p>
+
+### 奖励设计分析
+
+比较不同距离门控函数、PBRS 开关和奖励端点对照。
+
+<p align="center">
+  <img src="../results/figures/showcase/polished/reward_design_panel.png" width="100%" alt="奖励设计分析">
+</p>
+
+### 长距离搜索与压力测试
+
+观察扩大网格和搜索预算后，本文方法相对基线是否仍然保持优势。
+
+<p align="center">
+  <img src="../results/figures/showcase/polished/long_range_panel.png" width="100%" alt="长距离搜索与压力测试">
+</p>
+
+### 轨迹行为统计
+
+用接近目标、单调接近和重复访问等指标解释轨迹为什么更稳定。
+
+<p align="center">
+  <img src="../results/figures/showcase/polished/trajectory_behavior_panel.png" width="100%" alt="轨迹行为统计">
+</p>
+
+### 奖励过程分解
+
+按成功/失败轨迹分解外在奖励、门控内在奖励、PBRS 和总奖励。
+
+<p align="center">
+  <img src="../results/figures/showcase/polished/reward_process_panel.png" width="100%" alt="奖励过程分解">
 </p>
 
 ## 同步三联动图
 
-三联动图将同一案例下的 Ours、GOMAA-Geo 和 GeoExplorer 轨迹同步放在一张 GIF 中。新版采用无白底、无卡片、无外边框的三联拼接，并在面板之间保留细间隔，只保留图内方法名、步数和极细进度线，适合项目首页、答辩页和补充材料快速展示。
+三联动图将同一案例下的本文方法、GOMAA-Geo 和 GeoExplorer 轨迹同步放在一张 GIF 中。新版采用无白底、无卡片、无外边框的三联拼接，并在面板之间保留细间隔，只保留图内方法名、步数和极细进度线，适合项目首页、答辩页和补充材料快速展示。
 
 <p align="center">
-  <img src="../results/figures/showcase/trajectories/triptych_gifs/three_method_hardcase__img189_d6_s20_g14_r0__triptych.gif" width="100%" alt="hardcase triptych gif">
+  <img src="../results/figures/showcase/trajectories/triptych_gifs/three_method_hardcase__img189_d6_s20_g14_r0__triptych.gif" width="100%" alt="困难样例三联轨迹动图">
 </p>
 
 可用三联动图清单：
 
 | 案例 | 文件 |
 | --- | --- |
-| C=4 failure/detour | `results/figures/showcase/trajectories/triptych_gifs/c4_anchor_failure_or_detour__img025_d4_s12_g00_r0__triptych.gif` |
-| C=4 success | `results/figures/showcase/trajectories/triptych_gifs/c4_anchor_success__img011_d4_s03_g11_r0__triptych.gif` |
-| C=6 failure/detour | `results/figures/showcase/trajectories/triptych_gifs/c6_anchor_failure_or_detour__img050_d6_s14_g00_r0__triptych.gif` |
-| C=6 success | `results/figures/showcase/trajectories/triptych_gifs/c6_anchor_success__img006_d6_s24_g06_r0__triptych.gif` |
-| C=8 failure/detour | `results/figures/showcase/trajectories/triptych_gifs/c8_anchor_failure_or_detour__img054_d8_s20_g04_r0__triptych.gif` |
-| C=8 success | `results/figures/showcase/trajectories/triptych_gifs/c8_anchor_success__img000_d8_s24_g00_r0__triptych.gif` |
-| Three-method hard case | `results/figures/showcase/trajectories/triptych_gifs/three_method_hardcase__img189_d6_s20_g14_r0__triptych.gif` |
+| C=4 失败/绕行样例 | `results/figures/showcase/trajectories/triptych_gifs/c4_anchor_failure_or_detour__img025_d4_s12_g00_r0__triptych.gif` |
+| C=4 成功样例 | `results/figures/showcase/trajectories/triptych_gifs/c4_anchor_success__img011_d4_s03_g11_r0__triptych.gif` |
+| C=6 失败/绕行样例 | `results/figures/showcase/trajectories/triptych_gifs/c6_anchor_failure_or_detour__img050_d6_s14_g00_r0__triptych.gif` |
+| C=6 成功样例 | `results/figures/showcase/trajectories/triptych_gifs/c6_anchor_success__img006_d6_s24_g06_r0__triptych.gif` |
+| C=8 失败/绕行样例 | `results/figures/showcase/trajectories/triptych_gifs/c8_anchor_failure_or_detour__img054_d8_s20_g04_r0__triptych.gif` |
+| C=8 成功样例 | `results/figures/showcase/trajectories/triptych_gifs/c8_anchor_success__img000_d8_s24_g00_r0__triptych.gif` |
+| 三方法困难样例 | `results/figures/showcase/trajectories/triptych_gifs/three_method_hardcase__img189_d6_s20_g14_r0__triptych.gif` |
 
 ## 论文补充分析图
 

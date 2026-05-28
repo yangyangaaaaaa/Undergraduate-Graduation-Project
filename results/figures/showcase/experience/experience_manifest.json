@@ -1,12 +1,11 @@
 {
   "generated_by": "code/tools/build_showcase_experience.py",
   "style": "cinematic scientific landing-page assets",
-  "file_count": 12,
+  "file_count": 11,
   "files": [
     "results/figures/showcase/experience/evidence_wall_experience.png",
     "results/figures/showcase/experience/experience_manifest.json",
     "results/figures/showcase/experience/hero_experience.png",
-    "results/figures/showcase/experience/method_blueprint_experience.png",
     "results/figures/showcase/experience/trajectory_storyboard_experience.png",
     "results/figures/showcase/experience/trajectory_theater_gifs/c4_anchor_failure_or_detour__img025_d4_s12_g00_r0__theater.gif",
     "results/figures/showcase/experience/trajectory_theater_gifs/c4_anchor_success__img011_d4_s03_g11_r0__theater.gif",

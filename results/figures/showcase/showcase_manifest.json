@@ -1,15 +1,13 @@
 {
-  "generated_by": "code/tools/build_visual_showcase.py",
-  "figure_root": "results/figures/showcase",
-  "file_count": 141,
+  "generated_by": "manual manifest refresh after showcase redesign",
   "media_counts": {
-    "results\\figures\\showcase\\trajectories\\gifs": 21,
-    "results\\figures\\showcase\\trajectories\\comparison_png": 7,
-    "results\\figures\\showcase\\trajectories\\static_png": 21,
-    "results\\figures\\showcase\\reward_story": 14,
-    "results\\figures\\showcase\\reward_story\\gifs": 1,
-    "results\\figures\\showcase\\dataset": 5
+    "png": 71,
+    "svg": 31,
+    "gif": 36,
+    "json": 2,
+    "other": 0
   },
+  "file_count": 140,
   "files": [
     "results/figures/showcase/ablation_factor_effects.png",
     "results/figures/showcase/ablation_factor_effects.svg",
@@ -27,7 +25,6 @@
     "results/figures/showcase/experience/evidence_wall_experience.png",
     "results/figures/showcase/experience/experience_manifest.json",
     "results/figures/showcase/experience/hero_experience.png",
-    "results/figures/showcase/experience/method_blueprint_experience.png",
     "results/figures/showcase/experience/trajectory_storyboard_experience.png",
     "results/figures/showcase/experience/trajectory_theater_gifs/c4_anchor_failure_or_detour__img025_d4_s12_g00_r0__theater.gif",
     "results/figures/showcase/experience/trajectory_theater_gifs/c4_anchor_success__img011_d4_s03_g11_r0__theater.gif",
