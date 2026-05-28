@@ -424,86 +424,137 @@ def build_evidence_wall() -> None:
     metrics = compute_metrics()
     main = read_csv("main_benchmark/paper_baseline_compare_table.csv")
     main["method_clean"] = main["method"].map(normalize_method)
-    ultra = read_csv("supplement_eval/budget_sensitivity_table.csv")
-    ultra["method_clean"] = ultra["method"].map(normalize_method)
     traj = read_csv("trajectory_analysis/trajectory_behavior_by_distance.csv")
+    budget = read_csv("supplement_eval/budget_sensitivity_table.csv")
+    budget["method_clean"] = budget["method"].map(normalize_method)
 
-    canvas = Image.new("RGBA", (2400, 1350), "#FAFAF6")
+    pair = main[main["method_clean"].isin(["Ours", "GOMAA-Geo"])].copy()
+    pivot = pair.pivot_table(index="benchmark", columns="method_clean", values="success_ratio", aggfunc="first").dropna()
+    pivot["gain"] = pivot["Ours"] - pivot["GOMAA-Geo"]
+    pivot = pivot.sort_values("gain", ascending=True)
+
+    canvas = Image.new("RGBA", (2400, 1350), "#F7F8F4")
     draw = ImageDraw.Draw(canvas)
-    draw.text((105, 70), "Evidence wall: where the improvement comes from", font=F["h1"], fill=INK)
-    draw.text((108, 140), "A one-page reading path for the main quantitative claims.", font=F["body"], fill=SLATE)
+    # Header band: dense and editorial, closer to the reference landing page.
+    draw.rectangle((0, 0, 2400, 190), fill="#0B1B2B")
+    draw.text((90, 42), "证据墙：四条证据链支撑方法改进", font=F["h1"], fill=WHITE)
+    draw.text((94, 118), "主基准 / 跨模态 / 长距离 / 轨迹行为", font=F["body"], fill="#C7D6E4")
+    metric_tiles = [
+        ("主基准 SR", f"{metrics['shared_mean']:.3f}", BLUE),
+        ("平均提升", f"+{metrics['shared_gain']:.3f}", GREEN),
+        ("消融提升", f"+{metrics['ablation_gain']:.3f}", VIOLET),
+        ("长距离提升", f"+{metrics['ultra_gain']:.3f}", YELLOW),
+    ]
+    for i, (label, value, color) in enumerate(metric_tiles):
+        x = 1180 + i * 285
+        y = 45
+        draw.rounded_rectangle((x, y, x + 250, y + 105), radius=24, fill=(255, 255, 255, 24), outline=(255, 255, 255, 70), width=2)
+        draw.text((x + 22, y + 18), label, font=F["small"], fill="#C7D6E4")
+        draw.text((x + 22, y + 43), value, font=F["number"], fill=color)
 
-    panels = [(90, 230, 1080, 520), (1220, 230, 1080, 520), (90, 810, 1080, 430), (1220, 810, 1080, 430)]
-    for panel in panels:
-        x, y, w, h = panel
-        draw.rounded_rectangle((x, y, x + w, y + h), radius=38, fill=WHITE, outline="#E0E4E1", width=3)
+    def section(x: int, y: int, w: int, h: int, title: str, tag: str, color: str) -> None:
+        draw.rectangle((x, y, x + w, y + h), fill=WHITE)
+        draw.rectangle((x, y, x + w, y + 8), fill=color)
+        draw.text((x + 28, y + 28), tag, font=F["h3"], fill=color)
+        draw.text((x + 100, y + 28), title, font=F["h2"], fill=INK)
+        draw.line((x + 28, y + 86, x + w - 28, y + 86), fill="#E2E6E8", width=2)
 
-    # Panel 1: headline metrics.
-    x, y, w, h = panels[0]
-    draw.text((x + 50, y + 45), "Main result", font=F["h2"], fill=INK)
-    for i, (label, value, color) in enumerate(
-        [
-            ("shared mean SR", f"{metrics['shared_mean']:.3f}", BLUE),
-            ("mean gain", f"+{metrics['shared_gain']:.3f}", GREEN),
-            ("16-cell ablation gain", f"+{metrics['ablation_gain']:.3f}", VIOLET),
-        ]
-    ):
-        cx = x + 60 + i * 325
-        draw.text((cx, y + 132), value, font=F["number"], fill=color)
-        draw.text((cx, y + 220), label, font=F["small"], fill=SLATE)
-    draw_wrapped(draw, (x + 58, y + 310), "The full method leads the shared method-comparison benchmarks and remains the best cell in the controlled G/P/E/V ablation.", F["body"], "#293649", w - 116)
+    # 01 benchmark gains.
+    x, y, w, h = 90, 245, 1030, 440
+    section(x, y, w, h, "主基准逐项提升", "01", BLUE)
+    bar_x, bar_y = x + 360, y + 120
+    bar_w, row_h = 485, 34
+    min_gain, max_gain = float(pivot["gain"].min()), float(pivot["gain"].max())
+    scale = bar_w / max(0.001, max_gain - min_gain)
+    for i, (bench, row) in enumerate(pivot.iterrows()):
+        yy = bar_y + i * row_h
+        label = {
+            "masa_aerial": "MASA aerial",
+            "mmgag_aerial": "MM-GAG aerial",
+            "mmgag_ground": "MM-GAG ground",
+            "mmgag_text": "MM-GAG text",
+            "swissview100_aerial": "SwissView100 aerial",
+            "swissviewmonuments_aerial": "SwissMon aerial",
+            "swissviewmonuments_ground": "SwissMon ground",
+            "xbd_pre_aerial": "xBD pre",
+            "xbd_disaster_aerial": "xBD disaster",
+        }.get(bench, bench.replace("_", " "))
+        draw.text((x + 32, yy - 4), label, font=F["tiny"], fill="#293649")
+        zero_x = bar_x + int((0 - min_gain) * scale)
+        val_x = bar_x + int((row["gain"] - min_gain) * scale)
+        draw.line((bar_x, yy + 12, bar_x + bar_w, yy + 12), fill="#EDF1F2", width=3)
+        draw.line((zero_x, yy + 12, val_x, yy + 12), fill=GREEN if row["gain"] >= 0 else RED, width=16)
+        draw.ellipse((val_x - 8, yy + 4, val_x + 8, yy + 20), fill=GREEN if row["gain"] >= 0 else RED)
+        draw.text((bar_x + bar_w + 18, yy - 4), f"{row['gain']:+.3f}", font=F["tiny"], fill=GREEN if row["gain"] >= 0 else RED)
+    draw.line((bar_x + int((0 - min_gain) * scale), bar_y - 12, bar_x + int((0 - min_gain) * scale), bar_y + len(pivot) * row_h), fill="#6B7280", width=2)
 
-    # Panel 2: MM-GAG slope chart.
-    x, y, w, h = panels[1]
-    draw.text((x + 50, y + 45), "Cross-modal target adaptation", font=F["h2"], fill=INK)
-    targets = [("mmgag_aerial", "Aerial"), ("mmgag_ground", "Ground"), ("mmgag_text", "Text")]
-    base_y = y + 155
+    # 02 MM-GAG cross-modal.
+    x, y, w, h = 1190, 245, 1120, 440
+    section(x, y, w, h, "跨模态目标适应", "02", GREEN)
+    targets = [("mmgag_aerial", "航拍目标"), ("mmgag_ground", "地面目标"), ("mmgag_text", "文本目标")]
     for i, (bench, label) in enumerate(targets):
         ours = float(main[(main["benchmark"].eq(bench)) & (main["method_clean"].eq("Ours"))]["success_ratio"].iloc[0])
         gomaa = float(main[(main["benchmark"].eq(bench)) & (main["method_clean"].eq("GOMAA-Geo"))]["success_ratio"].iloc[0])
-        yy = base_y + i * 92
-        x1 = x + 245 + int(gomaa * 760)
-        x2 = x + 245 + int(ours * 760)
-        draw.line((x1, yy, x2, yy), fill="#BFD7EA", width=16)
-        draw.ellipse((x1 - 13, yy - 13, x1 + 13, yy + 13), fill=ORANGE)
-        draw.ellipse((x2 - 15, yy - 15, x2 + 15, yy + 15), fill=BLUE)
-        draw.text((x + 62, yy - 18), label, font=F["body"], fill=INK)
-        draw.text((x2 + 28, yy - 18), f"+{ours-gomaa:.3f}", font=F["h3"], fill=GREEN)
-    draw.text((x + 300, y + 440), "orange = GOMAA-Geo, blue = Ours", font=F["small"], fill=SLATE)
+        yy = y + 142 + i * 86
+        x1 = x + 250 + int(gomaa * 760)
+        x2 = x + 250 + int(ours * 760)
+        draw.text((x + 40, yy - 18), label, font=F["body"], fill=INK)
+        draw.line((x + 250, yy, x + 250 + int(0.70 * 760), yy), fill="#EDF1F2", width=4)
+        draw.line((x1, yy, x2, yy), fill="#BFD7EA", width=18)
+        draw.ellipse((x1 - 16, yy - 16, x1 + 16, yy + 16), fill=ORANGE)
+        draw.ellipse((x2 - 18, yy - 18, x2 + 18, yy + 18), fill=BLUE)
+        draw.text((x2 + 34, yy - 18), f"+{ours-gomaa:.3f}", font=F["h3"], fill=GREEN)
+    draw.text((x + 360, y + h - 60), "orange = GOMAA-Geo, blue = Ours", font=F["small"], fill=SLATE)
 
-    # Panel 3: long-range.
-    x, y, w, h = panels[2]
-    draw.text((x + 50, y + 40), "Long-range stress", font=F["h2"], fill=INK)
-    sub = ultra[(ultra["grid"].eq("10x10")) & (ultra["method_clean"].isin(["Ours", "GOMAA-Geo"]))].copy()
-    budgets = sorted(sub["budget"].unique())
-    for method, color in [("GOMAA-Geo", ORANGE), ("Ours", BLUE)]:
-        hit = sub[sub["method_clean"].eq(method)].sort_values("budget")
-        pts = []
-        for _, row in hit.iterrows():
-            xx = x + 120 + budgets.index(row["budget"]) * 145
-            yy = y + 315 - int(row["success_ratio"] * 260)
-            pts.append((xx, yy))
-        if len(pts) > 1:
-            draw.line(pts, fill=color, width=8)
-        for pt in pts:
-            draw.ellipse((pt[0] - 10, pt[1] - 10, pt[0] + 10, pt[1] + 10), fill=color)
-        draw.text((x + 770, pts[-1][1] - 16), method, font=F["small"], fill=color)
-    draw.text((x + 55, y + 340), "10x10 budget sweep: advantage persists as budget changes.", font=F["body"], fill="#293649")
+    # 03 long-range budget curves.
+    x, y, w, h = 90, 745, 1030, 485
+    section(x, y, w, h, "长距离预算敏感性", "03", ORANGE)
+    for idx, grid in enumerate(["8x8", "10x10"]):
+        sub = budget[(budget["grid"].eq(grid)) & (budget["method_clean"].isin(["Ours", "GOMAA-Geo"]))].copy()
+        if sub.empty:
+            continue
+        bx = x + 65 + idx * 465
+        by = y + 135
+        bw, bh = 380, 250
+        draw.text((bx, y + 100), grid, font=F["h3"], fill=INK)
+        draw.line((bx, by + bh, bx + bw, by + bh), fill="#A9B4BE", width=2)
+        draw.line((bx, by, bx, by + bh), fill="#A9B4BE", width=2)
+        budgets = sorted(sub["budget"].unique())
+        for method, color in [("GOMAA-Geo", ORANGE), ("Ours", BLUE)]:
+            hit = sub[sub["method_clean"].eq(method)].sort_values("budget")
+            pts = []
+            for _, row in hit.iterrows():
+                xx = bx + int((budgets.index(row["budget"]) / max(1, len(budgets) - 1)) * bw)
+                yy = by + bh - int(row["success_ratio"] * bh)
+                pts.append((xx, yy))
+            if len(pts) > 1:
+                draw.line(pts, fill=color, width=7)
+            for pt in pts:
+                draw.ellipse((pt[0] - 9, pt[1] - 9, pt[0] + 9, pt[1] + 9), fill=color)
+            if pts:
+                draw.text((pts[-1][0] - 72, pts[-1][1] - 34), method, font=F["tiny"], fill=color)
+        draw.text((bx, by + bh + 22), f"B={budgets[0]}..{budgets[-1]}", font=F["small"], fill=SLATE)
+    draw.text((x + 65, y + h - 55), "预算变化下优势保持稳定，说明提升并非只来自单一预算点。", font=F["body"], fill="#293649")
 
-    # Panel 4: behavior metrics.
-    x, y, w, h = panels[3]
-    draw.text((x + 50, y + 40), "Trajectory behavior", font=F["h2"], fill=INK)
+    # 04 trajectory behavior.
+    x, y, w, h = 1190, 745, 1120, 485
+    section(x, y, w, h, "轨迹行为解释", "04", VIOLET)
     sub = traj[traj["distance"].eq(8)].copy()
-    labels = ["success_rate", "progress_ratio", "monotonic_step_rate", "revisit_rate"]
-    names = ["success", "progress", "monotonic", "revisit"]
-    for i, (metric, name) in enumerate(zip(labels, names)):
-        yy = y + 130 + i * 62
-        draw.text((x + 60, yy - 16), name, font=F["small"], fill=INK)
-        for method, color, offset in [("GOMAA-Geo", ORANGE, 0), ("GeoExplorer-anchor0624", BLUE, 24)]:
+    metrics_bars = [
+        ("success_rate", "成功率"),
+        ("progress_ratio", "接近目标"),
+        ("monotonic_step_rate", "单调接近"),
+        ("revisit_rate", "重复访问"),
+    ]
+    for i, (metric, name) in enumerate(metrics_bars):
+        yy = y + 132 + i * 70
+        draw.text((x + 44, yy + 5), name, font=F["body"], fill=INK)
+        for method, color, offset in [("GOMAA-Geo", ORANGE, 0), ("GeoExplorer-anchor0624", BLUE, 28)]:
             val = float(sub[sub["method"].eq(method)][metric].iloc[0])
-            draw.rounded_rectangle((x + 230, yy + offset, x + 230 + int(val * 700), yy + offset + 18), radius=9, fill=color)
-            draw.text((x + 950, yy + offset - 6), f"{val:.2f}", font=F["tiny"], fill=color)
-    draw.text((x + 60, y + 370), "At C=8, the learned policy shows stronger progress and lower drift.", font=F["body"], fill="#293649")
+            bar_len = int(val * 760)
+            draw.rounded_rectangle((x + 230, yy + offset, x + 230 + bar_len, yy + offset + 20), radius=10, fill=color)
+            draw.text((x + 1010, yy + offset - 4), f"{val:.2f}", font=F["tiny"], fill=color)
+    draw.text((x + 230, y + h - 58), "C=8 困难样例中，本文方法更少回访、更稳定接近目标。", font=F["body"], fill="#293649")
 
     canvas.convert("RGB").save(EXP_DIR / "evidence_wall_experience.png", quality=95)
 
@@ -515,13 +566,12 @@ def build_trajectory_storyboard(base: str = "three_method_hardcase__img189_d6_s2
     draw.text((88, 58), "One hard case, three behaviors", font=F["h1"], fill=WHITE)
     draw.text((92, 126), "Same start, same target, same budget.  Labels stay inside the imagery; no cards, no outer frame.", font=F["body"], fill="#C8D6E4")
     panel_w, panel_h = 710, 650
-    start_x, y0 = 87, 235
+    gutter = 16
+    start_x, y0 = 75, 235
     for j, (suffix, label, color, outcome) in enumerate(METHODS):
-        x = start_x + j * panel_w
+        x = start_x + j * (panel_w + gutter)
         panel = fit_cover(frames[f"{suffix}_last"], (panel_w, panel_h)).convert("RGBA")
         canvas.alpha_composite(panel, (x, y0))
-        if j:
-            draw.rectangle((x - 3, y0, x + 3, y0 + panel_h), fill=(4, 10, 18, 210))
         draw.rectangle((x, y0, x + 8, y0 + panel_h), fill=color)
         draw_shadow_text(draw, (x + 34, y0 + 32), label, F["h2"], WHITE, stroke=3)
         badge = "target reached" if suffix == "anchor0624" else outcome
@@ -543,7 +593,7 @@ def theater_frame(
     title: str,
 ) -> Image.Image:
     panel_w, panel_h = 568, 520
-    gutter = 0
+    gutter = 16
     canvas = Image.new("RGBA", (panel_w * 3 + gutter * 2, panel_h), "#07101D")
     draw = ImageDraw.Draw(canvas)
 
@@ -552,8 +602,6 @@ def theater_frame(
         frame = crop_map_frame(loaded[j][min(i, len(loaded[j]) - 1)])
         panel = fit_cover(frame, (panel_w, panel_h))
         canvas.alpha_composite(panel.convert("RGBA"), (x0, 0))
-        if j:
-            draw.rectangle((x0 - 2, 0, x0 + 2, panel_h), fill=(4, 10, 18, 210))
         # Text is burned into the image instead of being placed in cards.
         draw_shadow_text(draw, (x0 + 16, 12), label, font(22, bold=True), WHITE, stroke=2)
         draw_shadow_text(draw, (x0 + panel_w - 116, 14), f"step {i:02d}/{n - 1:02d}", F["tiny"], "#EAF3FB", stroke=2)

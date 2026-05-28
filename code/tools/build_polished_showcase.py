@@ -739,20 +739,19 @@ def build_triptych_gifs() -> None:
             durations.append(duration)
         n = max(len(frames) for frames in loaded)
         panel_w, panel_h = 568, 520
-        canvas_size = (panel_w * 3, panel_h)
+        gutter = 16
+        canvas_size = (panel_w * 3 + gutter * 2, panel_h)
         duration = int(np.median(durations))
         frames_out: list[Image.Image] = []
         for i in range(n):
             canvas = Image.new("RGBA", canvas_size, "#07101D")
             draw = ImageDraw.Draw(canvas)
             for j, (suffix, label, color, outcome) in enumerate(methods):
-                x0 = j * panel_w
+                x0 = j * (panel_w + gutter)
                 src_frames = loaded[j]
                 frame = _crop_map_frame(src_frames[min(i, len(src_frames) - 1)])
                 panel = _fit_cover(frame, (panel_w, panel_h)).convert("RGBA")
                 canvas.alpha_composite(panel, (x0, 0))
-                if j:
-                    draw.rectangle((x0 - 2, 0, x0 + 2, panel_h), fill=(4, 10, 18, 210))
                 draw.rectangle((x0, 0, x0 + 6, panel_h), fill=color)
                 _draw_shadow_text(draw, (x0 + 16, 12), label, label_font, "white", stroke=2)
                 _draw_shadow_text(draw, (x0 + panel_w - 116, 14), f"step {i:02d}/{n - 1:02d}", small_font, "#EAF3FB", stroke=2)

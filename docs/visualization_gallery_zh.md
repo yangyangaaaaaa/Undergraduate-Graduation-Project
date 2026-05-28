@@ -18,20 +18,23 @@ python code/tools/build_visual_showcase.py
   <img src="../results/figures/showcase/experience/hero_experience.png" width="100%" alt="experience hero">
 </p>
 
-<table>
-  <tr>
-    <td width="50%" valign="top">
-      <img src="../results/figures/showcase/experience/method_blueprint_experience.png" width="100%" alt="method blueprint"><br>
-      <b>方法蓝图</b><br>
-      将推理路径和训练阶段混合奖励回路分开，避免把奖励机制误解为推理阶段也参与计算。
-    </td>
-    <td width="50%" valign="top">
-      <img src="../results/figures/showcase/experience/evidence_wall_experience.png" width="100%" alt="evidence wall"><br>
-      <b>证据墙</b><br>
-      将主结果、跨模态、长距离和轨迹行为压缩为一页阅读路径。
-    </td>
-  </tr>
-</table>
+### 方法架构图
+
+<p align="center">
+  <img src="../results/figures/showcase/dataset/figure3_1_method_overview_revised.png" width="100%" alt="method architecture">
+</p>
+
+### 数据集场景图
+
+<p align="center">
+  <img src="../results/figures/showcase/dataset/chapter2_typical_dataset_scene_examples.png" width="100%" alt="dataset examples">
+</p>
+
+### 证据墙
+
+<p align="center">
+  <img src="../results/figures/showcase/experience/evidence_wall_experience.png" width="100%" alt="evidence wall">
+</p>
 
 <p align="center">
   <img src="../results/figures/showcase/experience/trajectory_theater_gifs/three_method_hardcase__img189_d6_s20_g14_r0__theater.gif" width="100%" alt="trajectory theater">
@@ -43,55 +46,39 @@ python code/tools/build_visual_showcase.py
 
 ## Polished 核心图卡
 
-<table>
-  <tr>
-    <td width="50%" valign="top">
-      <img src="../results/figures/showcase/polished/hero_dashboard.png" width="100%" alt="hero dashboard"><br>
-      <b>总览图</b><br>
-      用主基准平均 SR、平均提升、MM-GAG 提升和长距离提升概括项目主要结论。
-    </td>
-    <td width="50%" valign="top">
-      <img src="../results/figures/showcase/polished/mmgag_modality_panel.png" width="100%" alt="mmgag modality panel"><br>
-      <b>MM-GAG 跨模态</b><br>
-      对比航拍图像目标、地面图像目标和文本目标下的 SR，展示跨模态目标适应性。
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <img src="../results/figures/showcase/polished/ablation_story_panel.png" width="100%" alt="ablation story panel"><br>
-      <b>机制消融</b><br>
-      展示 16 组 G/P/E/V 消融热力图和四个因子的平均主效应。
-    </td>
-    <td width="50%" valign="top">
-      <img src="../results/figures/showcase/polished/reward_design_panel.png" width="100%" alt="reward design panel"><br>
-      <b>奖励设计</b><br>
-      比较不同门控函数与 PBRS 开关，同时给出外在/内在奖励端点对比。
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <img src="../results/figures/showcase/polished/long_range_panel.png" width="100%" alt="long range panel"><br>
-      <b>长距离与压力测试</b><br>
-      展示 8x8、10x10 和 25x25 网格下的预算敏感性与任务库随机种子稳定性。
-    </td>
-    <td width="50%" valign="top">
-      <img src="../results/figures/showcase/polished/trajectory_behavior_panel.png" width="100%" alt="trajectory behavior panel"><br>
-      <b>轨迹行为分析</b><br>
-      用成功率、距离缩短率、单调接近率和重复访问率解释中远距离优势。
-    </td>
-  </tr>
-  <tr>
-    <td colspan="2" valign="top">
-      <img src="../results/figures/showcase/polished/reward_process_panel.png" width="100%" alt="reward process panel"><br>
-      <b>奖励过程补充</b><br>
-      将外在奖励、门控内在奖励、PBRS、总奖励和门控值放入统一图卡，便于解释混合奖励为什么主要在训练阶段改善搜索策略。
-    </td>
-  </tr>
-</table>
+核心图卡按单列展示，避免 GitHub 页面把坐标和数值压得过小。
+
+<p align="center">
+  <img src="../results/figures/showcase/polished/hero_dashboard.png" width="100%" alt="hero dashboard">
+</p>
+
+<p align="center">
+  <img src="../results/figures/showcase/polished/mmgag_modality_panel.png" width="100%" alt="mmgag modality panel">
+</p>
+
+<p align="center">
+  <img src="../results/figures/showcase/polished/ablation_story_panel.png" width="100%" alt="ablation story panel">
+</p>
+
+<p align="center">
+  <img src="../results/figures/showcase/polished/reward_design_panel.png" width="100%" alt="reward design panel">
+</p>
+
+<p align="center">
+  <img src="../results/figures/showcase/polished/long_range_panel.png" width="100%" alt="long range panel">
+</p>
+
+<p align="center">
+  <img src="../results/figures/showcase/polished/trajectory_behavior_panel.png" width="100%" alt="trajectory behavior panel">
+</p>
+
+<p align="center">
+  <img src="../results/figures/showcase/polished/reward_process_panel.png" width="100%" alt="reward process panel">
+</p>
 
 ## 同步三联动图
 
-三联动图将同一案例下的 Ours、GOMAA-Geo 和 GeoExplorer 轨迹同步放在一张 GIF 中。新版采用无白底、无卡片、无外边框的贴边拼接，只保留图内方法名、步数和极细进度线，适合项目首页、答辩页和补充材料快速展示。
+三联动图将同一案例下的 Ours、GOMAA-Geo 和 GeoExplorer 轨迹同步放在一张 GIF 中。新版采用无白底、无卡片、无外边框的三联拼接，并在面板之间保留细间隔，只保留图内方法名、步数和极细进度线，适合项目首页、答辩页和补充材料快速展示。
 
 <p align="center">
   <img src="../results/figures/showcase/trajectories/triptych_gifs/three_method_hardcase__img189_d6_s20_g14_r0__triptych.gif" width="100%" alt="hardcase triptych gif">
