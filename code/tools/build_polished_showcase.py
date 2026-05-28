@@ -20,6 +20,7 @@ import matplotlib
 
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+from matplotlib.colors import LinearSegmentedColormap
 from matplotlib import font_manager
 from matplotlib.patches import FancyBboxPatch
 
@@ -136,13 +137,17 @@ def ensure_dirs() -> None:
 
 
 def setup_style() -> None:
+    font_manager.fontManager.addfont("C:/Windows/Fonts/times.ttf")
+    font_manager.fontManager.addfont("C:/Windows/Fonts/timesbd.ttf")
+    font_manager.fontManager.addfont("C:/Windows/Fonts/simsun.ttc")
     plt.rcParams.update(
         {
             "figure.facecolor": PAPER,
             "axes.facecolor": CARD,
             "savefig.facecolor": PAPER,
-            "font.family": "sans-serif",
-            "font.sans-serif": ["Microsoft YaHei", "SimHei", "Arial", "DejaVu Sans", "Helvetica"],
+            "font.family": ["Times New Roman", "SimSun"],
+            "font.serif": ["Times New Roman", "SimSun"],
+            "font.sans-serif": ["Times New Roman", "SimSun"],
             "axes.edgecolor": FAINT,
             "axes.labelcolor": INK,
             "xtick.color": MUTED,
@@ -155,6 +160,7 @@ def setup_style() -> None:
             "ytick.labelsize": 9,
             "legend.fontsize": 9,
             "svg.fonttype": "none",
+            "axes.unicode_minus": False,
         }
     )
 
@@ -377,7 +383,11 @@ def ablation_story_panel() -> None:
     gs = fig.add_gridspec(1, 2, left=0.075, right=0.94, bottom=0.18, top=0.78, wspace=0.32, width_ratios=[1.15, 0.85])
 
     ax = fig.add_subplot(gs[0, 0])
-    im = ax.imshow(mat.values, cmap="cividis", vmin=0.35, vmax=0.625)
+    soft_cmap = LinearSegmentedColormap.from_list(
+        "soft_teal_blue",
+        ["#F1FAF8", "#D8F0EF", "#A9D7E4", "#72B3D0", "#3F83B7"],
+    )
+    im = ax.imshow(mat.values, cmap=soft_cmap, vmin=0.35, vmax=0.625)
     ax.set_xticks(np.arange(len(col_order)))
     ax.set_xticklabels(col_order)
     ax.set_yticks(np.arange(len(row_order)))
@@ -386,8 +396,8 @@ def ablation_story_panel() -> None:
     for i in range(mat.shape[0]):
         for j in range(mat.shape[1]):
             val = mat.iloc[i, j]
-            color = "white" if val > 0.585 else INK
-            ax.text(j, i, f"{val:.3f}", ha="center", va="center", color=color, fontsize=12, fontweight="bold" if val == best else "normal")
+            weight = "bold" if val == best else "semibold"
+            ax.text(j, i, f"{val:.3f}", ha="center", va="center", color=INK, fontsize=16, fontweight=weight)
     ax.set_title("主泛化均值")
     cbar = fig.colorbar(im, ax=ax, fraction=0.046, pad=0.04)
     cbar.set_label("成功率")
@@ -715,16 +725,44 @@ def reward_process_panel() -> None:
     save_card(fig, "reward_process_panel")
 
 
-def _load_font(size: int, bold: bool = False) -> ImageFont.FreeTypeFont | ImageFont.ImageFont:
+def _font_path(latin: bool, bold: bool) -> Path:
+    if latin:
+        return Path("C:/Windows/Fonts/timesbd.ttf" if bold else "C:/Windows/Fonts/times.ttf")
+    return Path("C:/Windows/Fonts/simsun.ttc")
+
+
+def _load_font(size: int, bold: bool = False, latin: bool = False) -> ImageFont.FreeTypeFont | ImageFont.ImageFont:
     candidates = [
-        Path("C:/Windows/Fonts/arialbd.ttf" if bold else "C:/Windows/Fonts/arial.ttf"),
-        Path("C:/Windows/Fonts/calibrib.ttf" if bold else "C:/Windows/Fonts/calibri.ttf"),
+        _font_path(latin, bold),
+        Path("C:/Windows/Fonts/timesbd.ttf" if bold else "C:/Windows/Fonts/times.ttf"),
+        Path("C:/Windows/Fonts/simsun.ttc"),
         Path(font_manager.findfont("DejaVu Sans", fallback_to_default=True)),
     ]
     for path in candidates:
         if path.exists():
             return ImageFont.truetype(str(path), size=size)
     return ImageFont.load_default()
+
+
+def _is_latin_run_char(ch: str) -> bool:
+    return ord(ch) < 128
+
+
+def _split_text_runs(text: str) -> list[tuple[str, bool]]:
+    runs: list[tuple[str, bool]] = []
+    current = ""
+    current_latin: bool | None = None
+    for ch in str(text):
+        latin = _is_latin_run_char(ch)
+        if current and latin != current_latin:
+            runs.append((current, bool(current_latin)))
+            current = ch
+        else:
+            current += ch
+        current_latin = latin
+    if current:
+        runs.append((current, bool(current_latin)))
+    return runs
 
 
 def _read_gif_frames(path: Path) -> tuple[list[Image.Image], int]:
@@ -763,7 +801,14 @@ def _draw_shadow_text(
     fill: str | tuple[int, int, int, int],
     stroke: int = 2,
 ) -> None:
-    draw.text(xy, text, font=font_obj, fill=fill, stroke_width=stroke, stroke_fill=(0, 0, 0, 185))
+    x, y = xy
+    size = getattr(font_obj, "size", 18)
+    source_path = str(getattr(font_obj, "path", "")).lower()
+    bold = "bd" in source_path or "bold" in source_path
+    for run, latin in _split_text_runs(text):
+        run_font = _load_font(size, bold=bold, latin=latin)
+        draw.text((x, y), run, font=run_font, fill=fill, stroke_width=stroke, stroke_fill=(0, 0, 0, 185))
+        x += int(draw.textlength(run, font=run_font))
 
 
 def build_triptych_gifs() -> None:
@@ -800,7 +845,7 @@ def build_triptych_gifs() -> None:
         duration = int(np.median(durations))
         frames_out: list[Image.Image] = []
         for i in range(n):
-            canvas = Image.new("RGBA", canvas_size, "#07101D")
+            canvas = Image.new("RGBA", canvas_size, "#FFFFFF")
             draw = ImageDraw.Draw(canvas)
             for j, (suffix, label, color, outcome) in enumerate(methods):
                 x0 = j * (panel_w + gutter)
@@ -814,8 +859,10 @@ def build_triptych_gifs() -> None:
                 status = outcome if i == n - 1 else "搜索中"
                 meta = f"{status} | C=6 | 图像 189 | 步数 {i}/{n - 1}"
                 _draw_shadow_text(draw, (x0 + 16, panel_h - 30), meta, small_font, "#F2F7FA", stroke=2)
-            draw.rectangle((0, panel_h - 4, canvas_size[0], panel_h), fill=(5, 10, 18, 160))
-            draw.rectangle((0, panel_h - 4, int(canvas_size[0] * i / max(1, n - 1)), panel_h), fill=BLUE)
+            for j, (_, _, color, _) in enumerate(methods):
+                x0 = j * (panel_w + gutter)
+                draw.rectangle((x0, panel_h - 4, x0 + panel_w, panel_h), fill=(255, 255, 255, 185))
+                draw.rectangle((x0, panel_h - 4, x0 + int(panel_w * i / max(1, n - 1)), panel_h), fill=color)
             frames_out.append(canvas.convert("P", palette=Image.Palette.ADAPTIVE, colors=128))
 
         out = TRIPTYCH_DIR / f"{base}__triptych.gif"

@@ -22,6 +22,8 @@ import matplotlib
 
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+from matplotlib.colors import LinearSegmentedColormap
+from matplotlib import font_manager
 from matplotlib.patches import FancyBboxPatch
 
 
@@ -91,11 +93,16 @@ def prepare_dirs() -> None:
 
 
 def set_style() -> None:
+    font_manager.fontManager.addfont("C:/Windows/Fonts/times.ttf")
+    font_manager.fontManager.addfont("C:/Windows/Fonts/timesbd.ttf")
+    font_manager.fontManager.addfont("C:/Windows/Fonts/simsun.ttc")
     plt.rcParams.update(
         {
             "figure.facecolor": "white",
             "axes.facecolor": "white",
-            "font.family": "DejaVu Sans",
+            "font.family": ["Times New Roman", "SimSun"],
+            "font.serif": ["Times New Roman", "SimSun"],
+            "font.sans-serif": ["Times New Roman", "SimSun"],
             "axes.edgecolor": "#D7DCE3",
             "axes.labelcolor": "#1F2937",
             "xtick.color": "#374151",
@@ -107,6 +114,7 @@ def set_style() -> None:
             "ytick.labelsize": 10,
             "legend.fontsize": 10,
             "svg.fonttype": "none",
+            "axes.unicode_minus": False,
         }
     )
 
@@ -355,7 +363,11 @@ def generalization_heatmap_16cell() -> None:
     )[col_order]
 
     fig, ax = plt.subplots(figsize=(8.5, 5.8))
-    im = ax.imshow(mat.values, cmap="YlGnBu", vmin=0.54, vmax=0.625)
+    soft_cmap = LinearSegmentedColormap.from_list(
+        "soft_teal_blue",
+        ["#F1FAF8", "#D8F0EF", "#A9D7E4", "#72B3D0", "#3F83B7"],
+    )
+    im = ax.imshow(mat.values, cmap=soft_cmap, vmin=0.54, vmax=0.625)
     ax.set_xticks(np.arange(len(col_order)))
     ax.set_xticklabels(col_order)
     ax.set_yticks(np.arange(len(row_order)))
@@ -370,8 +382,9 @@ def generalization_heatmap_16cell() -> None:
                 f"{value:.3f}",
                 ha="center",
                 va="center",
-                color="white" if value > 0.59 else "#111827",
-                fontweight="bold" if value == np.nanmax(mat.values) else "normal",
+                color="#111827",
+                fontsize=13,
+                fontweight="bold" if value == np.nanmax(mat.values) else "semibold",
             )
     cbar = fig.colorbar(im, ax=ax, fraction=0.046, pad=0.04)
     cbar.set_label("Primary generalization mean")

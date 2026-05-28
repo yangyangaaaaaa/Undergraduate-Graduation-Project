@@ -72,15 +72,75 @@ def font(size: int, bold: bool = False, serif: bool = False) -> ImageFont.FreeTy
         candidates = ["C:/Windows/Fonts/timesbd.ttf" if bold else "C:/Windows/Fonts/times.ttf"]
     else:
         candidates = [
+            "C:/Windows/Fonts/simsun.ttc",
             "C:/Windows/Fonts/msyhbd.ttc" if bold else "C:/Windows/Fonts/msyh.ttc",
-            "C:/Windows/Fonts/arialbd.ttf" if bold else "C:/Windows/Fonts/arial.ttf",
-            "C:/Windows/Fonts/calibrib.ttf" if bold else "C:/Windows/Fonts/calibri.ttf",
         ]
     for candidate in candidates:
         p = Path(candidate)
         if p.exists():
             return ImageFont.truetype(str(p), size=size)
     return ImageFont.load_default()
+
+
+def is_latin_run_char(ch: str) -> bool:
+    return ord(ch) < 128
+
+
+def split_text_runs(text: str) -> list[tuple[str, bool]]:
+    runs: list[tuple[str, bool]] = []
+    current = ""
+    current_latin: bool | None = None
+    for ch in str(text):
+        latin = is_latin_run_char(ch)
+        if current and latin != current_latin:
+            runs.append((current, bool(current_latin)))
+            current = ch
+        else:
+            current += ch
+        current_latin = latin
+    if current:
+        runs.append((current, bool(current_latin)))
+    return runs
+
+
+def infer_bold(font_obj: ImageFont.ImageFont) -> bool:
+    source_path = str(getattr(font_obj, "path", "")).lower()
+    return "bd" in source_path or "bold" in source_path
+
+
+def mixed_textlength(draw: ImageDraw.ImageDraw, text: str, font_obj: ImageFont.ImageFont) -> float:
+    size = getattr(font_obj, "size", 18)
+    bold = infer_bold(font_obj)
+    total = 0.0
+    for run, latin in split_text_runs(text):
+        run_font = font(size, bold=bold, serif=latin)
+        total += draw.textlength(run, font=run_font)
+    return total
+
+
+def draw_mixed_text(
+    draw: ImageDraw.ImageDraw,
+    xy: tuple[int, int],
+    text: str,
+    font_obj: ImageFont.ImageFont,
+    fill: str | tuple[int, int, int, int],
+    stroke: int = 0,
+    stroke_fill: tuple[int, int, int, int] | str | None = None,
+) -> None:
+    x, y = xy
+    size = getattr(font_obj, "size", 18)
+    bold = infer_bold(font_obj)
+    for run, latin in split_text_runs(text):
+        run_font = font(size, bold=bold, serif=latin)
+        draw.text(
+            (x, y),
+            run,
+            font=run_font,
+            fill=fill,
+            stroke_width=stroke,
+            stroke_fill=stroke_fill if stroke_fill is not None else fill,
+        )
+        x += int(draw.textlength(run, font=run_font))
 
 
 F = {
@@ -175,7 +235,7 @@ def draw_shadow_text(
     fill: str | tuple[int, int, int, int],
     stroke: int = 2,
 ) -> None:
-    draw.text(xy, text, font=font_obj, fill=fill, stroke_width=stroke, stroke_fill=(0, 0, 0, 185))
+    draw_mixed_text(draw, xy, text, font_obj, fill, stroke=stroke, stroke_fill=(0, 0, 0, 185))
 
 
 def draw_wrapped(
@@ -194,14 +254,14 @@ def draw_wrapped(
     line = ""
     for word in words:
         candidate = f"{line}{sep}{word}".strip() if has_spaces else f"{line}{word}"
-        if draw.textlength(candidate, font=font_obj) <= width or not line:
+        if mixed_textlength(draw, candidate, font_obj) <= width or not line:
             line = candidate
         else:
-            draw.text((x, y), line, font=font_obj, fill=fill)
+            draw_mixed_text(draw, (x, y), line, font_obj, fill)
             y += font_obj.size + line_gap
             line = word
     if line:
-        draw.text((x, y), line, font=font_obj, fill=fill)
+        draw_mixed_text(draw, (x, y), line, font_obj, fill)
         y += font_obj.size + line_gap
     return y
 
@@ -227,8 +287,8 @@ def draw_chip(
 ) -> None:
     x, y = xy
     draw.rounded_rectangle((x, y, x + width, y + height), radius=26, fill=(255, 255, 255, 26), outline=(255, 255, 255, 58), width=2)
-    draw.text((x + 26, y + 20), label, font=F["small"], fill="#5D6B7C")
-    draw.text((x + 26, y + 50), value, font=F["number"], fill=color)
+    draw_mixed_text(draw, (x + 26, y + 20), label, F["small"], "#5D6B7C")
+    draw_mixed_text(draw, (x + 26, y + 50), value, F["number"], color)
 
 
 def load_gif_frames(base: str, suffix: str) -> tuple[list[Image.Image], int]:
@@ -310,8 +370,8 @@ def build_hero() -> None:
     for y in range(0, 1440, 160):
         draw.line((0, y, 2560, y), fill=(255, 255, 255, 10), width=1)
 
-    draw.text((120, 96), "好奇心驱动", font=F["display"], fill=WHITE)
-    draw.text((120, 178), "无人机主动目标定位", font=font(62, bold=True), fill=WHITE)
+    draw_mixed_text(draw, (120, 96), "好奇心驱动", F["display"], WHITE)
+    draw_mixed_text(draw, (120, 178), "无人机主动目标定位", font(62, bold=True), WHITE)
     draw_wrapped(
         draw,
         (124, 275),
@@ -334,8 +394,8 @@ def build_hero() -> None:
     # Main trajectory evidence.
     paste_round(canvas, frames["anchor0624_last"], (1380, 250), (890, 740), radius=42, border="#7CC7FF", border_width=5)
     draw.rounded_rectangle((1428, 298, 1820, 368), radius=24, fill=(31, 119, 180, 225))
-    draw.text((1455, 314), "同一困难样例：到达目标", font=F["h3"], fill=WHITE)
-    draw.text((1415, 1040), "轨迹证据", font=F["h2"], fill=WHITE)
+    draw_mixed_text(draw, (1455, 314), "同一困难样例：到达目标", F["h3"], WHITE)
+    draw_mixed_text(draw, (1415, 1040), "轨迹证据", F["h2"], WHITE)
     draw_wrapped(
         draw,
         (1415, 1092),
@@ -358,8 +418,8 @@ def build_hero() -> None:
     for i, (title, subtitle) in enumerate(stages):
         w = 365 if i == 2 else 275
         draw.rounded_rectangle((x, strip_y, x + w, strip_y + 125), radius=28, fill=(255, 255, 255, 235), outline=(255, 255, 255, 90), width=2)
-        draw.text((x + 24, strip_y + 22), title, font=F["h3"], fill=INK)
-        draw.text((x + 24, strip_y + 66), subtitle, font=F["small"], fill=SLATE)
+        draw_mixed_text(draw, (x + 24, strip_y + 22), title, F["h3"], INK)
+        draw_mixed_text(draw, (x + 24, strip_y + 66), subtitle, F["small"], SLATE)
         if i < len(stages) - 1:
             draw_arrow(draw, (x + w + 18, strip_y + 62), (x + w + 82, strip_y + 62), "#8BBCE8", width=5)
         x += w + 96
@@ -391,8 +451,8 @@ def build_evidence_wall() -> None:
     canvas = Image.new("RGBA", (2400, 1350), "#F6F8F5")
     draw = ImageDraw.Draw(canvas)
 
-    draw.text((90, 56), "核心结果证据墙", font=F["h1"], fill=INK)
-    draw.text((94, 126), "从总体性能、跨模态适应、长距离搜索和轨迹行为四个角度说明方法改进。", font=F["body"], fill="#445166")
+    draw_mixed_text(draw, (90, 56), "核心结果证据墙", F["h1"], INK)
+    draw_mixed_text(draw, (94, 126), "从总体性能、跨模态适应、长距离搜索和轨迹行为四个角度说明方法改进。", F["body"], "#445166")
     metric_tiles = [
         ("平均成功率", f"{metrics['shared_mean']:.3f}", BLUE),
         ("平均提升", f"+{metrics['shared_gain']:.3f}", GREEN),
@@ -404,14 +464,14 @@ def build_evidence_wall() -> None:
         y = 44
         draw.rounded_rectangle((x, y, x + 250, y + 112), radius=20, fill=WHITE, outline="#DCE3E4", width=2)
         draw.rectangle((x + 18, y + 18, x + 25, y + 92), fill=color)
-        draw.text((x + 42, y + 20), label, font=F["small"], fill="#627083")
-        draw.text((x + 42, y + 44), value, font=F["number"], fill=color)
+        draw_mixed_text(draw, (x + 42, y + 20), label, F["small"], "#627083")
+        draw_mixed_text(draw, (x + 42, y + 44), value, F["number"], color)
 
     def section(x: int, y: int, w: int, h: int, title: str, tag: str, color: str, note: str) -> None:
         draw.rounded_rectangle((x, y, x + w, y + h), radius=18, fill=WHITE, outline="#DDE4E5", width=2)
         draw.rectangle((x + 24, y + 26, x + 34, y + 80), fill=color)
-        draw.text((x + 52, y + 24), tag, font=F["h3"], fill=color)
-        draw.text((x + 105, y + 22), title, font=F["h2"], fill=INK)
+        draw_mixed_text(draw, (x + 52, y + 24), tag, F["h3"], color)
+        draw_mixed_text(draw, (x + 105, y + 22), title, F["h2"], INK)
         draw.line((x + 30, y + 92, x + w - 30, y + 92), fill="#E5EAEC", width=2)
         draw_wrapped(draw, (x + 34, y + h - 72), note, F["small"], "#445166", w - 68, line_gap=6)
 
@@ -425,13 +485,13 @@ def build_evidence_wall() -> None:
     for i, (bench, row) in enumerate(pivot.iterrows()):
         yy = bar_y + i * row_h
         label = display_benchmark(bench)
-        draw.text((x + 32, yy - 4), label, font=F["tiny"], fill="#293649")
+        draw_mixed_text(draw, (x + 32, yy - 4), label, F["tiny"], "#293649")
         zero_x = bar_x + int((0 - min_gain) * scale)
         val_x = bar_x + int((row["gain"] - min_gain) * scale)
         draw.line((bar_x, yy + 12, bar_x + bar_w, yy + 12), fill="#EDF1F2", width=3)
         draw.line((zero_x, yy + 12, val_x, yy + 12), fill=GREEN if row["gain"] >= 0 else RED, width=16)
         draw.ellipse((val_x - 8, yy + 4, val_x + 8, yy + 20), fill=GREEN if row["gain"] >= 0 else RED)
-        draw.text((bar_x + bar_w + 18, yy - 4), f"{row['gain']:+.3f}", font=F["tiny"], fill=GREEN if row["gain"] >= 0 else RED)
+        draw_mixed_text(draw, (bar_x + bar_w + 18, yy - 4), f"{row['gain']:+.3f}", F["tiny"], GREEN if row["gain"] >= 0 else RED)
     draw.line((bar_x + int((0 - min_gain) * scale), bar_y - 12, bar_x + int((0 - min_gain) * scale), bar_y + len(pivot) * row_h), fill="#6B7280", width=2)
 
     # 02 MM-GAG cross-modal.
@@ -444,13 +504,13 @@ def build_evidence_wall() -> None:
         yy = y + 140 + i * 76
         x1 = x + 250 + int(gomaa * 760)
         x2 = x + 250 + int(ours * 760)
-        draw.text((x + 40, yy - 18), label, font=F["body"], fill=INK)
+        draw_mixed_text(draw, (x + 40, yy - 18), label, F["body"], INK)
         draw.line((x + 250, yy, x + 250 + int(0.70 * 760), yy), fill="#EDF1F2", width=4)
         draw.line((x1, yy, x2, yy), fill="#BFD7EA", width=18)
         draw.ellipse((x1 - 16, yy - 16, x1 + 16, yy + 16), fill=ORANGE)
         draw.ellipse((x2 - 18, yy - 18, x2 + 18, yy + 18), fill=BLUE)
-        draw.text((x2 + 34, yy - 18), f"+{ours-gomaa:.3f}", font=F["h3"], fill=GREEN)
-    draw.text((x + 360, y + 352), "橙色为 GOMAA-Geo，蓝色为本文方法", font=F["small"], fill=SLATE)
+        draw_mixed_text(draw, (x2 + 34, yy - 18), f"+{ours-gomaa:.3f}", F["h3"], GREEN)
+    draw_mixed_text(draw, (x + 360, y + 352), "橙色为 GOMAA-Geo，蓝色为本文方法", F["small"], SLATE)
 
     # 03 long-range budget curves.
     x, y, w, h = 90, 745, 1030, 505
@@ -462,7 +522,7 @@ def build_evidence_wall() -> None:
         bx = x + 65 + idx * 465
         by = y + 135
         bw, bh = 380, 230
-        draw.text((bx, y + 100), grid, font=F["h3"], fill=INK)
+        draw_mixed_text(draw, (bx, y + 100), grid, F["h3"], INK)
         draw.line((bx, by + bh, bx + bw, by + bh), fill="#A9B4BE", width=2)
         draw.line((bx, by, bx, by + bh), fill="#A9B4BE", width=2)
         budgets = sorted(sub["budget"].unique())
@@ -481,8 +541,8 @@ def build_evidence_wall() -> None:
                 label = "本文方法" if method == "Ours" else method
                 dx = -100 if method == "Ours" else -72
                 dy = -48 if method == "Ours" else 14
-                draw.text((pts[-1][0] + dx, pts[-1][1] + dy), label, font=F["tiny"], fill=color)
-        draw.text((bx, by + bh + 22), f"B={budgets[0]}..{budgets[-1]}", font=F["small"], fill=SLATE)
+                draw_mixed_text(draw, (pts[-1][0] + dx, pts[-1][1] + dy), label, F["tiny"], color)
+        draw_mixed_text(draw, (bx, by + bh + 22), f"B={budgets[0]}..{budgets[-1]}", F["small"], SLATE)
 
     # 04 trajectory behavior.
     x, y, w, h = 1190, 745, 1120, 505
@@ -496,13 +556,13 @@ def build_evidence_wall() -> None:
     ]
     for i, (metric, name) in enumerate(metrics_bars):
         yy = y + 126 + i * 62
-        draw.text((x + 44, yy + 5), name, font=F["body"], fill=INK)
+        draw_mixed_text(draw, (x + 44, yy + 5), name, F["body"], INK)
         for method, color, offset in [("GOMAA-Geo", ORANGE, 0), ("GeoExplorer-anchor0624", BLUE, 28)]:
             val = float(sub[sub["method"].eq(method)][metric].iloc[0])
             bar_len = int(val * 760)
             draw.rounded_rectangle((x + 230, yy + offset, x + 230 + bar_len, yy + offset + 20), radius=10, fill=color)
-            draw.text((x + 1010, yy + offset - 4), f"{val:.2f}", font=F["tiny"], fill=color)
-    draw.text((x + 230, y + 392), "橙色为 GOMAA-Geo，蓝色为本文方法", font=F["small"], fill=SLATE)
+            draw_mixed_text(draw, (x + 1010, yy + offset - 4), f"{val:.2f}", F["tiny"], color)
+    draw_mixed_text(draw, (x + 230, y + 392), "橙色为 GOMAA-Geo，蓝色为本文方法", F["small"], SLATE)
 
     canvas.convert("RGB").save(EXP_DIR / "evidence_wall_experience.png", quality=95)
 
@@ -511,8 +571,8 @@ def build_trajectory_storyboard(base: str = "three_method_hardcase__img189_d6_s2
     frames = first_last_frames(base)
     canvas = gradient_bg((2400, 1040), "#07101D", "#142A3D")
     draw = ImageDraw.Draw(canvas)
-    draw.text((88, 58), "同一困难样例下的三种搜索行为", font=F["h1"], fill=WHITE)
-    draw.text((92, 126), "起点、目标和预算完全一致；标签直接嵌入图像，便于对比真实搜索路径。", font=F["body"], fill="#C8D6E4")
+    draw_mixed_text(draw, (88, 58), "同一困难样例下的三种搜索行为", F["h1"], WHITE)
+    draw_mixed_text(draw, (92, 126), "起点、目标和预算完全一致；标签直接嵌入图像，便于对比真实搜索路径。", F["body"], "#C8D6E4")
     panel_w, panel_h = 710, 650
     gutter = 16
     start_x, y0 = 75, 235
@@ -524,11 +584,12 @@ def build_trajectory_storyboard(base: str = "three_method_hardcase__img189_d6_s2
         draw_shadow_text(draw, (x + 34, y0 + 32), label, F["h2"], WHITE, stroke=3)
         badge = "到达目标" if suffix == "anchor0624" else outcome
         draw_shadow_text(draw, (x + 34, y0 + panel_h - 70), badge, F["h2"], color, stroke=3)
-    draw.text(
+    draw_mixed_text(
+        draw,
         (105, 950),
         "绿色框为起点，黄色框为目标；编号标记表示搜索顺序。对比重点是路径本身，因此版式不再使用白色说明卡片或装饰边框。",
-        font=F["body"],
-        fill="#C8D6E4",
+        F["body"],
+        "#C8D6E4",
     )
     canvas.convert("RGB").save(EXP_DIR / "trajectory_storyboard_experience.png", quality=95)
 
@@ -542,7 +603,7 @@ def theater_frame(
 ) -> Image.Image:
     panel_w, panel_h = 568, 520
     gutter = 16
-    canvas = Image.new("RGBA", (panel_w * 3 + gutter * 2, panel_h), "#07101D")
+    canvas = Image.new("RGBA", (panel_w * 3 + gutter * 2, panel_h), WHITE)
     draw = ImageDraw.Draw(canvas)
 
     for j, (suffix, label, color, outcome) in enumerate(METHODS):
@@ -557,11 +618,12 @@ def theater_frame(
         meta = f"{status} | C=6 | 图像 189 | 步数 {i}/{n - 1}"
         draw_shadow_text(draw, (x0 + 16, panel_h - 30), meta, F["tiny"], "#F2F7FA", stroke=2)
 
-    # Ultra-thin progress indicator, kept inside the image instead of adding a
-    # separate caption area.
-    progress_w = canvas.size[0]
-    draw.rectangle((0, panel_h - 4, progress_w, panel_h), fill=(5, 10, 18, 160))
-    draw.rectangle((0, panel_h - 4, int(progress_w * i / max(1, n - 1)), panel_h), fill=BLUE)
+    # Ultra-thin progress indicators stay inside each image panel so the
+    # gutters remain clean white space instead of becoming dark separator lines.
+    for j, (_, _, color, _) in enumerate(METHODS):
+        x0 = j * (panel_w + gutter)
+        draw.rectangle((x0, panel_h - 4, x0 + panel_w, panel_h), fill=(255, 255, 255, 185))
+        draw.rectangle((x0, panel_h - 4, x0 + int(panel_w * i / max(1, n - 1)), panel_h), fill=color)
     return canvas.convert("P", palette=Image.Palette.ADAPTIVE, colors=128)
 
 
