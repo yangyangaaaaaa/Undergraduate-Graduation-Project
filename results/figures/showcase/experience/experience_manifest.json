@@ -1,0 +1,19 @@
+{
+  "generated_by": "code/tools/build_showcase_experience.py",
+  "style": "cinematic scientific landing-page assets",
+  "file_count": 12,
+  "files": [
+    "results/figures/showcase/experience/evidence_wall_experience.png",
+    "results/figures/showcase/experience/experience_manifest.json",
+    "results/figures/showcase/experience/hero_experience.png",
+    "results/figures/showcase/experience/method_blueprint_experience.png",
+    "results/figures/showcase/experience/trajectory_storyboard_experience.png",
+    "results/figures/showcase/experience/trajectory_theater_gifs/c4_anchor_failure_or_detour__img025_d4_s12_g00_r0__theater.gif",
+    "results/figures/showcase/experience/trajectory_theater_gifs/c4_anchor_success__img011_d4_s03_g11_r0__theater.gif",
+    "results/figures/showcase/experience/trajectory_theater_gifs/c6_anchor_failure_or_detour__img050_d6_s14_g00_r0__theater.gif",
+    "results/figures/showcase/experience/trajectory_theater_gifs/c6_anchor_success__img006_d6_s24_g06_r0__theater.gif",
+    "results/figures/showcase/experience/trajectory_theater_gifs/c8_anchor_failure_or_detour__img054_d8_s20_g04_r0__theater.gif",
+    "results/figures/showcase/experience/trajectory_theater_gifs/c8_anchor_success__img000_d8_s24_g00_r0__theater.gif",
+    "results/figures/showcase/experience/trajectory_theater_gifs/three_method_hardcase__img189_d6_s20_g14_r0__theater.gif"
+  ]
+}

@@ -1,6 +1,6 @@
 # 可视化结果画廊
 
-本画廊整理项目展示页、论文补充材料和答辩展示可直接使用的图件。新版展示图采用统一的科研风格图卡：固定 16:9 画幅、统一字体层级、色盲友好配色、留白一致，并将三方法轨迹 GIF 合成为同步三联动图，避免 GitHub Markdown 表格中图片高度不一致和文字乱换行的问题。
+本画廊整理项目展示页、论文补充材料和答辩展示可直接使用的图件。当前展示层分为两级：`experience/` 用于 GitHub 首页首屏、轨迹剧场和方法叙事；`polished/` 用于可复现的科研风格结果图卡。这样既保留数据表驱动的严谨性，也避免首页只像普通统计图堆叠。
 
 ## 生成方式
 
@@ -8,7 +8,38 @@
 python code/tools/build_visual_showcase.py
 ```
 
-该脚本会读取 `results/tables/` 中的真实实验结果表，重新生成基础展示图、新版 polished 图卡、同步三联 GIF，并复制轨迹与奖励机制媒体。新版核心文件位于 `results/figures/showcase/polished/` 和 `results/figures/showcase/trajectories/triptych_gifs/`。
+该脚本会读取 `results/tables/` 中的真实实验结果表，重新生成基础展示图、experience 首页资产、polished 图卡、同步三联 GIF，并复制轨迹与奖励机制媒体。新版核心文件位于 `results/figures/showcase/experience/`、`results/figures/showcase/polished/` 和 `results/figures/showcase/trajectories/triptych_gifs/`。
+
+## Experience 首页资产
+
+这些图用于项目首页和答辩开场页，目标是先讲清楚“任务是什么、方法强在哪、轨迹为什么更稳”。
+
+<p align="center">
+  <img src="../results/figures/showcase/experience/hero_experience.png" width="100%" alt="experience hero">
+</p>
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <img src="../results/figures/showcase/experience/method_blueprint_experience.png" width="100%" alt="method blueprint"><br>
+      <b>方法蓝图</b><br>
+      将推理路径和训练阶段混合奖励回路分开，避免把奖励机制误解为推理阶段也参与计算。
+    </td>
+    <td width="50%" valign="top">
+      <img src="../results/figures/showcase/experience/evidence_wall_experience.png" width="100%" alt="evidence wall"><br>
+      <b>证据墙</b><br>
+      将主结果、跨模态、长距离和轨迹行为压缩为一页阅读路径。
+    </td>
+  </tr>
+</table>
+
+<p align="center">
+  <img src="../results/figures/showcase/experience/trajectory_theater_gifs/three_method_hardcase__img189_d6_s20_g14_r0__theater.gif" width="100%" alt="trajectory theater">
+</p>
+
+<p align="center">
+  <img src="../results/figures/showcase/experience/trajectory_storyboard_experience.png" width="100%" alt="trajectory storyboard">
+</p>
 
 ## Polished 核心图卡
 

@@ -806,6 +806,12 @@ def build_all() -> None:
         build_polished()
     except Exception as exc:  # pragma: no cover - keep base showcase generation robust.
         print(f"Polished showcase generation skipped: {exc}")
+    try:
+        from build_showcase_experience import build_experience
+
+        build_experience()
+    except Exception as exc:  # pragma: no cover - keep base showcase generation robust.
+        print(f"Experience showcase generation skipped: {exc}")
     write_manifest(media_counts)
     print(f"Showcase written to {FIG_DIR}")
 
