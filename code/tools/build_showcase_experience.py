@@ -223,7 +223,7 @@ def load_gif_frames(base: str, suffix: str) -> tuple[list[Image.Image], int]:
 def crop_map_frame(frame: Image.Image) -> Image.Image:
     # The source GIF includes a white title band and border.  Cropping keeps the
     # meaningful aerial evidence and lets the new layout own the labels.
-    return frame.crop((102, 112, 608, 582))
+    return frame.crop((100, 112, 613, 582))
 
 
 def first_last_frames(base: str) -> dict[str, Image.Image]:
@@ -514,8 +514,8 @@ def build_trajectory_storyboard(base: str = "three_method_hardcase__img189_d6_s2
     draw = ImageDraw.Draw(canvas)
     draw.text((88, 58), "One hard case, three behaviors", font=F["h1"], fill=WHITE)
     draw.text((92, 126), "Same start, same target, same budget.  Labels stay inside the imagery; no cards, no outer frame.", font=F["body"], fill="#C8D6E4")
-    panel_w, panel_h = 730, 685
-    start_x, y0 = 105, 235
+    panel_w, panel_h = 710, 650
+    start_x, y0 = 87, 235
     for j, (suffix, label, color, outcome) in enumerate(METHODS):
         x = start_x + j * panel_w
         panel = fit_cover(frames[f"{suffix}_last"], (panel_w, panel_h)).convert("RGBA")
@@ -542,7 +542,7 @@ def theater_frame(
     loaded: list[list[Image.Image]],
     title: str,
 ) -> Image.Image:
-    panel_w, panel_h = 528, 520
+    panel_w, panel_h = 568, 520
     gutter = 0
     canvas = Image.new("RGBA", (panel_w * 3 + gutter * 2, panel_h), "#07101D")
     draw = ImageDraw.Draw(canvas)

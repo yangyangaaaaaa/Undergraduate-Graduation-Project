@@ -696,7 +696,7 @@ def _fit_cover(im: Image.Image, size: tuple[int, int]) -> Image.Image:
 def _crop_map_frame(frame: Image.Image) -> Image.Image:
     # Source GIFs include a white title band and figure border.  The showcase
     # triptych should compare paths directly, so keep only the map evidence.
-    return frame.crop((102, 112, 608, 582))
+    return frame.crop((100, 112, 613, 582))
 
 
 def _draw_shadow_text(
@@ -738,7 +738,7 @@ def build_triptych_gifs() -> None:
             loaded.append(frames)
             durations.append(duration)
         n = max(len(frames) for frames in loaded)
-        panel_w, panel_h = 528, 520
+        panel_w, panel_h = 568, 520
         canvas_size = (panel_w * 3, panel_h)
         duration = int(np.median(durations))
         frames_out: list[Image.Image] = []
