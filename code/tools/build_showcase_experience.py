@@ -150,6 +150,17 @@ def fit_contain(im: Image.Image, size: tuple[int, int], bg: str = WHITE) -> Imag
     return out
 
 
+def draw_shadow_text(
+    draw: ImageDraw.ImageDraw,
+    xy: tuple[int, int],
+    text: str,
+    font_obj: ImageFont.ImageFont,
+    fill: str | tuple[int, int, int, int],
+    stroke: int = 2,
+) -> None:
+    draw.text(xy, text, font=font_obj, fill=fill, stroke_width=stroke, stroke_fill=(0, 0, 0, 185))
+
+
 def draw_wrapped(
     draw: ImageDraw.ImageDraw,
     xy: tuple[int, int],
@@ -212,7 +223,7 @@ def load_gif_frames(base: str, suffix: str) -> tuple[list[Image.Image], int]:
 def crop_map_frame(frame: Image.Image) -> Image.Image:
     # The source GIF includes a white title band and border.  Cropping keeps the
     # meaningful aerial evidence and lets the new layout own the labels.
-    return frame.crop((102, 112, 638, 582))
+    return frame.crop((102, 112, 608, 582))
 
 
 def first_last_frames(base: str) -> dict[str, Image.Image]:
@@ -499,29 +510,27 @@ def build_evidence_wall() -> None:
 
 def build_trajectory_storyboard(base: str = "three_method_hardcase__img189_d6_s20_g14_r0") -> None:
     frames = first_last_frames(base)
-    canvas = gradient_bg((2400, 1350), "#08101D", "#173247")
+    canvas = gradient_bg((2400, 1040), "#07101D", "#142A3D")
     draw = ImageDraw.Draw(canvas)
-    draw.text((95, 62), "One hard case, three behaviors", font=F["h1"], fill=WHITE)
-    draw.text((100, 130), "Same start, same target, same search budget.  The difference is the learned directionality of the policy.", font=F["body"], fill="#C8D6E4")
-    panel_w, panel_h = 660, 635
-    xs = [110, 870, 1630]
-    for x, (suffix, label, color, outcome) in zip(xs, METHODS):
-        paste_round(canvas, frames[f"{suffix}_last"], (x, 250), (panel_w, panel_h), radius=36, border=color, border_width=6)
-        draw.rounded_rectangle((x + 28, 278, x + 300, 338), radius=20, fill=color)
-        draw.text((x + 52, 294), label, font=F["h3"], fill=WHITE)
+    draw.text((88, 58), "One hard case, three behaviors", font=F["h1"], fill=WHITE)
+    draw.text((92, 126), "Same start, same target, same budget.  Labels stay inside the imagery; no cards, no outer frame.", font=F["body"], fill="#C8D6E4")
+    panel_w, panel_h = 730, 685
+    start_x, y0 = 105, 235
+    for j, (suffix, label, color, outcome) in enumerate(METHODS):
+        x = start_x + j * panel_w
+        panel = fit_cover(frames[f"{suffix}_last"], (panel_w, panel_h)).convert("RGBA")
+        canvas.alpha_composite(panel, (x, y0))
+        if j:
+            draw.rectangle((x - 3, y0, x + 3, y0 + panel_h), fill=(4, 10, 18, 210))
+        draw.rectangle((x, y0, x + 8, y0 + panel_h), fill=color)
+        draw_shadow_text(draw, (x + 34, y0 + 32), label, F["h2"], WHITE, stroke=3)
         badge = "target reached" if suffix == "anchor0624" else outcome
-        draw.rounded_rectangle((x + 28, 912, x + panel_w - 28, 1002), radius=24, fill=(255, 255, 255, 35), outline=(255, 255, 255, 70), width=2)
-        draw.text((x + 58, 938), badge, font=F["h2"], fill=color)
-    draw.rounded_rectangle((120, 1100, 2280, 1245), radius=36, fill=(255, 255, 255, 235), outline=(255, 255, 255, 80), width=2)
-    draw.text((165, 1135), "Reading guide", font=F["h2"], fill=INK)
-    draw_wrapped(
-        draw,
-        (465, 1136),
-        "Green box = start, yellow box = goal, numbered markers = search order.  The successful policy keeps moving toward the target while baselines spend budget on detours.",
-        F["body"],
-        "#293649",
-        1710,
-        line_gap=6,
+        draw_shadow_text(draw, (x + 34, y0 + panel_h - 70), badge, F["h2"], color, stroke=3)
+    draw.text(
+        (105, 950),
+        "Green=start, yellow=goal, numbered markers=search order.  The useful comparison is the path itself, so the layout avoids white cards and decorative borders.",
+        font=F["body"],
+        fill="#C8D6E4",
     )
     canvas.convert("RGB").save(EXP_DIR / "trajectory_storyboard_experience.png", quality=95)
 
@@ -534,7 +543,7 @@ def theater_frame(
     title: str,
 ) -> Image.Image:
     panel_w, panel_h = 528, 520
-    gutter = 6
+    gutter = 0
     canvas = Image.new("RGBA", (panel_w * 3 + gutter * 2, panel_h), "#07101D")
     draw = ImageDraw.Draw(canvas)
 
@@ -543,15 +552,14 @@ def theater_frame(
         frame = crop_map_frame(loaded[j][min(i, len(loaded[j]) - 1)])
         panel = fit_cover(frame, (panel_w, panel_h))
         canvas.alpha_composite(panel.convert("RGBA"), (x0, 0))
-        # Tiny in-image overlays only: no external boxes, no large white cards.
-        draw.rectangle((x0, 0, x0 + panel_w, 44), fill=(6, 12, 20, 118))
-        draw.text((x0 + 14, 10), label, font=font(20, bold=True), fill=WHITE)
-        draw.text((x0 + panel_w - 112, 12), f"step {i:02d}/{n - 1:02d}", font=F["tiny"], fill="#DDEAF5")
+        if j:
+            draw.rectangle((x0 - 2, 0, x0 + 2, panel_h), fill=(4, 10, 18, 210))
+        # Text is burned into the image instead of being placed in cards.
+        draw_shadow_text(draw, (x0 + 16, 12), label, font(22, bold=True), WHITE, stroke=2)
+        draw_shadow_text(draw, (x0 + panel_w - 116, 14), f"step {i:02d}/{n - 1:02d}", F["tiny"], "#EAF3FB", stroke=2)
         status = "success" if suffix == "anchor0624" and i == n - 1 else (outcome if i == n - 1 else "searching")
         meta = f"{status} | C=6 | img=189 | step={i}/{n - 1}"
-        meta_w = min(panel_w - 24, int(draw.textlength(meta, font=F["tiny"])) + 18)
-        draw.rectangle((x0 + 10, panel_h - 31, x0 + 10 + meta_w, panel_h - 8), fill=(245, 247, 244, 178))
-        draw.text((x0 + 18, panel_h - 29), meta, font=F["tiny"], fill="#1F2D3D")
+        draw_shadow_text(draw, (x0 + 16, panel_h - 30), meta, F["tiny"], "#F2F7FA", stroke=2)
 
     # Ultra-thin progress indicator, kept inside the image instead of adding a
     # separate caption area.

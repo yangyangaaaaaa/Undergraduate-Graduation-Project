@@ -91,7 +91,7 @@ python code/tools/build_visual_showcase.py
 
 ## 同步三联动图
 
-三联动图将同一案例下的 Ours、GOMAA-Geo 和 GeoExplorer 轨迹同步放在一张 GIF 中。每一帧共享统一标题、方法标签、边框和步数标记，适合项目首页、答辩页和补充材料快速展示。
+三联动图将同一案例下的 Ours、GOMAA-Geo 和 GeoExplorer 轨迹同步放在一张 GIF 中。新版采用无白底、无卡片、无外边框的贴边拼接，只保留图内方法名、步数和极细进度线，适合项目首页、答辩页和补充材料快速展示。
 
 <p align="center">
   <img src="../results/figures/showcase/trajectories/triptych_gifs/three_method_hardcase__img189_d6_s20_g14_r0__triptych.gif" width="100%" alt="hardcase triptych gif">

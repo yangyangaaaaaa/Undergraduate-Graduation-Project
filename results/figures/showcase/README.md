@@ -9,7 +9,7 @@ This directory contains the visual evidence package used by the GitHub README an
 - `polished/`: high-impact 16:9 scientific figure cards used by the README.
 - `dataset/`: copied dataset, method, and chapter trajectory overview figures.
 - `trajectories/gifs/`: 21 animated trajectory cases.
-- `trajectories/triptych_gifs/`: 7 synchronized three-method GIFs for direct visual comparison.
+- `trajectories/triptych_gifs/`: 7 borderless synchronized three-method GIFs for direct visual comparison.
 - `trajectories/comparison_png/`: 7 static method-comparison trajectory figures.
 - `trajectories/static_png/`: 21 single-method static trajectory figures.
 - `reward_story/`: reward-mechanism figures and one reward replay GIF.

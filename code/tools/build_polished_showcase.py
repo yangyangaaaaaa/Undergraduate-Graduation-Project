@@ -693,18 +693,34 @@ def _fit_cover(im: Image.Image, size: tuple[int, int]) -> Image.Image:
     return resized.crop((left, top, left + tw, top + th))
 
 
+def _crop_map_frame(frame: Image.Image) -> Image.Image:
+    # Source GIFs include a white title band and figure border.  The showcase
+    # triptych should compare paths directly, so keep only the map evidence.
+    return frame.crop((102, 112, 608, 582))
+
+
+def _draw_shadow_text(
+    draw: ImageDraw.ImageDraw,
+    xy: tuple[int, int],
+    text: str,
+    font_obj: ImageFont.ImageFont,
+    fill: str | tuple[int, int, int, int],
+    stroke: int = 2,
+) -> None:
+    draw.text(xy, text, font=font_obj, fill=fill, stroke_width=stroke, stroke_fill=(0, 0, 0, 185))
+
+
 def build_triptych_gifs() -> None:
     gif_dir = SHOWCASE_DIR / "trajectories" / "gifs"
     if not gif_dir.exists():
         return
 
-    label_font = _load_font(36, bold=True)
-    small_font = _load_font(20, bold=False)
-    title_font = _load_font(30, bold=True)
+    label_font = _load_font(22, bold=True)
+    small_font = _load_font(15, bold=False)
     methods = [
-        ("anchor0624", "Ours", BLUE),
-        ("gomaa", "GOMAA-Geo", ORANGE),
-        ("pristine", "GeoExplorer", GRAY),
+        ("anchor0624", "Ours", BLUE, "success"),
+        ("gomaa", "GOMAA-Geo", ORANGE, "misses target"),
+        ("pristine", "GeoExplorer", GREEN, "drifts away"),
     ]
 
     base_names = sorted(
@@ -717,38 +733,35 @@ def build_triptych_gifs() -> None:
     for base in base_names:
         loaded = []
         durations = []
-        for suffix, _, _ in methods:
+        for suffix, _, _, _ in methods:
             frames, duration = _read_gif_frames(gif_dir / f"{base}__{suffix}.gif")
             loaded.append(frames)
             durations.append(duration)
         n = max(len(frames) for frames in loaded)
-        panel_size = (620, 585)
-        gutter = 28
-        margin = 44
-        header = 160
-        footer = 54
-        canvas_size = (margin * 2 + panel_size[0] * 3 + gutter * 2, header + panel_size[1] + footer)
+        panel_w, panel_h = 528, 520
+        canvas_size = (panel_w * 3, panel_h)
         duration = int(np.median(durations))
         frames_out: list[Image.Image] = []
         for i in range(n):
-            canvas = Image.new("RGB", canvas_size, "#F8F7F2")
+            canvas = Image.new("RGBA", canvas_size, "#07101D")
             draw = ImageDraw.Draw(canvas)
-            draw.rounded_rectangle((14, 14, canvas_size[0] - 14, canvas_size[1] - 14), radius=28, fill="#FFFDF7", outline="#E2DED4", width=2)
-            draw.text((margin, 28), "Synchronized trajectory replay", font=title_font, fill=INK)
-            draw.text((margin, 68), base.replace("__", "  |  ").replace("_", " "), font=small_font, fill=MUTED)
-            draw.text((canvas_size[0] - 210, 42), f"step {i + 1:02d}/{n:02d}", font=small_font, fill=BLUE)
-            for j, (suffix, label, color) in enumerate(methods):
-                x0 = margin + j * (panel_size[0] + gutter)
-                y0 = header
+            for j, (suffix, label, color, outcome) in enumerate(methods):
+                x0 = j * panel_w
                 src_frames = loaded[j]
-                frame = src_frames[min(i, len(src_frames) - 1)]
-                panel = _fit_cover(frame, panel_size)
-                draw.rounded_rectangle((x0, y0 - 54, x0 + panel_size[0], y0 - 10), radius=16, fill=color)
-                draw.text((x0 + 22, y0 - 48), label, font=label_font, fill="white")
-                canvas.paste(panel.convert("RGB"), (x0, y0))
-                draw.rounded_rectangle((x0, y0, x0 + panel_size[0], y0 + panel_size[1]), radius=16, outline=color, width=5)
-            draw.text((margin, canvas_size[1] - 38), "Green=start, yellow=goal, numbered markers=search order. Composite GIF uses aligned frames for direct method comparison.", font=small_font, fill=MUTED)
-            frames_out.append(canvas)
+                frame = _crop_map_frame(src_frames[min(i, len(src_frames) - 1)])
+                panel = _fit_cover(frame, (panel_w, panel_h)).convert("RGBA")
+                canvas.alpha_composite(panel, (x0, 0))
+                if j:
+                    draw.rectangle((x0 - 2, 0, x0 + 2, panel_h), fill=(4, 10, 18, 210))
+                draw.rectangle((x0, 0, x0 + 6, panel_h), fill=color)
+                _draw_shadow_text(draw, (x0 + 16, 12), label, label_font, "white", stroke=2)
+                _draw_shadow_text(draw, (x0 + panel_w - 116, 14), f"step {i:02d}/{n - 1:02d}", small_font, "#EAF3FB", stroke=2)
+                status = outcome if i == n - 1 else "searching"
+                meta = f"{status} | C=6 | img=189 | step={i}/{n - 1}"
+                _draw_shadow_text(draw, (x0 + 16, panel_h - 30), meta, small_font, "#F2F7FA", stroke=2)
+            draw.rectangle((0, panel_h - 4, canvas_size[0], panel_h), fill=(5, 10, 18, 160))
+            draw.rectangle((0, panel_h - 4, int(canvas_size[0] * i / max(1, n - 1)), panel_h), fill=BLUE)
+            frames_out.append(canvas.convert("P", palette=Image.Palette.ADAPTIVE, colors=128))
 
         out = TRIPTYCH_DIR / f"{base}__triptych.gif"
         frames_out[0].save(
@@ -776,7 +789,7 @@ def write_manifest() -> None:
     )
     manifest = {
         "generated_by": "code/tools/build_polished_showcase.py",
-        "style": "editorial scientific cards, synchronized triptych GIFs",
+        "style": "editorial scientific cards, borderless synchronized triptych GIFs",
         "file_count": len(files),
         "files": files,
     }
