@@ -800,6 +800,12 @@ def build_all() -> None:
     trajectory_statistics()
     main_benchmark_rankings()
     media_counts = copy_media()
+    try:
+        from build_polished_showcase import build_polished
+
+        build_polished()
+    except Exception as exc:  # pragma: no cover - keep base showcase generation robust.
+        print(f"Polished showcase generation skipped: {exc}")
     write_manifest(media_counts)
     print(f"Showcase written to {FIG_DIR}")
 

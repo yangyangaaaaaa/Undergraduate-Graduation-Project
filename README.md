@@ -1,17 +1,26 @@
 # Undergraduate Graduation Project
 
-本仓库用于整理本科毕业设计《好奇心驱动的无人机主动定位目标导航方法》的代码、实验结果、可视化材料、论文文档和复现说明。项目面向离散网格下的无人机主动目标定位导航任务：给定航拍搜索区域和目标线索后，智能体从起始网格出发，根据当前位置观测、目标表示和历史搜索序列选择移动动作，并在有限预算内尽可能到达目标网格。
+<p align="center">
+  <b>好奇心驱动的无人机主动定位目标导航方法</b><br>
+  Active target geo-localization with distance-aware curiosity reward shaping
+</p>
 
-![Benchmark overview](results/figures/showcase/benchmark_overview_dashboard.png)
+<p align="center">
+  <img src="results/figures/showcase/polished/hero_dashboard.png" width="100%" alt="Polished benchmark dashboard">
+</p>
 
-## 一眼看结果
+## 项目概览
 
-- 主结果：在 9 个共享基准评测上，本文方法平均 SR 为 `0.580`，GOMAA-Geo 为 `0.519`，平均提升约 `+0.062`。
-- 跨模态：在 MM-GAG 的航拍图像、地面图像和文本目标上，本文方法 SR 分别为 `0.617`、`0.639`、`0.625`。
-- 机制消融：16 组 G/P/E/V 消融中，完整分支 `g1_p1_e1_v1` 的主泛化均值为 `0.6211`，高于同数据无新增机制控制组 `0.5545`。
-- 长距离：8x8 与 10x10 扩展网格中，本文方法在更长起终点距离下保持更稳定的成功率；25x25 压力测试也保留了对比材料。
-- 可视化：仓库整理了 `103` 个展示文件，包括 `22` 个 GIF、`57` 张 PNG、`24` 个 SVG，以及轨迹、奖励机制、参数敏感和长距离测试图。
-- 补充分析：新增置信区间、轨迹行为、C=4 失败画像和奖励过程曲线，用于支撑结果稳定性与中远距离优势解释。
+本仓库整理本科毕业设计《好奇心驱动的无人机主动定位目标导航方法》的代码、实验结果、可视化材料、论文文档和复现说明。任务面向离散网格下的无人机主动目标定位导航：给定航拍搜索区域和目标线索后，智能体从起始网格出发，根据当前位置观测、目标表示和历史搜索序列选择移动动作，并在有限预算内尽可能到达目标网格。
+
+<table>
+  <tr>
+    <td width="25%" align="center"><b>主基准平均 SR</b><br><code>0.580</code></td>
+    <td width="25%" align="center"><b>相对 GOMAA 提升</b><br><code>+0.062</code></td>
+    <td width="25%" align="center"><b>MM-GAG 平均提升</b><br><code>+0.083</code></td>
+    <td width="25%" align="center"><b>展示文件</b><br><code>128</code></td>
+  </tr>
+</table>
 
 ## 方法概览
 
@@ -23,33 +32,64 @@ r_t = r_ex,t + lambda_t r_in,t + r_p,t
 
 其中 `r_ex,t` 为外在目标奖励，`r_in,t` 为下一步特征预测误差构造的好奇心内在奖励，`lambda_t` 为随距离变化的门控权重，`r_p,t` 为势函数奖励塑形项。推理阶段不再计算混合奖励或更新 PPO 参数，只使用训练后的策略网络进行动作选择。
 
-![Method overview](results/figures/showcase/dataset/figure3_1_method_overview_revised.png)
+<p align="center">
+  <img src="results/figures/showcase/dataset/figure3_1_method_overview_revised.png" width="88%" alt="Method overview">
+</p>
 
-## 结果展示
+## 科研风格结果展示
 
-| 主题 | 图示 | 说明 |
-|---|---|---|
-| MM-GAG 跨模态 | ![MM-GAG modality](results/figures/showcase/mmgag_modality_sr.png) | A/G/T 三类目标形式下，本文方法均高于 GOMAA-Geo；AiRLoc 仅补充航拍目标 A 行。 |
-| 距离桶曲线 | ![Distance buckets](results/figures/showcase/distance_bucket_curves.png) | C=4 到 C=8 上展示不同距离条件的成功率变化。 |
-| 机制消融 | ![Ablation heatmap](results/figures/showcase/generalization_heatmap_16cell.png) | 16 组 G/P/E/V 组合的主泛化均值，完整方法位于最佳单元。 |
-| 奖励设计 | ![Reward gate](results/figures/showcase/reward_gate_pb_comparison.png) | 对比常数、线性、正弦、二次幂和混合门控，以及 PBRS 开关。 |
-| 参数敏感 | ![Parameter sensitivity](results/figures/showcase/parameter_sensitivity_curves.png) | 覆盖门控下限、PBRS 系数、熵系数、训练预算和验证距离集合。 |
-| 长距离压力测试 | ![Ultra long](results/figures/showcase/ultra_long_sr_curves.png) | 8x8 与 10x10 扩展网格下的长距离成功率曲线。 |
-| 补充行为分析 | ![Trajectory behavior](results/figures/supplement/trajectory_behavior_metrics.png) | 用轨迹单调接近率、重复访问率和距离缩短率解释中远距离搜索行为。 |
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <img src="results/figures/showcase/polished/mmgag_modality_panel.png" width="100%" alt="MM-GAG modality panel"><br>
+      <b>MM-GAG 跨模态目标</b><br>
+      A/G/T 三类目标形式下，本文方法均保持高于 GOMAA-Geo 的成功率；AiRLoc 仅作为航拍目标补充基线。
+    </td>
+    <td width="50%" valign="top">
+      <img src="results/figures/showcase/polished/ablation_story_panel.png" width="100%" alt="Ablation story panel"><br>
+      <b>机制消融</b><br>
+      16 组 G/P/E/V 消融中，完整分支 <code>g1_p1_e1_v1</code> 取得最高主泛化均值。
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <img src="results/figures/showcase/polished/reward_design_panel.png" width="100%" alt="Reward design panel"><br>
+      <b>奖励机制</b><br>
+      线性距离门控与 PBRS 组合在 MM-GAG 平均 SR 上表现最好，纯内在奖励无法单独支撑目标定位。
+    </td>
+    <td width="50%" valign="top">
+      <img src="results/figures/showcase/polished/long_range_panel.png" width="100%" alt="Long-range stress panel"><br>
+      <b>超长距离与压力测试</b><br>
+      8x8、10x10 和 25x25 网格测试展示扩大搜索范围后的相对优势与极端难度。
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <img src="results/figures/showcase/polished/trajectory_behavior_panel.png" width="100%" alt="Trajectory behavior panel"><br>
+      <b>轨迹行为分析</b><br>
+      用成功率、距离缩短率、单调接近率和重复访问率解释中远距离搜索行为差异。
+    </td>
+    <td width="50%" valign="top">
+      <img src="results/figures/showcase/polished/reward_process_panel.png" width="100%" alt="Reward process panel"><br>
+      <b>奖励过程补充</b><br>
+      展示外在奖励、门控内在奖励、PBRS 和总奖励在成功/失败轨迹中的变化。
+    </td>
+  </tr>
+</table>
 
-## 动态轨迹
+## 同步动态轨迹
 
-下面的 GIF 展示同一个困难样例中三种方法的搜索过程。更多 C=4、C=6、C=8 成功与失败案例见 [可视化画廊](docs/visualization_gallery_zh.md)。
+下面的 GIF 将同一个困难样例中的三种方法同步放在一张图中，避免原先三张 GIF 分列时高度不统一、播放不同步和换行混乱的问题。更多成功、失败和绕行案例见 [可视化画廊](docs/visualization_gallery_zh.md)。
 
-| Ours | GOMAA-Geo | GeoExplorer |
-|---|---|---|
-| ![Ours hard case](results/figures/showcase/trajectories/gifs/three_method_hardcase__img189_d6_s20_g14_r0__anchor0624.gif) | ![GOMAA hard case](results/figures/showcase/trajectories/gifs/three_method_hardcase__img189_d6_s20_g14_r0__gomaa.gif) | ![GeoExplorer hard case](results/figures/showcase/trajectories/gifs/three_method_hardcase__img189_d6_s20_g14_r0__pristine.gif) |
+<p align="center">
+  <img src="results/figures/showcase/trajectories/triptych_gifs/three_method_hardcase__img189_d6_s20_g14_r0__triptych.gif" width="100%" alt="Synchronized trajectory replay">
+</p>
 
-## 仓库结构
+## 结果与材料组织
 
 - `code/geoexplorer_active/`：本文方法的干净代码入口，包括训练、评测、数据预处理和模型定义。
-- `code/tools/build_visual_showcase.py`：从 `results/tables/` 重新生成 GitHub 展示图和媒体清单。
-- `code/tools/build_supplement_experiment_analysis.py`：生成置信区间、轨迹行为、奖励过程和后续补跑实验方案。
+- `code/tools/build_visual_showcase.py`：从 `results/tables/` 重新生成 GitHub 展示图、同步三联 GIF 和媒体清单。
+- `code/tools/build_supplement_experiment_analysis.py`：生成置信区间、轨迹行为、奖励过程和补充实验分析图。
 - `experiments/`：主表、消融实验、参数实验和长距离测试对应的脚本与 manifest。
 - `results/tables/`：已整理的主实验、消融、附录参数、长距离和轨迹记录表。
 - `results/figures/`：论文图、数据集图、轨迹图、奖励机制图和 GitHub 展示图。
