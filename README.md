@@ -126,6 +126,7 @@ Southern California fire 样例展示了另一类灾害变化：建筑损毁和�
 - `results/tables/`：主实验、消融实验、补充实验、轨迹行为和短距离评估表格。
 - `results/reports/`：实验总结、奖励机制分析、续训诊断、验收演示和短距离边界报告。
 - `results/figures/defense_readme_20260613/`：最终答辩展示用的压缩动图与静态图。
+- `archives/raw_results_20260613/`：不直接展示的大批原始结果材料压缩归档索引；45 个 ZIP 大包保存在 GitHub Release 附件中，内容包含验收演示、奖励分析、PPT 候选图、展示图、实验报告、表格、日志和离线分析脚本。
 - `thesis/`：论文 Word 版、Markdown 草稿和正式 PDF。
 - `materials/project_admin/`：任务书、开题、中期、验收表、外文翻译和题目变更说明等过程材料。
 - `materials/defense/`：结题答辩 PDF。
@@ -161,6 +162,7 @@ python validate.py
 - [结题收尾总览](docs/project_closing_summary_zh.md)
 - [PPT 汇报脉络](docs/defense_ppt_storyline_zh.md)
 - [论文与过程材料索引](docs/thesis_material_index_zh.md)
+- [原始结果压缩归档说明](archives/raw_results_20260613/README.md)
 - [服务器验收指南](docs/server_acceptance_guide_zh.md)
 - [实验结果总览](docs/experiment_summary_zh.md)
 - [结果文件索引](docs/result_inventory_zh.md)
