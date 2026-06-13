@@ -1,0 +1,32 @@
+{
+  "timestamp": "2026-05-19T17:29:38.851666",
+  "episode": 452,
+  "time_step": 480001,
+  "current_ep_reward": 33.129194222758414,
+  "rolling_success_ratio": 0.2967391304347826,
+  "val_success": 12,
+  "best_val_success": 15,
+  "update_stats": {
+    "policy_loss": -0.0033837184775620255,
+    "value_loss": 0.8617488145828247,
+    "entropy": 0.2407776676118374,
+    "approx_kl": 0.0038343018877640134,
+    "clip_fraction": 0.008593750302679837,
+    "oracle_bc_loss": 0.0,
+    "sil_loss": 0.0,
+    "actor_lr": 9.277400070650586e-05,
+    "critic_lr": 9.277400070650586e-05,
+    "update_epochs_ran": 4
+  },
+  "runtime_reward": "in",
+  "runtime_factor": 1.0,
+  "runtime_progress_metric": "l2sq",
+  "gate_mode": "power",
+  "gate_floor": 0.405,
+  "pbrs_coef": 0.1,
+  "oracle_bc_coef": 0.0,
+  "sil_coef": 0.0,
+  "curriculum_mode": "none",
+  "control_path": "/root/geoexplorer/results/checkpoint/appendix_compare_20260519/anchor0624_gate_valdist_dense_followup/gate_type_power2_pbrs_seed321_t480k/control.json",
+  "elapsed_sec": 10684.333531856537
+}

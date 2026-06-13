@@ -79,6 +79,9 @@
 | `results/figures/chapter4_trajectories/` | 典型成功轨迹和三方法困难样例对比。 |
 | `results/figures/reward_story/` | G/P 机制辅助可视化图。 |
 | `results/figures/supplement/` | 置信区间、轨迹行为、C=4 失败画像和奖励过程曲线等补充分析图。 |
+| `results/figures/defense_readme_20260613/` | 最终答辩展示素材，含 MASA、SwissView、MM-GAG、xBD、10x10 长距离和实验分析页的压缩 GIF/PNG。 |
+| `results/figures/acceptance_demo_selected_20260613/` | 验收演示精选压缩动图，覆盖 C4/C6/C8、三方法困难样例、MM-GAG、xBD 和长距离设置。 |
+| `results/figures/defense_reward_selected_20260613/` | 奖励机制与答辩证据精选图，含动作归因、路线/奖励案例、同任务演化和 C4 失败边界。 |
 
 ## 中文报告
 

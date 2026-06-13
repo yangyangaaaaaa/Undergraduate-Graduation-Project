@@ -1,0 +1,7 @@
+﻿method,method_label,best_c8_success,best_c8_success_progress,best_c8_success_checkpoint,first_hit_90_progress,best_c8_sg,best_c8_sg_progress,best_c8_sg_checkpoint,final_observed_c8_success_mean,final_observed_c8_success_max,final_observed_c8_sg_min
+proposed_linear_gate_pbrs,门控内在奖励+PBRS,0.95,0.9943180555555555,geoexplorer_450.pt,0.9943180555555555,0.1,0.9943180555555555,geoexplorer_450.pt,0.8416666666666667,0.95,0.1
+mixed_no_gate_no_pbrs,外部+内在直接相加,0.925,0.9958548611111112,geoexplorer_450.pt,0.9958548611111112,0.25,0.9958548611111112,geoexplorer_450.pt,0.8833333333333333,0.925,0.25
+external_only,仅外部奖励,0.9,0.7767493055555555,geoexplorer_350.pt,0.7767493055555555,0.3,0.5587784722222222,geoexplorer_250.pt,0.7999999999999999,0.875,0.35
+mixed_gate_only,门控内在奖励,0.875,0.9949979166666667,geoexplorer_450.pt,,0.3,0.9949979166666667,geoexplorer_450.pt,0.7166666666666667,0.875,0.3
+mixed_pbrs_only,外部+内在+PBRS,0.825,0.9971986111111111,geoexplorer_450.pt,,0.55,0.9971986111111111,geoexplorer_450.pt,0.5666666666666667,0.825,0.55
+intrinsic_only,仅内在奖励,0.2,0.002272916666666633,geoexplorer_0.pt,,4.4,0.002272916666666633,geoexplorer_0.pt,0.0,0.0,7.35

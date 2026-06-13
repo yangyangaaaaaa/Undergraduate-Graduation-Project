@@ -19,15 +19,27 @@
 
 ## 首页抽取素材
 
-`results/figures/defense_readme_20260613/` 中的文件均依据 PPT 的 `ppt/media/*` 整理；其中 GIF 为压缩展示版：
+`results/figures/defense_readme_20260613/` 中的文件来自最终答辩 PPT 的 `ppt/media/*`，GIF 另做了 GitHub 展示压缩。素材按答辩顺序命名，方便 README、答辩复盘和后续汇报复用。
 
 | 文件 | PPT 来源 | 用途 |
 | --- | --- | --- |
+| `cover_symbol.png` | slide 1 | 封面视觉元素 |
 | `method_framework.png` | slide 5 | 研究框架 |
-| `short_distance_route.gif` | slide 8 | 短距离绕路成功轨迹 |
-| `c8_route_demo.gif` | slide 12 | C8 连续搜索轨迹 |
-| `multimodal_text_target.gif` | slide 16 | MM-GAG 文本目标 |
-| `xbd_disaster_route.gif` | slide 19 | xBD 灾后搜索 |
+| `short_distance_route.gif` | slide 8 | MASA 短距离绕路成功轨迹 |
+| `short_distance_route_static.png` | slide 9 | MASA 短距离绕路静态页 |
+| `swissview_town_landmark.gif` | slide 10 | SwissView 城镇地标连续搜索 |
+| `swissview_town_landmark_static.png` | slide 11 | SwissView 城镇地标静态页 |
+| `c8_route_demo.gif` | slide 12 | SwissView 跨区域湖边长距离搜索 |
+| `swissview_lake_long_distance_static.png` | slide 13 | SwissView 跨区域湖边静态页 |
+| `mmgag_ground_target.gif` | slide 14 | MM-GAG 地面图像目标 |
+| `mmgag_ground_target_static.png` | slide 15 | MM-GAG 地面图像目标静态页 |
+| `multimodal_text_target.gif` | slide 16 | MM-GAG 文本描述目标 |
+| `mmgag_text_target_static.png` | slide 17 | MM-GAG 文本描述目标静态页 |
+| `xbd_hurricane_prepost.png` | slide 18 | xBD 飓风灾前灾后对比 |
+| `xbd_disaster_route.gif` | slide 19 | xBD 飓风灾后搜索 |
+| `xbd_hurricane_route_static.png` | slide 20 | xBD 飓风灾后搜索静态页 |
+| `xbd_fire_prepost.png` | slide 21 | xBD 火灾灾前灾后对比 |
+| `xbd_fire_route_static.png` | slide 22 | xBD 火灾灾后搜索 |
 | `long_distance_grid10.gif` | slide 23 | 10x10 长距离搜索 |
 | `short_distance_failure.png` | slide 24 | 短距离失败边界 |
 | `performance_analysis.png` | slide 25 | 性能实验分析 |

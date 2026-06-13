@@ -1,0 +1,182 @@
+{
+  "generated_by": "code/tools/build_acceptance_demo_visuals.py",
+  "design": "white background, aligned grid, square cues, route maps plus experiment evidence pages",
+  "route_gifs": [
+    {
+      "role": "c4_smooth_success",
+      "case_id": "img011_d4_s03_g11_r0",
+      "img_idx": "11",
+      "success": "True",
+      "curve": "up=0, turns=0, final_d=0",
+      "gif": "results\\figures\\acceptance_demo\\acceptance_c4_smooth_success.gif",
+      "poster": "results\\figures\\acceptance_demo\\acceptance_c4_smooth_success_poster.png"
+    },
+    {
+      "role": "c4_wavy_success",
+      "case_id": "img044_d4_s07_g19_r0",
+      "img_idx": "44",
+      "success": "True",
+      "curve": "up=2, turns=4, final_d=0",
+      "gif": "results\\figures\\acceptance_demo\\acceptance_c4_wavy_success.gif",
+      "poster": "results\\figures\\acceptance_demo\\acceptance_c4_wavy_success_poster.png"
+    },
+    {
+      "role": "c4_wavy_success_02",
+      "case_id": "img113_d4_s21_g13_r0",
+      "img_idx": "113",
+      "success": "True",
+      "curve": "up=2, turns=4, final_d=0",
+      "gif": "results\\figures\\acceptance_demo\\acceptance_c4_wavy_success_02.gif",
+      "poster": "results\\figures\\acceptance_demo\\acceptance_c4_wavy_success_02_poster.png"
+    },
+    {
+      "role": "c4_wavy_detour",
+      "case_id": "img050_d4_s16_g00_r0",
+      "img_idx": "50",
+      "success": "False",
+      "curve": "up=7, turns=6, final_d=8",
+      "gif": "results\\figures\\acceptance_demo\\acceptance_c4_wavy_detour.gif",
+      "poster": "results\\figures\\acceptance_demo\\acceptance_c4_wavy_detour_poster.png"
+    },
+    {
+      "role": "c6_smooth_success",
+      "case_id": "img006_d6_s24_g06_r0",
+      "img_idx": "6",
+      "success": "True",
+      "curve": "up=0, turns=0, final_d=0",
+      "gif": "results\\figures\\acceptance_demo\\acceptance_c6_smooth_success.gif",
+      "poster": "results\\figures\\acceptance_demo\\acceptance_c6_smooth_success_poster.png"
+    },
+    {
+      "role": "c6_wavy_success",
+      "case_id": "img005_d6_s19_g05_r0",
+      "img_idx": "5",
+      "success": "True",
+      "curve": "up=2, turns=4, final_d=0",
+      "gif": "results\\figures\\acceptance_demo\\acceptance_c6_wavy_success.gif",
+      "poster": "results\\figures\\acceptance_demo\\acceptance_c6_wavy_success_poster.png"
+    },
+    {
+      "role": "c6_wavy_success_02",
+      "case_id": "img069_d6_s01_g19_r0",
+      "img_idx": "69",
+      "success": "True",
+      "curve": "up=2, turns=4, final_d=0",
+      "gif": "results\\figures\\acceptance_demo\\acceptance_c6_wavy_success_02.gif",
+      "poster": "results\\figures\\acceptance_demo\\acceptance_c6_wavy_success_02_poster.png"
+    },
+    {
+      "role": "c6_wavy_detour",
+      "case_id": "img203_d6_s15_g03_r0",
+      "img_idx": "203",
+      "success": "False",
+      "curve": "up=4, turns=7, final_d=4",
+      "gif": "results\\figures\\acceptance_demo\\acceptance_c6_wavy_detour.gif",
+      "poster": "results\\figures\\acceptance_demo\\acceptance_c6_wavy_detour_poster.png"
+    },
+    {
+      "role": "c8_smooth_success",
+      "case_id": "img000_d8_s24_g00_r0",
+      "img_idx": "0",
+      "success": "True",
+      "curve": "up=0, turns=0, final_d=0",
+      "gif": "results\\figures\\acceptance_demo\\acceptance_c8_smooth_success.gif",
+      "poster": "results\\figures\\acceptance_demo\\acceptance_c8_smooth_success_poster.png"
+    },
+    {
+      "role": "c8_wavy_success",
+      "case_id": "img129_d8_s20_g04_r0",
+      "img_idx": "129",
+      "success": "True",
+      "curve": "up=1, turns=2, final_d=0",
+      "gif": "results\\figures\\acceptance_demo\\acceptance_c8_wavy_success.gif",
+      "poster": "results\\figures\\acceptance_demo\\acceptance_c8_wavy_success_poster.png"
+    },
+    {
+      "role": "c8_wavy_success_02",
+      "case_id": "img025_d8_s24_g00_r0",
+      "img_idx": "25",
+      "success": "True",
+      "curve": "up=1, turns=2, final_d=0",
+      "gif": "results\\figures\\acceptance_demo\\acceptance_c8_wavy_success_02.gif",
+      "poster": "results\\figures\\acceptance_demo\\acceptance_c8_wavy_success_02_poster.png"
+    },
+    {
+      "role": "c8_wavy_detour",
+      "case_id": "img204_d8_s20_g04_r0",
+      "img_idx": "204",
+      "success": "False",
+      "curve": "up=3, turns=6, final_d=4",
+      "gif": "results\\figures\\acceptance_demo\\acceptance_c8_wavy_detour.gif",
+      "poster": "results\\figures\\acceptance_demo\\acceptance_c8_wavy_detour_poster.png"
+    },
+    {
+      "role": "three_method_hardcase",
+      "case_id": "img189_d6_s20_g14_r0",
+      "img_idx": "189",
+      "success": "True",
+      "curve": "up=2, turns=4, final_d=0",
+      "gif": "results\\figures\\acceptance_demo\\acceptance_three_method_hardcase.gif",
+      "poster": "results\\figures\\acceptance_demo\\acceptance_three_method_hardcase_poster.png"
+    }
+  ],
+  "pages": {
+    "route_gallery": "results\\figures\\acceptance_demo\\acceptance_route_gallery.png",
+    "xbd_compare": "results\\figures\\acceptance_demo\\acceptance_xbd_route_settings_compare.png",
+    "mmgag_multimodal": "results\\figures\\acceptance_demo\\acceptance_mmgag_multimodal_route_setting.png",
+    "main_benchmark": "results\\figures\\acceptance_demo\\acceptance_main_benchmark_effects.png",
+    "factorial": "results\\figures\\acceptance_demo\\acceptance_factorial_ablation_effects.png",
+    "reward": "results\\figures\\acceptance_demo\\acceptance_reward_gate_pbrs_effects.png",
+    "dataset_param": "results\\figures\\acceptance_demo\\acceptance_dataset_parameter_effects.png",
+    "budget": "results\\figures\\acceptance_demo\\acceptance_budget_stress_effects.png",
+    "continuation_status": "results\\figures\\acceptance_demo\\acceptance_continuation_status.png",
+    "index": "results\\figures\\acceptance_demo\\acceptance_visual_pack_index.png"
+  },
+  "xbd_pages": [
+    {
+      "role": "xbd_pre_route_setting",
+      "image": "results\\figures\\acceptance_demo\\acceptance_xbd_pre_route_setting.png"
+    },
+    {
+      "role": "xbd_disaster_route_setting",
+      "image": "results\\figures\\acceptance_demo\\acceptance_xbd_disaster_route_setting.png"
+    }
+  ],
+  "setting_gifs": [
+    {
+      "role": "xbd_pre_route_setting",
+      "gif": "results\\figures\\acceptance_demo\\acceptance_xbd_pre_route_setting.gif",
+      "poster": "results\\figures\\acceptance_demo\\acceptance_xbd_pre_route_setting_poster.png"
+    },
+    {
+      "role": "xbd_disaster_route_setting",
+      "gif": "results\\figures\\acceptance_demo\\acceptance_xbd_disaster_route_setting.gif",
+      "poster": "results\\figures\\acceptance_demo\\acceptance_xbd_disaster_route_setting_poster.png"
+    },
+    {
+      "role": "mmgag_aerial_route_setting",
+      "gif": "results\\figures\\acceptance_demo\\acceptance_mmgag_aerial_route_setting.gif",
+      "poster": "results\\figures\\acceptance_demo\\acceptance_mmgag_aerial_route_setting_poster.png"
+    },
+    {
+      "role": "mmgag_ground_route_setting",
+      "gif": "results\\figures\\acceptance_demo\\acceptance_mmgag_ground_route_setting.gif",
+      "poster": "results\\figures\\acceptance_demo\\acceptance_mmgag_ground_route_setting_poster.png"
+    },
+    {
+      "role": "mmgag_text_route_setting",
+      "gif": "results\\figures\\acceptance_demo\\acceptance_mmgag_text_route_setting.gif",
+      "poster": "results\\figures\\acceptance_demo\\acceptance_mmgag_text_route_setting_poster.png"
+    },
+    {
+      "role": "ultralong_grid8_route_setting",
+      "gif": "results\\figures\\acceptance_demo\\acceptance_ultralong_grid8_route_setting.gif",
+      "poster": "results\\figures\\acceptance_demo\\acceptance_ultralong_grid8_route_setting_poster.png"
+    },
+    {
+      "role": "ultralong_grid10_route_setting",
+      "gif": "results\\figures\\acceptance_demo\\acceptance_ultralong_grid10_route_setting.gif",
+      "poster": "results\\figures\\acceptance_demo\\acceptance_ultralong_grid10_route_setting_poster.png"
+    }
+  ]
+}

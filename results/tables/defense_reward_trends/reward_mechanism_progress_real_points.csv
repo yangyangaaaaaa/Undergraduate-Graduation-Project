@@ -1,0 +1,6 @@
+﻿order,stage,full_label,mmgag_mean_sr,source
+0,仅内在,仅内在奖励,0.09191489361702122,reward_control_long_table.csv
+1,直接相加,外部+内在直接相加,0.5662411347517731,reward_control_long_table.csv
+2,线性门控,线性门控，无 PBRS,0.582128,reward_gate_type_mmgag_only_table_with_linear.csv
+3,PBRS,外部奖励+PBRS,0.594326,reward_gate_type_mmgag_only_table_with_linear.csv
+4,门控+PBRS,线性门控+PBRS（本文方法）,0.609362,reward_gate_type_mmgag_only_table_with_linear.csv

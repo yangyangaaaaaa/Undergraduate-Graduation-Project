@@ -1,0 +1,5 @@
+﻿method,method_label,best_c8_success,best_c8_success_progress,best_c8_success_checkpoint,first_hit_90_progress,best_c8_sg,best_c8_sg_progress,best_c8_sg_checkpoint,final_observed_c8_success_mean,final_observed_c8_sg
+proposed_linear_gate_pbrs,门控内在奖励+PBRS,0.9262411347517729,0.9960708333333331,geoexplorer_450.pt,0.9960708333333331,0.22695035460992907,0.9960708333333331,geoexplorer_450.pt,0.9262411347517729,0.22695035460992907
+external_pbrs,外部奖励+PBRS,0.8723404255319149,0.9953583333333332,geoexplorer_450.pt,,0.41702127659574467,0.9953583333333332,geoexplorer_450.pt,0.8723404255319149,0.41702127659574467
+constant_gate_pbrs,常数门控+PBRS,0.8581560283687942,0.88715,geoexplorer_400.pt,,0.4312056737588652,0.88715,geoexplorer_400.pt,0.8439716312056738,0.5333333333333333
+linear_gate_no_pbrs,线性门控，无 PBRS,0.8411347517730497,0.99439375,geoexplorer_450.pt,,0.4652482269503546,0.99439375,geoexplorer_450.pt,0.8411347517730497,0.4652482269503546

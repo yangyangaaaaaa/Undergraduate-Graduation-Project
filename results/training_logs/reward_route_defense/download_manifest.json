@@ -1,0 +1,354 @@
+[
+  {
+    "run": "reward_external_only",
+    "file": "training_metrics.csv",
+    "status": "downloaded",
+    "remote": "/root/geoexplorer/results/checkpoint/appendix_compare_20260519/anchor0624_gate_valdist_dense_followup/reward_external_only_seed321_t480k/training_metrics.csv",
+    "local": "F:\\bishe\\Undergraduate-Graduation-Project\\results\\training_logs\\reward_route_defense\\reward_external_only\\training_metrics.csv",
+    "bytes": 124862
+  },
+  {
+    "run": "reward_external_only",
+    "file": "config.json",
+    "status": "downloaded",
+    "remote": "/root/geoexplorer/results/checkpoint/appendix_compare_20260519/anchor0624_gate_valdist_dense_followup/reward_external_only_seed321_t480k/config.json",
+    "local": "F:\\bishe\\Undergraduate-Graduation-Project\\results\\training_logs\\reward_route_defense\\reward_external_only\\config.json",
+    "bytes": 2741
+  },
+  {
+    "run": "reward_external_only",
+    "file": "heartbeat.json",
+    "status": "downloaded",
+    "remote": "/root/geoexplorer/results/checkpoint/appendix_compare_20260519/anchor0624_gate_valdist_dense_followup/reward_external_only_seed321_t480k/heartbeat.json",
+    "local": "F:\\bishe\\Undergraduate-Graduation-Project\\results\\training_logs\\reward_route_defense\\reward_external_only\\heartbeat.json",
+    "bytes": 1028
+  },
+  {
+    "run": "reward_external_only",
+    "file": "expt_logs.txt",
+    "status": "downloaded",
+    "remote": "/root/geoexplorer/results/checkpoint/appendix_compare_20260519/anchor0624_gate_valdist_dense_followup/reward_external_only_seed321_t480k/expt_logs.txt",
+    "local": "F:\\bishe\\Undergraduate-Graduation-Project\\results\\training_logs\\reward_route_defense\\reward_external_only\\expt_logs.txt",
+    "bytes": 48586
+  },
+  {
+    "run": "reward_intrinsic_only",
+    "file": "training_metrics.csv",
+    "status": "downloaded",
+    "remote": "/root/geoexplorer/results/checkpoint/appendix_compare_20260519/anchor0624_gate_valdist_dense_followup/reward_intrinsic_only_seed321_t480k/training_metrics.csv",
+    "local": "F:\\bishe\\Undergraduate-Graduation-Project\\results\\training_logs\\reward_route_defense\\reward_intrinsic_only\\training_metrics.csv",
+    "bytes": 129759
+  },
+  {
+    "run": "reward_intrinsic_only",
+    "file": "config.json",
+    "status": "downloaded",
+    "remote": "/root/geoexplorer/results/checkpoint/appendix_compare_20260519/anchor0624_gate_valdist_dense_followup/reward_intrinsic_only_seed321_t480k/config.json",
+    "local": "F:\\bishe\\Undergraduate-Graduation-Project\\results\\training_logs\\reward_route_defense\\reward_intrinsic_only\\config.json",
+    "bytes": 2753
+  },
+  {
+    "run": "reward_intrinsic_only",
+    "file": "heartbeat.json",
+    "status": "downloaded",
+    "remote": "/root/geoexplorer/results/checkpoint/appendix_compare_20260519/anchor0624_gate_valdist_dense_followup/reward_intrinsic_only_seed321_t480k/heartbeat.json",
+    "local": "F:\\bishe\\Undergraduate-Graduation-Project\\results\\training_logs\\reward_route_defense\\reward_intrinsic_only\\heartbeat.json",
+    "bytes": 1033
+  },
+  {
+    "run": "reward_intrinsic_only",
+    "file": "expt_logs.txt",
+    "status": "downloaded",
+    "remote": "/root/geoexplorer/results/checkpoint/appendix_compare_20260519/anchor0624_gate_valdist_dense_followup/reward_intrinsic_only_seed321_t480k/expt_logs.txt",
+    "local": "F:\\bishe\\Undergraduate-Graduation-Project\\results\\training_logs\\reward_route_defense\\reward_intrinsic_only\\expt_logs.txt",
+    "bytes": 49717
+  },
+  {
+    "run": "reward_no_decay_mixed",
+    "file": "training_metrics.csv",
+    "status": "downloaded",
+    "remote": "/root/geoexplorer/results/checkpoint/appendix_compare_20260519/anchor0624_gate_valdist_dense_followup/reward_intrinsic_no_decay_seed321_t480k/training_metrics.csv",
+    "local": "F:\\bishe\\Undergraduate-Graduation-Project\\results\\training_logs\\reward_route_defense\\reward_no_decay_mixed\\training_metrics.csv",
+    "bytes": 135784
+  },
+  {
+    "run": "reward_no_decay_mixed",
+    "file": "config.json",
+    "status": "downloaded",
+    "remote": "/root/geoexplorer/results/checkpoint/appendix_compare_20260519/anchor0624_gate_valdist_dense_followup/reward_intrinsic_no_decay_seed321_t480k/config.json",
+    "local": "F:\\bishe\\Undergraduate-Graduation-Project\\results\\training_logs\\reward_route_defense\\reward_no_decay_mixed\\config.json",
+    "bytes": 2749
+  },
+  {
+    "run": "reward_no_decay_mixed",
+    "file": "heartbeat.json",
+    "status": "downloaded",
+    "remote": "/root/geoexplorer/results/checkpoint/appendix_compare_20260519/anchor0624_gate_valdist_dense_followup/reward_intrinsic_no_decay_seed321_t480k/heartbeat.json",
+    "local": "F:\\bishe\\Undergraduate-Graduation-Project\\results\\training_logs\\reward_route_defense\\reward_no_decay_mixed\\heartbeat.json",
+    "bytes": 1044
+  },
+  {
+    "run": "reward_no_decay_mixed",
+    "file": "expt_logs.txt",
+    "status": "downloaded",
+    "remote": "/root/geoexplorer/results/checkpoint/appendix_compare_20260519/anchor0624_gate_valdist_dense_followup/reward_intrinsic_no_decay_seed321_t480k/expt_logs.txt",
+    "local": "F:\\bishe\\Undergraduate-Graduation-Project\\results\\training_logs\\reward_route_defense\\reward_no_decay_mixed\\expt_logs.txt",
+    "bytes": 48843
+  },
+  {
+    "run": "external_pbrs",
+    "file": "training_metrics.csv",
+    "status": "downloaded",
+    "remote": "/root/geoexplorer/results/checkpoint/appendix_compare_20260519/anchor0624_gate_valdist_dense_followup/reward_external_pbrs_seed321_t480k/training_metrics.csv",
+    "local": "F:\\bishe\\Undergraduate-Graduation-Project\\results\\training_logs\\reward_route_defense\\external_pbrs\\training_metrics.csv",
+    "bytes": 136290
+  },
+  {
+    "run": "external_pbrs",
+    "file": "config.json",
+    "status": "downloaded",
+    "remote": "/root/geoexplorer/results/checkpoint/appendix_compare_20260519/anchor0624_gate_valdist_dense_followup/reward_external_pbrs_seed321_t480k/config.json",
+    "local": "F:\\bishe\\Undergraduate-Graduation-Project\\results\\training_logs\\reward_route_defense\\external_pbrs\\config.json",
+    "bytes": 2741
+  },
+  {
+    "run": "external_pbrs",
+    "file": "heartbeat.json",
+    "status": "downloaded",
+    "remote": "/root/geoexplorer/results/checkpoint/appendix_compare_20260519/anchor0624_gate_valdist_dense_followup/reward_external_pbrs_seed321_t480k/heartbeat.json",
+    "local": "F:\\bishe\\Undergraduate-Graduation-Project\\results\\training_logs\\reward_route_defense\\external_pbrs\\heartbeat.json",
+    "bytes": 1039
+  },
+  {
+    "run": "external_pbrs",
+    "file": "expt_logs.txt",
+    "status": "downloaded",
+    "remote": "/root/geoexplorer/results/checkpoint/appendix_compare_20260519/anchor0624_gate_valdist_dense_followup/reward_external_pbrs_seed321_t480k/expt_logs.txt",
+    "local": "F:\\bishe\\Undergraduate-Graduation-Project\\results\\training_logs\\reward_route_defense\\external_pbrs\\expt_logs.txt",
+    "bytes": 49268
+  },
+  {
+    "run": "constant_gate_pbrs",
+    "file": "training_metrics.csv",
+    "status": "downloaded",
+    "remote": "/root/geoexplorer/results/checkpoint/appendix_compare_20260519/anchor0624_gate_valdist_dense_followup/gate_type_constant_0405_pbrs_seed321_t480k/training_metrics.csv",
+    "local": "F:\\bishe\\Undergraduate-Graduation-Project\\results\\training_logs\\reward_route_defense\\constant_gate_pbrs\\training_metrics.csv",
+    "bytes": 135868
+  },
+  {
+    "run": "constant_gate_pbrs",
+    "file": "config.json",
+    "status": "downloaded",
+    "remote": "/root/geoexplorer/results/checkpoint/appendix_compare_20260519/anchor0624_gate_valdist_dense_followup/gate_type_constant_0405_pbrs_seed321_t480k/config.json",
+    "local": "F:\\bishe\\Undergraduate-Graduation-Project\\results\\training_logs\\reward_route_defense\\constant_gate_pbrs\\config.json",
+    "bytes": 2759
+  },
+  {
+    "run": "constant_gate_pbrs",
+    "file": "heartbeat.json",
+    "status": "downloaded",
+    "remote": "/root/geoexplorer/results/checkpoint/appendix_compare_20260519/anchor0624_gate_valdist_dense_followup/gate_type_constant_0405_pbrs_seed321_t480k/heartbeat.json",
+    "local": "F:\\bishe\\Undergraduate-Graduation-Project\\results\\training_logs\\reward_route_defense\\constant_gate_pbrs\\heartbeat.json",
+    "bytes": 1049
+  },
+  {
+    "run": "constant_gate_pbrs",
+    "file": "expt_logs.txt",
+    "status": "downloaded",
+    "remote": "/root/geoexplorer/results/checkpoint/appendix_compare_20260519/anchor0624_gate_valdist_dense_followup/gate_type_constant_0405_pbrs_seed321_t480k/expt_logs.txt",
+    "local": "F:\\bishe\\Undergraduate-Graduation-Project\\results\\training_logs\\reward_route_defense\\constant_gate_pbrs\\expt_logs.txt",
+    "bytes": 48769
+  },
+  {
+    "run": "sine_gate_pbrs",
+    "file": "training_metrics.csv",
+    "status": "downloaded",
+    "remote": "/root/geoexplorer/results/checkpoint/appendix_compare_20260519/anchor0624_gate_valdist_dense_followup/gate_type_sine_pbrs_seed321_t480k/training_metrics.csv",
+    "local": "F:\\bishe\\Undergraduate-Graduation-Project\\results\\training_logs\\reward_route_defense\\sine_gate_pbrs\\training_metrics.csv",
+    "bytes": 135543
+  },
+  {
+    "run": "sine_gate_pbrs",
+    "file": "config.json",
+    "status": "downloaded",
+    "remote": "/root/geoexplorer/results/checkpoint/appendix_compare_20260519/anchor0624_gate_valdist_dense_followup/gate_type_sine_pbrs_seed321_t480k/config.json",
+    "local": "F:\\bishe\\Undergraduate-Graduation-Project\\results\\training_logs\\reward_route_defense\\sine_gate_pbrs\\config.json",
+    "bytes": 2737
+  },
+  {
+    "run": "sine_gate_pbrs",
+    "file": "heartbeat.json",
+    "status": "downloaded",
+    "remote": "/root/geoexplorer/results/checkpoint/appendix_compare_20260519/anchor0624_gate_valdist_dense_followup/gate_type_sine_pbrs_seed321_t480k/heartbeat.json",
+    "local": "F:\\bishe\\Undergraduate-Graduation-Project\\results\\training_logs\\reward_route_defense\\sine_gate_pbrs\\heartbeat.json",
+    "bytes": 1021
+  },
+  {
+    "run": "sine_gate_pbrs",
+    "file": "expt_logs.txt",
+    "status": "downloaded",
+    "remote": "/root/geoexplorer/results/checkpoint/appendix_compare_20260519/anchor0624_gate_valdist_dense_followup/gate_type_sine_pbrs_seed321_t480k/expt_logs.txt",
+    "local": "F:\\bishe\\Undergraduate-Graduation-Project\\results\\training_logs\\reward_route_defense\\sine_gate_pbrs\\expt_logs.txt",
+    "bytes": 49568
+  },
+  {
+    "run": "power2_gate_pbrs",
+    "file": "training_metrics.csv",
+    "status": "downloaded",
+    "remote": "/root/geoexplorer/results/checkpoint/appendix_compare_20260519/anchor0624_gate_valdist_dense_followup/gate_type_power2_pbrs_seed321_t480k/training_metrics.csv",
+    "local": "F:\\bishe\\Undergraduate-Graduation-Project\\results\\training_logs\\reward_route_defense\\power2_gate_pbrs\\training_metrics.csv",
+    "bytes": 135999
+  },
+  {
+    "run": "power2_gate_pbrs",
+    "file": "config.json",
+    "status": "downloaded",
+    "remote": "/root/geoexplorer/results/checkpoint/appendix_compare_20260519/anchor0624_gate_valdist_dense_followup/gate_type_power2_pbrs_seed321_t480k/config.json",
+    "local": "F:\\bishe\\Undergraduate-Graduation-Project\\results\\training_logs\\reward_route_defense\\power2_gate_pbrs\\config.json",
+    "bytes": 2742
+  },
+  {
+    "run": "power2_gate_pbrs",
+    "file": "heartbeat.json",
+    "status": "downloaded",
+    "remote": "/root/geoexplorer/results/checkpoint/appendix_compare_20260519/anchor0624_gate_valdist_dense_followup/gate_type_power2_pbrs_seed321_t480k/heartbeat.json",
+    "local": "F:\\bishe\\Undergraduate-Graduation-Project\\results\\training_logs\\reward_route_defense\\power2_gate_pbrs\\heartbeat.json",
+    "bytes": 1040
+  },
+  {
+    "run": "power2_gate_pbrs",
+    "file": "expt_logs.txt",
+    "status": "downloaded",
+    "remote": "/root/geoexplorer/results/checkpoint/appendix_compare_20260519/anchor0624_gate_valdist_dense_followup/gate_type_power2_pbrs_seed321_t480k/expt_logs.txt",
+    "local": "F:\\bishe\\Undergraduate-Graduation-Project\\results\\training_logs\\reward_route_defense\\power2_gate_pbrs\\expt_logs.txt",
+    "bytes": 49591
+  },
+  {
+    "run": "gp_off_off",
+    "file": "training_metrics.csv",
+    "status": "downloaded",
+    "remote": "/root/geoexplorer/results/checkpoint/algo_ablation_anchor0624_20260515/masa_plus_mmgag_anchor0624_component_ablation_seed321_480k_gpu01/g0_p0_e1_v1_seed321_t480k/training_metrics.csv",
+    "local": "F:\\bishe\\Undergraduate-Graduation-Project\\results\\training_logs\\reward_route_defense\\gp_off_off\\training_metrics.csv",
+    "bytes": 135659
+  },
+  {
+    "run": "gp_off_off",
+    "file": "config.json",
+    "status": "downloaded",
+    "remote": "/root/geoexplorer/results/checkpoint/algo_ablation_anchor0624_20260515/masa_plus_mmgag_anchor0624_component_ablation_seed321_480k_gpu01/g0_p0_e1_v1_seed321_t480k/config.json",
+    "local": "F:\\bishe\\Undergraduate-Graduation-Project\\results\\training_logs\\reward_route_defense\\gp_off_off\\config.json",
+    "bytes": 2808
+  },
+  {
+    "run": "gp_off_off",
+    "file": "heartbeat.json",
+    "status": "downloaded",
+    "remote": "/root/geoexplorer/results/checkpoint/algo_ablation_anchor0624_20260515/masa_plus_mmgag_anchor0624_component_ablation_seed321_480k_gpu01/g0_p0_e1_v1_seed321_t480k/heartbeat.json",
+    "local": "F:\\bishe\\Undergraduate-Graduation-Project\\results\\training_logs\\reward_route_defense\\gp_off_off\\heartbeat.json",
+    "bytes": 1060
+  },
+  {
+    "run": "gp_off_off",
+    "file": "expt_logs.txt",
+    "status": "downloaded",
+    "remote": "/root/geoexplorer/results/checkpoint/algo_ablation_anchor0624_20260515/masa_plus_mmgag_anchor0624_component_ablation_seed321_480k_gpu01/g0_p0_e1_v1_seed321_t480k/expt_logs.txt",
+    "local": "F:\\bishe\\Undergraduate-Graduation-Project\\results\\training_logs\\reward_route_defense\\gp_off_off\\expt_logs.txt",
+    "bytes": 48843
+  },
+  {
+    "run": "gp_g_only",
+    "file": "training_metrics.csv",
+    "status": "downloaded",
+    "remote": "/root/geoexplorer/results/checkpoint/algo_ablation_anchor0624_20260515/masa_plus_mmgag_anchor0624_component_ablation_seed321_480k_gpu01/g1_p0_e1_v1_seed321_t480k/training_metrics.csv",
+    "local": "F:\\bishe\\Undergraduate-Graduation-Project\\results\\training_logs\\reward_route_defense\\gp_g_only\\training_metrics.csv",
+    "bytes": 136464
+  },
+  {
+    "run": "gp_g_only",
+    "file": "config.json",
+    "status": "downloaded",
+    "remote": "/root/geoexplorer/results/checkpoint/algo_ablation_anchor0624_20260515/masa_plus_mmgag_anchor0624_component_ablation_seed321_480k_gpu01/g1_p0_e1_v1_seed321_t480k/config.json",
+    "local": "F:\\bishe\\Undergraduate-Graduation-Project\\results\\training_logs\\reward_route_defense\\gp_g_only\\config.json",
+    "bytes": 2812
+  },
+  {
+    "run": "gp_g_only",
+    "file": "heartbeat.json",
+    "status": "downloaded",
+    "remote": "/root/geoexplorer/results/checkpoint/algo_ablation_anchor0624_20260515/masa_plus_mmgag_anchor0624_component_ablation_seed321_480k_gpu01/g1_p0_e1_v1_seed321_t480k/heartbeat.json",
+    "local": "F:\\bishe\\Undergraduate-Graduation-Project\\results\\training_logs\\reward_route_defense\\gp_g_only\\heartbeat.json",
+    "bytes": 1066
+  },
+  {
+    "run": "gp_g_only",
+    "file": "expt_logs.txt",
+    "status": "downloaded",
+    "remote": "/root/geoexplorer/results/checkpoint/algo_ablation_anchor0624_20260515/masa_plus_mmgag_anchor0624_component_ablation_seed321_480k_gpu01/g1_p0_e1_v1_seed321_t480k/expt_logs.txt",
+    "local": "F:\\bishe\\Undergraduate-Graduation-Project\\results\\training_logs\\reward_route_defense\\gp_g_only\\expt_logs.txt",
+    "bytes": 48834
+  },
+  {
+    "run": "gp_p_only",
+    "file": "training_metrics.csv",
+    "status": "downloaded",
+    "remote": "/root/geoexplorer/results/checkpoint/algo_ablation_anchor0624_20260515/masa_plus_mmgag_anchor0624_component_ablation_seed321_480k_gpu01/g0_p1_e1_v1_seed321_t480k/training_metrics.csv",
+    "local": "F:\\bishe\\Undergraduate-Graduation-Project\\results\\training_logs\\reward_route_defense\\gp_p_only\\training_metrics.csv",
+    "bytes": 135576
+  },
+  {
+    "run": "gp_p_only",
+    "file": "config.json",
+    "status": "downloaded",
+    "remote": "/root/geoexplorer/results/checkpoint/algo_ablation_anchor0624_20260515/masa_plus_mmgag_anchor0624_component_ablation_seed321_480k_gpu01/g0_p1_e1_v1_seed321_t480k/config.json",
+    "local": "F:\\bishe\\Undergraduate-Graduation-Project\\results\\training_logs\\reward_route_defense\\gp_p_only\\config.json",
+    "bytes": 2808
+  },
+  {
+    "run": "gp_p_only",
+    "file": "heartbeat.json",
+    "status": "downloaded",
+    "remote": "/root/geoexplorer/results/checkpoint/algo_ablation_anchor0624_20260515/masa_plus_mmgag_anchor0624_component_ablation_seed321_480k_gpu01/g0_p1_e1_v1_seed321_t480k/heartbeat.json",
+    "local": "F:\\bishe\\Undergraduate-Graduation-Project\\results\\training_logs\\reward_route_defense\\gp_p_only\\heartbeat.json",
+    "bytes": 1042
+  },
+  {
+    "run": "gp_p_only",
+    "file": "expt_logs.txt",
+    "status": "downloaded",
+    "remote": "/root/geoexplorer/results/checkpoint/algo_ablation_anchor0624_20260515/masa_plus_mmgag_anchor0624_component_ablation_seed321_480k_gpu01/g0_p1_e1_v1_seed321_t480k/expt_logs.txt",
+    "local": "F:\\bishe\\Undergraduate-Graduation-Project\\results\\training_logs\\reward_route_defense\\gp_p_only\\expt_logs.txt",
+    "bytes": 49042
+  },
+  {
+    "run": "gp_full_linear_pbrs",
+    "file": "training_metrics.csv",
+    "status": "downloaded",
+    "remote": "/root/geoexplorer/results/checkpoint/algo_ablation_anchor0624_20260515/masa_plus_mmgag_anchor0624_component_ablation_seed321_480k_gpu01/g1_p1_e1_v1_seed321_t480k/training_metrics.csv",
+    "local": "F:\\bishe\\Undergraduate-Graduation-Project\\results\\training_logs\\reward_route_defense\\gp_full_linear_pbrs\\training_metrics.csv",
+    "bytes": 135744
+  },
+  {
+    "run": "gp_full_linear_pbrs",
+    "file": "config.json",
+    "status": "downloaded",
+    "remote": "/root/geoexplorer/results/checkpoint/algo_ablation_anchor0624_20260515/masa_plus_mmgag_anchor0624_component_ablation_seed321_480k_gpu01/g1_p1_e1_v1_seed321_t480k/config.json",
+    "local": "F:\\bishe\\Undergraduate-Graduation-Project\\results\\training_logs\\reward_route_defense\\gp_full_linear_pbrs\\config.json",
+    "bytes": 2812
+  },
+  {
+    "run": "gp_full_linear_pbrs",
+    "file": "heartbeat.json",
+    "status": "downloaded",
+    "remote": "/root/geoexplorer/results/checkpoint/algo_ablation_anchor0624_20260515/masa_plus_mmgag_anchor0624_component_ablation_seed321_480k_gpu01/g1_p1_e1_v1_seed321_t480k/heartbeat.json",
+    "local": "F:\\bishe\\Undergraduate-Graduation-Project\\results\\training_logs\\reward_route_defense\\gp_full_linear_pbrs\\heartbeat.json",
+    "bytes": 1064
+  },
+  {
+    "run": "gp_full_linear_pbrs",
+    "file": "expt_logs.txt",
+    "status": "downloaded",
+    "remote": "/root/geoexplorer/results/checkpoint/algo_ablation_anchor0624_20260515/masa_plus_mmgag_anchor0624_component_ablation_seed321_480k_gpu01/g1_p1_e1_v1_seed321_t480k/expt_logs.txt",
+    "local": "F:\\bishe\\Undergraduate-Graduation-Project\\results\\training_logs\\reward_route_defense\\gp_full_linear_pbrs\\expt_logs.txt",
+    "bytes": 48332
+  }
+]

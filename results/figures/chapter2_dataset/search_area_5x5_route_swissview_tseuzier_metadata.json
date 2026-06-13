@@ -1,0 +1,74 @@
+{
+  "output_image": "F:\\bishe\\Undergraduate-Graduation-Project\\results\\figures\\chapter2_dataset\\search_area_5x5_route_swissview_tseuzier.png",
+  "ppt_pack_copy": "F:\\bishe\\Undergraduate-Graduation-Project\\results\\figures\\ppt_candidate_pack_20260606\\01_开场_方法与数据集\\search_area_5x5_route_swissview_tseuzier.png",
+  "base_image": "F:\\bishe\\Undergraduate-Graduation-Project\\results\\figures\\chapter2_dataset\\search_area_5x5_grid_swissview_tseuzier_no_target.png",
+  "trajectory_table": "F:\\bishe\\Undergraduate-Graduation-Project\\results\\tables\\main_benchmark\\trajectory_records.csv",
+  "dataset": "swissviewmonuments",
+  "img_idx": 328,
+  "case_id": "img328_d4_s11_g03_r0",
+  "method": "GOMAA-Geo",
+  "distance": 4,
+  "start": 11,
+  "goal": 3,
+  "success": true,
+  "final_distance": 0,
+  "path_length": 4,
+  "optimal_steps": 4,
+  "detour_steps": 0,
+  "trajectory": [
+    11,
+    12,
+    13,
+    8,
+    3
+  ],
+  "grid_mapping": "5x5 row-major cell index over the full 1500x1500 figure",
+  "coordinates": [
+    {
+      "step": 0,
+      "cell_index": 11,
+      "row": 2,
+      "col": 1,
+      "x": 450.0,
+      "y": 750.0
+    },
+    {
+      "step": 1,
+      "cell_index": 12,
+      "row": 2,
+      "col": 2,
+      "x": 750.0,
+      "y": 750.0
+    },
+    {
+      "step": 2,
+      "cell_index": 13,
+      "row": 2,
+      "col": 3,
+      "x": 1050.0,
+      "y": 750.0
+    },
+    {
+      "step": 3,
+      "cell_index": 8,
+      "row": 1,
+      "col": 3,
+      "x": 1050.0,
+      "y": 450.0
+    },
+    {
+      "step": 4,
+      "cell_index": 3,
+      "row": 0,
+      "col": 3,
+      "x": 1050.0,
+      "y": 150.0
+    }
+  ],
+  "visual_style": {
+    "route": "solid cyan-blue with white outline and direction arrows",
+    "start_marker": "green circle",
+    "goal_marker": "red circle",
+    "note": "Built on the no-target dashed-grid base; no standalone yellow target dot is reused."
+  }
+}

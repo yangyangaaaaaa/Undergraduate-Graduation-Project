@@ -8,8 +8,10 @@
 - `F:\literature\PROJECT_STATE.md`、`PROJECT_HISTORY.md`、`PROJECT_ONBOARDING.md`、`PROJECT_ASSETS.md`
 - `D:\codex-home\continuity\project_index.json`
 - `D:\codex-home\sessions` 与 `D:\codex-home\archived_sessions` 中 2026-05-14 以来的相关会话
+- `D:\codex-home\sessions\2026\06\08\rollout-2026-06-08T16-06-27-019ea644-cf72-76f1-9ec3-5b4a9514c19d.jsonl`
 - 关键词覆盖：`bishe`、`literature`、`Undergraduate-Graduation-Project`、`GitHub`、`README`、`PPT`、`实验`、`答辩`、`验收`、`上传`、`AIGC`、`GeoExplorer`、`MM-GAG`、`xBD`
 - 抽取到的相关 session/归档 session 共 66 个，重点人工核对了 5 月 17-28 日实验与仓库上传线、6 月 6-10 日答辩图包与验收线
+- `019ea644...` 重点核对了 PPT 候选图包、奖励机制“分阶段直线轴”最终图、Tseuzier/SwissView 搜索区域图、C4 短距离失败案例、续训诊断结论和不在聊天框预览图片的处理约束。
 
 ## 时间线
 
@@ -28,6 +30,7 @@
 - 5 月 19-24 日：完成附录数据集/参数/奖励门控/P0/P1/25x25 等补充实验。
 - 6 月 4-6 日：制作训练阶段奖励趋势、动作归因、同任务演化、PPT 图包；同时确认 480k->960k 续训是负向/诊断结果，不进主线。
 - 6 月 8-10 日：整理服务器验收演示、一键训练、一键路线包和 C1-C3 短距离完整评估。
+- 6 月 8 日：在 `019ea644...` 会话中继续收口奖励机制展示图，最终保留“远距离阶段有探索正反馈、近目标阶段回退被压制、到达动作获得最高总奖励”的灰色说明，并确认该图只解释训练阶段奖励信号。
 
 ### GitHub 上传线
 
@@ -63,10 +66,13 @@ https://github.com/yangyangaaaaaa/Undergraduate-Graduation-Project
 - `docs/project_closing_summary_zh.md`：本收尾总结。
 - `docs/defense_ppt_storyline_zh.md`：PPT 28 页讲述脉络。
 - `docs/server_acceptance_guide_zh.md`：远端验收命令与结果边界。
-- `results/figures/defense_readme_20260613/`：从最终 PPT 抽取并压缩的首页素材。
+- `results/figures/defense_readme_20260613/`：从最终 PPT 抽取并压缩的 22 个首页素材，覆盖 MASA、SwissView、MM-GAG、xBD、10x10 长距离和实验分析页。
+- `results/figures/acceptance_demo_selected_20260613/`：从验收演示大包中压缩出的代表动图与索引图，覆盖 C4/C6/C8、三方法困难样例、MM-GAG、xBD 和长距离设置。
+- `results/figures/defense_reward_selected_20260613/`：从奖励机制大目录中精选的动作归因、路线/奖励案例、同任务演化和 C4 失败边界图。
 - `results/reports/short_distance_c123_summary_20260609_zh.md`：短距离边界报告。
 - `results/tables/short_distance_c123/`：短距离 C1-C3 小型结果表。
 - `code/tools/*acceptance*` 与 `code/tools/*c123*`：验收演示、验收训练、路线包和短距离评估脚本。
+- `materials/project_admin/zhangyang_*`：任务书、开题报告、中期检查、软硬件验收表和题目变更说明等过程材料补充归档。
 
 不建议归档：
 
@@ -118,6 +124,7 @@ https://github.com/yangyangaaaaaa/Undergraduate-Graduation-Project
 ### 答辩材料
 
 1. README 和 PPT 不应堆旧图，应围绕最终答辩主线讲任务、方法、结果和边界。
-2. 图片处理尽量使用文件级校验、尺寸、哈希和索引，不在聊天框中批量打开图片。
-3. 可视化结论必须有表格或日志支撑。漂亮图只能帮助解释，不能代替正式评估。
-4. 讲稿中可直接使用这句边界：混合奖励用于训练阶段优化策略，正式测试阶段只加载训练好的策略网络执行动作。
+2. README 文字应自然介绍项目，不写成“按某条命令整理”或“执行某个 agent 指令”的口吻；过程线索放入 docs，不放在首页开头。
+3. 图片处理尽量使用文件级校验、尺寸、哈希和索引，不在聊天框中批量打开图片。
+4. 可视化结论必须有表格或日志支撑。漂亮图只能帮助解释，不能代替正式评估。
+5. 讲稿中可直接使用这句边界：混合奖励用于训练阶段优化策略，正式测试阶段只加载训练好的策略网络执行动作。

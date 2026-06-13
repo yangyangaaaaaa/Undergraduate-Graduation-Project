@@ -1,0 +1,163 @@
+[
+  {
+    "file": "acceptance_c4_wavy_success.gif",
+    "title": "C4 wavy success",
+    "source": "F:\\bishe\\Undergraduate-Graduation-Project\\results\\figures\\acceptance_demo\\acceptance_c4_wavy_success.gif",
+    "bytes": 572729,
+    "sha256_12": "f08db60508cc",
+    "original_pixels": "1920x1080",
+    "output_pixels": "960x540",
+    "frames": 9,
+    "caption": "Short-distance non-smooth success case"
+  },
+  {
+    "file": "acceptance_c6_wavy_success.gif",
+    "title": "C6 wavy success",
+    "source": "F:\\bishe\\Undergraduate-Graduation-Project\\results\\figures\\acceptance_demo\\acceptance_c6_wavy_success.gif",
+    "bytes": 1942985,
+    "sha256_12": "3c27fc6a1ec6",
+    "original_pixels": "1920x1080",
+    "output_pixels": "960x540",
+    "frames": 11,
+    "caption": "Mid-distance continuous search success case"
+  },
+  {
+    "file": "acceptance_c8_wavy_detour.gif",
+    "title": "C8 detour success",
+    "source": "F:\\bishe\\Undergraduate-Graduation-Project\\results\\figures\\acceptance_demo\\acceptance_c8_wavy_detour.gif",
+    "bytes": 1915651,
+    "sha256_12": "e7f6b4d994d7",
+    "original_pixels": "1920x1080",
+    "output_pixels": "960x540",
+    "frames": 11,
+    "caption": "Long-distance detour/non-smooth success case"
+  },
+  {
+    "file": "acceptance_three_method_hardcase.gif",
+    "title": "Three-method hard case",
+    "source": "F:\\bishe\\Undergraduate-Graduation-Project\\results\\figures\\acceptance_demo\\acceptance_three_method_hardcase.gif",
+    "bytes": 1998460,
+    "sha256_12": "c33b13f784b0",
+    "original_pixels": "1920x1080",
+    "output_pixels": "960x540",
+    "frames": 11,
+    "caption": "Trajectory comparison on a difficult shared sample"
+  },
+  {
+    "file": "acceptance_mmgag_aerial_route_setting.gif",
+    "title": "MM-GAG aerial target setting",
+    "source": "F:\\bishe\\Undergraduate-Graduation-Project\\results\\figures\\acceptance_demo\\acceptance_mmgag_aerial_route_setting.gif",
+    "bytes": 1591659,
+    "sha256_12": "73a38ad10a18",
+    "original_pixels": "1920x1080",
+    "output_pixels": "960x540",
+    "frames": 9,
+    "caption": "Aerial target cue route visualization"
+  },
+  {
+    "file": "acceptance_mmgag_ground_route_setting.gif",
+    "title": "MM-GAG ground target setting",
+    "source": "F:\\bishe\\Undergraduate-Graduation-Project\\results\\figures\\acceptance_demo\\acceptance_mmgag_ground_route_setting.gif",
+    "bytes": 1616449,
+    "sha256_12": "ead721865c4e",
+    "original_pixels": "1920x1080",
+    "output_pixels": "960x540",
+    "frames": 9,
+    "caption": "Ground-image target cue route visualization"
+  },
+  {
+    "file": "acceptance_mmgag_text_route_setting.gif",
+    "title": "MM-GAG text target setting",
+    "source": "F:\\bishe\\Undergraduate-Graduation-Project\\results\\figures\\acceptance_demo\\acceptance_mmgag_text_route_setting.gif",
+    "bytes": 1512012,
+    "sha256_12": "2cb4e475e59d",
+    "original_pixels": "1920x1080",
+    "output_pixels": "960x540",
+    "frames": 9,
+    "caption": "Text target cue route visualization"
+  },
+  {
+    "file": "acceptance_xbd_pre_route_setting.gif",
+    "title": "xBD pre-disaster setting",
+    "source": "F:\\bishe\\Undergraduate-Graduation-Project\\results\\figures\\acceptance_demo\\acceptance_xbd_pre_route_setting.gif",
+    "bytes": 1042775,
+    "sha256_12": "79b124dd3731",
+    "original_pixels": "1920x1080",
+    "output_pixels": "960x540",
+    "frames": 9,
+    "caption": "Pre-disaster route setting visualization"
+  },
+  {
+    "file": "acceptance_xbd_disaster_route_setting.gif",
+    "title": "xBD post-disaster setting",
+    "source": "F:\\bishe\\Undergraduate-Graduation-Project\\results\\figures\\acceptance_demo\\acceptance_xbd_disaster_route_setting.gif",
+    "bytes": 1035515,
+    "sha256_12": "be23349aca17",
+    "original_pixels": "1920x1080",
+    "output_pixels": "960x540",
+    "frames": 9,
+    "caption": "Post-disaster route setting visualization"
+  },
+  {
+    "file": "acceptance_ultralong_grid8_route_setting.gif",
+    "title": "8x8 long-distance setting",
+    "source": "F:\\bishe\\Undergraduate-Graduation-Project\\results\\figures\\acceptance_demo\\acceptance_ultralong_grid8_route_setting.gif",
+    "bytes": 2586705,
+    "sha256_12": "6a37d86fe52f",
+    "original_pixels": "1920x1080",
+    "output_pixels": "960x540",
+    "frames": 15,
+    "caption": "Grid8 long-distance route setting"
+  },
+  {
+    "file": "acceptance_ultralong_grid10_route_setting.gif",
+    "title": "10x10 long-distance setting",
+    "source": "F:\\bishe\\Undergraduate-Graduation-Project\\results\\figures\\acceptance_demo\\acceptance_ultralong_grid10_route_setting.gif",
+    "bytes": 3257268,
+    "sha256_12": "3d5dcfc852ae",
+    "original_pixels": "1920x1080",
+    "output_pixels": "960x540",
+    "frames": 19,
+    "caption": "Grid10 long-distance route setting"
+  },
+  {
+    "file": "acceptance_demo_manifest.json",
+    "title": "Acceptance source manifest",
+    "source": "F:\\bishe\\Undergraduate-Graduation-Project\\results\\figures\\acceptance_demo\\acceptance_demo_manifest.json",
+    "bytes": 8067,
+    "sha256_12": "042116aa0141",
+    "caption": "Original acceptance demo source manifest"
+  },
+  {
+    "file": "acceptance_visual_pack_index.png",
+    "title": "Acceptance visual pack index",
+    "source": "F:\\bishe\\Undergraduate-Graduation-Project\\results\\figures\\acceptance_demo\\acceptance_visual_pack_index.png",
+    "bytes": 1173031,
+    "sha256_12": "b5310c22305d",
+    "caption": "Visual index for the acceptance package"
+  },
+  {
+    "file": "acceptance_route_gallery.png",
+    "title": "Acceptance route gallery",
+    "source": "F:\\bishe\\Undergraduate-Graduation-Project\\results\\figures\\acceptance_demo\\acceptance_route_gallery.png",
+    "bytes": 1048178,
+    "sha256_12": "dcfd3afbaef7",
+    "caption": "Route GIF gallery page"
+  },
+  {
+    "file": "acceptance_main_benchmark_effects.png",
+    "title": "Main benchmark effects",
+    "source": "F:\\bishe\\Undergraduate-Graduation-Project\\results\\figures\\acceptance_demo\\acceptance_main_benchmark_effects.png",
+    "bytes": 119286,
+    "sha256_12": "54c138706a0c",
+    "caption": "Main benchmark evidence page"
+  },
+  {
+    "file": "acceptance_reward_gate_pbrs_effects.png",
+    "title": "Reward gate PBRS effects",
+    "source": "F:\\bishe\\Undergraduate-Graduation-Project\\results\\figures\\acceptance_demo\\acceptance_reward_gate_pbrs_effects.png",
+    "bytes": 109987,
+    "sha256_12": "9b88896c5b91",
+    "caption": "Reward gate and PBRS evidence page"
+  }
+]

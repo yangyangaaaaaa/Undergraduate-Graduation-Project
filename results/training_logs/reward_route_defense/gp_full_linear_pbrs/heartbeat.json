@@ -1,0 +1,32 @@
+{
+  "timestamp": "2026-05-15T12:54:53.171001",
+  "episode": 452,
+  "time_step": 480001,
+  "current_ep_reward": 64.52605593479153,
+  "rolling_success_ratio": 0.32418478260869565,
+  "val_success": 19,
+  "best_val_success": 20,
+  "update_stats": {
+    "policy_loss": -0.0022712391175445934,
+    "value_loss": 0.9146336242556572,
+    "entropy": 0.3206219971179962,
+    "approx_kl": 0.001590611147196358,
+    "clip_fraction": 0.005664062511641532,
+    "oracle_bc_loss": 0.0,
+    "sil_loss": 0.0,
+    "actor_lr": 9.277863987045758e-05,
+    "critic_lr": 9.277863987045758e-05,
+    "update_epochs_ran": 4
+  },
+  "runtime_reward": "in",
+  "runtime_factor": 1.0,
+  "runtime_progress_metric": "l2sq",
+  "gate_mode": "linear",
+  "gate_floor": 0.405,
+  "pbrs_coef": 0.1,
+  "oracle_bc_coef": 0.0,
+  "sil_coef": 0.0,
+  "curriculum_mode": "none",
+  "control_path": "/root/geoexplorer/results/checkpoint/algo_ablation_anchor0624_20260515/masa_plus_mmgag_anchor0624_component_ablation_seed321_480k_gpu01/g1_p1_e1_v1_seed321_t480k/control.json",
+  "elapsed_sec": 10784.944746494293
+}

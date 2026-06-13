@@ -1,0 +1,90 @@
+{
+  "data": {
+    "patch_size": 5,
+    "min_budget": 10,
+    "max_budget": 11,
+    "budget_step": 2,
+    "train_path": "/root/geoexplorer/GeoExplorer/staging/algo_ablation_anchor0624_20260515/masa_plus_mmgag_anchor0624_component_ablation_seed321_480k_gpu01/masa_plus_mmgag_train_grid_5.npy",
+    "val_path": "/root/geoexplorer/data/masa/sat_val_grid_5.npy",
+    "test_path": "/root/geoexplorer/data/masa/sat_test_grid_5.npy"
+  },
+  "min_c": 4,
+  "max_c": 9,
+  "dataset": "masa",
+  "reward": "in",
+  "factor": 1.0,
+  "progress_metric": "l2sq",
+  "algo": {
+    "gate_mode": "linear",
+    "gate_floor": 0.405,
+    "gate_power": 1.0,
+    "gate_blend_alpha": 0.0,
+    "commit_best_on_progress": false,
+    "finish_bonus_scale": 0.0,
+    "finish_bonus_radius": 1,
+    "pbrs_coef": 0.1,
+    "oracle_bc_coef": 0.0,
+    "sil_coef": 0.0,
+    "curriculum_mode": "none",
+    "curriculum_phase1": 0.25,
+    "curriculum_phase2": 0.65
+  },
+  "sample_number": 895,
+  "num_config_per_img": 5,
+  "pretrain": {
+    "ckpt_folder": "/root/geoexplorer/results/checkpoint",
+    "expt_folder": "env_modeling",
+    "expt_name": "state_action",
+    "log_name": "expt_logs.txt",
+    "min_seq_length": 6,
+    "hparams": {
+      "accelerator": "gpu",
+      "lr": 1e-05,
+      "warmup": 5,
+      "devices": 1,
+      "epochs": 300,
+      "weight_decay": 0.0001
+    }
+  },
+  "train": {
+    "ckpt_folder": "/root/geoexplorer/results/checkpoint",
+    "expt_folder": "algo_ablation_anchor0624_20260515/masa_plus_mmgag_anchor0624_component_ablation_seed321_480k_gpu01/g1_p1_e1_v1_seed321_t480k",
+    "load_from_checkpoint": false,
+    "device": "cuda:0",
+    "expt_name": "geoexplorer.pt",
+    "expt_name_tmp": "geoexplorer_",
+    "log_name": "expt_logs.txt",
+    "metrics_name": "training_metrics.csv",
+    "heartbeat_name": "heartbeat.json",
+    "control_name": "control.json",
+    "llm_model": "tiiuae/falcon-7b",
+    "num_actions": 4,
+    "llm_hidden_dim": 1152,
+    "llm_checkpoint": "/root/geoexplorer/results/checkpoint/env_modeling_fullrerun_20260407_111046/state_action.ckpt",
+    "checkpoint_path": "/root/geoexplorer/results/checkpoint/algo_ablation_anchor0624_20260515/masa_plus_mmgag_anchor0624_component_ablation_seed321_480k_gpu01/g1_p1_e1_v1_seed321_t480k/geoexplorer.pt",
+    "hparams": {
+      "max_ep_len": 10,
+      "max_training_timesteps": 480000,
+      "log_freq": 20,
+      "save_model_freq": 20000,
+      "update_timestep": 640,
+      "K_epochs": 4,
+      "eps_clip": 0.2,
+      "gamma": 0.93,
+      "lr_actor": 0.0001,
+      "lr_critic": 0.0001,
+      "lr_llm": 0.0001,
+      "lr_gamma": 0.9999,
+      "random_seed": 321,
+      "ent_coef": 0.005,
+      "vf_coef": 0.5,
+      "max_grad_norm": 0.5,
+      "normalize_advantage": true,
+      "target_kl": 0.02,
+      "val_distances": [
+        7,
+        8
+      ]
+    }
+  }
+}

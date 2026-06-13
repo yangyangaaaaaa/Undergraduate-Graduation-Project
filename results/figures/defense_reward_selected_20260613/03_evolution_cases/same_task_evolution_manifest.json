@@ -1,0 +1,170 @@
+{
+  "external_only": [
+    {
+      "episode": 5,
+      "run_progress": 0.0117208333333333,
+      "success": 0,
+      "final_dist": 5,
+      "progress_steps": 6,
+      "regress_steps": 3,
+      "patch_sequence": "[24, 0, 1, 6, 7, 12, 11, 12, 7, 8, 3]",
+      "dist_sequence": "[8, 7, 6, 5, 4, 5, 4, 5, 4, 5]"
+    },
+    {
+      "episode": 85,
+      "run_progress": 0.1915541666666666,
+      "success": 0,
+      "final_dist": 1,
+      "progress_steps": 7,
+      "regress_steps": 0,
+      "patch_sequence": "[24, 0, 1, 6, 11, 16, 17, 22, 23]",
+      "dist_sequence": "[8, 7, 6, 5, 4, 3, 2, 1]"
+    },
+    {
+      "episode": 285,
+      "run_progress": 0.6350145833333334,
+      "success": 0,
+      "final_dist": 1,
+      "progress_steps": 7,
+      "regress_steps": 0,
+      "patch_sequence": "[24, 0, 5, 10, 11, 12, 13, 18, 23]",
+      "dist_sequence": "[8, 7, 6, 5, 4, 3, 2, 1]"
+    },
+    {
+      "episode": 380,
+      "run_progress": 0.8413520833333333,
+      "success": 0,
+      "final_dist": 2,
+      "progress_steps": 7,
+      "regress_steps": 1,
+      "patch_sequence": "[24, 0, 5, 6, 11, 12, 13, 18, 23, 22]",
+      "dist_sequence": "[8, 7, 6, 5, 4, 3, 2, 1, 2]"
+    }
+  ],
+  "mixed_no_gate_no_pbrs": [
+    {
+      "episode": 5,
+      "run_progress": 0.01171875,
+      "success": 0,
+      "final_dist": 3,
+      "progress_steps": 7,
+      "regress_steps": 2,
+      "patch_sequence": "[24, 0, 1, 2, 7, 8, 13, 12, 13, 8, 9]",
+      "dist_sequence": "[8, 7, 6, 5, 4, 3, 4, 3, 4, 3]"
+    },
+    {
+      "episode": 85,
+      "run_progress": 0.1908645833333333,
+      "success": 0,
+      "final_dist": 1,
+      "progress_steps": 7,
+      "regress_steps": 0,
+      "patch_sequence": "[24, 0, 1, 2, 3, 4, 9, 14, 19]",
+      "dist_sequence": "[8, 7, 6, 5, 4, 3, 2, 1]"
+    },
+    {
+      "episode": 285,
+      "run_progress": 0.633025,
+      "success": 0,
+      "final_dist": 3,
+      "progress_steps": 6,
+      "regress_steps": 1,
+      "patch_sequence": "[24, 0, 5, 6, 7, 12, 17, 22, 21]",
+      "dist_sequence": "[8, 7, 6, 5, 4, 3, 2, 3]"
+    },
+    {
+      "episode": 380,
+      "run_progress": 0.8411395833333334,
+      "success": 0,
+      "final_dist": 2,
+      "progress_steps": 7,
+      "regress_steps": 1,
+      "patch_sequence": "[24, 0, 5, 10, 15, 16, 17, 22, 21, 22]",
+      "dist_sequence": "[8, 7, 6, 5, 4, 3, 2, 3, 2]"
+    }
+  ],
+  "mixed_gate_only": [
+    {
+      "episode": 5,
+      "run_progress": 0.01171875,
+      "success": 0,
+      "final_dist": 3,
+      "progress_steps": 7,
+      "regress_steps": 2,
+      "patch_sequence": "[24, 0, 1, 2, 7, 8, 13, 12, 13, 8, 9]",
+      "dist_sequence": "[8, 7, 6, 5, 4, 3, 4, 3, 4, 3]"
+    },
+    {
+      "episode": 85,
+      "run_progress": 0.1908083333333333,
+      "success": 0,
+      "final_dist": 3,
+      "progress_steps": 6,
+      "regress_steps": 1,
+      "patch_sequence": "[24, 0, 5, 10, 15, 20, 15, 20, 21]",
+      "dist_sequence": "[8, 7, 6, 5, 4, 5, 4, 3]"
+    },
+    {
+      "episode": 285,
+      "run_progress": 0.6330854166666666,
+      "success": 0,
+      "final_dist": 5,
+      "progress_steps": 5,
+      "regress_steps": 2,
+      "patch_sequence": "[24, 0, 5, 10, 15, 20, 15, 20, 15]",
+      "dist_sequence": "[8, 7, 6, 5, 4, 5, 4, 5]"
+    },
+    {
+      "episode": 380,
+      "run_progress": 0.8422416666666667,
+      "success": 0,
+      "final_dist": 2,
+      "progress_steps": 7,
+      "regress_steps": 1,
+      "patch_sequence": "[24, 0, 5, 6, 7, 8, 13, 18, 17, 22]",
+      "dist_sequence": "[8, 7, 6, 5, 4, 3, 2, 3, 2]"
+    }
+  ],
+  "proposed_linear_gate_pbrs": [
+    {
+      "episode": 5,
+      "run_progress": 0.01171875,
+      "success": 0,
+      "final_dist": 3,
+      "progress_steps": 7,
+      "regress_steps": 2,
+      "patch_sequence": "[24, 0, 1, 2, 7, 8, 13, 12, 13, 8, 9]",
+      "dist_sequence": "[8, 7, 6, 5, 4, 3, 4, 3, 4, 3]"
+    },
+    {
+      "episode": 85,
+      "run_progress": 0.1912041666666666,
+      "success": 0,
+      "final_dist": 3,
+      "progress_steps": 6,
+      "regress_steps": 1,
+      "patch_sequence": "[24, 0, 5, 10, 15, 20, 15, 20, 21]",
+      "dist_sequence": "[8, 7, 6, 5, 4, 5, 4, 3]"
+    },
+    {
+      "episode": 285,
+      "run_progress": 0.6314041666666667,
+      "success": 0,
+      "final_dist": 1,
+      "progress_steps": 7,
+      "regress_steps": 0,
+      "patch_sequence": "[24, 0, 5, 10, 15, 16, 17, 22, 23]",
+      "dist_sequence": "[8, 7, 6, 5, 4, 3, 2, 1]"
+    },
+    {
+      "episode": 380,
+      "run_progress": 0.8388770833333333,
+      "success": 1,
+      "final_dist": 0,
+      "progress_steps": 8,
+      "regress_steps": 0,
+      "patch_sequence": "[24, 0, 5, 10, 15, 16, 17, 18, 23, 24]",
+      "dist_sequence": "[8, 7, 6, 5, 4, 3, 2, 1, 0]"
+    }
+  ]
+}

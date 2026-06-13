@@ -13,6 +13,12 @@
 | `materials/project_admin/08122215_张洋_开题答辩.pptx` | 开题答辩 | 早期方案展示 |
 | `materials/project_admin/08122215_张洋_中期报告.doc` | 中期报告 | 过程检查与阶段计划 |
 | `materials/project_admin/08122215_张洋_外文文献翻译.docx` | 外文文献翻译 | 文献翻译与学习过程 |
+| `materials/project_admin/zhangyang_task_book_signed_20260608.pdf` | 任务书 PDF 版 | 正式提交/签字版备份 |
+| `materials/project_admin/zhangyang_opening_report_full_20260310.pdf` | 开题报告 PDF 正文版 | 开题报告正式 PDF 备份 |
+| `materials/project_admin/zhangyang_opening_report_review_signed_20260608.pdf` | 开题审查意见 PDF | 指导教师和开题小组意见备份 |
+| `materials/project_admin/zhangyang_midterm_check_signed_20260608.pdf` | 中期检查表 PDF | 中期检查与指导意见备份 |
+| `materials/project_admin/zhangyang_hardware_software_acceptance_form_20260609.docx` | 软硬件验收表 | 毕设验收流程材料 |
+| `materials/project_admin/zhangyang_thesis_title_change_statement_20260612.doc` | 论文题目变更说明 | 过程管理补充材料 |
 | `thesis/official/zhangyang_thesis_final_20260602.pdf` | 论文定稿 PDF | 最终提交载体，45 页 |
 | `materials/defense/zhangyang_final_defense_20260611.pdf` | 结题答辩 PDF | 最终答辩载体，27 页 |
 | `materials/quality/aigc_reports_20260603/` | AIGC 检测报告 | 定稿阶段质量检查记录 |
@@ -26,9 +32,10 @@
 | --- | ---: | ---: | --- | --- | --- |
 | `D:\桌面\literature\张洋_本科毕业设计论文 - 定稿2 - 副本.pdf` | 45 | 3.05 MB | 可提取，约 4.7 万字符 | 论文最终 PDF 载体 | 已上传到 `thesis/official/zhangyang_thesis_final_20260602.pdf` |
 | `G:\毕设答辩\08122215_张洋_结题答辩 (2).pdf` | 27 | 6.76 MB | 可提取，约 4 千字符 | 答辩展示载体 | 已上传到 `materials/defense/zhangyang_final_defense_20260611.pdf` |
-| `E:\杂\bulk_download\张洋_08122215_毕业论文（设计）任务书 (2).pdf` | 5 | 0.23 MB | 可提取 | 任务书正式 PDF | 中高价值；仓库已有 DOCX，PDF 可作为正式提交版备份 |
-| `E:\杂\bulk_download\zqjc.pdf` | 1 | 0.16 MB | 可提取 | 中期检查表 | 过程价值；含指导意见/签字字段，公开仓库不建议优先上传原件 |
-| `E:\杂\54726c05-c215-4b17-8e90-6e50c68558d9 (3).pdf` | 11 | 0.81 MB | 可提取 | 开题报告 PDF | 中高价值；仓库已有 DOC 版，PDF 可作为正式版备份 |
+| `E:\杂\bulk_download\张洋_08122215_毕业论文（设计）任务书 (2).pdf` | 5 | 0.23 MB | 可提取 | 任务书正式 PDF | 已上传到 `materials/project_admin/zhangyang_task_book_signed_20260608.pdf` |
+| `E:\杂\bulk_download\zqjc.pdf` | 1 | 0.16 MB | 可提取 | 中期检查表 | 已上传到 `materials/project_admin/zhangyang_midterm_check_signed_20260608.pdf` |
+| `E:\杂\54726c05-c215-4b17-8e90-6e50c68558d9 (3).pdf` | 11 | 0.81 MB | 可提取 | 开题报告 PDF | 已上传到 `materials/project_admin/zhangyang_opening_report_full_20260310.pdf` |
+| `E:\杂\bulk_download\张洋_08122215_毕业论文（设计）开题报告.pdf` | 1 | 0.11 MB | 可提取 | 开题审查意见/签字页 | 已上传到 `materials/project_admin/zhangyang_opening_report_review_signed_20260608.pdf` |
 
 ## 本次新增或核验的源文件
 
@@ -38,6 +45,8 @@
 | `D:\桌面\literature\08122215_张洋_开题报告.doc` | 与 `materials/project_admin/08122215_张洋_开题报告.doc` 完全一致，已在仓库中 | `ECA57277D9DB` |
 | `E:\杂\3c4fc94e-4576-41f7-bd92-331054a3d594.doc` | 与 `materials/project_admin/08122215_张洋_中期报告.doc` 完全一致，已在仓库中 | `ED55B88B6891` |
 | `E:\杂\af5a3468-1c96-4eb9-8f3c-c0e674bb7989 (1).zip` | 已上传到 `materials/quality/aigc_reports_20260603/`，并解包为独立报告 | `EFF77A8C3580` |
+| `E:\杂\张洋_东南大学本科毕业设计软硬件验收表.docx` | 已上传到 `materials/project_admin/zhangyang_hardware_software_acceptance_form_20260609.docx` | `F487D708190F` |
+| `E:\杂\毕业论文题目变更说明.doc` | 已上传到 `materials/project_admin/zhangyang_thesis_title_change_statement_20260612.doc` | `BFEF9FCDBD93` |
 
 ## 推荐公开仓库策略
 
@@ -56,13 +65,16 @@
 
 ## 推荐目录映射
 
-如果后续决定上传 PDF 原件，建议按以下目录整理：
+PDF 原件已按以下目录归档：
 
 ```text
-materials/project_admin/pdf/
-  task_book_08122215_zhangyang.pdf
-  proposal_report_08122215_zhangyang.pdf
-  midterm_check_08122215_zhangyang.pdf
+materials/project_admin/
+  zhangyang_task_book_signed_20260608.pdf
+  zhangyang_opening_report_full_20260310.pdf
+  zhangyang_opening_report_review_signed_20260608.pdf
+  zhangyang_midterm_check_signed_20260608.pdf
+  zhangyang_hardware_software_acceptance_form_20260609.docx
+  zhangyang_thesis_title_change_statement_20260612.doc
 ```
 
 文件名建议使用英文或拼音，避免 GitHub URL 中中文和括号造成引用不便；正文索引中保留原始文件名、来源路径和日期。

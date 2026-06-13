@@ -1,0 +1,12 @@
+{
+  "figure_count":5,
+  "figures":[
+    "F:\\bishe\\Undergraduate-Graduation-Project\\results\\figures\\defense_reward_training_stage\\action_attribution\\action_attribution_01_case_04_C8_seed123_ep120_img5_s4_g20.png",
+    "F:\\bishe\\Undergraduate-Graduation-Project\\results\\figures\\defense_reward_training_stage\\action_attribution\\action_attribution_02_case_08_C8_seed123_ep55_img6_s4_g20.png",
+    "F:\\bishe\\Undergraduate-Graduation-Project\\results\\figures\\defense_reward_training_stage\\action_attribution\\action_attribution_03_case_07_C8_seed123_ep90_img15_s0_g24.png",
+    "F:\\bishe\\Undergraduate-Graduation-Project\\results\\figures\\defense_reward_training_stage\\action_attribution\\action_attribution_04_case_12_C7_seed123_ep75_img5_s4_g21.png",
+    "F:\\bishe\\Undergraduate-Graduation-Project\\results\\figures\\defense_reward_training_stage\\action_attribution\\action_attribution_05_case_02_C7_seed123_ep110_img15_s23_g0.png"
+  ],
+  "contact_sheet":"F:\\bishe\\Undergraduate-Graduation-Project\\results\\figures\\defense_reward_training_stage\\action_attribution\\action_attribution_contact_sheet.png",
+  "report":"F:\\bishe\\Undergraduate-Graduation-Project\\results\\reports\\reward_action_attribution_cases_zh.md"
+}

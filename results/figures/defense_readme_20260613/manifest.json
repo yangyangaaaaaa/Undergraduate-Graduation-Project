@@ -1,67 +1,236 @@
 [
   {
     "file": "cover_symbol.png",
-    "source_ppt_media": "ppt/media/image1.png",
-    "bytes": 83199
+    "slide": 1,
+    "source_media": "ppt/media/image1.png",
+    "title": "Cover symbol",
+    "caption": "Defense title-page visual element",
+    "bytes": 83199,
+    "sha256_12": "ee41d69017b8",
+    "output_pixels": "1285x1650"
   },
   {
     "file": "method_framework.png",
-    "source_ppt_media": "ppt/media/image16.png",
-    "bytes": 181157
+    "slide": 5,
+    "source_media": "ppt/media/image16.png",
+    "title": "Method framework",
+    "caption": "Unified target encoding, history/state modeling, hybrid reward, and PPO training",
+    "bytes": 181157,
+    "sha256_12": "d088c89f2b4e",
+    "output_pixels": "1732x578"
   },
   {
     "file": "short_distance_route.gif",
-    "source_ppt_media": "ppt/media/image33.gif",
-    "bytes": 2135759,
-    "optimized_for_github": true,
-    "optimization": "scaled to 960px width, 128-color adaptive palette; source content from PPT embedded media"
+    "slide": 8,
+    "source_media": "ppt/media/image34.gif",
+    "title": "MASA short-distance detour success",
+    "caption": "The policy can recover after deviating from the target and finish localization",
+    "bytes": 2128427,
+    "sha256_12": "656eb8335ee8",
+    "original_pixels": "1920x1080",
+    "output_pixels": "960x540",
+    "frames": 11
+  },
+  {
+    "file": "short_distance_route_static.png",
+    "slide": 9,
+    "source_media": "ppt/media/image36.png",
+    "title": "MASA short-distance static page",
+    "caption": "Static companion for the short-distance detour case",
+    "bytes": 2430040,
+    "sha256_12": "b97ea8214585",
+    "output_pixels": "1920x1080"
+  },
+  {
+    "file": "swissview_town_landmark.gif",
+    "slide": 10,
+    "source_media": "ppt/media/image37.gif",
+    "title": "SwissView town landmark search",
+    "caption": "The policy keeps target convergence after local offsets",
+    "bytes": 1942985,
+    "sha256_12": "3c27fc6a1ec6",
+    "original_pixels": "1920x1080",
+    "output_pixels": "960x540",
+    "frames": 11
+  },
+  {
+    "file": "swissview_town_landmark_static.png",
+    "slide": 11,
+    "source_media": "ppt/media/image38.png",
+    "title": "SwissView town landmark static page",
+    "caption": "Static companion for the town landmark case",
+    "bytes": 2044987,
+    "sha256_12": "694f9c3e1a65",
+    "output_pixels": "1920x1080"
   },
   {
     "file": "c8_route_demo.gif",
-    "source_ppt_media": "ppt/media/image38.gif",
-    "bytes": 1138479,
-    "optimized_for_github": true,
-    "optimization": "scaled to 960px width, 128-color adaptive palette; source content from PPT embedded media"
+    "slide": 12,
+    "source_media": "ppt/media/image39.gif",
+    "title": "SwissView cross-region lake long-distance search",
+    "caption": "The policy keeps target convergence after local detours under a different background",
+    "bytes": 1132060,
+    "sha256_12": "89ef213ea066",
+    "original_pixels": "1920x1080",
+    "output_pixels": "960x540",
+    "frames": 11
+  },
+  {
+    "file": "swissview_lake_long_distance_static.png",
+    "slide": 13,
+    "source_media": "ppt/media/image40.png",
+    "title": "SwissView lake long-distance static page",
+    "caption": "Static companion for the cross-region lake case",
+    "bytes": 1454291,
+    "sha256_12": "c555f1ad93a5",
+    "output_pixels": "1920x1080"
+  },
+  {
+    "file": "mmgag_ground_target.gif",
+    "slide": 14,
+    "source_media": "ppt/media/image41.gif",
+    "title": "MM-GAG ground-image target search",
+    "caption": "Ground image target cue tests cross-view target guidance",
+    "bytes": 960921,
+    "sha256_12": "3b9c63a32f35",
+    "original_pixels": "1920x1080",
+    "output_pixels": "960x540",
+    "frames": 5
+  },
+  {
+    "file": "mmgag_ground_target_static.png",
+    "slide": 15,
+    "source_media": "ppt/media/image42.png",
+    "title": "MM-GAG ground-image static page",
+    "caption": "Static companion for cross-view target guidance",
+    "bytes": 2412162,
+    "sha256_12": "5674388a067f",
+    "output_pixels": "1920x1080"
   },
   {
     "file": "multimodal_text_target.gif",
-    "source_ppt_media": "ppt/media/image42.gif",
-    "bytes": 924908,
-    "optimized_for_github": true,
-    "optimization": "scaled to 960px width, 128-color adaptive palette; source content from PPT embedded media"
+    "slide": 16,
+    "source_media": "ppt/media/image43.gif",
+    "title": "MM-GAG text target search",
+    "caption": "Text cue tests semantic target navigation through the unified target representation",
+    "bytes": 923786,
+    "sha256_12": "365ecf3a21db",
+    "original_pixels": "1920x1080",
+    "output_pixels": "960x540",
+    "frames": 5
+  },
+  {
+    "file": "mmgag_text_target_static.png",
+    "slide": 17,
+    "source_media": "ppt/media/image44.png",
+    "title": "MM-GAG text target static page",
+    "caption": "Static companion for semantic target navigation",
+    "bytes": 2333441,
+    "sha256_12": "1890e3e633da",
+    "output_pixels": "1920x1080"
+  },
+  {
+    "file": "xbd_hurricane_prepost.png",
+    "slide": 18,
+    "source_media": "ppt/media/image45.png",
+    "title": "xBD hurricane pre/post comparison",
+    "caption": "Pre- and post-disaster target appearance difference",
+    "bytes": 2282761,
+    "sha256_12": "df3e25378d53",
+    "output_pixels": "1920x1080"
   },
   {
     "file": "xbd_disaster_route.gif",
-    "source_ppt_media": "ppt/media/image45.gif",
-    "bytes": 1047809,
-    "optimized_for_github": true,
-    "optimization": "scaled to 960px width, 128-color adaptive palette; source content from PPT embedded media"
+    "slide": 19,
+    "source_media": "ppt/media/image46.gif",
+    "title": "xBD hurricane post-disaster route",
+    "caption": "Continuous target search under damaged appearance and changed background",
+    "bytes": 1035515,
+    "sha256_12": "be23349aca17",
+    "original_pixels": "1920x1080",
+    "output_pixels": "960x540",
+    "frames": 9
+  },
+  {
+    "file": "xbd_hurricane_route_static.png",
+    "slide": 20,
+    "source_media": "ppt/media/image47.png",
+    "title": "xBD hurricane route static page",
+    "caption": "Static companion for the hurricane route",
+    "bytes": 1591401,
+    "sha256_12": "f608928ee425",
+    "output_pixels": "1920x1080"
+  },
+  {
+    "file": "xbd_fire_prepost.png",
+    "slide": 21,
+    "source_media": "ppt/media/image48.png",
+    "title": "xBD fire pre/post comparison",
+    "caption": "Building damage and texture change under a different disaster type",
+    "bytes": 2729239,
+    "sha256_12": "89cd0faf7368",
+    "output_pixels": "1920x1080"
+  },
+  {
+    "file": "xbd_fire_route_static.png",
+    "slide": 22,
+    "source_media": "ppt/media/image49.png",
+    "title": "xBD fire route static page",
+    "caption": "Continuous target search under fire-disaster scenes",
+    "bytes": 1862312,
+    "sha256_12": "52ec06d33fd9",
+    "output_pixels": "1661x857"
   },
   {
     "file": "long_distance_grid10.gif",
-    "source_ppt_media": "ppt/media/image49.gif",
-    "bytes": 3279200,
-    "optimized_for_github": true,
-    "optimization": "scaled to 960px width, 128-color adaptive palette; source content from PPT embedded media"
+    "slide": 23,
+    "source_media": "ppt/media/image50.gif",
+    "title": "10x10 long-distance extension",
+    "caption": "Target-directed search under larger search space and longer paths",
+    "bytes": 3257268,
+    "sha256_12": "3d5dcfc852ae",
+    "original_pixels": "1920x1080",
+    "output_pixels": "960x540",
+    "frames": 19
   },
   {
     "file": "short_distance_failure.png",
-    "source_ppt_media": "ppt/media/image50.png",
-    "bytes": 2916139
+    "slide": 24,
+    "source_media": "ppt/media/image51.png",
+    "title": "Short-distance failure boundary",
+    "caption": "Local similar modules can cause wandering and terminal localization fluctuation",
+    "bytes": 2916139,
+    "sha256_12": "397836dd4b7a",
+    "output_pixels": "1810x932"
   },
   {
     "file": "performance_analysis.png",
-    "source_ppt_media": "ppt/media/image51.png",
-    "bytes": 233767
+    "slide": 25,
+    "source_media": "ppt/media/image52.png",
+    "title": "Performance analysis",
+    "caption": "Higher overall success rate, stronger long-distance advantage, short-distance fluctuation",
+    "bytes": 233767,
+    "sha256_12": "b347f145651e",
+    "output_pixels": "1448x961"
   },
   {
     "file": "reward_distance_analysis.png",
-    "source_ppt_media": "ppt/media/image52.png",
-    "bytes": 253095
+    "slide": 26,
+    "source_media": "ppt/media/image53.png",
+    "title": "Reward-by-distance analysis",
+    "caption": "Training-stage average single-step reward for progress/regress actions",
+    "bytes": 253095,
+    "sha256_12": "d4f99adfc004",
+    "output_pixels": "1998x863"
   },
   {
     "file": "ablation_analysis.png",
-    "source_ppt_media": "ppt/media/image53.png",
-    "bytes": 190524
+    "slide": 27,
+    "source_media": "ppt/media/image54.png",
+    "title": "Ablation analysis",
+    "caption": "External reward, curiosity reward, distance shaping, and the complete method",
+    "bytes": 190524,
+    "sha256_12": "b4cce239e258",
+    "output_pixels": "1467x1027"
   }
 ]

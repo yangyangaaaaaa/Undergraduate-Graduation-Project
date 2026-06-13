@@ -1,0 +1,156 @@
+[
+  {
+    "file": "01_action_attribution/action_attribution_01_case_04_C8_seed123_ep120_img5_s4_g20.png",
+    "source": "results/figures/defense_reward_training_stage/action_attribution/action_attribution_01_case_04_C8_seed123_ep120_img5_s4_g20.png",
+    "title": "Training-stage action reward attribution",
+    "bytes": 1822965,
+    "sha256_12": "fb95603573cd"
+  },
+  {
+    "file": "01_action_attribution/action_attribution_02_case_08_C8_seed123_ep55_img6_s4_g20.png",
+    "source": "results/figures/defense_reward_training_stage/action_attribution/action_attribution_02_case_08_C8_seed123_ep55_img6_s4_g20.png",
+    "title": "Training-stage action reward attribution",
+    "bytes": 1735920,
+    "sha256_12": "ad547b36767b"
+  },
+  {
+    "file": "01_action_attribution/action_attribution_03_case_07_C8_seed123_ep90_img15_s0_g24.png",
+    "source": "results/figures/defense_reward_training_stage/action_attribution/action_attribution_03_case_07_C8_seed123_ep90_img15_s0_g24.png",
+    "title": "Training-stage action reward attribution",
+    "bytes": 1636342,
+    "sha256_12": "3915523127c9"
+  },
+  {
+    "file": "01_action_attribution/action_attribution_04_case_12_C7_seed123_ep75_img5_s4_g21.png",
+    "source": "results/figures/defense_reward_training_stage/action_attribution/action_attribution_04_case_12_C7_seed123_ep75_img5_s4_g21.png",
+    "title": "Training-stage action reward attribution",
+    "bytes": 1832856,
+    "sha256_12": "7f9d01d0829c"
+  },
+  {
+    "file": "01_action_attribution/action_attribution_05_case_02_C7_seed123_ep110_img15_s23_g0.png",
+    "source": "results/figures/defense_reward_training_stage/action_attribution/action_attribution_05_case_02_C7_seed123_ep110_img15_s23_g0.png",
+    "title": "Training-stage action reward attribution",
+    "bytes": 1699686,
+    "sha256_12": "e43e497c98f6"
+  },
+  {
+    "file": "01_action_attribution/action_attribution_contact_sheet.png",
+    "source": "results/figures/defense_reward_training_stage/action_attribution/action_attribution_contact_sheet.png",
+    "title": "Training-stage action reward attribution",
+    "bytes": 394174,
+    "sha256_12": "811f4c80019d"
+  },
+  {
+    "file": "01_action_attribution/action_attribution_manifest.json",
+    "source": "results/figures/defense_reward_training_stage/action_attribution/action_attribution_manifest.json",
+    "title": "Training-stage action reward attribution",
+    "bytes": 1257,
+    "sha256_12": "901783639ce3"
+  },
+  {
+    "file": "02_route_reward_cases/focus_case_01_case_04_C8_seed123_ep120_img5_s4_g20.png",
+    "source": "results/figures/defense_reward_training_stage/ppt_focus_cases/focus_case_01_case_04_C8_seed123_ep120_img5_s4_g20.png",
+    "title": "Route and reward-curve focus case",
+    "bytes": 7133429,
+    "sha256_12": "151aaa2b9dec"
+  },
+  {
+    "file": "02_route_reward_cases/reward_case_01_case_04_C8_seed123_ep120_img5_s4_g20.png",
+    "source": "results/figures/defense_reward_training_stage/ppt_focus_cases/reward_case_01_case_04_C8_seed123_ep120_img5_s4_g20.png",
+    "title": "Route and reward-curve focus case",
+    "bytes": 532616,
+    "sha256_12": "c9d17898765a"
+  },
+  {
+    "file": "02_route_reward_cases/focus_case_02_case_08_C8_seed123_ep55_img6_s4_g20.png",
+    "source": "results/figures/defense_reward_training_stage/ppt_focus_cases/focus_case_02_case_08_C8_seed123_ep55_img6_s4_g20.png",
+    "title": "Route and reward-curve focus case",
+    "bytes": 6892510,
+    "sha256_12": "32de0ea1ff95"
+  },
+  {
+    "file": "02_route_reward_cases/reward_case_02_case_08_C8_seed123_ep55_img6_s4_g20.png",
+    "source": "results/figures/defense_reward_training_stage/ppt_focus_cases/reward_case_02_case_08_C8_seed123_ep55_img6_s4_g20.png",
+    "title": "Route and reward-curve focus case",
+    "bytes": 470104,
+    "sha256_12": "1e5ecf1b6253"
+  },
+  {
+    "file": "02_route_reward_cases/focus_case_03_case_07_C8_seed123_ep90_img15_s0_g24.png",
+    "source": "results/figures/defense_reward_training_stage/ppt_focus_cases/focus_case_03_case_07_C8_seed123_ep90_img15_s0_g24.png",
+    "title": "Route and reward-curve focus case",
+    "bytes": 6470612,
+    "sha256_12": "3306c0938713"
+  },
+  {
+    "file": "02_route_reward_cases/reward_case_03_case_07_C8_seed123_ep90_img15_s0_g24.png",
+    "source": "results/figures/defense_reward_training_stage/ppt_focus_cases/reward_case_03_case_07_C8_seed123_ep90_img15_s0_g24.png",
+    "title": "Route and reward-curve focus case",
+    "bytes": 509115,
+    "sha256_12": "dd50127f7e11"
+  },
+  {
+    "file": "02_route_reward_cases/focus_case_08_case_12_C7_seed123_ep75_img5_s4_g21.png",
+    "source": "results/figures/defense_reward_training_stage/ppt_focus_cases/focus_case_08_case_12_C7_seed123_ep75_img5_s4_g21.png",
+    "title": "Route and reward-curve focus case",
+    "bytes": 7100628,
+    "sha256_12": "26d579a87beb"
+  },
+  {
+    "file": "02_route_reward_cases/reward_case_08_case_12_C7_seed123_ep75_img5_s4_g21.png",
+    "source": "results/figures/defense_reward_training_stage/ppt_focus_cases/reward_case_08_case_12_C7_seed123_ep75_img5_s4_g21.png",
+    "title": "Route and reward-curve focus case",
+    "bytes": 590543,
+    "sha256_12": "2e56c410b785"
+  },
+  {
+    "file": "02_route_reward_cases/focus_case_contact_sheet.png",
+    "source": "results/figures/defense_reward_training_stage/ppt_focus_cases/focus_case_contact_sheet.png",
+    "title": "Route and reward-curve focus case",
+    "bytes": 2490012,
+    "sha256_12": "a7731541e94a"
+  },
+  {
+    "file": "02_route_reward_cases/reward_case_contact_sheet.png",
+    "source": "results/figures/defense_reward_training_stage/ppt_focus_cases/reward_case_contact_sheet.png",
+    "title": "Route and reward-curve focus case",
+    "bytes": 758555,
+    "sha256_12": "803fb979d89c"
+  },
+  {
+    "file": "03_evolution_cases/same_task_evolution_c8_seed123_img20_s0_g24.png",
+    "source": "results/figures/defense_reward_training_stage/evolution_cases/same_task_evolution_c8_seed123_img20_s0_g24.png",
+    "title": "Same-task early/late route evolution",
+    "bytes": 5060713,
+    "sha256_12": "d737ee89a469"
+  },
+  {
+    "file": "03_evolution_cases/same_task_evolution_manifest.json",
+    "source": "results/figures/defense_reward_training_stage/evolution_cases/same_task_evolution_manifest.json",
+    "title": "Same-task early/late route evolution",
+    "bytes": 4860,
+    "sha256_12": "bed55ee87de1"
+  },
+  {
+    "file": "04_c4_wandering_failures/c4_all_failed_wandering_04_img072_d4_s14_g22_r0.png",
+    "source": "results/figures/defense_reward_training_stage/c4_all_failed_wandering_routes/c4_all_failed_wandering_04_img072_d4_s14_g22_r0.png",
+    "title": "C4 short-distance wandering failure boundary",
+    "bytes": 1595940,
+    "sha256_12": "62cbb20f5fa3"
+  },
+  {
+    "file": "04_c4_wandering_failures/c4_all_failed_wandering_contact_sheet.png",
+    "source": "results/figures/defense_reward_training_stage/c4_all_failed_wandering_routes/c4_all_failed_wandering_contact_sheet.png",
+    "title": "C4 short-distance wandering failure boundary",
+    "bytes": 1299833,
+    "sha256_12": "38efa4bf9472"
+  },
+  {
+    "file": "05_reward_mechanism_axis/27_奖励机制分阶段直线轴_好奇心作用.png",
+    "source": "results/figures/defense_reward_training_stage/single_reward_mechanism/27_奖励机制分阶段直线轴_好奇心作用.png",
+    "title": "Final staged reward-mechanism axis figure",
+    "bytes": 437536,
+    "sha256_12": "0deacef6f004"
+  }
+]
