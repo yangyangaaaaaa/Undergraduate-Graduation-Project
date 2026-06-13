@@ -86,7 +86,10 @@
 - `results/reports/`：实验总结、奖励分析、续训诊断、短距离 C1-C3 评估报告。
 - `results/figures/defense_readme_20260613/`：从最终结题答辩 PPT 抽取并压缩的首页展示素材。
 - `thesis/`：论文草稿与 Word 版本归档。
+- `thesis/official/`：论文定稿 PDF。
 - `materials/project_admin/`：任务书、开题、中期、外文翻译等过程材料。
+- `materials/defense/`：结题答辩 PDF。
+- `materials/quality/`：AIGC 检测报告等质量检查材料。
 
 ## 复现与验收
 
@@ -117,6 +120,7 @@ python validate.py
 
 - [结题收尾总览](docs/project_closing_summary_zh.md)
 - [PPT 汇报脉络](docs/defense_ppt_storyline_zh.md)
+- [论文与过程材料索引](docs/thesis_material_index_zh.md)
 - [服务器验收指南](docs/server_acceptance_guide_zh.md)
 - [实验结果总览](docs/experiment_summary_zh.md)
 - [可视化结果画廊](docs/visualization_gallery_zh.md)
