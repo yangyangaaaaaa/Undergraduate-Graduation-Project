@@ -1,0 +1,6 @@
+method,num_benchmarks,supported_mean_success_ratio,supported_mean_sg,benchmarks
+Random policy,4,0.3653014184397163,2.0558014184397164,"masa_aerial,mmgag_aerial,xbd_disaster_aerial,xbd_pre_aerial"
+GeoExplorer-pristine,9,0.286956987128973,2.883673102180195,"masa_aerial,mmgag_aerial,mmgag_ground,mmgag_text,swissview100_aerial,swissviewmonuments_aerial,swissviewmonuments_ground,xbd_disaster_aerial,xbd_pre_aerial"
+GOMAA-Geo,9,0.2737050827423168,3.0870033490937745,"masa_aerial,mmgag_aerial,mmgag_ground,mmgag_text,swissview100_aerial,swissviewmonuments_aerial,swissviewmonuments_ground,xbd_disaster_aerial,xbd_pre_aerial"
+GeoExplorer-anchor0624,9,0.2535483320199632,3.360017796164959,"masa_aerial,mmgag_aerial,mmgag_ground,mmgag_text,swissview100_aerial,swissviewmonuments_aerial,swissviewmonuments_ground,xbd_disaster_aerial,xbd_pre_aerial"
+DiT-AGL,4,0.24651285460992908,1.971415780141844,"masa_aerial,mmgag_aerial,xbd_disaster_aerial,xbd_pre_aerial"

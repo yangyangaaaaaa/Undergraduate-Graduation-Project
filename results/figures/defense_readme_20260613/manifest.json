@@ -1,0 +1,67 @@
+[
+  {
+    "file": "cover_symbol.png",
+    "source_ppt_media": "ppt/media/image1.png",
+    "bytes": 83199
+  },
+  {
+    "file": "method_framework.png",
+    "source_ppt_media": "ppt/media/image16.png",
+    "bytes": 181157
+  },
+  {
+    "file": "short_distance_route.gif",
+    "source_ppt_media": "ppt/media/image33.gif",
+    "bytes": 2135759,
+    "optimized_for_github": true,
+    "optimization": "scaled to 960px width, 128-color adaptive palette; source content from PPT embedded media"
+  },
+  {
+    "file": "c8_route_demo.gif",
+    "source_ppt_media": "ppt/media/image38.gif",
+    "bytes": 1138479,
+    "optimized_for_github": true,
+    "optimization": "scaled to 960px width, 128-color adaptive palette; source content from PPT embedded media"
+  },
+  {
+    "file": "multimodal_text_target.gif",
+    "source_ppt_media": "ppt/media/image42.gif",
+    "bytes": 924908,
+    "optimized_for_github": true,
+    "optimization": "scaled to 960px width, 128-color adaptive palette; source content from PPT embedded media"
+  },
+  {
+    "file": "xbd_disaster_route.gif",
+    "source_ppt_media": "ppt/media/image45.gif",
+    "bytes": 1047809,
+    "optimized_for_github": true,
+    "optimization": "scaled to 960px width, 128-color adaptive palette; source content from PPT embedded media"
+  },
+  {
+    "file": "long_distance_grid10.gif",
+    "source_ppt_media": "ppt/media/image49.gif",
+    "bytes": 3279200,
+    "optimized_for_github": true,
+    "optimization": "scaled to 960px width, 128-color adaptive palette; source content from PPT embedded media"
+  },
+  {
+    "file": "short_distance_failure.png",
+    "source_ppt_media": "ppt/media/image50.png",
+    "bytes": 2916139
+  },
+  {
+    "file": "performance_analysis.png",
+    "source_ppt_media": "ppt/media/image51.png",
+    "bytes": 233767
+  },
+  {
+    "file": "reward_distance_analysis.png",
+    "source_ppt_media": "ppt/media/image52.png",
+    "bytes": 253095
+  },
+  {
+    "file": "ablation_analysis.png",
+    "source_ppt_media": "ppt/media/image53.png",
+    "bytes": 190524
+  }
+]

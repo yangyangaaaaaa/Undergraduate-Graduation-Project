@@ -1,0 +1,6 @@
+#!/bin/sh
+set -eu
+
+unset LD_LIBRARY_PATH
+export PYTHONPATH="/root/geoexplorer/env/geoexplorer_site:/root/geoexplorer:/root/geoexplorer/GeoExplorer${PYTHONPATH:+:$PYTHONPATH}"
+exec /usr/bin/python3 -u /root/geoexplorer/GeoExplorer/acceptance_demo/build_acceptance_case_pack.py "$@"

@@ -1,159 +1,123 @@
-# Undergraduate Graduation Project
+# 好奇心驱动的无人机主动定位目标导航方法
+
+本科毕业设计项目归档仓库。当前首页按 2026 年 6 月结题答辩 PPT 重新整理，展示内容依据最终 PPT 中实际嵌入的媒体与论文定稿结论整理，动图已做 GitHub 展示压缩。
 
 <p align="center">
-  <b>好奇心驱动的无人机主动目标定位导航方法</b><br>
-  Active target geo-localization with distance-aware curiosity reward shaping
+  <img src="results/figures/defense_readme_20260613/method_framework.png" width="100%" alt="研究框架">
+</p>
+
+## 项目概览
+
+本项目研究低空场景下的无人机主动目标定位导航。给定一个航拍搜索区域和目标线索后，无人机从起点出发，在每一步根据当前位置观测、历史动作和目标表示选择移动方向，并在有限搜索预算内尽量到达目标网格。
+
+任务并不是一次性图像识别，也不是已知终点路径规划。它更接近“边移动、边观察、边修正”的连续搜索问题。本文方法把航拍图像、地面图像和文本描述等目标线索统一编码，并在 PPO 策略学习中加入好奇心驱动的混合奖励机制。
+
+## 核心思想
+
+混合奖励只用于训练阶段，正式测试阶段只加载训练好的 checkpoint 输出动作，不再调用奖励函数。
+
+训练信号由三部分组成：
+
+- 外在奖励：保证目标导向，到达或靠近目标时提供直接反馈。
+- 好奇心内在奖励：由状态预测误差产生，用于补充探索动力。
+- 距离调节与势函数塑形：在远距离阶段鼓励探索，在接近目标时抑制偏离并转向收敛。
+
+## 答辩主线展示
+
+下面几组图依据最终结题答辩 PPT 嵌入媒体抽取与压缩，保留 PPT 的讲述顺序：任务设置、连续搜索、跨模态目标、灾后场景、长距离搜索和实验分析。
+
+### 连续搜索轨迹
+
+<p align="center">
+  <img src="results/figures/defense_readme_20260613/c8_route_demo.gif" width="100%" alt="C8 连续搜索轨迹">
+</p>
+
+### 跨模态文本目标
+
+<p align="center">
+  <img src="results/figures/defense_readme_20260613/multimodal_text_target.gif" width="100%" alt="文本目标搜索轨迹">
+</p>
+
+### 灾后场景搜索
+
+<p align="center">
+  <img src="results/figures/defense_readme_20260613/xbd_disaster_route.gif" width="100%" alt="xBD 灾后搜索轨迹">
+</p>
+
+### 长距离扩展任务
+
+<p align="center">
+  <img src="results/figures/defense_readme_20260613/long_distance_grid10.gif" width="100%" alt="10x10 长距离搜索轨迹">
+</p>
+
+### 短距离失败边界
+
+<p align="center">
+  <img src="results/figures/defense_readme_20260613/short_distance_failure.png" width="100%" alt="短距离失败案例">
+</p>
+
+## 实验结论
+
+论文定稿与答辩 PPT 的主要结论是一致的：
+
+- 在 MM-GAG 上，航拍图像、地面图像、文本目标的平均成功率分别为 `0.6170`、`0.6391`、`0.6247`。
+- 在 `10 x 10` 长距离扩展测试中，平均成功率为 `0.7480`，平均最终距离为 `0.7360`。
+- 方法优势主要体现在中远距离、多步搜索和跨模态目标线索场景。
+- C1-C3 短距离补充评测显示，短距离不是本文方法的优势区间；局部相似模块容易导致徘徊和末端定位波动。
+
+<p align="center">
+  <img src="results/figures/defense_readme_20260613/performance_analysis.png" width="100%" alt="实验结果分析">
 </p>
 
 <p align="center">
-  <img src="results/figures/showcase/experience/hero_experience.png" width="100%" alt="好奇心驱动的无人机主动目标定位展示图">
-</p>
-
-## 项目一眼看懂
-
-本仓库整理本科毕业设计《好奇心驱动的无人机主动目标定位导航方法》的代码、实验结果、可视化材料、论文文档和复现说明。任务面向离散网格下的无人机主动目标定位导航：给定航拍搜索区域和目标线索后，智能体从起始网格出发，根据当前位置观测、目标表示和历史搜索序列选择移动动作，并在有限搜索预算内尽可能到达目标网格。
-
-<table>
-  <tr>
-    <td width="25%" align="center"><b>主基准平均 SR</b><br><code>0.580</code></td>
-    <td width="25%" align="center"><b>相对 GOMAA 提升</b><br><code>+0.062</code></td>
-    <td width="25%" align="center"><b>MM-GAG 平均提升</b><br><code>+0.083</code></td>
-    <td width="25%" align="center"><b>长距离平均提升</b><br><code>+0.093</code></td>
-  </tr>
-</table>
-
-## 方法框架
-
-方法由三部分组成：首先将航拍图像、地面图像或文本描述编码为统一的目标表示；随后用 Transformer 建模历史动作与观测特征序列；最后由 Actor-Critic 策略网络根据当前状态和历史信息选择下一步动作。混合奖励机制只用于训练阶段优化策略，推理阶段直接使用训练好的策略网络。
-
-<p align="center">
-  <img src="results/figures/showcase/dataset/figure3_1_method_overview_revised.png" width="100%" alt="方法框架图">
-</p>
-
-## 数据集与任务场景
-
-实验材料覆盖航拍目标、地面目标、文本目标和灾前灾后场景。下面的图用于快速说明不同数据设置对应的目标线索和搜索区域形式。
-
-<p align="center">
-  <img src="results/figures/showcase/dataset/chapter2_typical_dataset_scene_examples.png" width="100%" alt="数据集与任务场景示例">
-</p>
-
-## 轨迹对比
-
-下面的 GIF 把同一个困难样例下的三种方法同步放在一张图中。新版在三个轨迹面板之间保留细间隔，避免画面直接挤在一起，同时保持统一裁剪、统一步数和统一进度条，便于直接观察搜索行为差异。
-
-<p align="center">
-  <img src="results/figures/showcase/experience/trajectory_theater_gifs/three_method_hardcase__img189_d6_s20_g14_r0__theater.gif" width="100%" alt="同步轨迹对比动图">
+  <img src="results/figures/defense_readme_20260613/reward_distance_analysis.png" width="100%" alt="奖励分距离分析">
 </p>
 
 <p align="center">
-  <img src="results/figures/showcase/experience/trajectory_storyboard_experience.png" width="100%" alt="轨迹对比结果图">
+  <img src="results/figures/defense_readme_20260613/ablation_analysis.png" width="100%" alt="消融分析">
 </p>
 
-## 核心结果证据墙
+## 仓库内容
 
-证据墙把总体性能、跨模态目标、长距离搜索和轨迹行为放在同一页中，用来快速说明本文方法的提升来自哪些实验现象。完整数值仍以 `results/tables/` 中的表格为准。
+- `code/geoexplorer_active/`：整理后的核心代码入口。
+- `code/tools/`：结果整理、可视化生成、服务器验收与短距离评估脚本。
+- `docs/`：代码结构、实验复现、结题收尾、服务器验收、PPT 汇报脉络等说明文档。
+- `results/tables/`：主实验、消融实验、补充实验和短距离评估表格。
+- `results/reports/`：实验总结、奖励分析、续训诊断、短距离 C1-C3 评估报告。
+- `results/figures/defense_readme_20260613/`：从最终结题答辩 PPT 抽取并压缩的首页展示素材。
+- `thesis/`：论文草稿与 Word 版本归档。
+- `materials/project_admin/`：任务书、开题、中期、外文翻译等过程材料。
 
-<p align="center">
-  <img src="results/figures/showcase/experience/evidence_wall_experience.png" width="100%" alt="核心结果证据墙">
-</p>
+## 复现与验收
 
-## 主要实验结果
-
-以下结果图按单列展示，避免 GitHub 页面压缩后看不清坐标、数值和图例。每张图对应一组核心实验结论。
-
-### 结果总览
-
-汇总主基准平均成功率、相对提升、跨模态任务和长距离任务表现，用于快速把握整体实验结论。
-
-<p align="center">
-  <img src="results/figures/showcase/polished/hero_dashboard.png" width="100%" alt="实验结果总览">
-</p>
-
-### 跨模态目标定位
-
-比较航拍图像、地面图像和文本描述三类目标线索，展示目标表示在不同输入形式下的适应能力。
-
-<p align="center">
-  <img src="results/figures/showcase/polished/mmgag_modality_panel.png" width="100%" alt="跨模态目标定位表现">
-</p>
-
-### 模块消融实验
-
-对门控、势函数塑形、内在奖励和价值分支进行组合消融，说明完整机制相对各个删减版本的收益。
-
-<p align="center">
-  <img src="results/figures/showcase/polished/ablation_story_panel.png" width="100%" alt="模块消融实验">
-</p>
-
-### 奖励设计分析
-
-比较不同距离门控函数和 PBRS 开关，解释训练阶段混合奖励如何改善策略学习。
-
-<p align="center">
-  <img src="results/figures/showcase/polished/reward_design_panel.png" width="100%" alt="奖励设计对比">
-</p>
-
-### 长距离搜索与压力测试
-
-展示 8x8、10x10 和 25x25 网格下的预算敏感性与随机种子稳定性，评估搜索范围扩大后的表现。
-
-<p align="center">
-  <img src="results/figures/showcase/polished/long_range_panel.png" width="100%" alt="长距离搜索与压力测试">
-</p>
-
-### 轨迹行为统计
-
-从成功率、接近目标比例、单调接近率和重复访问率解释本文方法为什么在中远距离任务中更稳定。
-
-<p align="center">
-  <img src="results/figures/showcase/polished/trajectory_behavior_panel.png" width="100%" alt="轨迹行为统计">
-</p>
-
-## 结果与材料组织
-
-- `code/geoexplorer_active/`：本文方法的干净代码入口，包括训练、评测、数据预处理和模型定义。
-- `code/tools/build_visual_showcase.py`：从 `results/tables/` 重新生成 GitHub 展示图、experience 图、polished 图卡、同步 GIF 和媒体清单。
-- `code/tools/build_showcase_experience.py`：生成首页首屏海报、轨迹剧场、证据墙和首页叙事资产。
-- `code/tools/build_supplement_experiment_analysis.py`：生成置信区间、轨迹行为、奖励过程和补充实验分析图。
-- `experiments/`：主表、消融实验、参数实验和长距离测试对应的脚本与 manifest。
-- `results/tables/`：已整理的主实验、消融、附录参数、长距离和轨迹记录表。
-- `results/figures/`：论文图、数据集图、轨迹图、奖励机制图和 GitHub 展示图。
-- `docs/`：代码结构、实验总结、数据划分、结果索引、复现说明和可视化画廊。
-- `thesis/`：论文正文与 Markdown 草稿。
-- `materials/`：任务书、开题报告、中期报告、外文翻译等毕设过程材料。
-
-## 复现入口
-
-环境配置：
+基础训练与评估入口：
 
 ```bash
 cd code/geoexplorer_active
 conda env create -f environment.yml
 conda activate geoexplorer
-```
-
-基础训练与评测入口：
-
-```bash
 python pretrain.py
 python train.py
 python validate.py
 ```
 
-重新生成展示图：
+服务器验收脚本已整理到 `code/tools/`。远端部署时使用环境变量或安全凭据传入登录信息，不要把密码、token 或 cookie 写入仓库。
+
+常用验收命令：
 
 ```bash
-python code/tools/build_visual_showcase.py
-python code/tools/build_supplement_experiment_analysis.py
+/root/geoexplorer/run_acceptance_demo
+/root/geoexplorer/run_acceptance_demo --visual-only
+/root/geoexplorer/run_acceptance_case_pack
+/root/geoexplorer/run_acceptance_train --status
+/root/geoexplorer/run_c123_eval
 ```
 
-仓库不包含训练 checkpoint、原始大规模数据包和本地临时缓存。结果表保留 checkpoint 路径或 run 名称，用于和原始实验设置对应；大文件权重需要按复现说明另行准备。
+## 进一步阅读
 
-## 文档导航
-
-- [可视化画廊](docs/visualization_gallery_zh.md)
+- [结题收尾总览](docs/project_closing_summary_zh.md)
+- [PPT 汇报脉络](docs/defense_ppt_storyline_zh.md)
+- [服务器验收指南](docs/server_acceptance_guide_zh.md)
 - [实验结果总览](docs/experiment_summary_zh.md)
+- [可视化结果画廊](docs/visualization_gallery_zh.md)
 - [复现说明](docs/reproducibility_zh.md)
-- [结果文件索引](docs/result_inventory_zh.md)
-- [代码结构说明](docs/code_structure_zh.md)

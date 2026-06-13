@@ -1,0 +1,39 @@
+GeoExplorer 验收常用命令
+
+1. 跑一遍完整验收：重新推理，然后生成所有可视化结果
+/root/geoexplorer/run_acceptance_demo
+
+2. 只重新生成可视化：不跑模型推理，速度快一点
+/root/geoexplorer/run_acceptance_demo --visual-only
+
+3. 只推理一张数据集里的指定图片：把 189 换成你想看的 img_idx
+/root/geoexplorer/run_acceptance_demo --one-image 189
+
+4. 数据集指定图片快速出图：不重新跑模型，复用已有推理记录
+/root/geoexplorer/run_acceptance_demo --visual-only --one-image 189
+
+5. 跑一张你自己放到服务器上的图片：先把图片传到服务器，比如 /root/demo.png
+/root/geoexplorer/run_acceptance_demo --custom-image /root/demo.png
+
+6. 自定义图片还想指定起点终点：按 5x5 小格编号 0 到 24 来填
+/root/geoexplorer/run_acceptance_demo --custom-image /root/demo.png --start 20 --goal 4
+
+7. 跑一个训练小测试：只跑 20 个 timestep，确认训练链路没问题
+/root/geoexplorer/run_acceptance_train
+
+8. 启动正式长训练：后台跑 480k timestep，别随便开，确认要跑再用
+/root/geoexplorer/run_acceptance_train --full
+
+9. 看最新训练状态：有没有在跑、跑到哪一步、验证结果是多少
+/root/geoexplorer/run_acceptance_train --status
+
+10. 实时看最新训练日志：适合长训练时盯进度
+/root/geoexplorer/run_acceptance_train --tail
+
+11. 看最新可视化验收结果在哪个目录
+readlink -f /root/geoexplorer/analysis/acceptance_demo_latest
+
+12. 看最新训练结果在哪个目录
+readlink -f /root/geoexplorer/analysis/acceptance_train_latest
+
+一般验收最常用的是第 1 条和第 7 条。如果时间紧，就用第 2 条快速出图。如果老师说“就看某一张图”，用第 3 条；如果是你自己上传的新图，用第 5 条。

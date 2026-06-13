@@ -1,0 +1,6 @@
+#!/bin/sh
+set -eu
+
+# Short, environment-safe server wrapper for the acceptance demo runner.
+unset LD_LIBRARY_PATH
+exec /usr/bin/bash /root/geoexplorer/GeoExplorer/acceptance_demo/run_acceptance_demo_oneclick.sh "$@"
