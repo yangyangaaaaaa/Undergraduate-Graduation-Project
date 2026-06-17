@@ -1,6 +1,6 @@
-# GeoExplorer Active Code
+# Code
 
-This directory contains the cleaned code used for the graduation project experiments.
+This directory contains the cleaned implementation used for the graduation project experiments.
 
 ## Entry Points
 

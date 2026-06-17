@@ -291,7 +291,7 @@ def render_gif(record, aerial_np, current_patch_np, goal_patch_np, save_path):
         ax_patch.set_xticks([])
         ax_patch.set_yticks([])
 
-        fig.suptitle(f"GeoExplorer Trajectory Replay | img_{record['img_idx']}", fontsize=14, fontweight="bold")
+        fig.suptitle(f"Active Navigation Trajectory Replay | img_{record['img_idx']}", fontsize=14, fontweight="bold")
         frames.append(figure_to_pil(fig))
         plt.close(fig)
 
@@ -342,7 +342,7 @@ def render_record(record, metadata, dist_val, save_dir):
     draw_patch_panel(ax_final, final_patch_np, "Final Patch", "#e03131" if not record["success"] else "#1971c2")
 
     fig.suptitle(
-        f"GeoExplorer Inference Visualization | dist={dist_val} | {'SUCCESS' if record['success'] else 'FAILED'}",
+        f"Active Navigation Inference Visualization | dist={dist_val} | {'SUCCESS' if record['success'] else 'FAILED'}",
         fontsize=18,
         fontweight="bold",
     )

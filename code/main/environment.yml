@@ -1,4 +1,4 @@
-﻿name: geoexplorer
+name: code
 channels:
   - defaults
   - conda-forge
