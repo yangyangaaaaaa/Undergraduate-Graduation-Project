@@ -1,0 +1,355 @@
+
+
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word" xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="Generator" content="Microsoft Word 14 (filtered)">
+    <!--[if gte mso 9]><xml><w:WordDocument><w:View>Print</w:View><w:TrackMoves>false</w:TrackMoves><w:TrackFormatting/><w:ValidateAgainstSchemas/><w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid><w:IgnoreMixedContent>false</w:IgnoreMixedContent><w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText><w:DoNotPromoteQF/><w:LidThemeOther>EN-US</w:LidThemeOther><w:LidThemeAsian>ZH-CN</w:LidThemeAsian><w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript><w:Compatibility><w:BreakWrappedTables/><w:SnapToGridInCell/><w:WrapTextWithPunct/><w:UseAsianBreakRules/><w:DontGrowAutofit/><w:SplitPgBreakAndParaMark/><w:DontVertAlignCellWithSp/><w:DontBreakConstrainedForcedTables/><w:DontVertAlignInTxbx/><w:Word11KerningPairs/><w:CachedColBalance/><w:UseFELayout/></w:Compatibility><w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel><m:mathPr><m:mathFont m:val="Cambria Math"/><m:brkBin m:val="before"/><m:brkBinSub m:val="--"/><m:smallFrac m:val="off"/><m:dispDef/><m:lMargin m:val="0"/> <m:rMargin m:val="0"/><m:defJc m:val="centerGroup"/><m:wrapIndent m:val="1440"/><m:intLim m:val="subSup"/><m:naryLim m:val="undOvr"/></m:mathPr></w:WordDocument></xml><![endif]-->
+
+    <title>毕业设计选题申报表</title>
+    <style>
+        <!--
+        /* Font Definitions */
+        @font-face {
+            font-family: 宋体;
+            panose-1: 2 1 6 0 3 1 1 1 1 1;
+        }
+
+        @font-face {
+            font-family: 黑体;
+            panose-1: 2 1 6 9 6 1 1 1 1 1;
+        }
+
+        @font-face {
+            font-family: "Cambria Math";
+            panose-1: 2 4 5 3 5 4 6 3 2 4;
+        }
+
+        @font-face {
+            font-family: 楷体_GB2312;
+        }
+
+        @font-face {
+            font-family: "\@宋体";
+            panose-1: 2 1 6 0 3 1 1 1 1 1;
+        }
+
+        @font-face {
+            font-family: "\@黑体";
+            panose-1: 2 1 6 0 3 1 1 1 1 1;
+        }
+
+        @font-face {
+            font-family: "\@楷体_GB2312";
+        }
+        /* Style Definitions */
+        p.MsoNormal, li.MsoNormal, div.MsoNormal {
+            margin: 0cm;
+            text-align: justify;
+            text-justify: inter-ideograph;
+            font-size: 10.5pt;
+            font-family: "Times New Roman",serif;
+        }
+        /* Page Definitions */
+        @page WordSection1 {
+            size: 595.3pt 841.9pt;
+            margin: 2.0cm 89.85pt 2.0cm 89.85pt;
+            layout-grid: 15.6pt;
+        }
+
+        div.WordSection1 {
+            page: WordSection1;
+        }
+        /* List Definitions */
+        ol {
+            margin-bottom: 0cm;
+        }
+
+        ul {
+            margin-bottom: 0cm;
+        }
+        -->
+    </style>
+
+</head>
+
+<body lang="ZH-CN" style='word-wrap: break-word; text-justify-trim: punctuation'>
+
+    <div class="WordSection1" style='layout-grid: 15.6pt'>
+
+        <p class="MsoNormal" align="center" style='text-align: center'>
+            <b><span
+                style='font-size: 14.0pt; font-family: 楷体_GB2312'>毕业设计选题申报表</span></b>
+        </p>
+
+        <p class="MsoNormal"><span lang="EN-US" style='font-size: 12.0pt; font-family: 楷体_GB2312'>&nbsp;</span></p>
+
+        <p class="MsoNormal" style='margin-left: 21.0pt'>
+            <span style='font-family: 楷体_GB2312'>班级：</span>
+            <span lang="EN-US" style='font-family: 楷体_GB2312'>081222&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+                style='font-family: 楷体_GB2312'>指导教师：朱鹏飞</span>
+        </p>
+
+        <table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="578"
+            style='width: 433.4pt; margin-left: 1.4pt; border-collapse: collapse; border: none'>
+            <tr>
+                <td width="576" colspan="4" valign="top" style='width: 432.0pt; border: solid black 1.0pt; padding: 0cm 1.4pt 0cm 1.4pt'>
+                    <p class="MsoNormal"><span lang="EN-US">1</span><span style='font-family: 楷体_GB2312'>、课题内容（名称、具体任务）</span></p>
+                    <p class="MsoNormal" style='text-indent: 12.0pt'><span style='font-family: 黑体'>名称：好奇心驱动的无人机主动定位目标导航方法</span></p>
+                    <p class="MsoNormal" style='text-indent: 12.0pt'><span style='font-family: 黑体'>任务：<p>
+	本课题旨在提出结合好奇心驱动探索的新方法，通过内在奖励机制鼓励无人机主动探索环境，同时结合目标导向的外在奖励，实现高效的无人机目标定位导航。
+</p>
+<p>
+	具体任务如下:&nbsp;&nbsp;
+</p>
+1.系统学习视觉-语言导航模型、兴趣点表示方法及无人机动态路径规划相关文献，重点分析多模态信息融合与导航决策机制；<br />
+2.研究基于语义-几何联合建模的兴趣点驱动框架，设计动态目标感知与路径生成方法；<br />
+3.实现支持多模态环境探索的自主导航系统，通过仿真验证系统鲁棒性与适应性。<br /></span></p>
+                    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+                </td>
+                <td style='border: none; padding: 0cm 0cm 0cm 0cm' width="2">
+                    <p class='MsoNormal'>
+                        &nbsp;</td>
+            </tr>
+            <tr>
+                <td width="576" colspan="4" valign="top" style='width: 432.0pt; border: solid black 1.0pt; border-top: none; padding: 0cm 1.4pt 0cm 1.4pt'>
+                    <p class="MsoNormal"><span lang="EN-US">2</span><span style='font-family: 楷体_GB2312'>、课题性质（毕业设计、科研论文），课题来源（生产、科研、自拟）</span></p>
+                    <p class="MsoNormal">
+                        <span lang="EN-US">&nbsp; </span><span style='font-family: 黑体'>课题类别</span><span style='font-family: 楷体_GB2312'>：</span><span lang="EN-US">毕业设计 </span>
+                    </p>
+                    <p class="MsoNormal">
+                        <span lang="EN-US">&nbsp; </span><span style='font-family: 黑体'>课题来源</span><span style='font-family: 楷体_GB2312'>：科研</span>
+                    </p>
+                    <p class="MsoNormal">
+                        <span lang="EN-US">&nbsp; </span><span style='font-family: 黑体'>是否卓越课题：否</span>
+                    </p>
+                </td>
+                <td style='border: none; padding: 0cm 0cm 0cm 0cm' width="2">
+                    <p class='MsoNormal'>
+                        &nbsp;</td>
+            </tr>
+            <tr style='height: 75.75pt'>
+                <td width="576" colspan="4" valign="top" style='width: 432.0pt; border: solid black 1.0pt; border-top: none; padding: 0cm 1.4pt 0cm 1.4pt; height: 75.75pt'>
+                    <p class="MsoNormal"><span lang="EN-US">3</span><span style='font-family: 楷体_GB2312'>、课题难易程度及作为毕业设计（论文）选题的可行性</span></p>
+                    <p class="MsoNormal"><span lang="EN-US">本课题难度中等，工作量中等偏上，适合有读研倾向的学生选择。</span></p>
+                </td>
+                <td style='border: none; padding: 0cm 0cm 0cm 0cm' width="2">
+                    <p class='MsoNormal'>
+                        &nbsp;</td>
+            </tr>
+            <tr style='height: 68.9pt'>
+                <td width="576" colspan="4" valign="top" style='width: 432.0pt; border: solid black 1.0pt; border-top: none; padding: 0cm 1.4pt 0cm 1.4pt; height: 68.9pt'>
+                    <p class="MsoNormal"><span lang="EN-US">4</span><span style='font-family: 楷体_GB2312'>、已具备的条件（经费、设备及指导人力）和存在的困难</span></p>
+                    <p class="MsoNormal"><span lang="EN-US">仪器设备与指导人员齐备:实验室算力资源充沛，团队拥有1名博导与1名至善博士后。</span></p>
+                </td>
+                <td style='border: none; padding: 0cm 0cm 0cm 0cm' width="2">
+                    <p class='MsoNormal'>
+                        &nbsp;</td>
+            </tr>
+            <tr style='height: 69.85pt'>
+                <td width="576" colspan="4" valign="top" style='width: 432.0pt; border: solid black 1.0pt; border-top: none; padding: 0cm 1.4pt 0cm 1.4pt; height: 69.85pt'>
+                    <p class="MsoNormal"><span lang="EN-US">5</span><span style='font-family: 楷体_GB2312'>、教学要求与工作计划</span></p>
+                    <p class="MsoNormal"><span lang="EN-US"><p>
+	2025.12.20-2026.3.1，完成任务1、2
+</p>
+<p>
+	2026.3.1-2026.5.1，完成任务3
+</p>
+2026.5.1-2026.5.25，完成论文写作<br /></span></p>
+                </td>
+                <td style='border: none; padding: 0cm 0cm 0cm 0cm' width="2">
+                    <p class='MsoNormal'>
+                        &nbsp;</td>
+            </tr>
+            <tr style='height: 69.3pt'>
+                <td width="576" colspan="4" valign="top" style='width: 432.0pt; border: solid black 1.0pt; border-top: none; padding: 0cm 1.4pt 0cm 1.4pt; height: 69.3pt'>
+                    <p class="MsoNormal"><span lang="EN-US">6</span><span style='font-family: 楷体_GB2312'>、系教学主任审核意见</span></p>
+                    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+                    <p class="MsoNormal">
+                        <span lang="EN-US">课题符合要求
+                        </span><span style='font-family: 楷体_GB2312'>审核人：</span><span lang="EN-US"><img src='data:image/jpeg;base64,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'  width='70' height='35' runat='server' />
+                        </span><span style='font-family: 楷体_GB2312'>2025年</span><span lang="EN-US">
+                        </span><span style='font-family: 楷体_GB2312'>12月</span><span lang="EN-US">
+                        </span><span style='font-family: 楷体_GB2312'>24日</span>
+                    </p>
+                </td>
+                <td style='border: none; padding: 0cm 0cm 0cm 0cm' width="2">
+                    <p class='MsoNormal'>
+                        &nbsp;</td>
+            </tr>
+            <tr>
+                <td width="576" colspan="4" valign="top" style='width: 432.0pt; border: solid black 1.0pt; border-top: none; padding: 0cm 1.4pt 0cm 1.4pt'>
+                    <p class="MsoNormal"><span lang="EN-US">7</span><span style='font-family: 楷体_GB2312'>、选择本课题的同学：</span></p>
+                </td>
+                <td style='border: none; padding: 0cm 0cm 0cm 0cm' width="2">
+                    <p class='MsoNormal'>
+                        &nbsp;</td>
+            </tr>
+            <tr style='page-break-inside: avoid; height: 13.95pt'>
+                <td width="132" valign="top" style='width: 99.0pt; border: solid windowtext 1.0pt; border-top: none; padding: 0cm 5.4pt 0cm 5.4pt; height: 13.95pt'>
+                    <p class="MsoNormal" align="center" style='text-align: center; line-height: 130%; layout-grid-mode: char'>
+                        <span style='line-height: 130%; font-family: 楷体_GB2312'>姓</span><span
+                            style='line-height: 130%'> </span><span style='line-height: 130%; font-family: 楷体_GB2312'>名</span>
+                    </p>
+                </td>
+                <td width="156" valign="top" style='width: 117.0pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 2.25pt; padding: 0cm 5.4pt 0cm 5.4pt; height: 13.95pt'>
+                    <p class="MsoNormal" align="center" style='text-align: center; line-height: 130%; layout-grid-mode: char'>
+                        <span style='line-height: 130%; font-family: 楷体_GB2312'>学号</span>
+                    </p>
+                </td>
+                <td width="144" valign="top" style='width: 108.0pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0cm 5.4pt 0cm 5.4pt; height: 13.95pt'>
+                    <p class="MsoNormal" align="center" style='text-align: center; line-height: 130%; layout-grid-mode: char'>
+                        <span style='line-height: 130%; font-family: 楷体_GB2312'>姓名</span>
+                    </p>
+                </td>
+                <td width="144" valign="top" style='width: 108.0pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0cm 5.4pt 0cm 5.4pt; height: 13.95pt'>
+                    <p class="MsoNormal" align="center" style='text-align: center; line-height: 130%; layout-grid-mode: char'>
+                        <span style='line-height: 130%; font-family: 楷体_GB2312'>学号</span>
+                    </p>
+                </td>
+                <td style='border: none; padding: 0cm 0cm 0cm 0cm' width="2">
+                    <p class='MsoNormal'>
+                        &nbsp;</td>
+            </tr>
+            <tr style='page-break-inside: avoid; height: 13.85pt'>
+                <td width="132" valign="top" style='width: 99.0pt; border: solid windowtext 1.0pt; border-top: none; padding: 0cm 5.4pt 0cm 5.4pt; height: 13.85pt'>
+                    <p class="MsoNormal" style='line-height: 130%; layout-grid-mode: char'>
+                        <span
+                            lang="EN-US" style='line-height: 130%'>张洋</span>
+                    </p>
+                </td>
+                <td width="156" valign="top" style='width: 117.0pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 2.25pt; padding: 0cm 5.4pt 0cm 5.4pt; height: 13.85pt'>
+                    <p class="MsoNormal" style='line-height: 130%; layout-grid-mode: char'>
+                        <span
+                            lang="EN-US" style='line-height: 130%'>08122215</span>
+                    </p>
+                </td>
+                <td width="144" valign="top" style='width: 108.0pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0cm 5.4pt 0cm 5.4pt; height: 13.85pt'>
+                    <p class="MsoNormal" style='line-height: 130%; layout-grid-mode: char'>
+                        <span
+                            lang="EN-US" style='line-height: 130%'>&nbsp;</span>
+                    </p>
+                </td>
+                <td width="144" valign="top" style='width: 108.0pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0cm 5.4pt 0cm 5.4pt; height: 13.85pt'>
+                    <p class="MsoNormal" style='line-height: 130%; layout-grid-mode: char'>
+                        <span
+                            lang="EN-US" style='line-height: 130%'>&nbsp;</span>
+                    </p>
+                </td>
+                <td style='border: none; padding: 0cm 0cm 0cm 0cm' width="2">
+                    <p class='MsoNormal'>
+                        &nbsp;</td>
+            </tr>
+            <tr style='page-break-inside: avoid; height: 13.85pt'>
+                <td width="132" valign="top" style='width: 99.0pt; border: solid windowtext 1.0pt; border-top: none; padding: 0cm 5.4pt 0cm 5.4pt; height: 13.85pt'>
+                    <p class="MsoNormal" style='line-height: 130%; layout-grid-mode: char'>
+                        <span
+                            lang="EN-US" style='line-height: 130%'>&nbsp;</span>
+                    </p>
+                </td>
+                <td width="156" valign="top" style='width: 117.0pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 2.25pt; padding: 0cm 5.4pt 0cm 5.4pt; height: 13.85pt'>
+                    <p class="MsoNormal" style='line-height: 130%; layout-grid-mode: char'>
+                        <span
+                            lang="EN-US" style='line-height: 130%'>&nbsp;</span>
+                    </p>
+                </td>
+                <td width="144" valign="top" style='width: 108.0pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0cm 5.4pt 0cm 5.4pt; height: 13.85pt'>
+                    <p class="MsoNormal" style='line-height: 130%; layout-grid-mode: char'>
+                        <span
+                            lang="EN-US" style='line-height: 130%'>&nbsp;</span>
+                    </p>
+                </td>
+                <td width="144" valign="top" style='width: 108.0pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0cm 5.4pt 0cm 5.4pt; height: 13.85pt'>
+                    <p class="MsoNormal" style='line-height: 130%; layout-grid-mode: char'>
+                        <span
+                            lang="EN-US" style='line-height: 130%'>&nbsp;</span>
+                    </p>
+                </td>
+                <td style='border: none; padding: 0cm 0cm 0cm 0cm' width="2">
+                    <p class='MsoNormal'>
+                        &nbsp;</td>
+            </tr>
+            <tr style='page-break-inside: avoid; height: 13.85pt'>
+                <td width="132" valign="top" style='width: 99.0pt; border: solid windowtext 1.0pt; border-top: none; padding: 0cm 5.4pt 0cm 5.4pt; height: 13.85pt'>
+                    <p class="MsoNormal" style='line-height: 130%; layout-grid-mode: char'>
+                        <span
+                            lang="EN-US" style='line-height: 130%'>&nbsp;</span>
+                    </p>
+                </td>
+                <td width="156" valign="top" style='width: 117.0pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 2.25pt; padding: 0cm 5.4pt 0cm 5.4pt; height: 13.85pt'>
+                    <p class="MsoNormal" style='line-height: 130%; layout-grid-mode: char'>
+                        <span
+                            lang="EN-US" style='line-height: 130%'>&nbsp;</span>
+                    </p>
+                </td>
+                <td width="144" valign="top" style='width: 108.0pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0cm 5.4pt 0cm 5.4pt; height: 13.85pt'>
+                    <p class="MsoNormal" style='line-height: 130%; layout-grid-mode: char'>
+                        <span
+                            lang="EN-US" style='line-height: 130%'>&nbsp;</span>
+                    </p>
+                </td>
+                <td width="144" valign="top" style='width: 108.0pt; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 0cm 5.4pt 0cm 5.4pt; height: 13.85pt'>
+                    <p class="MsoNormal" style='line-height: 130%; layout-grid-mode: char'>
+                        <span
+                            lang="EN-US" style='line-height: 130%'>&nbsp;</span>
+                    </p>
+                </td>
+                <td style='border: none; border-bottom: solid black 1.0pt' width="2">
+                    <p class='MsoNormal'>
+                        &nbsp;</td>
+            </tr>
+            <tr style='height: 58.15pt'>
+                <td width="578" colspan="5" valign="top" style='width: 433.4pt; border: solid black 1.0pt; border-top: none; padding: 0cm 1.4pt 0cm 1.4pt; height: 58.15pt'>
+                    <p class="MsoNormal">
+                        <span lang="EN-US">8</span><span style='font-family: 楷体_GB2312'>、院</span><span
+                            lang="EN-US">(</span><span style='font-family: 楷体_GB2312'>系</span><span
+                                lang="EN-US">)</span><span style='font-family: 楷体_GB2312'>教学院长（主任）意见</span>
+                    </p>
+                    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+                </td>
+            </tr>
+        </table>
+
+        <p class="MsoNormal" style='line-height: 110%; layout-grid-mode: char'>
+            <span
+                style='font-size: 9.0pt; line-height: 110%; font-family: 宋体'>注：</span>
+        </p>
+
+        <p class="MsoNormal" style='margin-left: 18.0pt; text-indent: -18.0pt; line-height: 110%; layout-grid-mode: char'>
+            <span lang="EN-US" style='font-size: 9.0pt; line-height: 110%; font-family: 宋体'>1、<span style='font: 7.0pt "Times New Roman"'>&nbsp; </span></span><span
+                style='font-size: 9.0pt; line-height: 110%; font-family: 宋体'>指导教师填写上述<span
+                    lang="EN-US">1</span>～<span lang="EN-US">5</span>项。学生填上述第<span lang="EN-US">7</span>项。</span>
+        </p>
+
+        <p class="MsoNormal" style='margin-left: 18.0pt; text-indent: -18.0pt; line-height: 110%; layout-grid-mode: char'>
+            <span lang="EN-US" style='font-size: 9.0pt; line-height: 110%; font-family: 宋体'>2、<span style='font: 7.0pt "Times New Roman"'>&nbsp; </span></span><span
+                style='font-size: 9.0pt; line-height: 110%; font-family: 宋体'>一个学生一个题目。需要多个学生完成的选题，分别填报选题。</span>
+        </p>
+
+        <p class="MsoNormal" style='margin-left: 18.0pt; text-indent: -18.0pt; line-height: 110%; layout-grid-mode: char'>
+            <span lang="EN-US" style='font-size: 9.0pt; line-height: 110%; font-family: 宋体'>3、<span style='font: 7.0pt "Times New Roman"'>&nbsp; </span></span><span
+                style='font-size: 9.0pt; line-height: 110%; font-family: 宋体'>下列情况的题目不宜安排学生做毕业设计（论文）：</span>
+        </p>
+
+        <p class="MsoNormal" style='margin-top: 0cm; margin-right: -7.7pt; margin-bottom: 0cm; margin-left: 21.0pt; margin-bottom: .0001pt; layout-grid-mode: char'>
+            <span
+                style='font-size: 9.0pt; font-family: 宋体'>（<span lang="EN-US">1</span>）课题偏离本专业所学基本知识；（<span
+                    lang="EN-US">2</span>）课题范围过专过窄，达不到全面训练的目的；（<span lang="EN-US">3</span>）属本科生难以胜任的高新技术；（<span
+                        lang="EN-US">4</span>）毕业设计期间难以完成或不能取得阶段成果的。</span>
+        </p>
+
+        <p class="MsoNormal" style='margin-top: 0cm; margin-right: -7.7pt; margin-bottom: 0cm; margin-left: 18.0pt; margin-bottom: .0001pt; text-indent: -18.0pt; layout-grid-mode: char'>
+            <span lang="EN-US" style='font-size: 9.0pt; font-family: 宋体'>4、<span
+                style='font: 7.0pt "Times New Roman"'>&nbsp; </span></span><span
+                    style='font-size: 9.0pt; font-family: 宋体'>每个同学填报<span lang="EN-US">3</span>个志愿。为了使同学的志愿尽量得到满足，同学的志愿应有一定的分布，选择某个课题的同学不应太集中。若填报某项课题的同学太集中，人数超过了需要人数，可能会被调剂。</span>
+        </p>
+
+    </div>
+
+</body>
+
+</html>
+

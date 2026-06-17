@@ -1,0 +1,372 @@
+﻿[
+    {
+        "category":  "thesis_vector_figures",
+        "source":  "C:\\Users\\Yang\\Pictures\\图片1.svg",
+        "target":  "thesis_vector_figures/图片1.svg",
+        "status":  "new",
+        "existing":  "",
+        "sha256":  "E38274F5969E5FF6D03BE1C3FAFB4D022C94CF73A832DEEB1025C84B3B9E2461",
+        "size_bytes":  132894,
+        "size_mb":  0.13
+    },
+    {
+        "category":  "thesis_vector_figures",
+        "source":  "C:\\Users\\Yang\\Pictures\\图片2.svg",
+        "target":  "thesis_vector_figures/图片2.svg",
+        "status":  "new",
+        "existing":  "",
+        "sha256":  "B44ADDC5109E24AE7B264027B4D06F7896B2AC5682828008B74D5CF420DF324D",
+        "size_bytes":  2753731,
+        "size_mb":  2.63
+    },
+    {
+        "category":  "thesis_vector_figures",
+        "source":  "C:\\Users\\Yang\\Pictures\\图片3.svg",
+        "target":  "thesis_vector_figures/图片3.svg",
+        "status":  "new",
+        "existing":  "",
+        "sha256":  "F667D7833CEE24BF1C59BA80B695C4B44740E453BB25B8D6D2F29538C7E2EF4E",
+        "size_bytes":  257997,
+        "size_mb":  0.25
+    },
+    {
+        "category":  "thesis_vector_figures",
+        "source":  "C:\\Users\\Yang\\Pictures\\图片4.svg",
+        "target":  "thesis_vector_figures/图片4.svg",
+        "status":  "new",
+        "existing":  "",
+        "sha256":  "F11DCD7D0FF85420BEE5A9F5E1329D33BB3108462362C9B952098C4BD68C021D",
+        "size_bytes":  352733,
+        "size_mb":  0.34
+    },
+    {
+        "category":  "thesis_vector_figures",
+        "source":  "C:\\Users\\Yang\\Pictures\\图片5.svg",
+        "target":  "thesis_vector_figures/图片5.svg",
+        "status":  "new",
+        "existing":  "",
+        "sha256":  "E9FD7B38A533CA6581360E84AEA58A88F86BCBB9CCEEE935E80F91302DA755E7",
+        "size_bytes":  162047,
+        "size_mb":  0.15
+    },
+    {
+        "category":  "thesis_vector_figures",
+        "source":  "C:\\Users\\Yang\\Pictures\\图片6.svg",
+        "target":  "thesis_vector_figures/图片6.svg",
+        "status":  "new",
+        "existing":  "",
+        "sha256":  "0984C1754251B1C8B750EBEE0218C733D1B0610B074F652E897B971E8AE9D796",
+        "size_bytes":  195862,
+        "size_mb":  0.19
+    },
+    {
+        "category":  "final_thesis_pdf",
+        "source":  "D:\\桌面\\literature\\08122215.pdf",
+        "target":  "final_thesis_pdf/08122215.pdf",
+        "status":  "new",
+        "existing":  "",
+        "sha256":  "CD2F87B597AB910D6CF8C9AAF302944F5183444DF1CFE61E56C829E93D437150",
+        "size_bytes":  3227486,
+        "size_mb":  3.08
+    },
+    {
+        "category":  "formal_documents",
+        "source":  "D:\\桌面\\literature\\资料盒\\08122215_张洋_外文文献翻译.pdf",
+        "target":  "formal_documents/08122215_张洋_外文文献翻译.pdf",
+        "status":  "new",
+        "existing":  "",
+        "sha256":  "E12B0228C1250D97448112E22E447772EE3F0D8921D25CA8C9D78B51A380A975",
+        "size_bytes":  3014478,
+        "size_mb":  2.87
+    },
+    {
+        "category":  "formal_documents",
+        "source":  "D:\\桌面\\literature\\资料盒\\AIGC.zip",
+        "target":  "formal_documents/AIGC.zip",
+        "status":  "already_in_repo",
+        "existing":  "materials\\quality\\aigc_reports_20260603\\aigc_report_bundle_20260603.zip",
+        "sha256":  "EFF77A8C3580CD2F009C72A94703ED6CD4D4E3F27B501173F30D90692D02D760",
+        "size_bytes":  9311694,
+        "size_mb":  8.88
+    },
+    {
+        "category":  "formal_documents",
+        "source":  "D:\\桌面\\literature\\资料盒\\导出页面自 08122215_张洋_外文文献翻译封面.pdf",
+        "target":  "formal_documents/导出页面自 08122215_张洋_外文文献翻译封面.pdf",
+        "status":  "new",
+        "existing":  "",
+        "sha256":  "D179FE3D46125733D239FDCAB24CAEF9DB85CE3220B12347F09E79A423AE62DF",
+        "size_bytes":  3009822,
+        "size_mb":  2.87
+    },
+    {
+        "category":  "formal_documents",
+        "source":  "D:\\桌面\\literature\\资料盒\\翻译.docx",
+        "target":  "formal_documents/翻译.docx",
+        "status":  "already_in_repo",
+        "existing":  "materials\\project_admin\\08122215_张洋_外文文献翻译.docx",
+        "sha256":  "7291D070C9B99152B38360F7356CA5385A394103F1C656CB32388291CEF25348",
+        "size_bytes":  23351164,
+        "size_mb":  22.27
+    },
+    {
+        "category":  "formal_documents",
+        "source":  "D:\\桌面\\literature\\资料盒\\好奇心驱动的无人机主动定位目标导航方法（简洁）.pdf",
+        "target":  "formal_documents/好奇心驱动的无人机主动定位目标导航方法（简洁）.pdf",
+        "status":  "new",
+        "existing":  "",
+        "sha256":  "205FDBC477C64451B5CE1C7DE31ED3B860231E00E2FDF84474BBDEEE217B47B7",
+        "size_bytes":  145229,
+        "size_mb":  0.14
+    },
+    {
+        "category":  "formal_documents",
+        "source":  "D:\\桌面\\literature\\资料盒\\开题报告.pdf",
+        "target":  "formal_documents/开题报告.pdf",
+        "status":  "already_in_repo",
+        "existing":  "materials\\project_admin\\zhangyang_opening_report_full_20260310.pdf",
+        "sha256":  "C8DED3D399EF785722C11EC9968A389D98700B3BBA3E38BBAFBFDB164443FF9F",
+        "size_bytes":  848392,
+        "size_mb":  0.81
+    },
+    {
+        "category":  "formal_documents",
+        "source":  "D:\\桌面\\literature\\资料盒\\外文翻译封面.pdf",
+        "target":  "formal_documents/外文翻译封面.pdf",
+        "status":  "new",
+        "existing":  "",
+        "sha256":  "8DE5CD86CE27F0A214D17C54FF0C54888CF5876768F6B4C06E9DF2694C74305C",
+        "size_bytes":  3155431,
+        "size_mb":  3.01
+    },
+    {
+        "category":  "formal_documents",
+        "source":  "D:\\桌面\\literature\\资料盒\\外文原文.pdf",
+        "target":  "formal_documents/外文原文.pdf",
+        "status":  "already_in_repo",
+        "existing":  "相关文献\\[0]_Mi_GeoExplorer_Active_Geo-localization_with_Curiosity-Driven_Exploration_ICCV_2025_paper.pdf",
+        "sha256":  "ADAE2DF8BD15D174C9AE14B58C5AD155CF524897075461B58C49B99921983D54",
+        "size_bytes":  8274156,
+        "size_mb":  7.89
+    },
+    {
+        "category":  "formal_documents",
+        "source":  "D:\\桌面\\literature\\资料盒\\张洋_08122215_毕业论文（设计）答辩小组意见表.doc",
+        "target":  "formal_documents/张洋_08122215_毕业论文（设计）答辩小组意见表.doc",
+        "status":  "new",
+        "existing":  "",
+        "sha256":  "2E3C0EB4FDFEE682DC2BF02BFDF0C4D49020D86459667CD41DDA3449A1F1042A",
+        "size_bytes":  80133,
+        "size_mb":  0.08
+    },
+    {
+        "category":  "formal_documents",
+        "source":  "D:\\桌面\\literature\\资料盒\\张洋_08122215_毕业论文（设计）答辩小组意见表.pdf",
+        "target":  "formal_documents/张洋_08122215_毕业论文（设计）答辩小组意见表.pdf",
+        "status":  "new",
+        "existing":  "",
+        "sha256":  "DA3E1BBFEA4A2BB136EBA1645827396AB0459F56D0D295D9195DE0D2274B75DC",
+        "size_bytes":  101093,
+        "size_mb":  0.1
+    },
+    {
+        "category":  "formal_documents",
+        "source":  "D:\\桌面\\literature\\资料盒\\张洋_08122215_毕业论文（设计）答辩资格审查表.doc",
+        "target":  "formal_documents/张洋_08122215_毕业论文（设计）答辩资格审查表.doc",
+        "status":  "new",
+        "existing":  "",
+        "sha256":  "6D44E7FF3198573B440E576F10455EBE51BD22BE1927461690BA1B757C6B89C6",
+        "size_bytes":  122449,
+        "size_mb":  0.12
+    },
+    {
+        "category":  "formal_documents",
+        "source":  "D:\\桌面\\literature\\资料盒\\张洋_08122215_毕业论文（设计）答辩资格审查表.pdf",
+        "target":  "formal_documents/张洋_08122215_毕业论文（设计）答辩资格审查表.pdf",
+        "status":  "new",
+        "existing":  "",
+        "sha256":  "F6F051DAB66121AD4D94979A76673BCF9C19D183E1EE2ED8A60DCDB2B9E1DCA3",
+        "size_bytes":  102369,
+        "size_mb":  0.1
+    },
+    {
+        "category":  "formal_documents",
+        "source":  "D:\\桌面\\literature\\资料盒\\张洋_08122215_毕业论文（设计）开题报告意见.doc",
+        "target":  "formal_documents/张洋_08122215_毕业论文（设计）开题报告意见.doc",
+        "status":  "new",
+        "existing":  "",
+        "sha256":  "8FD36184CDB3BC9B55655556DE33D58E5A96305BA02C43BBF6E102BD5735FDB8",
+        "size_bytes":  217596,
+        "size_mb":  0.21
+    },
+    {
+        "category":  "formal_documents",
+        "source":  "D:\\桌面\\literature\\资料盒\\张洋_08122215_毕业论文（设计）开题报告意见.pdf",
+        "target":  "formal_documents/张洋_08122215_毕业论文（设计）开题报告意见.pdf",
+        "status":  "new",
+        "existing":  "",
+        "sha256":  "D34952CDFCA6A150C5747ED2486C16266B4760ABC6969A0B1222919D671268E4",
+        "size_bytes":  93783,
+        "size_mb":  0.09
+    },
+    {
+        "category":  "formal_documents",
+        "source":  "D:\\桌面\\literature\\资料盒\\张洋_08122215_毕业论文（设计）评阅表.doc",
+        "target":  "formal_documents/张洋_08122215_毕业论文（设计）评阅表.doc",
+        "status":  "new",
+        "existing":  "",
+        "sha256":  "EE24243665D3E31B286C02C4EE95B6B724D330638E9FDBABC858B208D3BCBAF5",
+        "size_bytes":  87914,
+        "size_mb":  0.08
+    },
+    {
+        "category":  "formal_documents",
+        "source":  "D:\\桌面\\literature\\资料盒\\张洋_08122215_毕业论文（设计）评阅表.pdf",
+        "target":  "formal_documents/张洋_08122215_毕业论文（设计）评阅表.pdf",
+        "status":  "new",
+        "existing":  "",
+        "sha256":  "BEDD16D3D32E818E877F1C4B6CA7BC45B82786BD556BB692F48672B1A99950EF",
+        "size_bytes":  78799,
+        "size_mb":  0.08
+    },
+    {
+        "category":  "formal_documents",
+        "source":  "D:\\桌面\\literature\\资料盒\\张洋_08122215_毕业论文（设计）任务书.pdf",
+        "target":  "formal_documents/张洋_08122215_毕业论文（设计）任务书.pdf",
+        "status":  "new",
+        "existing":  "",
+        "sha256":  "04E730CDC103AA415413DD8591A891D3ED1A5DBAA421F22AFB8A80EB385352C9",
+        "size_bytes":  183976,
+        "size_mb":  0.18
+    },
+    {
+        "category":  "formal_documents",
+        "source":  "D:\\桌面\\literature\\资料盒\\张洋_08122215_毕业论文（设计）任务书意见.doc",
+        "target":  "formal_documents/张洋_08122215_毕业论文（设计）任务书意见.doc",
+        "status":  "new",
+        "existing":  "",
+        "sha256":  "B7486E507123F1E054C293EC42E221660A040B022C5457370735A72242B9BE6F",
+        "size_bytes":  143043,
+        "size_mb":  0.14
+    },
+    {
+        "category":  "formal_documents",
+        "source":  "D:\\桌面\\literature\\资料盒\\张洋_08122215_毕业论文（设计）外文翻译 (1).doc",
+        "target":  "formal_documents/张洋_08122215_毕业论文（设计）外文翻译 (1).doc",
+        "status":  "new",
+        "existing":  "",
+        "sha256":  "2AC57119AAD814AC021CB29C05A20400E92880371C9421B160A6D3C6C0AC10C4",
+        "size_bytes":  114898,
+        "size_mb":  0.11
+    },
+    {
+        "category":  "formal_documents",
+        "source":  "D:\\桌面\\literature\\资料盒\\张洋_08122215_毕业论文（设计）外文翻译意见.pdf",
+        "target":  "formal_documents/张洋_08122215_毕业论文（设计）外文翻译意见.pdf",
+        "status":  "new",
+        "existing":  "",
+        "sha256":  "4FDB6A20D4567839EF1BECFCC031F4F79AE190134E418A4FEDC74E1EC6482B7F",
+        "size_bytes":  82481,
+        "size_mb":  0.08
+    },
+    {
+        "category":  "formal_documents",
+        "source":  "D:\\桌面\\literature\\资料盒\\张洋_08122215_毕业论文（设计）外文封面.doc",
+        "target":  "formal_documents/张洋_08122215_毕业论文（设计）外文封面.doc",
+        "status":  "new",
+        "existing":  "",
+        "sha256":  "43FD909804752F035D9B5A40E152D632F58500B3FBDAEA80EFAE61B182FE2D45",
+        "size_bytes":  18282,
+        "size_mb":  0.02
+    },
+    {
+        "category":  "formal_documents",
+        "source":  "D:\\桌面\\literature\\资料盒\\张洋_08122215_毕业论文（设计）选题申报表 (1).doc",
+        "target":  "formal_documents/张洋_08122215_毕业论文（设计）选题申报表 (1).doc",
+        "status":  "new",
+        "existing":  "",
+        "sha256":  "053AFE22A1460E64C86DB02D4E938F00739EC96AC6E9EE89D7F87B8251C996B8",
+        "size_bytes":  26112,
+        "size_mb":  0.02
+    },
+    {
+        "category":  "formal_documents",
+        "source":  "D:\\桌面\\literature\\资料盒\\张洋_08122215_毕业论文（设计）选题申报表 (1).pdf",
+        "target":  "formal_documents/张洋_08122215_毕业论文（设计）选题申报表 (1).pdf",
+        "status":  "new",
+        "existing":  "",
+        "sha256":  "89418F7BC79A3F8685A3A0FF3025B2D65D33A5D34EF3CFBF4E17D2C1FF6EA181",
+        "size_bytes":  153046,
+        "size_mb":  0.15
+    },
+    {
+        "category":  "formal_documents",
+        "source":  "D:\\桌面\\literature\\资料盒\\张洋_08122215_毕业设计（论文）成绩组成表.doc",
+        "target":  "formal_documents/张洋_08122215_毕业设计（论文）成绩组成表.doc",
+        "status":  "new",
+        "existing":  "",
+        "sha256":  "BC3D675415341BE9340BD9F5A451EF66A2F2421C85B4CC4B42B6CB4C8F48A1DB",
+        "size_bytes":  1102263,
+        "size_mb":  1.05
+    },
+    {
+        "category":  "formal_documents",
+        "source":  "D:\\桌面\\literature\\资料盒\\张洋_08122215_毕业设计（论文）成绩组成表.pdf",
+        "target":  "formal_documents/张洋_08122215_毕业设计（论文）成绩组成表.pdf",
+        "status":  "new",
+        "existing":  "",
+        "sha256":  "696DF5B4518C8EC69FF0845DCB430B5F27D0ED68D1E037C2FA62762CA6047450",
+        "size_bytes":  113442,
+        "size_mb":  0.11
+    },
+    {
+        "category":  "formal_documents",
+        "source":  "D:\\桌面\\literature\\资料盒\\中期检查.doc",
+        "target":  "formal_documents/中期检查.doc",
+        "status":  "new",
+        "existing":  "",
+        "sha256":  "9AC758FC748D25157D2BD342D91CDEC0A0DA0FA23F2FB923829302B8EA0CBEF1",
+        "size_bytes":  118323,
+        "size_mb":  0.11
+    },
+    {
+        "category":  "formal_documents",
+        "source":  "D:\\桌面\\literature\\资料盒\\中期检查报告.pdf",
+        "target":  "formal_documents/中期检查报告.pdf",
+        "status":  "new",
+        "existing":  "",
+        "sha256":  "1ED9BC7195F7DAC094AA6F58E6546367D18FCB22EBC88F9C3CB1B3EDADC0F872",
+        "size_bytes":  171929,
+        "size_mb":  0.16
+    },
+    {
+        "category":  "formal_documents",
+        "source":  "D:\\桌面\\literature\\资料盒\\中期检查表.pdf",
+        "target":  "formal_documents/中期检查表.pdf",
+        "status":  "new",
+        "existing":  "",
+        "sha256":  "B6CB71AA3CAB36702544D2974CD6D53BCA48ED1D4871340A9070FA017FBCD7D5",
+        "size_bytes":  124749,
+        "size_mb":  0.12
+    },
+    {
+        "category":  "formal_documents",
+        "source":  "D:\\桌面\\literature\\资料盒\\中期检查意见.doc",
+        "target":  "formal_documents/中期检查意见.doc",
+        "status":  "already_in_repo",
+        "existing":  "materials\\project_admin\\08122215_张洋_中期报告.doc",
+        "sha256":  "ED55B88B6891F6E56705B148752B5C4ACBF3AA3274BB7A72BAF46C142F74FE9D",
+        "size_bytes":  66048,
+        "size_mb":  0.06
+    },
+    {
+        "category":  "formal_documents",
+        "source":  "D:\\桌面\\literature\\资料盒\\自 外文翻译封面.pdf",
+        "target":  "formal_documents/自 外文翻译封面.pdf",
+        "status":  "new",
+        "existing":  "",
+        "sha256":  "4B5A651022708C84959F93812624F18862D6C47960637AC7DCD28EAA4AAF3FF3",
+        "size_bytes":  40482758,
+        "size_mb":  38.61
+    }
+]
