@@ -1,55 +1,45 @@
 # 结题答辩 PPT 汇报脉络
 
-依据文件：`D:\桌面\08122215_张洋_结题答辩 (2).pptx`。本仓库未直接提交 PPT 原件，因为该文件约 105 MB，超过 GitHub 普通单文件限制；首页素材改为抽取 PPT 中实际嵌入的关键媒体，GIF 另做 GitHub 展示压缩。
+本文件整理最终结题答辩 PPT 的讲述顺序、核心材料和使用边界。PPT 原文件体积较大，仓库中保存答辩 PDF、抽取后的展示媒体和对应索引。
 
-## 28 页结构
+## 汇报主线
 
-1. 封面：好奇心驱动的无人机主动定位目标导航方法。
-2. 选题背景：低空经济、搜救巡检、无人机智能升级。
-3. 任务设置：5x5 搜索区域、图像/语义目标引导、上下左右动作空间。
-4. 现存问题：引导不足、反馈稀疏、局部最优。
-5. 研究框架：目标线索统一编码，历史动作与观测建模，混合奖励和 PPO 训练。
-6. 混合奖励机制：外在奖励、好奇心内在奖励、距离调节奖励。
-7. 实验设置：GPU、网格、搜索预算、距离桶、训练/验证/测试数据集。
-8-24. 实验结果可视化：短距离、C6/C8、MM-GAG 三模态、xBD 灾前灾后、10x10 长距离、短距离失败案例。
-25. 性能实验对比：整体成功率、中远距离优势、短距离波动。
-26. 奖励分距离分析：训练阶段接近/偏离动作的平均单步奖励。
-27. 消融实验对比：外在奖励、好奇心奖励、距离调节函数、本文完整方法。
-28. 致谢页。
+1. 选题背景：低空经济、搜救巡检和无人机智能升级对主动目标定位的需求。
+2. 任务设置：在离散搜索区域内，根据图像或语义目标线索进行逐步搜索。
+3. 现存问题：目标引导不足、反馈稀疏、局部最优和远距离搜索稳定性不足。
+4. 方法框架：目标线索统一编码、历史动作与观测建模、混合奖励训练和 PPO 策略优化。
+5. 奖励机制：外在奖励、好奇心内在奖励、距离门控和势函数奖励塑形共同作用于训练阶段。
+6. 实验设置：数据集、网格、搜索预算、距离桶、训练/验证/测试划分和评价指标。
+7. 结果展示：短距离、中距离、远距离、多模态目标、灾前灾后和长距离扩展场景。
+8. 性能分析：整体成功率、中远距离优势、短距离边界和消融实验。
+9. 总结：本文方法在中远距离和跨场景搜索中更稳定，奖励机制用于改善训练阶段的探索与收敛。
 
-## 首页抽取素材
+## 展示素材
 
-`results/figures/defense_readme_20260613/` 中的文件来自最终答辩 PPT 的 `ppt/media/*`，GIF 另做了 GitHub 展示压缩。素材按答辩顺序命名，方便 README、答辩复盘和后续汇报复用。
+答辩核心展示素材整理在：
 
-| 文件 | PPT 来源 | 用途 |
-| --- | --- | --- |
-| `cover_symbol.png` | slide 1 | 封面视觉元素 |
-| `method_framework.png` | slide 5 | 研究框架 |
-| `short_distance_route.gif` | slide 8 | MASA 短距离绕路成功轨迹 |
-| `short_distance_route_static.png` | slide 9 | MASA 短距离绕路静态页 |
-| `swissview_town_landmark.gif` | slide 10 | SwissView 城镇地标连续搜索 |
-| `swissview_town_landmark_static.png` | slide 11 | SwissView 城镇地标静态页 |
-| `c8_route_demo.gif` | slide 12 | SwissView 跨区域湖边长距离搜索 |
-| `swissview_lake_long_distance_static.png` | slide 13 | SwissView 跨区域湖边静态页 |
-| `mmgag_ground_target.gif` | slide 14 | MM-GAG 地面图像目标 |
-| `mmgag_ground_target_static.png` | slide 15 | MM-GAG 地面图像目标静态页 |
-| `multimodal_text_target.gif` | slide 16 | MM-GAG 文本描述目标 |
-| `mmgag_text_target_static.png` | slide 17 | MM-GAG 文本描述目标静态页 |
-| `xbd_hurricane_prepost.png` | slide 18 | xBD 飓风灾前灾后对比 |
-| `xbd_disaster_route.gif` | slide 19 | xBD 飓风灾后搜索 |
-| `xbd_hurricane_route_static.png` | slide 20 | xBD 飓风灾后搜索静态页 |
-| `xbd_fire_prepost.png` | slide 21 | xBD 火灾灾前灾后对比 |
-| `xbd_fire_route_static.png` | slide 22 | xBD 火灾灾后搜索 |
-| `long_distance_grid10.gif` | slide 23 | 10x10 长距离搜索 |
-| `short_distance_failure.png` | slide 24 | 短距离失败边界 |
-| `performance_analysis.png` | slide 25 | 性能实验分析 |
-| `reward_distance_analysis.png` | slide 26 | 奖励分距离分析 |
-| `ablation_analysis.png` | slide 27 | 消融实验分析 |
+```text
+results/figures/defense_showcase/
+```
+
+| 文件 | 用途 |
+| --- | --- |
+| `method_framework.png` | 研究框架页。 |
+| `short_distance_route.gif` | MASA 短距离绕路成功轨迹。 |
+| `swissview_town_landmark.gif` | SwissView 城镇地标连续搜索。 |
+| `c8_route_demo.gif` | 跨区域湖边长距离搜索。 |
+| `mmgag_ground_target.gif` | MM-GAG 地面图像目标。 |
+| `multimodal_text_target.gif` | MM-GAG 文本目标。 |
+| `xbd_disaster_route.gif` | xBD 灾后搜索。 |
+| `long_distance_grid10.gif` | 10x10 长距离搜索。 |
+| `performance_analysis.png` | 性能实验分析。 |
+| `reward_distance_analysis.png` | 奖励分距离分析。 |
+| `ablation_analysis.png` | 消融实验分析。 |
 
 ## 讲述边界
 
-- 奖励、门控和 PBRS 是训练阶段信号；测试阶段不调用奖励函数。
-- 主结论放在 MM-GAG、多模态、长距离和正式固定评估上。
-- 短距离 C1-C3 结果是边界分析，不应包装成本文方法优势。
-- 续训曲线是诊断材料，不用于证明本文方法持续领先。
+- 混合奖励用于训练阶段优化策略；正式测试阶段只加载训练好的策略网络执行动作。
+- 主结论放在 MM-GAG、多模态目标、中远距离和固定协议评估上。
+- 短距离 C1-C3 结果属于边界分析，不包装为方法优势。
+- 续训曲线是诊断材料，不用于证明方法持续领先。
 - xBD-disaster 口径为灾后搜索区域，目标仍使用灾前图像嵌入。

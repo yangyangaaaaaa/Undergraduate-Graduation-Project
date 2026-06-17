@@ -1,21 +1,21 @@
 # 复现说明
 
-本说明记录论文实验的复现口径。仓库保存代码、实验脚本、manifest、结果表和图件；训练 checkpoint、原始大规模数据包和生成的 embedding 数组不进入仓库。
+本说明记录论文实验的复现入口。仓库保存代码、实验脚本、manifest、结果表和图件；训练 checkpoint、原始大规模数据包和生成的 embedding 数组不进入仓库。
 
 ## 环境
 
 建议使用 Linux GPU 环境。基础环境文件位于：
 
 ```bash
-code/geoexplorer_active/environment.yml
+code/main/environment.yml
 ```
 
 创建环境：
 
 ```bash
-cd code/geoexplorer_active
+cd code/main
 conda env create -f environment.yml
-conda activate geoexplorer
+conda activate code
 ```
 
 ## 数据划分
@@ -53,6 +53,8 @@ GEOEXPLORER_PBRS_COEF=1.0
 GEOEXPLORER_VAL_DISTS=7,8
 ```
 
+这些变量沿用实验阶段脚本命名，用于保证结果表与原始训练记录可以对应。
+
 ## 评测入口
 
 单模型评测：
@@ -72,20 +74,18 @@ experiments/scripts/ultra_long_eval/
 
 ## Checkpoint 对应关系
 
-结果表中的 `checkpoint` 列保留了原始 GPU 环境中的 checkpoint 路径。仓库不上传权重文件，但 run 名称、manifest 和结果表可以对应到具体实验设置。
-
-关键 checkpoint：
+结果表中的 `checkpoint` 列保留原始 GPU 环境中的 checkpoint 路径。仓库不上传权重文件，但 run 名称、manifest 和结果表可以对应到具体实验设置。
 
 | 论文称呼 | 结果表 run | 说明 |
 | --- | --- | --- |
 | 本文方法 | `g1_p1_e1_v1_seed321_t480k` | 线性距离门控 + PBRS + 低熵设置 + `VAL_DISTS=7,8`。 |
 | 同数据无新增机制控制组 | `g0_p0_e0_v0_seed321_t480k` | 与本文方法同数据、同训练步数，但不启用 G/P/E/V。 |
-| GeoExplorer 原始风格基线 | `pristine_seed321_t480k` | 历史原始风格 checkpoint，在统一协议下重新评测。 |
+| 好奇心探索基线 | `pristine_seed321_t480k` | 统一协议下的基线重评估。 |
 | GOMAA-Geo | `formal_ppo_seed42_t480k` | 外部对比方法 checkpoint。 |
 
 ## 长距离扩展测试
 
-长距离测试只用于验证中远距离搜索优势，不替代标准 `5 x 5` 主评测。
+长距离测试用于验证中远距离搜索优势，不替代标准 `5 x 5` 主评测。
 
 | 设置 | 网格 | 距离 | 预算 | 任务数 |
 | --- | --- | --- | ---: | ---: |

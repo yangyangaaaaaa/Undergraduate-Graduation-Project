@@ -1,6 +1,6 @@
 # 代码结构说明
 
-本文方法代码的干净入口位于 `code/geoexplorer_active/`。该目录保留能够复现论文实验逻辑的核心文件，去除了临时交接记录、缓存、服务器连接记录和大文件。
+本文方法的主代码入口位于 `code/main/`。该目录保留复现论文实验所需的核心训练、评测、数据预处理和模型定义文件；生成图表、整理结果和验收材料的离线脚本放在 `code/tools/`。
 
 ## 主入口
 
@@ -9,7 +9,8 @@
 | `config.py` | 统一配置入口，支持通过环境变量切换奖励、门控函数、PBRS 系数、训练数据和验证距离。 |
 | `pretrain.py` | 训练动作-特征预测模块，为好奇心内在奖励提供预测误差来源。 |
 | `train.py` | PPO 训练入口，实现外在奖励、内在奖励、距离门控和势函数奖励塑形。 |
-| `validate.py` | 固定 checkpoint 的推理评测入口，使用贪心合法动作选择策略。 |
+| `validate.py` | 固定 checkpoint 的推理评测入口，使用合法动作约束下的策略输出完成评测。 |
+| `environment.yml` | Linux GPU 环境依赖。 |
 
 ## 模型模块
 
@@ -18,7 +19,7 @@
 | `models/model_falcon.py` | 历史动作-观测序列建模与状态特征输出。 |
 | `models/ppo.py` | Actor-Critic 策略网络、PPO 更新和多模态评测函数。 |
 | `models/pretrain_model.py` | 下一步特征预测模型。 |
-| `models/decision_transformer.py` | 原始工程保留的序列建模组件。 |
+| `models/decision_transformer.py` | 序列建模组件。 |
 
 ## 数据与工具
 
