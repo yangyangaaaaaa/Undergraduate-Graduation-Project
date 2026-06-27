@@ -149,11 +149,11 @@ python validate.py
 常用验收命令：
 
 ```bash
-/root/geoexplorer/run_acceptance_demo
-/root/geoexplorer/run_acceptance_demo --visual-only
-/root/geoexplorer/run_acceptance_case_pack
-/root/geoexplorer/run_acceptance_train --status
-/root/geoexplorer/run_c123_eval
+/root/code/run_acceptance_demo
+/root/code/run_acceptance_demo --visual-only
+/root/code/run_acceptance_case_pack
+/root/code/run_acceptance_train --status
+/root/code/run_c123_eval
 ```
 
 ## 进一步阅读
