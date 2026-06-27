@@ -4,7 +4,7 @@
 
 ## Files
 
-- `final_submission_20260617.csv`
-- `final_submission_20260617.json`
+- `formal_materials_archive.csv`
+- `formal_materials_archive.json`
 
 CSV 便于人工核对，JSON 便于程序读取。
