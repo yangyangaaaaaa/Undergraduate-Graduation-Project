@@ -20,13 +20,23 @@ python code/tools/build_supplement_experiment_analysis.py
 
 | 图件 | 用途 |
 | --- | --- |
-| `results/figures/showcase/experience/hero_experience.png` | README 首屏展示。 |
-| `results/figures/showcase/dataset/figure3_1_method_overview_revised.png` | 方法框架。 |
-| `results/figures/showcase/dataset/chapter2_typical_dataset_scene_examples.png` | 数据集与任务场景。 |
-| `results/figures/showcase/experience/evidence_wall_experience.png` | 核心结果证据墙。 |
-| `results/figures/showcase/experience/trajectory_theater_gifs/three_method_hardcase__img189_d6_s20_g14_r0__theater.gif` | 同步轨迹对比动图。 |
+| `results/figures/defense_showcase/method_framework.png` | README 首屏研究框架。 |
+| `results/figures/defense_showcase/short_distance_route.gif` | MASA 短距离绕路成功轨迹。 |
+| `results/figures/defense_showcase/swissview_town_landmark.gif` | SwissView 城镇地标连续搜索。 |
+| `results/figures/defense_showcase/c8_route_demo.gif` | SwissView 跨区域湖边长距离搜索。 |
+| `results/figures/defense_showcase/mmgag_ground_target.gif` | MM-GAG 地面图像目标搜索。 |
+| `results/figures/defense_showcase/multimodal_text_target.gif` | MM-GAG 文本目标搜索。 |
+| `results/figures/defense_showcase/xbd_hurricane_prepost.png` | xBD 飓风灾前灾后目标对比。 |
+| `results/figures/defense_showcase/xbd_disaster_route.gif` | xBD 飓风灾后搜索轨迹。 |
+| `results/figures/defense_showcase/xbd_fire_prepost.png` | xBD 火灾灾前灾后目标对比。 |
+| `results/figures/defense_showcase/xbd_fire_route_static.png` | xBD 火灾灾后搜索轨迹。 |
+| `results/figures/defense_showcase/long_distance_grid10.gif` | 10x10 长距离固定边界搜索。 |
+| `results/figures/defense_showcase/short_distance_failure.png` | 短距离失败边界。 |
+| `results/figures/defense_showcase/performance_analysis.png` | 性能实验分析。 |
+| `results/figures/defense_showcase/reward_distance_analysis.png` | 奖励分距离分析。 |
+| `results/figures/defense_showcase/ablation_analysis.png` | 消融实验分析。 |
 
-## 主要实验图卡
+## 补充实验图卡
 
 | 图件 | 说明 |
 | --- | --- |
@@ -50,6 +60,6 @@ python code/tools/build_supplement_experiment_analysis.py
 
 ## 使用建议
 
-- README 首页优先使用 `showcase/experience/` 与 `showcase/polished/` 中的最终图。
+- README 首页优先使用 `results/figures/defense_showcase/` 中的最终答辩 PPT 展示素材。
 - 答辩和演示优先使用 PNG 与 GIF，论文正文可使用 SVG/PDF 或从源表重新导出。
 - 展示图只用于解释趋势，正式结论必须回到 `results/tables/` 和对应报告。
