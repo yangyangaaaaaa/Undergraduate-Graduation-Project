@@ -24,8 +24,8 @@
 
 | 位置 | 内容 |
 | --- | --- |
-| `materials/manifests/final_submission_20260617.csv` | 2026-06-17 正式材料补充归档的来源、目标路径、文件大小和 SHA-256 校验值。 |
-| `materials/manifests/final_submission_20260617.json` | 与 CSV 等价的结构化清单，便于程序读取。 |
+| `materials/manifests/formal_materials_archive.csv` | 2026-06-17 正式材料补充归档的来源、目标路径、文件大小和 SHA-256 校验值。 |
+| `materials/manifests/formal_materials_archive.json` | 与 CSV 等价的结构化清单，便于程序读取。 |
 
 ## 使用建议
 
