@@ -11,9 +11,10 @@ python code/tools/build_supplement_experiment_analysis.py
 
 核心展示图位于：
 
-- `results/figures/showcase/experience/`
-- `results/figures/showcase/polished/`
-- `results/figures/showcase/trajectories/`
+- `results/figures/defense_showcase/`
+- `results/figures/acceptance_demo/`
+- `results/figures/reward_cases/`
+- `results/figures/showcase/`
 
 ## 首页展示素材
 
