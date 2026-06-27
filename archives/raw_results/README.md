@@ -12,7 +12,7 @@ https://github.com/yangyangaaaaaa/Undergraduate-Graduation-Project/releases/tag/
 | --- | --- |
 | `figures_acceptance_demo` | 验收演示阶段生成的原始动图、路线设置图、poster 图和配置清单。 |
 | `figures_defense_reward_training_stage` | 奖励机制分析中的训练阶段图、路线奖励案例、动作归因和趋势图。 |
-| `figures_ppt_candidate_pack_20260606` | 结题答辩前筛选过的 PPT 候选素材。 |
+| `figures_presentation_assets` | 结题答辩前筛选过的 PPT 候选素材。 |
 | `figures_showcase` | 可视化展示区的完整图件。 |
 | `figures_chapter2_dataset` | 第二章数据集、搜索区域、网格和人工重绘辅助素材。 |
 | `figures_chapter4_trajectories` | 第四章典型轨迹相关的高质量图件。 |
